@@ -36,8 +36,8 @@ VERY IMPORTANT: Always run production build to compile compressed, production-re
 ### theme.json
 - Setup global settings and styles for block editor. Read details from <a href="https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json/">Block Editor Handbook</a>.
 
-More reading and examples from Dullsiteediting.com:
-<a href="https://fullsiteediting.com/lessons/creating-theme-json/">Exercise: Creating theme.json</a>
+More reading and examples from Fullsiteediting.com:
+<a href="https://fullsiteediting.com/lessons/creating-theme-json/">Exercise: Creating theme.json</a> and 
 <a href="https://fullsiteediting.com/lessons/global-styles/">Global Styles & theme.json</a>
 
 
