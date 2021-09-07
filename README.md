@@ -5,10 +5,13 @@ Hi. I'm a starter theme called Avidly Theme. I'm a theme meant for hacking so do
 ## Features
 
 ### Gutenberg with love
-I'm created for Gutenberg editor especially in mind. With theme.json you can configure the editor that enables a finer-grained control and introduces the first step in managing styles for future WordPress releases. Read more from documentation: https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json/
+I'm created for WordPress Block Editor especially in mind. I support theme.json theme configuring that enables a finer-grained controls introduces the first step in managing styles for future WordPress releases. Read more from <a href="https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json/">Block Editor Handbook</a>.
 
-### TailWind CSS
-I integrate with TailWind CSS. Learn <a href="https://tailwindcss.com/docs">how to use TailWind CSS</a> by reading the docs.
+### Accessibility
+I have been developed with accessibility / WCAG 2.1 criteria in mind.
+
+### Tailwind CSS
+I integrate with Tailwind CSS. Learn <a href="https://tailwindcss.com/docs">how to use Tailwind CSS</a> by reading the documentation.
 
 ### Requirements
 * Requires at least WordPress 5.8
@@ -16,7 +19,7 @@ I integrate with TailWind CSS. Learn <a href="https://tailwindcss.com/docs">how 
 * NodeJS v12.14.1 or later with npm 6.13.4 (no guarantees for v14 or newer)
 
 ## Getting Started
-1. Downloads avidly-theme.
+1. Download avidly-theme repository.
 2. Rename theme folder name for your project (use only a-z and -).
 3. Rename .pot file as your theme name in /languages/ folder (use only a-z and -).
 4. Run `sh setup.sh` in theme folder and follow the instructions in terminal. This will run some search and replace functionality for code.
@@ -25,10 +28,10 @@ I integrate with TailWind CSS. Learn <a href="https://tailwindcss.com/docs">how 
 
 ### Development
 - Get pagackes with `npm install` command
-- Run development with `npm run watch`command
-- Run production build with `npm run production` command (this also purges caches from edited assets, bu detecting version changes from /dist/mix-manifest.json)
+- Run development with `npm run watch` command
+- Run production build with `npm run production` command (this also purges caches from edited assets by detecting version changes from /dist/mix-manifest.json)
 
-VERY IMPORTANT: Allways run production build to compile compressed, production-ready CSS and JS. Otherwise you'll end up with ridiculously large CSS and JS files and your clients will call you on a Saturday evening when you're trying to enjoy a beer with your friends.
+VERY IMPORTANT: Always run production build to compile compressed, production-ready CSS and JS. Otherwise you'll end up with ridiculously large CSS and JS files and your clients will call you on a Saturday evening when you're trying to enjoy a beer with your friends.
 
 ### theme.json
 - Setup global settings and styles for block editor. Read details from <a href="https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json/">Block Editor Handbook</a>.
