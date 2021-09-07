@@ -1,0 +1,102 @@
+/* Tailwind CSS, change settings from tailwind.config.js */
+@tailwind base;
+
+
+@layer base {
+	/**
+	 * Font-face rules
+	 * 
+	 * @link https://v1.tailwindcss.com/docs/adding-base-styles#font-face-rules
+	 */
+	@font-face {
+		font-family: 'Roboto';
+		font-weight: 400;
+		src: url(../../webfonts/Roboto/Roboto-Regular.ttf) format('truetype');
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'Roboto';
+		font-weight: 700;
+		src: url(../../webfonts/Roboto/Roboto-Bold.ttf) format('truetype');
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'Roboto Slab';
+		font-weight: 400;
+		src: url(../../webfonts/Roboto_Slab/RobotoSlab-Regular.ttf) format('truetype');
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'Roboto Slab';
+		font-weight: 700;
+		src: url(../../webfonts/Roboto_Slab/RobotoSlab-Bold.ttf) format('truetype');
+		font-display: swap;
+	}
+
+	/**
+	 * Base typographty elements.
+	 */
+	h1,
+	h2,
+	h3,
+	h4,
+	.editor-post-title {
+		font-family: 'Roboto Slab', 'serif';
+		font-weight: 700;
+		@apply mb-3;
+		@apply mt-4;
+		@apply lg:mt-6;
+	}
+
+	h1,
+	h2 {
+		@apply mt-7;
+		@apply lg:mt-10;
+	}
+
+	h1 {
+		@apply text-6xl;
+		@apply lg:text-7xl;
+	}
+	h2 {
+		@apply text-4xl;
+		@apply lg:text-5xl;
+	}
+
+	a {
+		@apply underline;
+		@apply text-primary;
+	}
+	a:hover,
+	a:focus {
+		@apply no-underline;
+	}
+
+	blockquote,
+	dl,
+	dd,
+	figure,
+	p,
+	pre {
+		@apply mb-2;
+	}
+
+	cite {
+		@apply mt-2;
+	}
+
+	ul:not(.list-none),
+	ol:not(.list-none) {
+		@apply pl-10;
+	}
+	ul:not(.list-none) li,
+	ol:not(.list-none) li {
+		@apply mt-1;
+	}
+	ul:not(.list-none) {
+		@apply list-disc;
+	}
+	ol:not(.list-none) {
+		@apply list-decimal;
+	}
+}

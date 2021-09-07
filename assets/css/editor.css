@@ -1,0 +1,26 @@
+/* Tailwind CSS, change settings from tailwind.config.js */
+@import '_base.css';
+@tailwind components;
+@tailwind utilities;
+
+/* Blocks CSS for editor */
+@import '03-blocks/_button.css';
+@import '03-blocks/_quote.css';
+
+/**
+ * Editor fixes
+ */
+.wp-block[data-align=right],
+.wp-block[data-align=left] {
+	float: none !important; /* Overwrite core styles that does image floats incrorrectly in editor */
+}
+
+.wp-block[data-align=right] > .wp-block-image {
+	float: right;
+	margin-left: 2em;
+}
+
+.wp-block[data-align=left] > .wp-block-image {
+	float: left;
+	margin-right: 2em;
+}

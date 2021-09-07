@@ -1,0 +1,56 @@
+/**
+ * Block: Quote.
+ */
+ .wp-block-quote {
+	@apply relative;
+	@apply my-4;
+	@apply py-2;
+}
+
+.wp-block-quote > * {
+	@apply pl-4;
+}
+
+.wp-block-quote::before {
+	content: '';
+	@apply absolute;
+	@apply top-0;
+	@apply left-4;
+	@apply h-full;
+	@apply w-1;
+	@apply bg-primary;
+}
+
+/* Variation: align right */
+.wp-block-quote.has-text-align-right > * {
+	@apply pl-0;
+	@apply pr-4;
+}
+
+.wp-block-quote.has-text-align-right::before  {
+	@apply left-auto;
+	@apply right-4;
+}
+
+/* Variation: align center */
+.wp-block-quote.has-text-align-center {
+	@apply pb-4;
+}
+
+.wp-block-quote.has-text-align-center::before  {
+	@apply top-full;
+	@apply left-auto;
+	@apply right-auto;
+	@apply h-1;
+	@apply w-10;
+}
+
+
+/* Editor fixes */
+[data-type="core/quote"]::before {
+	@apply left-0;
+}
+
+[data-type="core/quote"].has-text-align-right::before {
+	@apply right-0;
+}

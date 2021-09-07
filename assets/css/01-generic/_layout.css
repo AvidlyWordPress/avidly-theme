@@ -1,0 +1,38 @@
+/**
+ * Front end widths.
+ */
+.container > *,
+.alignwide {
+	@apply mx-auto;
+}
+
+.container > *{
+	@apply max-w-screen-lg;
+}
+ 
+.alignwide,
+.alignwide > .alignwide {
+	@apply max-w-screen-xl;
+}
+ 
+.alignfull,
+.alignfull > .alignfull {
+	@apply max-w-none;
+}
+
+.container > *:not(.has-background):not(.site-header):not(.alignfull):not(ul):not(ol),
+.alignwide.has-background,
+.alignfull.has-background,
+.alignwide:not(.has-background) > .alignwide,
+.alignfull:not(.has-background) > .alignfull {
+	@apply px-4;
+}
+
+
+/**
+ * Content padding fixes.
+ */
+.has-background,
+p.has-background {
+	@apply p-4;
+}

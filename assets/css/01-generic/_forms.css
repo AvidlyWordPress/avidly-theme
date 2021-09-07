@@ -1,0 +1,37 @@
+/**
+ * General forms styling.
+ * Note: If you want use styles with Gravity Forms, disable its own styles from settings.
+ */
+input:not([type='checkbox'], [type='radio'], [type='submit']),
+textarea,
+select {
+	@apply border-2;
+	@apply border-black;
+	@apply py-1;
+	@apply px-2;
+	@apply mb-3;
+	@apply rounded;
+}
+fieldset {
+	@apply mt-3;
+}
+
+input[type='submit'] {
+	@apply cursor-pointer;
+	@apply bg-primary;
+	@apply border-0;
+	@apply rounded-full;
+	@apply py-2;
+	@apply px-4;
+	@apply text-white;
+	@apply my-4;
+
+	@apply scale-100;
+	@apply transform;
+	@apply transition;
+	@apply duration-75;
+}
+input[type='submit']:focus,
+input[type='submit']:hover {
+	@apply scale-105;
+}

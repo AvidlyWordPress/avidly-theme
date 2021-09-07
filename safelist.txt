@@ -1,0 +1,3 @@
+# Safelist for classes that cannot be detected from templates.
+## Do not purge these styles with purge, for example GF custom styles.
+.gform_wrapper
