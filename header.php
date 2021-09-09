@@ -29,13 +29,13 @@
 		<?php wp_body_open(); ?>
 
 		<div class="nav-container container">
-			<header class="site-header w-full menu:flex items-center justify-between alignwide">
+			<header class="site-header relative w-full menu:flex items-center justify-between alignwide">
 
 				<a class="skip-link screen-reader-text border-2 border-primary has-white-background-color has-text-color has-primary-color p-4" href="#primary">
 					<?php echo esc_html_x( 'Skip to the content', 'skip link', 'avidly-theme' ); ?>
 				</a>
 
-				<div class="site-header__logo px-4 xl:px-0">
+				<div class="site-header__logo px-4 w-3/4 menu:w-auto xl:px-0">
 					<?php
 					echo sprintf(
 						'<p class="site-header__title"><a href="%s" aria-label="%s">%s</a></p>',
@@ -49,11 +49,10 @@
 				<div id="main-navigation-wrapper" class="main-navigation-wrapper">
 					<?php
 					echo sprintf(
-						'<button class="%s" aria-expanded="false" aria-controls="mobile-menu" aria-label="%s">%s %s</button>',
-						'mobile-menu-toggle xs:absolute xs:top-4 xs:right-4 block my-2 mx-4 xl:mx-0 px-4 py-2 has-primary-background-color has-white-color menu:hidden',
+						'<button class="%s" aria-expanded="false" aria-controls="mobile-menu" aria-label="%s">%s</button>',
+						'mobile-menu-toggle absolute top-4 right-2 block my-2 mx-4 xl:mx-0 p-4 has-primary-background-color has-white-color menu:hidden',
 						esc_html( _x( 'Menu', 'menu UI', 'avidly-theme' ) ),
-						avidly_theme_get_theme_svg( 'menu', 'ui', 'w-12 mx-auto' ),
-						esc_html( _x( 'Menu', 'menu UI', 'avidly-theme' ) ) // phpcs:ignore
+						avidly_theme_get_theme_svg( 'menu', 'ui', 'w-8 mx-auto' ) // phpcs:ignore
 					);
 					?>
 

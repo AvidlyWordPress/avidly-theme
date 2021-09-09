@@ -99,4 +99,9 @@
 	ol:not(.list-none) {
 		@apply list-decimal;
 	}
+
+	svg {
+		@apply max-w-full;
+		@apply h-auto;
+	}
 }
