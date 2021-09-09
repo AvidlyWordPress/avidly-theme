@@ -46,7 +46,7 @@ class Disclosure_Nav_Menu extends Walker_Nav_Menu {
 			'<ul id="submenu-%s" class="%s" aria-label="%s">',
 			$this->cur_item->ID, // ID.
 			'disclosure-submenu level--' . ( $depth + 1 ) . ' ' . esc_attr( $level_class ) . ' list-none menu:absolute z-10 min-w-40 w-full pl-4 menu:pl-0 menu:w-auto has-white-background-color hidden', // class.
-			sprintf (
+			sprintf(
 				/* translators: 1 title. */
 				esc_html( _x( 'Submenu for %s', 'menu UI', 'avidly-theme' ) ),
 				esc_html( $this->cur_item->title )
@@ -69,7 +69,7 @@ class Disclosure_Nav_Menu extends Walker_Nav_Menu {
 	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 		// Restore the cur_item.
 		$this->cur_item = $item;
-		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+		$indent         = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 
 		$classes   = empty( $item->classes ) ? array() : (array) $item->classes;
 		$classes[] = 'menu-item-' . $item->ID;
@@ -171,7 +171,7 @@ class Disclosure_Nav_Menu extends Walker_Nav_Menu {
 		 */
 		$title = apply_filters( 'nav_menu_item_title', $title, $item, $args, $depth );
 
-		$item_output  = $args->before;
+		$item_output = $args->before;
 
 		// Create button to toddle dropdown menu.
 		if ( in_array( 'menu-item-has-children', $item->classes ) ) {
@@ -181,10 +181,10 @@ class Disclosure_Nav_Menu extends Walker_Nav_Menu {
 			$item_output .= $args->after;
 
 			$item_output .= sprintf(
-				'<button class="%s" aria-expanded="false" aria-controls="submenu-%s" aria-label="%s" aria-haspopup="true"><span class="screen-reader-text"></span></button>',
+				'<button class="%s" aria-expanded="false" aria-controls="submenu-%s" aria-haspopup="true"><span class="screen-reader-text">%s</span></button>',
 				'disclosure-menu-toggle toggle-level--' . ( $depth + 1 ) . ' has-primary-background-color has-white-color relative ml-1 w-8 h-8 text-center',
 				esc_attr( $this->cur_item->ID ),
-				sprintf (
+				sprintf(
 					/* translators: 1 title. */
 					esc_html( _x( 'Submenu: %s', 'menu UI', 'avidly-theme' ) ),
 					esc_html( $title )
