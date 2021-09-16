@@ -32,7 +32,7 @@ add_action(
  * @link https://wordpress.org/support/article/blocks/
  */
 add_action(
-	'allowed_block_types',
+	'allowed_block_types_all',
 	function( $allowed_block_types, $post ) {
 
 		$allowed_block_types = array(
@@ -140,7 +140,7 @@ add_action(
 
 			// Custom (for example 'acf/block-name', etc..).
 			'gravityforms/form',
-			// 'prefix/block',
+			'acf/avidly-acf-block',
 
 		);
 
