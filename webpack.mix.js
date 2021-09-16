@@ -1,6 +1,6 @@
-let mix = require('laravel-mix');
-// let SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
-/* https://github.com/cascornelissen/svg-spritemap-webpack-plugin/blob/v3.0.0/docs/options.md */
+const mix = require('laravel-mix');
+const tailwindcss = require('tailwindcss'); 
+
 
 /**
  * --------------------------------------------------------------------------
@@ -17,18 +17,14 @@ mix
 	.js('./assets/js/app.js', 'js/')
 	.js('./assets/js/disclosureMenu.js', 'js/')
 	.js('./assets/js/editor-script-block.js', 'js/')
-	.postCss('./assets/css/app.css', 'css/', [
-		require( 'tailwindcss' ),
-		require( 'autoprefixer' ),
-	])
-	.postCss('./assets/css/editor.css', 'css/', [
-		require( 'tailwindcss' ),
-	])
+	.sass('./assets/scss/app.scss', 'css/')
+	.sass('./assets/scss/editor.scss', 'css/')
 	.version()
 	.autoload({
 		jquery: ['$', 'global.jQuery',"jQuery","global.$","jquery","global.jquery"]
 	})
 	.options({
+		postCss: [ tailwindcss('./tailwind.config.js') ],
 		processCssUrls: false, // Process/optimize relative stylesheet url()'s. Set to false, if you don't want them touched.
 	});
 

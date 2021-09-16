@@ -6,9 +6,9 @@
 	@apply transform;
 	@apply transition;
 	@apply duration-75;
-}
 
-.wp-block-button__link:focus,
-.wp-block-button__link:hover {
-	@apply scale-105;
+	&:focus,
+	&:hover {
+		@apply scale-105;
+	}
 }

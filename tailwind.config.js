@@ -103,5 +103,8 @@ module.exports = {
 	// Plugins: https://tailwindcss.com/docs/plugins
 	// - - - - - - - - - - - - - - -
 	plugins: [
+		// require('postcss-import'),
+		// require('tailwindcss'),
+		// require('autoprefixer'),
 	]
 };

@@ -7,22 +7,25 @@
     @apply overflow-hidden;
     @apply absolute;
     @apply w-px;
+
+	&:focus {
+		clip: auto !important;
+		clip-path: none;
+		@apply block;
+		@apply h-auto;
+		@apply w-auto;
+		@apply top-0.5;
+		@apply right-0.5;
+	}
 }
-.screen-reader-text:focus {
-	clip: auto !important;
-	clip-path: none;
-	@apply block;
-	@apply h-auto;
-	@apply w-auto;
-	@apply top-0.5;
-	@apply right-0.5;
-}
+
 .skip-link {
 	@apply -left-96;
-}
-.skip-link:focus {
-	@apply left-0.5;
-	@apply right-auto;
+
+	&:focus {
+		@apply left-0.5;
+		@apply right-auto;
+	}
 }
 
 * {

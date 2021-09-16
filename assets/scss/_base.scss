@@ -62,12 +62,13 @@
 	a {
 		@apply underline;
 		@apply text-primary;
-	}
-	a:hover,
-	a:focus {
-		@apply no-underline;
-	}
 
+		&:hover,
+		&:focus {
+			@apply no-underline;
+		}
+	}
+	
 	blockquote,
 	dl,
 	dd,
@@ -84,11 +85,12 @@
 	ul:not(.list-none),
 	ol:not(.list-none) {
 		@apply pl-10;
+
+		li {
+			@apply mt-1;
+		}
 	}
-	ul:not(.list-none) li,
-	ol:not(.list-none) li {
-		@apply mt-1;
-	}
+ 
 	ul:not(.list-none) {
 		@apply list-disc;
 	}
@@ -99,5 +101,9 @@
 	svg {
 		@apply max-w-full;
 		@apply h-auto;
+		
+		&:not(.icon-theme) path {
+			fill: currentColor;
+		}
 	}
 }

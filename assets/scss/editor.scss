@@ -1,11 +1,11 @@
 /* Tailwind CSS, change settings from tailwind.config.js */
-@import '_base.css';
+@import 'base';
 @tailwind components;
 @tailwind utilities;
 
 /* Blocks CSS for editor */
-@import '03-blocks/_button.css';
-@import '03-blocks/_quote.css';
+@import '03-blocks/button';
+@import '03-blocks/quote';
 
 /**
  * Editor fixes

@@ -12,6 +12,7 @@ select {
 	@apply mb-3;
 	@apply rounded;
 }
+
 fieldset {
 	@apply mt-3;
 }
@@ -30,8 +31,9 @@ input[type='submit'] {
 	@apply transform;
 	@apply transition;
 	@apply duration-75;
-}
-input[type='submit']:focus,
-input[type='submit']:hover {
-	@apply scale-105;
+
+	&:focus,
+	&:hover {
+		@apply scale-105;
+	}
 }

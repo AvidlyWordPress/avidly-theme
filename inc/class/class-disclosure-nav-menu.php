@@ -73,7 +73,7 @@ class Disclosure_Nav_Menu extends Walker_Nav_Menu {
 
 		$classes   = empty( $item->classes ) ? array() : (array) $item->classes;
 		$classes[] = 'menu-item-' . $item->ID;
-		$classes[] = 'relative flex justify-between items-center flex-wrap menu:flex-nowrap my-2 menu:ml-4 leading-tight'; // Style helpers.
+		$classes[] = 'relative flex justify-between items-center flex-wrap menu:flex-nowrap my-2 menu:mx-2 leading-tight'; // Style helpers.
 
 		/**
 		 * Filter the arguments for a single nav menu item.
