@@ -4,6 +4,7 @@
         "color": {
             "custom": false,
             "customDuotone": false,
+            "gradients": [],
             "customGradient": false,
             "link": true,
             "palette": [
