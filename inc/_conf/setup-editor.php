@@ -55,37 +55,37 @@ add_filter(
 
 			// Formating.
 			'core/code',
-			'core/freeform', // Classic editor.
+			// 'core/freeform', // Classic editor.
 			'core/html',
-			'core/preformatted',
-			'core/pullquote',
+			// 'core/preformatted',
+			// 'core/pullquote',
 			'core/table',
-			'core/verse',
+			// 'core/verse',
 
 			// Layout elements.
-			'core/nextpage', // Page Break.
-			'core/spacer',
+			// 'core/nextpage', // Page Break.
+			// 'core/spacer',
 			'core/buttons', // New in core 5.4.
 			'core/button', // Required for buttons.
 			'core/column', // New in core 5.8, required for columns.
 			'core/columns',
 			'core/group',
 			'core/media-text',
-			'core/more',
+			// 'core/more',
 			'core/block', // Reusable block.
-			'core/separator',
+			// 'core/separator',
 
 			// Widgets.
-			'core/shortcode',
-			'core/archives',
-			'core/calendar', // New incore 5.3.
+			// 'core/shortcode',
+			// 'core/archives',
+			// 'core/calendar', // New incore 5.3.
 			'core/categories',
-			'core/latest-comments',
+			// 'core/latest-comments',
 			'core/latest-posts',
 			'core/rss', // New incore 5.3.
-			'core/social-link', // New in core 5.4, required for social-links.
-			'core/social-links', // New incore 5.4.
-			'core/search', // New incore 5.4.
+			// 'core/social-link', // New in core 5.4, required for social-links.
+			// 'core/social-links', // New incore 5.4.
+			// 'core/search', // New incore 5.4.
 			'core/tag-cloud', // New incore 5.3.
 
 			// Theme blocks.
@@ -112,9 +112,8 @@ add_filter(
 			// Variations can be set via /assets/js/editor-script-block.js.
 			'core/embed',
 
-			// Custom (for example 'acf/block-name', etc..).
+			// Custom (for example 'gravityforms/form', 'acf/block-name', etc..).
 			'gravityforms/form',
-			'acf/avidly-acf-block',
 
 		);
 
