@@ -30,8 +30,8 @@ module.exports = {
 			// => @media (min-width: your-value) { ... }
 			'xs': '414px', 
 			'sm': '768px',
-			'md' : '1024px',
-			'lg': '1280px',
+			'md' : '1024px', // Add this value also in tailwind.config.json => "contentSize"
+			'lg': '1280px', // Add this value also in tailwind.config.json => "wideSize"
 			'xl': '1624px',
 			'menu' : '992px' // If you change this, update value also to to /assets/js/discloserMenu.js.
 			
