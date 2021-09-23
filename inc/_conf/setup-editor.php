@@ -30,10 +30,15 @@ add_action(
  * Comment out the ones theme doesn't use.
  *
  * @link https://wordpress.org/support/article/blocks/
+ * @link https://developer.wordpress.org/reference/hooks/allowed_block_types_all/
  */
-add_action(
+add_filter(
 	'allowed_block_types_all',
-	function( $allowed_block_types, $post ) {
+	function( $allowed_block_types, $editor_context ) {
+
+		if ( empty( $editor_context->post ) ) {
+			return $allowed_block_types;
+		}
 
 		$allowed_block_types = array(
 			// Common.
@@ -70,6 +75,19 @@ add_action(
 			'core/block', // Reusable block.
 			'core/separator',
 
+			// Widgets.
+			'core/shortcode',
+			'core/archives',
+			'core/calendar', // New incore 5.3.
+			'core/categories',
+			'core/latest-comments',
+			'core/latest-posts',
+			'core/rss', // New incore 5.3.
+			'core/social-link', // New in core 5.4, required for social-links.
+			'core/social-links', // New incore 5.4.
+			'core/search', // New incore 5.4.
+			'core/tag-cloud', // New incore 5.3.
+
 			// Theme blocks.
 			'core/site-logo', // New in core 5.8.
 			'core/site-tagline', // New in core 5.8.
@@ -90,53 +108,9 @@ add_action(
 			'core/loginout', // New in core 5.8.
 			'core/pagelist', // New in core 5.8.
 
-			// Widgets.
-			'core/shortcode',
-			'core/archives',
-			'core/calendar', // New incore 5.3.
-			'core/categories',
-			'core/latest-comments',
-			'core/latest-posts',
-			'core/rss', // New incore 5.3.
-			'core/social-link', // New in core 5.4, required for social-links.
-			'core/social-links', // New incore 5.4.
-			'core/search', // New incore 5.4.
-			'core/tag-cloud', // New incore 5.3.
-
 			// Embeds, common.
+			// Handling induvidual embed block variations has been changed in core 5.8 and can be set in /assets/js/editor-script-block.js
 			'core/embed',
-			'core-embed/twitter',
-			'core-embed/youtube',
-			'core-embed/facebook',
-			'core-embed/instagram',
-			'core-embed/wordpress',
-			'core-embed/soundcloud',
-			'core-embed/spotify',
-			'core-embed/flickr',
-			'core-embed/vimeo',
-			'core-embed/animoto',
-			'core-embed/cloudup',
-			'core-embed/crowdsignal',
-			'core-embed/dailymotion',
-			'core-embed/imgur',
-			'core-embed/issuu',
-			'core-embed/kickstarter',
-			'core-embed/meetup-com',
-			'core-embed/mixcloud',
-			'core-embed/reddit',
-			'core-embed/reverbnation',
-			'core-embed/screencast',
-			'core-embed/scribd',
-			'core-embed/slideshare',
-			'core-embed/smugmug',
-			'core-embed/speaker',
-			'core-embed/speaker-deck',
-			'core-embed/tiktok', // New incore 5.4.
-			'core-embed/ted',
-			'core-embed/tumblr',
-			'core-embed/videopress',
-			'core-embed/wordpress-tv',
-			'core-embed/amazon-kindle',
 
 			// Custom (for example 'acf/block-name', etc..).
 			'gravityforms/form',
