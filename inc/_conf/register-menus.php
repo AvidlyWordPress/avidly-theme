@@ -17,6 +17,7 @@ add_action(
 			array(
 				'primary_menu'   => _x( 'Primary menu', 'menu UI', 'avidly-theme' ),
 				'secondary_menu' => _x( 'Secondary menu', 'menu UI', 'avidly-theme' ),
+				'policy_menu'    => _x( 'Policy menu', 'menu UI', 'avidly-theme' ),
 			)
 		);
 	}

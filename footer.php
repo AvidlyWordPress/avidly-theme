@@ -15,7 +15,7 @@
 				wp_nav_menu(
 					array(
 						'theme_location' => 'secondary_menu',
-						'menu_class'     => 'list flex list-none my-3',
+						'menu_class'     => 'list flex flex-wrap list-none my-3',
 						'fallback_cb'    => false, // Do not fall back to wp_page_menu().
 					)
 				);

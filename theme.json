@@ -21,17 +21,17 @@
                 {
                     "name": "Primary",
                     "slug": "primary",
-                    "color": "#00009B"
+                    "color": "#0000FF"
                 },
                 {
                     "name": "Secondary",
                     "slug": "secondary",
-                    "color": "#FF7068"
+                    "color": "#00FF00"
                 },
                 {
                     "name": "Tertiary",
                     "slug": "tertiary",
-                    "color": "#FFDDE0"
+                    "color": "#FF0000"
                 }
             ]
         },

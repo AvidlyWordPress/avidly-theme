@@ -35,7 +35,7 @@
 					<?php echo esc_html_x( 'Skip to the content', 'skip link', 'avidly-theme' ); ?>
 				</a>
 
-				<div class="site-header__logo px-4 w-3/4 menu:w-auto xl:px-0">
+				<div class="site-header__logo px-4 max-w-xs xl:px-0">
 					<?php
 					echo sprintf(
 						'<p class="site-header__title"><a href="%s" aria-label="%s">%s</a></p>',

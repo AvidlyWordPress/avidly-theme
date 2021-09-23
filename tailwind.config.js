@@ -43,9 +43,9 @@ module.exports = {
 			current: 'currentColor',
 			black: '#000000',
 			white: '#FFFFFF',
-			primary : '#00009B',
-			secondary: '#FF7068',
-			tertiary: '#FFDDE0',
+			primary : '#0000FF',
+			secondary: '#00FF00',
+			tertiary: '#FF0000',
 		},
 		fontFamily: {
 			// Font Family: https://tailwindcss.com/docs/min-width
