@@ -13,7 +13,6 @@ default_locale="fi"
 # Directories
 basedir="$( cd "$( dirname "$0" )" && pwd )/."
 assetsdir="$basedir/assets"
-docsdir="$basedir/docs"
 basedir_all_files="$basedir/."
 setup_script="$basedir/setup.sh"
 
@@ -112,9 +111,6 @@ find "$basedir" -name 'style.css' -type f -exec perl -p -i -e "s|$default_name|$
 # PHP files
 find "$basedir_all_files" -name '*.php' -type f -exec perl -p -i -e "s|$default_name|$name|g" {} \;
 
-# Docs MD
-find "$docsdir" -name '*.md' -type f -exec perl -p -i -e "s|$default_name|$name|g" {} \;
-
 echo "--> Search & replace name ... ${blue}done${txtreset}"
 
 # PHP files
@@ -125,9 +121,6 @@ find "$basedir" -name 'style.css' -type f -exec perl -p -i -e "s|$default_id|$id
 
 # package.json
 find "$basedir" -name 'package.json' -type f -exec perl -p -i -e "s|$default_id|$id|g" {} \;
-
-# Docs .md
-find "$docsdir" -name '*.md' -type f -exec perl -p -i -e "s|$default_id|$id|g" {} \;
 
 echo "--> Search & replace id ..... ${blue}done${txtreset}"
 
