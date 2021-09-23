@@ -108,8 +108,8 @@ add_filter(
 			'core/loginout', // New in core 5.8.
 			'core/pagelist', // New in core 5.8.
 
-			// Embeds, common.
-			// Handling induvidual embed block variations has been changed in core 5.8 and can be set in /assets/js/editor-script-block.js
+			// Embed blocks was refactored to be variations of the base Embed block on core 5.6.
+			// Variations can be set via /assets/js/editor-script-block.js.
 			'core/embed',
 
 			// Custom (for example 'acf/block-name', etc..).
