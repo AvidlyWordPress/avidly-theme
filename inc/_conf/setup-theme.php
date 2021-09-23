@@ -42,18 +42,18 @@ add_action(
 		 * Set post thumbnail size.
 		 *
 		 * @link https://developer.wordpress.org/reference/functions/set_post_thumbnail_size/
-		 * /
-		set_post_thumbnail_size( 400, 300, true );
+		 */
+		// set_post_thumbnail_size( 400, 300, true );
 
 		/*
 		 * Set custom image sizes.
 		 *
 		 * @link https://developer.wordpress.org/reference/functions/add_image_size/
-		 * /
+		 */
 		// Example: Hard crop, 16:9.
-		add_image_size( 'custom-thumb', 400, 225, true );
-		add_image_size( 'custom-medium', 800, 450, true );
-		add_image_size( 'custom-large', 1200, 675, true );
+		// add_image_size( 'custom-thumb', 400, 225, true );
+		// add_image_size( 'custom-medium', 800, 450, true );
+		// add_image_size( 'custom-large', 1200, 675, true );
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments

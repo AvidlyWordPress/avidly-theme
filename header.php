@@ -29,7 +29,7 @@
 		<?php wp_body_open(); ?>
 
 		<div class="nav-container container">
-			<header class="site-header relative w-full menu:flex items-center justify-between alignwide">
+			<header class="site-header relative w-full menu:flex items-center justify-between alignwide" aria-label="<?php echo esc_html_x( 'Site header', 'theme UI', 'avidly-theme' ); ?>">
 
 				<a class="skip-link screen-reader-text border-2 border-primary has-white-background-color has-text-color has-primary-color p-4" href="#primary">
 					<?php echo esc_html_x( 'Skip to the content', 'skip link', 'avidly-theme' ); ?>

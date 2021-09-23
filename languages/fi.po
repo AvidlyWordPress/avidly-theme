@@ -1,13 +1,13 @@
 # Copyright (C) 2016 Automattic
-# Copyright (C) 2017 Avidly
+# Copyright (C) 2020 Avidly
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
 "Project-Id-Version: Avidly Theme 2.0\n"
-"Report-Msgid-Bugs-To: https://https://github.com/ZeelandFamily/zf-theme/"
-"issues\n"
-"POT-Creation-Date: 2021-09-07 13:43+0300\n"
-"PO-Revision-Date: 2021-09-07 13:44+0300\n"
+"Report-Msgid-Bugs-To: https://github.com/AvidlyWordPress/avidly-"
+"theme\n"
+"POT-Creation-Date: 2021-09-23 11:01+0300\n"
+"PO-Revision-Date: 2021-09-23 11:02+0300\n"
 "Last-Translator: \n"
 "Language-Team: Avidly Digital <help@avidlyagency.com>\n"
 "Language: fi\n"
@@ -18,9 +18,9 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_n:2,1;_x:2c,1;esc_attr__;__ngettext:1,2;"
-"__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_nx:4c,1,2\n"
+"__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_nx_noop:4c,1,2;"
+"_ex:1,2c;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
+"esc_html_x:1,2c;_nx:4c,1,2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: bower_components\n"
@@ -29,7 +29,7 @@ msgstr ""
 
 #: 404.php:18
 msgid "Page not found"
-msgstr "Sivua ei löydy."
+msgstr "Sivua ei löydy"
 
 #: 404.php:23
 msgid "Oops! That page can&rsquo;t be found."
@@ -56,10 +56,20 @@ msgctxt "comments"
 msgid "Comments are closed."
 msgstr "Kommentointi on suljettu."
 
+#: footer.php:11
+msgctxt "theme UI"
+msgid "Site footer"
+msgstr "Sivuston alatunniste"
+
 #: footer.php:12 inc/_conf/register-menus.php:19
 msgctxt "menu UI"
 msgid "Secondary menu"
 msgstr "Toissijainen valikko"
+
+#: header.php:32
+msgctxt "theme UI"
+msgid "Site header"
+msgstr "Sivuston ylätunniste"
 
 #: header.php:35
 msgctxt "skip link"
@@ -71,12 +81,12 @@ msgctxt "screen reader text"
 msgid "Go to front page"
 msgstr "Siirry etusivulle"
 
-#: header.php:55 header.php:56
+#: header.php:54
 msgctxt "menu UI"
 msgid "Menu"
 msgstr "Valikko"
 
-#: header.php:61 inc/_conf/register-menus.php:18
+#: header.php:60 inc/_conf/register-menus.php:18
 msgctxt "menu UI"
 msgid "Primary menu"
 msgstr "Päävalikko"
@@ -101,17 +111,17 @@ msgctxt "widget area"
 msgid "Add widgets here."
 msgstr "Lisää vimpaimet tähän."
 
-#: inc/_conf/setup-editor.php:166
+#: inc/_conf/setup-editor.php:139
 msgctxt "admin: block pattern category"
 msgid "Block category"
 msgstr "Mallikategoria"
 
-#: inc/_conf/setup-editor.php:173
+#: inc/_conf/setup-editor.php:146
 msgctxt "admin: block pattern title"
 msgid "Custom block pattern"
 msgstr "Lohkomalli"
 
-#: inc/_conf/setup-editor.php:174
+#: inc/_conf/setup-editor.php:147
 msgctxt "admin: block pattern description"
 msgid "Example of custom block pattern."
 msgstr "Esimerkki lohkomallista."
@@ -134,7 +144,7 @@ msgctxt "theme UI"
 msgid "You searched for %s"
 msgstr "Hakusi: %s"
 
-#: template-parts/entry/card.php:23 template-parts/entry/content.php:24
+#: template-parts/entry/card.php:24 template-parts/entry/content.php:25
 msgctxt "theme UI"
 msgid "Published"
 msgstr "Julkaistu"

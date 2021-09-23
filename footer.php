@@ -8,7 +8,7 @@
 
 ?>
 
-<footer class="site-footer container">
+<footer class="site-footer container" aria-label="<?php echo esc_html_x( 'Site footer', 'theme UI', 'avidly-theme' ); ?>">
 	<nav class="mt-8 has-background has-secondary-background-color has-text-color has-white-color alignfull" aria-label="<?php echo esc_html_x( 'Secondary menu', 'menu UI', 'avidly-theme' ); ?>">
 		<div class="nowrap overflow-x-auto alignwide">
 			<?php
