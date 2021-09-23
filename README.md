@@ -16,7 +16,7 @@ I integrate with Tailwind CSS. Learn <a href="https://tailwindcss.com/docs">how 
 ### Requirements
 * Requires at least WordPress 5.8
 * Webpack / Laravel Mix for bundling assets
-* NodeJS v12.14.1 or later with npm 6.13.4 (no guarantees for v14 or newer)
+* NodeJS v12.14.1 or later
 
 ## Getting Started
 1. Download avidly-theme repository.

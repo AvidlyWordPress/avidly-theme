@@ -3,8 +3,7 @@
   "version": "2.0.0",
   "description": "",
   "main": "index.js",
-  "directories": {
-  },
+  "directories": {},
   "scripts": {
     "dev": "npm run development",
     "development": "mix",
