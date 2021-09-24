@@ -1,8 +1,7 @@
 /* Tailwind CSS, change settings from tailwind.config.js */
 @import 'base';
 @tailwind components;
-@tailwind utilities;
-
+@import 'utilities';
 
 
 /* Generic CSS for front end */

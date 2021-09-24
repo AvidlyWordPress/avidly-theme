@@ -1,0 +1,21 @@
+
+@tailwind utilities;
+
+@layer utilities {
+	.has-text-color a {
+		@apply text-current;
+	}
+
+	.link-element {
+		@apply relative;
+
+		a::after {
+			content: '';
+			@apply absolute;
+			@apply top-0;
+			@apply left-0;
+			@apply w-full;
+			@apply h-full;
+		}
+	}
+}

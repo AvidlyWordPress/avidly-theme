@@ -12,15 +12,22 @@
 
 <article <?php post_class(); ?> aria-labelledby="post-<?php the_ID(); ?>">
 
-	<header class="entry-header container text-center has-text-color has-white-color has-background-color has-primary-background-color alignfull px-5 py-10 mb-6">
-		<?php the_title( '<h1 id="post-' . esc_attr( get_the_ID() ) . '" class=" my-0">', '</h1>' ); ?>
+	<header class="entry-header container py-10 mb3-6">
+
+		<?php if ( has_post_thumbnail() ) : ?>
+			<div class="entry-header__image relative alignwide h-48 xxs:h-60 xs:h-96 lg:h-128 mb-5">
+				<?php the_post_thumbnail( 'large', array( 'class' => 'object-cover w-full h-full' ) ); ?>
+			</div>
+		<?php endif; ?>
+
+		<?php the_title( '<h1 id="post-' . esc_attr( get_the_ID() ) . '" class=" my-0 alignwide">', '</h1>' ); ?>
 
 		<?php
 		// Display date for posts.
 		if ( 'post' === get_post_type() ) {
 			echo sprintf( // WPCS: XSS OK.
 				/* translators: 1: published title, 2: date. */
-				'<time class="entry-header__time" datetime="%s">%s: %s</time>',
+				'<time class="entry-header__time block alignwide" datetime="%s">%s: %s</time>',
 				esc_attr( get_the_date( DATE_W3C ) ),
 				esc_html_x( 'Published', 'theme UI', 'avidly-theme' ),
 				esc_attr( get_the_date() )

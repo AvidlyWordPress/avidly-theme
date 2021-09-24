@@ -14,8 +14,8 @@
  */
 
 $page_for_posts = get_option( 'page_for_posts' );
-
-
+$posts_title    = get_the_title( $page_for_posts );
+$posts_content  = apply_filters( 'the_content', get_post_field( 'post_content', $page_for_posts ) );
 
 get_header();
 ?>
@@ -23,14 +23,16 @@ get_header();
 	<div id="primary" class="site-content overflow-hidden">
 		<main id="main" class="site-main">
 
-		<header class="entry-header container text-center has-text-color has-white-color has-background-color has-primary-background-color alignfull px-5 py-10 mb-6">
+		<header class="entry-header container text-center has-text-color has-white-color has-background-color has-black-background-color link-color-secondary px-5 py-10 mb-6">
 			<?php
 			if ( is_home() ) {
-				echo '<h1 class="my-0">' . esc_html( get_the_title( $page_for_posts ) ) . '</h1>';
+				echo '<h1 class="my-0">' . esc_html( $posts_title ) . '</h1>';
+				echo wp_kses_post( $posts_content );
 			} else if ( is_search() ) {
 				echo sprintf(
+					/* translators: 1: search word. */
 					'<h1 class="my-0"">' . esc_html_x( 'You searched for %s', 'theme UI', 'avidly-theme' ) . '</h1>',
-					'<span>' . get_search_query() . '</span>'
+					'<span>' . esc_html( get_search_query() ) . '</span>'
 				);
 			} else {
 				the_archive_title( '<h1 class="my-0"">', '</h1>' );
@@ -58,7 +60,7 @@ get_header();
 						?>
 					</ul>
 
-				<?php
+					<?php
 				else :
 
 					// If no content, include the "No posts found" template.

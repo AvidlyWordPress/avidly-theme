@@ -1,4 +1,3 @@
-const plugin = require('tailwindcss/plugin');
 const _      = require("lodash");
 
 module.exports = {
@@ -28,7 +27,8 @@ module.exports = {
 		screens: {
 			// Breakpoints: https://tailwindcss.com/docs/breakpoints#custom-media-queries
 			// => @media (min-width: your-value) { ... }
-			'xs': '414px', 
+			'xxs': '414px',
+			'xs': '481px',
 			'sm': '768px',
 			'md' : '1024px', // Add this value also in theme.json => "contentSize"
 			'lg': '1280px', // Add this value also in theme.json => "wideSize"
@@ -89,6 +89,10 @@ module.exports = {
 				'1/2': '50%',
 				'3/4': '75%',
 			},
+			height: theme => ({
+				// https://sung.codes/blog/2020/02/05/extending-tailwind-css-screen-height-utility/
+				'128': '32rem',
+			}),
 		},
 	},
 

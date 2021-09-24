@@ -16,7 +16,6 @@ add_action(
 		register_nav_menus(
 			array(
 				'primary_menu'   => _x( 'Primary menu', 'menu UI', 'avidly-theme' ),
-				'secondary_menu' => _x( 'Secondary menu', 'menu UI', 'avidly-theme' ),
 				'policy_menu'    => _x( 'Policy menu', 'menu UI', 'avidly-theme' ),
 			)
 		);
@@ -25,15 +24,23 @@ add_action(
 
 
 /**
- * Add custom classes to all <a> elements wp_nav_menu() menus.
+ * Add custom classes to all <a> elements in wp_nav_menu() menus.
  *
  * @return $atts.
  */
 add_action(
 	'nav_menu_link_attributes',
-	function( $atts ) {
-		$atts['class'] = 'no-underline';
+	function( $atts, $item, $args ) {
+		// All menus.
+		$atts['class'] = 'no-underline hover:underline';
+
+		// Secondary menu.
+		if ( 'policy_menu' === $args->theme_location ) {
+			$atts['class'] .= ' mr-4';
+		}
+
 		return $atts;
 	},
-	10
+	10,
+	3
 );

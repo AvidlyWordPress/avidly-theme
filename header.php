@@ -47,35 +47,36 @@
 				</div><!-- /.site-header__logo -->
 
 				<div id="main-navigation-wrapper" class="main-navigation-wrapper">
-					<?php
-					echo sprintf(
-						'<button class="%s" aria-expanded="false" aria-controls="mobile-menu" aria-label="%s">%s</button>',
-						'mobile-menu-toggle absolute top-4 right-2 block my-2 mx-4 xl:mx-0 p-4 has-primary-background-color has-white-color menu:hidden',
-						esc_html( _x( 'Menu', 'menu UI', 'avidly-theme' ) ),
-						avidly_theme_get_theme_svg( 'menu', 'ui', 'w-8 mx-auto' ) // phpcs:ignore
-					);
-					?>
+					<?php if ( has_nav_menu( 'primary_menu' ) ) : ?>
 
-					<div id="mobile-menu" class="hidden px-4 xl:px-0 menu:block">
-						<nav id="nav" class="nav-primary" aria-label="<?php echo esc_html_x( 'Primary menu', 'menu UI', 'avidly-theme' ); ?>">
-							<?php
-							if ( has_nav_menu( 'primary_menu' ) ) {
+						<?php
+						echo sprintf(
+							'<button class="%s" aria-expanded="false" aria-controls="mobile-menu" aria-label="%s">%s</button>',
+							'mobile-menu-toggle absolute top-4 right-2 block my-2 mx-4 xl:mx-0 p-4 has-primary-background-color has-white-color menu:hidden',
+							esc_html( _x( 'Menu', 'menu UI', 'avidly-theme' ) ),
+							avidly_theme_get_theme_svg( 'menu', 'ui', 'w-8 mx-auto' ) // phpcs:ignore
+						);
+						?>
+
+						<div id="mobile-menu" class="hidden px-4 xl:px-0 menu:block">
+							<nav id="nav" class="nav-primary" aria-label="<?php echo esc_html_x( 'Primary menu', 'menu UI', 'avidly-theme' ); ?>">
+								<?php
 								wp_nav_menu(
 									array(
 										'theme_location' => 'primary_menu',
 										'container'      => false,
 										'depth'          => 4,
-										'menu_class'     => 'disclosure-menu list-none flex flex-col menu:flex-row menu:flex-wrap menu:justify-end',
+										'menu_class'     => 'disclosure-menu list-none flex flex-col menu:flex-row menu:flex-wrap menu:justify-end has-text-color',
 										'menu_id'        => 'main-menu',
 										'echo'           => true,
 										'walker'         => new Disclosure_Nav_Menu(),
 										'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 									)
 								);
-							}
-							?>
-						</nav>
-					</div><!-- /.mobile-menu -->
+								?>
+							</nav>
+						</div><!-- /.mobile-menu -->
+					<?php endif; ?>
 				</div>
 			</header>
 		</div>

@@ -14,14 +14,14 @@ get_header();
 	<div id="primary" class="site-content overflow-hidden">
 		<main id="main" class="site-main">
 
-		<header class="entry-header container text-center has-text-color has-white-color has-background-color has-primary-background-color alignfull px-5 py-10 mb-6">
-			<h1 class="my-0"><?php esc_html_e( 'Page not found', 'avidly-theme' ); ?></h1>
-		</header><!-- .entry-header -->
+			<header class="entry-header container text-center px-5 py-10 mb-6">
+				<h1 class="my-0">404 - <?php esc_html_e( 'Page not found', 'avidly-theme' ); ?></h1>
+			</header><!-- .entry-header -->
 
-			<div class="entry-content container text-center">
+			<div class="entry-content container text-center mb-12">
 
 				<p><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'avidly-theme' ); ?></p>
-				<p><a href="<?php echo esc_html( get_site_url() ); ?>" class="wp-block-button__link">
+				<p><a href="<?php echo esc_html( get_site_url() ); ?>" class="wp-block-button__link mt-3">
 					<?php esc_html_e( 'Go to frontpage', 'avidly-theme' ); ?>
 				</a>
 
