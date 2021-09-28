@@ -78,15 +78,15 @@ add_filter(
 			// Widgets.
 			// 'core/shortcode',
 			// 'core/archives',
-			// 'core/calendar', // New incore 5.3.
+			// 'core/calendar', // New in core 5.3.
 			'core/categories',
 			// 'core/latest-comments',
 			'core/latest-posts',
-			'core/rss', // New incore 5.3.
+			'core/rss', // New in core 5.3.
 			// 'core/social-link', // New in core 5.4, required for social-links.
-			// 'core/social-links', // New incore 5.4.
-			// 'core/search', // New incore 5.4.
-			'core/tag-cloud', // New incore 5.3.
+			// 'core/social-links', // New in core 5.4.
+			// 'core/search', // New in core 5.4.
+			'core/tag-cloud', // New in core 5.3.
 
 			// Theme blocks.
 			'core/site-logo', // New in core 5.8.
@@ -112,9 +112,67 @@ add_filter(
 			// Variations can be set via /assets/js/editor-script-block.js.
 			'core/embed',
 
-			// Custom (for example 'gravityforms/form', 'acf/block-name', etc..).
+			// Gravity Forms.
 			'gravityforms/form',
 
+			/*
+			// Advanced Custom Fields.
+			'acf/your-block-name',
+			*/
+
+			/*
+			// LearnDash LMS (block list from version 3.5.0).
+			'learndash/ld-login',
+			'learndash/ld-profile',
+			'learndash/ld-course-list',
+			'learndash/ld-lesson-list',
+			'learndash/ld-topic-list',
+			'learndash/ld-quiz-list',
+			'learndash/ld-course-progress',
+			'learndash/ld-visitor',
+			'learndash/ld-student',
+			'learndash/ld-course-complete',
+			'learndash/ld-course-inprogress',
+			'learndash/ld-course-notstarted',
+			'learndash/ld-course-resume',
+			'learndash/ld-course-info',
+			'learndash/ld-user-course-points',
+			'learndash/ld-group-list',
+			'learndash/ld-user-groups',
+			'learndash/ld-group',
+			'learndash/ld-payment-buttons',
+			'learndash/ld-course-content',
+			'learndash/ld-course-expire-status',
+			'learndash/ld-certificate',
+			'learndash/ld-quiz-complete',
+			'learndash/ld-courseinfo',
+			'learndash/ld-quizinfo',
+			'learndash/ld-groupinfo',
+			'learndash/ld-usermeta',
+			*/
+
+			/*
+			// WooCommerce (block list from version 5.7.1).
+			'woocommerce/all-reviews',
+			'woocommerce/featured-category',
+			'woocommerce/featured-product',
+			'woocommerce/handpicked-products',
+			'woocommerce/product-best-sellers',
+			'woocommerce/product-categories',
+			'woocommerce/product-category',
+			'woocommerce/product-new',
+			'woocommerce/product-on-sale',
+			'woocommerce/products-by-attribute',
+			'woocommerce/product-top-rated',
+			'woocommerce/reviews-by-product',
+			'woocommerce/reviews-by-category',
+			'woocommerce/product-search',
+			'woocommerce/product-tag',
+			'woocommerce/all-products',
+			'woocommerce/price-filter',
+			'woocommerce/attribute-filter',
+			'woocommerce/active-filters',
+			*/
 		);
 
 		return $allowed_block_types;
