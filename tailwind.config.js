@@ -88,6 +88,7 @@ module.exports = {
 				'1/4': '25%',
 				'1/2': '50%',
 				'3/4': '75%',
+				'2xs': '16rem',
 			},
 			height: theme => ({
 				// https://sung.codes/blog/2020/02/05/extending-tailwind-css-screen-height-utility/

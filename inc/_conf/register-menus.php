@@ -15,8 +15,8 @@ add_action(
 	function() {
 		register_nav_menus(
 			array(
-				'primary_menu'   => _x( 'Primary menu', 'menu UI', 'avidly-theme' ),
-				'policy_menu'    => _x( 'Policy menu', 'menu UI', 'avidly-theme' ),
+				'primary_menu'   => _x( 'Primary menu', 'admin UI: menu name', 'avidly-theme' ),
+				'policy_menu'    => _x( 'Policy menu', 'admin UI: menu UI', 'avidly-theme' ),
 			)
 		);
 	}

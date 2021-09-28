@@ -22,21 +22,17 @@ $article_class .= ( is_sticky() && ! is_paged() ) ? ' sm:flex' : ' block xs:flex
 
 	<div class="card__wrapper p-4 flex-1">
 		<header class="card__header mb-2">
-			<?php the_title( '<h2 id="post-' . esc_attr( get_the_ID() ) . '" class="my-0 text-xl"><a href="' . esc_url( get_the_permalink() ) . '">', '</a></h2>' );
+			<?php
+			the_title( '<h2 id="post-' . esc_attr( get_the_ID() ) . '" class="my-0 text-xl break-words"><a href="' . esc_url( get_the_permalink() ) . '">', '</a></h2>' );
 			?>
 
 			<?php
 			if ( 'post' === get_post_type() ) {
-				echo sprintf( // WPCS: XSS OK.
-					/* translators: 1: published title, 2: date. */
-					'<time class="entry-header__time text-sm" datetime="%s">%s: %s</time>',
-					esc_attr( get_the_date( DATE_W3C ) ),
-					esc_html_x( 'Published', 'theme UI', 'avidly-theme' ),
-					esc_attr( get_the_date() )
-				);
+				// phpcs:ignore
+				echo avidly_theme_get_post_date();
 			}
 			?>
-		</header><!-- .cardcard__header -->
+		</header><!-- .card__header -->
 
 		<div class="card__content">
 			<?php the_excerpt(); ?>

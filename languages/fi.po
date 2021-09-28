@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: Avidly Theme 2.0\n"
 "Report-Msgid-Bugs-To: https://github.com/AvidlyWordPress/avidly-"
 "theme\n"
-"POT-Creation-Date: 2021-09-23 11:01+0300\n"
-"PO-Revision-Date: 2021-09-23 11:02+0300\n"
+"POT-Creation-Date: 2021-09-28 15:52+0300\n"
+"PO-Revision-Date: 2021-09-28 15:52+0300\n"
 "Last-Translator: \n"
 "Language-Team: Avidly Digital <help@avidlyagency.com>\n"
 "Language: fi\n"
@@ -22,241 +22,171 @@ msgstr ""
 "_ex:1,2c;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
 "esc_html_x:1,2c;_nx:4c,1,2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: bower_components\n"
 "X-Poedit-SearchPathExcluded-1: node_modules\n"
 "X-Poedit-SearchPathExcluded-2: _src\n"
 
-#: 404.php:18
-msgid "Page not found"
-msgstr "Sivua ei löydy"
+#. translators: 404 page title.
+#: 404.php:21
+msgctxt "theme UI"
+msgid "404 - Page not found"
+msgstr "404 - Sivua ei löydy"
 
-#: 404.php:23
+#. translators: 404 page error message.
+#: 404.php:31
+msgctxt "theme UI"
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Hups, etsimääsi sisältöä löytynyt."
 
-#: 404.php:25
-msgid "Go to frontpage"
+#. translators: Link to front page.
+#: 404.php:38 header.php:47
+msgctxt "theme UI"
+msgid "Go to front page"
 msgstr "Siirry etusivulle"
 
-#: comments.php:30
+#. translators: Comment title (singular): %1$s title.
+#: comments.php:31
 #, php-format
-msgctxt "comments title (singular)"
+msgctxt "comments UI"
 msgid "One thought on &ldquo;%1$s&rdquo;"
 msgstr "Yksi kommentti: &ldquo;%1$s&rdquo;"
 
-#: comments.php:36
+#. translators: Comment title (plurar): %1$s comment count number, %2$s title.
+#: comments.php:39
 #, php-format
-msgctxt "comments title (plurar)"
+msgctxt "comments UI"
 msgid "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr "%1$s kommenttia: &ldquo;%2$s&rdquo;"
 
-#: comments.php:59
-msgctxt "comments"
+#. translators: Commenting is closed message.
+#: comments.php:68
+msgctxt "comments UI"
 msgid "Comments are closed."
 msgstr "Kommentointi on suljettu."
 
 #: footer.php:11
-msgctxt "theme UI"
+msgctxt "theme UI: aria landmark"
 msgid "Site footer"
 msgstr "Sivuston alatunniste"
 
-#: footer.php:12 inc/_conf/register-menus.php:19
-msgctxt "menu UI"
-msgid "Secondary menu"
-msgstr "Toissijainen valikko"
+#: footer.php:14
+msgctxt "menu UI: aria landmark"
+msgid "Policy menu"
+msgstr "Selostevalikko"
 
 #: header.php:32
-msgctxt "theme UI"
+msgctxt "theme UI: aria landmark"
 msgid "Site header"
 msgstr "Sivuston ylätunniste"
 
-#: header.php:35
-msgctxt "skip link"
+#. translators: Link to skip site section.
+#: header.php:37
+msgctxt "theme UI: skip link"
 msgid "Skip to the content"
 msgstr "Siirry sisältöön"
 
-#: header.php:43
-msgctxt "screen reader text"
-msgid "Go to front page"
-msgstr "Siirry etusivulle"
-
-#: header.php:54
-msgctxt "menu UI"
+#. translators: Mobile menu toggle button.
+#: header.php:61
+msgctxt "menu UI: toggle"
 msgid "Menu"
 msgstr "Valikko"
 
-#: header.php:60 inc/_conf/register-menus.php:18
-msgctxt "menu UI"
+#: header.php:67
+msgctxt "menu UI: aria landmark"
 msgid "Primary menu"
 msgstr "Päävalikko"
 
-#: inc/_conf/register-assets.php:55
-msgctxt "menu UI"
-msgid "Expand submenu"
-msgstr "Laajenna alivalikko"
+#: inc/_conf/register-menus.php:18
+msgctxt "admin UI: menu name"
+msgid "Primary menu"
+msgstr "Päävalikko"
 
-#: inc/_conf/register-assets.php:56
-msgctxt "menu UI"
-msgid "Collapse submenu"
-msgstr "Suslje alivalikko"
+#: inc/_conf/register-menus.php:19
+msgctxt "admin UI: menu UI"
+msgid "Policy menu"
+msgstr "Selostevalikko"
 
 #: inc/_conf/register-sidebars.php:18
-msgctxt "widget area"
+msgctxt "admin UI: widget area"
 msgid "Footer"
 msgstr "Alatunniste"
 
 #: inc/_conf/register-sidebars.php:20
-msgctxt "widget area"
+msgctxt "admin UI: widget area"
 msgid "Add widgets here."
-msgstr "Lisää vimpaimet tähän."
+msgstr "Lisää vimpaimia tähän."
 
-#: inc/_conf/setup-editor.php:139
-msgctxt "admin: block pattern category"
+#: inc/_conf/setup-editor.php:196
+msgctxt "admin UI: block pattern category"
 msgid "Block category"
 msgstr "Mallikategoria"
 
-#: inc/_conf/setup-editor.php:146
-msgctxt "admin: block pattern title"
+#: inc/_conf/setup-editor.php:203
+msgctxt "admin UI: block pattern title"
 msgid "Custom block pattern"
 msgstr "Lohkomalli"
 
-#: inc/_conf/setup-editor.php:147
-msgctxt "admin: block pattern description"
+#: inc/_conf/setup-editor.php:204
+msgctxt "admin UI: block pattern description"
 msgid "Example of custom block pattern."
 msgstr "Esimerkki lohkomallista."
 
+#. translators: %s parent page title.
 #: inc/class/class-disclosure-nav-menu.php:51
 #, php-format
-msgctxt "menu UI"
+msgctxt "menu UI: aria landmark"
 msgid "Submenu for %s"
 msgstr "%s alavalikko"
 
+#. translators: Submenu toggle button: %s parent page title.
 #: inc/class/class-disclosure-nav-menu.php:189
 #, php-format
-msgctxt "menu UI"
+msgctxt "menu UI: toggle"
 msgid "Submenu: %s"
-msgstr "Valikko: %s"
+msgstr "Alavalikko: %s"
 
-#: index.php:32
+#. translators: %s post date.
+#: inc/helpers/template-tags.php:17
+#, php-format
+msgctxt "theme UI"
+msgid "Posted on %s"
+msgstr "Julkaistu %s"
+
+#. translators: %s search word.
+#: index.php:34
 #, php-format
 msgctxt "theme UI"
 msgid "You searched for %s"
 msgstr "Hakusi: %s"
 
-#: template-parts/entry/card.php:24 template-parts/entry/content.php:25
-msgctxt "theme UI"
-msgid "Published"
-msgstr "Julkaistu"
-
-#: template-parts/entry/none.php:16
+#. translators: Default no content message
+#: template-parts/entry/none.php:18
 msgctxt "theme UI"
 msgid "No content found."
 msgstr "Sisältöä ei löytynyt."
 
-#~ msgctxt "admin: color name"
-#~ msgid "Primary"
-#~ msgstr "Ensisijainen"
+#~ msgctxt "admin: menu name"
+#~ msgid "Primary menu"
+#~ msgstr "Päävalikko"
 
-#~ msgctxt "admin: color name"
-#~ msgid "Secondary"
-#~ msgstr "Toissijainen"
+#~ msgctxt "admin: menu UI"
+#~ msgid "Policy menu"
+#~ msgstr "Selostevalikko"
 
-#~ msgctxt "admin: color name"
-#~ msgid "Tertiary"
-#~ msgstr "Tertiäärinen"
+#~ msgctxt "menu UI: toggle"
+#~ msgid "Expand submenu"
+#~ msgstr "Laajenna alavalikko"
 
-#~ msgctxt "admin: color name"
-#~ msgid "Dark gray"
-#~ msgstr "Harmaa, tumma"
-
-#~ msgctxt "admin: color name"
-#~ msgid "Light gray"
-#~ msgstr "Harmaa, vaalea"
-
-#~ msgctxt "admin: color name"
-#~ msgid "White"
-#~ msgstr "Valkoinen"
-
-#~ msgctxt "admin: color name"
-#~ msgid "Black"
-#~ msgstr "Musta"
-
-#~ msgctxt "admin: font size name"
-#~ msgid "Regular"
-#~ msgstr "Normaali"
-
-#~ msgctxt "admin: font size name"
-#~ msgid "Large"
-#~ msgstr "Suuri"
+#~ msgctxt "menu UI: toggle"
+#~ msgid "Collapse submenu"
+#~ msgstr "Sulje alivalikko"
 
 #~ msgctxt "menu UI"
-#~ msgid "Menu toggle"
-#~ msgstr "Valikon avaus/sulku"
+#~ msgid "Primary menu"
+#~ msgstr "Päävalikko"
 
-#~ msgid "Continue reading"
-#~ msgstr "Jatka lukemista"
-
-#~ msgctxt "block title"
-#~ msgid "Cases"
-#~ msgstr "Asiakastarinat"
-
-#~ msgctxt "block description"
-#~ msgid "A custom cases block."
-#~ msgstr "Listaa asiakastarinoita."
-
-#~ msgctxt "block title"
-#~ msgid "People"
-#~ msgstr "Ihmiset"
-
-#~ msgctxt "block description"
-#~ msgid "A custom people block."
-#~ msgstr "Listaa henkilöitä."
-
-#~ msgctxt "block title"
-#~ msgid "Related pages"
-#~ msgstr "Katso myös"
-
-#, fuzzy
-#~| msgctxt "block description"
-#~| msgid "A custom cases block."
-#~ msgctxt "block description"
-#~ msgid "A custom related pages block."
-#~ msgstr "Listaa asiakastarinoita."
-
-#, php-format
-#~ msgid "#%d (no title)"
-#~ msgstr "#%d (ei otsikkoa)"
-
-#~ msgctxt "alt text"
-#~ msgid "Default people image"
-#~ msgstr "Oletuskuva"
-
-#~ msgctxt "alt text"
-#~ msgid "Default post image"
-#~ msgstr "Oletuskuva"
-
-#~ msgctxt "block placeholder"
-#~ msgid "Select related pages from left sidebar"
-#~ msgstr "Valitse aiheeseen liittyvät sivut vasemmasta sivupalkista."
-
-#~ msgctxt "post archive subheading"
-#~ msgid "News"
-#~ msgstr "Tiedotteet"
-
-#~ msgctxt "post archive heading"
-#~ msgid "News & current affairs"
-#~ msgstr "Ajankohtaista juuri nyt"
-
-#~ msgctxt "search results"
-#~ msgid "Results:"
-#~ msgstr "Hakutulokset:"
-
-#~ msgid "Horizontal"
-#~ msgstr "Vaakavalikko"
-
-#~ msgid "Close Menu"
-#~ msgstr "Sulje menu"
-
-#~ msgid "Mobile"
-#~ msgstr "Mobiilivalikko"
+#~ msgctxt "menu UI"
+#~ msgid "Policy menu"
+#~ msgstr "Selostevalikko"

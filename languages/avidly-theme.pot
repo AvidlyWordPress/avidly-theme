@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Avidly Theme 2.0\n"
 "Report-Msgid-Bugs-To: https://github.com/AvidlyWordPress/avidly-theme\n"
-"POT-Creation-Date: 2021-09-23 10:45+0300\n"
+"POT-Creation-Date: 2021-09-28 15:52+0300\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,124 +17,147 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_n:2,1;_x:2c,1;esc_attr__;__ngettext:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_nx:4c,1,2\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: bower_components\n"
 "X-Poedit-SearchPathExcluded-1: node_modules\n"
 "X-Poedit-SearchPathExcluded-2: _src\n"
 
-#: 404.php:18
-msgid "Page not found"
+#. translators: 404 page title.
+#: 404.php:21
+msgctxt "theme UI"
+msgid "404 - Page not found"
 msgstr ""
 
-#: 404.php:23
+#. translators: 404 page error message.
+#: 404.php:31
+msgctxt "theme UI"
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: 404.php:25
-msgid "Go to frontpage"
-msgstr ""
-
-#: comments.php:30
-#, php-format
-msgctxt "comments title (singular)"
-msgid "One thought on &ldquo;%1$s&rdquo;"
-msgstr ""
-
-#: comments.php:36
-#, php-format
-msgctxt "comments title (plurar)"
-msgid "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr ""
-
-#: comments.php:59
-msgctxt "comments"
-msgid "Comments are closed."
-msgstr ""
-
-#: footer.php:12 inc/_conf/register-menus.php:19
-msgctxt "menu UI"
-msgid "Secondary menu"
-msgstr ""
-
-#: header.php:35
-msgctxt "skip link"
-msgid "Skip to the content"
-msgstr ""
-
-#: header.php:43
-msgctxt "screen reader text"
+#. translators: Link to front page.
+#: 404.php:38 header.php:47
+msgctxt "theme UI"
 msgid "Go to front page"
 msgstr ""
 
-#: header.php:54
-msgctxt "menu UI"
+#. translators: Comment title (singular): %1$s title.
+#: comments.php:31
+#, php-format
+msgctxt "comments UI"
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#. translators: Comment title (plurar): %1$s comment count number, %2$s title.
+#: comments.php:39
+#, php-format
+msgctxt "comments UI"
+msgid "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr ""
+
+#. translators: Commenting is closed message.
+#: comments.php:68
+msgctxt "comments UI"
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:11
+msgctxt "theme UI: aria landmark"
+msgid "Site footer"
+msgstr ""
+
+#: footer.php:14
+msgctxt "menu UI: aria landmark"
+msgid "Policy menu"
+msgstr ""
+
+#: header.php:32
+msgctxt "theme UI: aria landmark"
+msgid "Site header"
+msgstr ""
+
+#. translators: Link to skip site section.
+#: header.php:37
+msgctxt "theme UI: skip link"
+msgid "Skip to the content"
+msgstr ""
+
+#. translators: Mobile menu toggle button.
+#: header.php:61
+msgctxt "menu UI: toggle"
 msgid "Menu"
 msgstr ""
 
-#: header.php:60 inc/_conf/register-menus.php:18
-msgctxt "menu UI"
+#: header.php:67
+msgctxt "menu UI: aria landmark"
 msgid "Primary menu"
 msgstr ""
 
-#: inc/_conf/register-assets.php:55
-msgctxt "menu UI"
-msgid "Expand submenu"
+#: inc/_conf/register-menus.php:18
+msgctxt "admin UI: menu name"
+msgid "Primary menu"
 msgstr ""
 
-#: inc/_conf/register-assets.php:56
-msgctxt "menu UI"
-msgid "Collapse submenu"
+#: inc/_conf/register-menus.php:19
+msgctxt "admin UI: menu UI"
+msgid "Policy menu"
 msgstr ""
 
 #: inc/_conf/register-sidebars.php:18
-msgctxt "widget area"
+msgctxt "admin UI: widget area"
 msgid "Footer"
 msgstr ""
 
 #: inc/_conf/register-sidebars.php:20
-msgctxt "widget area"
+msgctxt "admin UI: widget area"
 msgid "Add widgets here."
 msgstr ""
 
-#: inc/_conf/setup-editor.php:139
-msgctxt "admin: block pattern category"
+#: inc/_conf/setup-editor.php:196
+msgctxt "admin UI: block pattern category"
 msgid "Block category"
 msgstr ""
 
-#: inc/_conf/setup-editor.php:146
-msgctxt "admin: block pattern title"
+#: inc/_conf/setup-editor.php:203
+msgctxt "admin UI: block pattern title"
 msgid "Custom block pattern"
 msgstr ""
 
-#: inc/_conf/setup-editor.php:147
-msgctxt "admin: block pattern description"
+#: inc/_conf/setup-editor.php:204
+msgctxt "admin UI: block pattern description"
 msgid "Example of custom block pattern."
 msgstr ""
 
+#. translators: %s parent page title.
 #: inc/class/class-disclosure-nav-menu.php:51
 #, php-format
-msgctxt "menu UI"
+msgctxt "menu UI: aria landmark"
 msgid "Submenu for %s"
 msgstr ""
 
+#. translators: Submenu toggle button: %s parent page title.
 #: inc/class/class-disclosure-nav-menu.php:189
 #, php-format
-msgctxt "menu UI"
+msgctxt "menu UI: toggle"
 msgid "Submenu: %s"
 msgstr ""
 
-#: index.php:32
+#. translators: %s post date.
+#: inc/helpers/template-tags.php:17
+#, php-format
+msgctxt "theme UI"
+msgid "Posted on %s"
+msgstr ""
+
+#. translators: %s search word.
+#: index.php:34
 #, php-format
 msgctxt "theme UI"
 msgid "You searched for %s"
 msgstr ""
 
-#: template-parts/entry/card.php:24 template-parts/entry/content.php:25
-msgctxt "theme UI"
-msgid "Published"
-msgstr ""
-
-#: template-parts/entry/none.php:16
+#. translators: Default no content message
+#: template-parts/entry/none.php:18
 msgctxt "theme UI"
 msgid "No content found."
 msgstr ""

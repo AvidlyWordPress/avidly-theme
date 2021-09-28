@@ -20,22 +20,27 @@ if ( post_password_required() ) {
 
 	<?php
 	// You can start editing here -- including this comment!
-	if ( have_comments() ) : ?>
+	if ( have_comments() ) :
+		?>
 		<h2 class="comments-title">
 			<?php
 			$comment_count = get_comments_number();
 			if ( '1' === $comment_count ) {
 				printf(
-					/* translators: 1: title. */
-					esc_html_x( 'One thought on &ldquo;%1$s&rdquo;', 'comments title (singular)', 'avidly-theme' ),
+					// phpcs:disable
+					/* translators: Comment title (singular): %1$s title. */
+					esc_html_x( 'One thought on &ldquo;%1$s&rdquo;', 'comments UI', 'avidly-theme' ),
 					'<span>' . get_the_title() . '</span>'
+					// phpcs:enable
 				);
 			} else {
-				printf( // WPCS: XSS OK.
-					/* translators: 1: comment count number, 2: title. */
-					esc_html_x( '%1$s thoughts on &ldquo;%2$s&rdquo;', 'comments title (plurar)', 'avidly-theme' ),
+				printf(
+					// phpcs:disable
+					/* translators: Comment title (plurar): %1$s comment count number, %2$s title. */
+					esc_html_x( '%1$s thoughts on &ldquo;%2$s&rdquo;', 'comments UI', 'avidly-theme' ),
 					number_format_i18n( $comment_count ),
 					'<span>' . get_the_title() . '</span>'
+					// phpcs:enable
 				);
 			}
 			?>
@@ -45,19 +50,29 @@ if ( post_password_required() ) {
 
 		<ol class="comment-list">
 			<?php
-				wp_list_comments( array(
-					'style'      => 'ol',
-					'short_ping' => true,
-				) );
+				wp_list_comments(
+					array(
+						'style'      => 'ol',
+						'short_ping' => true,
+					)
+				);
 			?>
 		</ol><!-- .comment-list -->
 
-		<?php the_comments_navigation();
+		<?php
+		the_comments_navigation();
 
 		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() ) : ?>
-			<p class="no-comments"><?php echo esc_html_x( 'Comments are closed.', 'comments', 'avidly-theme' ); ?></p>
-		<?php
+		if ( ! comments_open() ) :
+			?>
+			<p class="no-comments">
+			<?php
+			/* translators: Commenting is closed message. */
+			echo esc_html_x( 'Comments are closed.', 'comments UI', 'avidly-theme' );
+			?>
+			</p>
+
+			<?php
 		endif;
 
 	endif; // Check for have_comments().

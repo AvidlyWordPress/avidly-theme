@@ -46,16 +46,6 @@ add_action(
 				'',
 				true
 			);
-
-			// Localize navigation texts.
-			wp_localize_script(
-				'avidly_theme-navigation',
-				'screenReaderText',
-				array(
-					'expand'   => _x( 'Expand submenu', 'menu UI', 'avidly-theme' ),
-					'collapse' => _x( 'Collapse submenu', 'menu UI', 'avidly-theme' ),
-				)
-			);
 		}
 
 		// Main js, run in footer.

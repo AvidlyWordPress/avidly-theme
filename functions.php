@@ -15,7 +15,7 @@
 /**
  * Configuration
  */
-require_once 'inc/_conf/_cache-busting.php'; // Purge assets cache in register-assets.php.
+require_once 'inc/_conf/cache-busting.php'; // Purge assets cache in register-assets.php.
 require_once 'inc/_conf/setup-theme.php';
 require_once 'inc/_conf/setup-editor.php';
 require_once 'inc/_conf/register-assets.php';
@@ -32,5 +32,6 @@ require_once 'inc/class/class-svg-icons.php';
 /**
  * Helpers
  */
-require_once 'inc/helpers/function-cleanup.php'; // Remove unneeded WordPress default functionality.
-require_once 'inc/helpers/function-svg-icons.php';
+require_once 'inc/helpers/wp-cleanup.php'; // Remove unneeded WordPress default functionality.
+require_once 'inc/helpers/svg-icons.php';
+require_once 'inc/helpers/template-tags.php';

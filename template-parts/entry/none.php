@@ -13,7 +13,10 @@
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 	<div class="entry-content container" role="status">
-		<?php echo esc_html_x( 'No content found.', 'theme UI', 'avidly-theme' ); ?>
+		<?php
+		/* translators: Default no content message */
+		echo esc_html_x( 'No content found.', 'theme UI', 'avidly-theme' );
+		?>
 	</div><!-- .entry-content -->
 
 </article>

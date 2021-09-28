@@ -8,10 +8,10 @@
 
 ?>
 
-<footer class="site-footer container" aria-label="<?php echo esc_html_x( 'Site footer', 'theme UI', 'avidly-theme' ); ?>">
+<footer class="site-footer container" aria-label="<?php echo esc_html_x( 'Site footer', 'theme UI: aria landmark', 'avidly-theme' ); ?>">
 
 	<?php if ( has_nav_menu( 'policy_menu' ) ) : ?>
-	<nav class="mt-8 has-background has-black-background-color has-text-color has-white-color alignfull" aria-label="<?php echo esc_html_x( 'Policy menu', 'menu UI', 'avidly-theme' ); ?>">
+	<nav class="mt-8 has-background has-black-background-color has-text-color has-white-color alignfull" aria-label="<?php echo esc_html_x( 'Policy menu', 'menu UI: aria landmark', 'avidly-theme' ); ?>">
 		<div class="nowrap overflow-x-auto alignwide">
 			<?php
 			wp_nav_menu(

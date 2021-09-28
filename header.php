@@ -29,37 +29,44 @@
 		<?php wp_body_open(); ?>
 
 		<div class="nav-container container">
-			<header class="site-header relative w-full menu:flex items-center justify-between alignwide" aria-label="<?php echo esc_html_x( 'Site header', 'theme UI', 'avidly-theme' ); ?>">
+			<header class="site-header relative w-full flex flex-wrap items-center justify-between alignwide" aria-label="<?php echo esc_html_x( 'Site header', 'theme UI: aria landmark', 'avidly-theme' ); ?>">
 
 				<a class="skip-link screen-reader-text border-2 border-primary has-white-background-color has-text-color has-primary-color p-4" href="#primary">
-					<?php echo esc_html_x( 'Skip to the content', 'skip link', 'avidly-theme' ); ?>
+					<?php
+					/* translators: Link to skip site section. */
+					echo esc_html_x( 'Skip to the content', 'theme UI: skip link', 'avidly-theme' );
+					?>
 				</a>
 
-				<div class="site-header__logo px-4 max-w-xs xl:px-0">
+				<div class="site-header__logo px-4 max-w-xs xl:px-0 flex-1">
 					<?php
 					echo sprintf(
 						'<p class="site-header__title"><a href="%s" aria-label="%s">%s</a></p>',
 						esc_url( get_site_url() ),
-						esc_html_x( 'Go to front page', 'screen reader text', 'avidly-theme' ),
+						/* translators: Link to front page. */
+						esc_html_x( 'Go to front page', 'theme UI', 'avidly-theme' ),
 						avidly_theme_get_theme_svg( 'logo', 'theme' ) // phpcs:ignore
 					);
 					?>
 				</div><!-- /.site-header__logo -->
 
-				<div id="main-navigation-wrapper" class="main-navigation-wrapper">
+				<?php
+				echo sprintf(
+					'<button class="%s" aria-expanded="false" aria-controls="mobile-menu" aria-label="%s">%s</button>',
+					'mobile-menu-toggle flex-initial xl:mx-0 p-4 m-4 has-primary-background-color has-white-color menu:hidden ',
+					/* translators: Mobile menu toggle button. */
+					esc_html( _x( 'Menu', 'menu UI: toggle', 'avidly-theme' ) ),
+					avidly_theme_get_theme_svg( 'menu', 'ui', 'w-8 mx-auto' ) // phpcs:ignore
+				);
+				?>
+
+				<div id="main-navigation-wrapper" class="main-navigation-wrapper w-full menu:w-auto">
 					<?php if ( has_nav_menu( 'primary_menu' ) ) : ?>
 
-						<?php
-						echo sprintf(
-							'<button class="%s" aria-expanded="false" aria-controls="mobile-menu" aria-label="%s">%s</button>',
-							'mobile-menu-toggle absolute top-4 right-2 block my-2 mx-4 xl:mx-0 p-4 has-primary-background-color has-white-color menu:hidden',
-							esc_html( _x( 'Menu', 'menu UI', 'avidly-theme' ) ),
-							avidly_theme_get_theme_svg( 'menu', 'ui', 'w-8 mx-auto' ) // phpcs:ignore
-						);
-						?>
+						
 
 						<div id="mobile-menu" class="hidden px-4 xl:px-0 menu:block">
-							<nav id="nav" class="nav-primary" aria-label="<?php echo esc_html_x( 'Primary menu', 'menu UI', 'avidly-theme' ); ?>">
+							<nav id="nav" class="nav-primary" aria-label="<?php echo esc_html_x( 'Primary menu', 'menu UI: aria landmark', 'avidly-theme' ); ?>">
 								<?php
 								wp_nav_menu(
 									array(

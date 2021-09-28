@@ -45,10 +45,10 @@ class Disclosure_Nav_Menu extends Walker_Nav_Menu {
 		$output .= sprintf(
 			'<ul id="submenu-%s" class="%s" aria-label="%s">',
 			$this->cur_item->ID, // ID.
-			'disclosure-submenu level--' . ( $depth + 1 ) . ' ' . esc_attr( $level_class ) . ' list-none menu:absolute z-10 min-w-40 w-full pl-4 menu:pl-0 menu:w-auto has-white-background-color hidden', // class.
+			'disclosure-submenu level--' . ( $depth + 1 ) . ' ' . esc_attr( $level_class ) . ' list-none menu:absolute z-10 min-w-40 w-full pl-4 menu:pl-0 menu:w-auto has-black-background-color has-white-color menu:border hidden', // class.
 			sprintf(
-				/* translators: 1 title. */
-				esc_html( _x( 'Submenu for %s', 'menu UI', 'avidly-theme' ) ),
+				/* translators: %s parent page title. */
+				esc_html( _x( 'Submenu for %s', 'menu UI: aria landmark', 'avidly-theme' ) ),
 				esc_html( $this->cur_item->title )
 			),
 		);
@@ -182,11 +182,11 @@ class Disclosure_Nav_Menu extends Walker_Nav_Menu {
 
 			$item_output .= sprintf(
 				'<button class="%s" aria-expanded="false" aria-controls="submenu-%s" aria-haspopup="true"><span class="screen-reader-text">%s</span></button>',
-				'disclosure-menu-toggle toggle-level--' . ( $depth + 1 ) . ' has-primary-background-color has-white-color relative ml-1 w-8 h-8 text-center',
+				'disclosure-menu-toggle toggle-level--' . ( $depth + 1 ) . ' relative ml-1 w-8 h-8 text-center border-2 border-current',
 				esc_attr( $this->cur_item->ID ),
 				sprintf(
-					/* translators: 1 title. */
-					esc_html( _x( 'Submenu: %s', 'menu UI', 'avidly-theme' ) ),
+					/* translators: Submenu toggle button: %s parent page title. */
+					esc_html( _x( 'Submenu: %s', 'menu UI: toggle', 'avidly-theme' ) ),
 					esc_html( $title )
 				)
 			);

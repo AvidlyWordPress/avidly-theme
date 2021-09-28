@@ -15,9 +15,9 @@ add_action(
 	function() {
 		register_sidebar(
 			array(
-				'name'          => esc_html_x( 'Footer', 'widget area', 'avidly-theme' ),
+				'name'          => esc_html_x( 'Footer', 'admin UI: widget area', 'avidly-theme' ),
 				'id'            => 'footer',
-				'description'   => esc_html_x( 'Add widgets here.', 'widget area', 'avidly-theme' ),
+				'description'   => esc_html_x( 'Add widgets here.', 'admin UI: widget area', 'avidly-theme' ),
 				'before_widget' => '<div id="%1$s" class="widget nested-list-reset ph3 ph4-m ph5-l w-third-ns %2$s">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<p class="widget__title mt0 mb0 ttu tracked f6 fw7 lh-copy">',

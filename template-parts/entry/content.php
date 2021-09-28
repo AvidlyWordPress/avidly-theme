@@ -12,7 +12,7 @@
 
 <article <?php post_class(); ?> aria-labelledby="post-<?php the_ID(); ?>">
 
-	<header class="entry-header container py-10 mb3-6">
+	<header class="entry-header container my-10">
 
 		<?php if ( has_post_thumbnail() ) : ?>
 			<div class="entry-header__image relative alignwide h-48 xxs:h-60 xs:h-96 lg:h-128 mb-5">
@@ -25,12 +25,19 @@
 		<?php
 		// Display date for posts.
 		if ( 'post' === get_post_type() ) {
-			echo sprintf( // WPCS: XSS OK.
-				/* translators: 1: published title, 2: date. */
-				'<time class="entry-header__time block alignwide" datetime="%s">%s: %s</time>',
-				esc_attr( get_the_date( DATE_W3C ) ),
-				esc_html_x( 'Published', 'theme UI', 'avidly-theme' ),
-				esc_attr( get_the_date() )
+			// phpcs:ignore
+			echo sprintf(
+				'<div class="entry-header__date alignwide">%s</div>',
+				// phpcs:ignore.
+				avidly_theme_get_post_date()
+			);
+		}
+
+		if ( has_excerpt() ) {
+			echo sprintf(
+				'<div class="entry-header__excerpt alignwide text-xl mt-10">%s</div>',
+				// phpcs:ignore.
+				apply_filters( 'the_excerpt', get_the_excerpt() )
 			);
 		}
 		?>

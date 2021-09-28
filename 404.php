@@ -15,14 +15,28 @@ get_header();
 		<main id="main" class="site-main">
 
 			<header class="entry-header container text-center px-5 py-10 mb-6">
-				<h1 class="my-0">404 - <?php esc_html_e( 'Page not found', 'avidly-theme' ); ?></h1>
+				<h1 class="my-0">
+					<?php
+					/* translators: 404 page title. */
+					echo esc_html_x( '404 - Page not found', 'theme UI', 'avidly-theme' );
+					?>
+				</h1>
 			</header><!-- .entry-header -->
 
 			<div class="entry-content container text-center mb-12">
 
-				<p><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'avidly-theme' ); ?></p>
-				<p><a href="<?php echo esc_html( get_site_url() ); ?>" class="wp-block-button__link mt-3">
-					<?php esc_html_e( 'Go to frontpage', 'avidly-theme' ); ?>
+				<p>
+				<?php
+				/* translators: 404 page error message. */
+				echo esc_html_x( 'Oops! That page can&rsquo;t be found.', 'theme UI', 'avidly-theme' );
+				?>
+				</p>
+
+				<a href="<?php echo esc_html( get_site_url() ); ?>" class="wp-block-button__link mt-3">
+					<?php
+					/* translators: Link to front page. */
+					echo esc_html_x( 'Go to front page', 'theme UI', 'avidly-theme' );
+					?>
 				</a>
 
 			</div><!-- /.entry-content -->

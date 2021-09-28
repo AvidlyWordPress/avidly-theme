@@ -30,7 +30,7 @@ get_header();
 				echo wp_kses_post( $posts_content );
 			} else if ( is_search() ) {
 				echo sprintf(
-					/* translators: 1: search word. */
+					/* translators: %s search word. */
 					'<h1 class="my-0"">' . esc_html_x( 'You searched for %s', 'theme UI', 'avidly-theme' ) . '</h1>',
 					'<span>' . esc_html( get_search_query() ) . '</span>'
 				);

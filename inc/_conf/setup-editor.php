@@ -193,15 +193,15 @@ add_action(
 		register_block_pattern_category(
 			'avidly_theme-block-cat',
 			array(
-				'label' => _x( 'Block category', 'admin: block pattern category', 'avidly-theme' ),
+				'label' => _x( 'Block category', 'admin UI: block pattern category', 'avidly-theme' ),
 			)
 		);
 
 		register_block_pattern(
 			'avidly-theme/example-pattern',
 			array(
-				'title'         => _x( 'Custom block pattern', 'admin: block pattern title', 'avidly-theme' ),
-				'description'   => _x( 'Example of custom block pattern.', 'admin: block pattern description', 'avidly-theme' ),
+				'title'         => _x( 'Custom block pattern', 'admin UI: block pattern title', 'avidly-theme' ),
+				'description'   => _x( 'Example of custom block pattern.', 'admin UI: block pattern description', 'avidly-theme' ),
 				'categories'    => array( 'avidly_theme-block-cat' ),
 				'keywords'      => '',
 				'viewportWidth' => 1440,
