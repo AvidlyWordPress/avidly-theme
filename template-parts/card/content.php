@@ -9,7 +9,7 @@
  */
 
 $article_class  = 'card mx-2 border h-full link-element';
-$article_class .= ( is_sticky() ) ? ' sm:flex' : ' block xs:flex md:block';
+$article_class .= ( is_sticky() && ! is_paged() ) ? ' sm:flex' : ' block xs:flex md:block';
 ?>
 
 <article <?php post_class( $article_class ); ?> aria-labelledby="post-<?php the_ID(); ?>">

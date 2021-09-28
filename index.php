@@ -51,10 +51,10 @@ get_header();
 							the_post();
 
 							$classes = 'mb-4';
-							$classes .= is_sticky() ? ' md:col-span-2 lg:col-span-3' : '';
+							$classes .= is_sticky() && ! is_paged() ? ' md:col-span-2 lg:col-span-3' : '';
 
 							echo '<li class="' . esc_attr( $classes ) . '">';
-							get_template_part( 'template-parts/entry/card', get_post_type() );
+							get_template_part( 'template-parts/card/content', get_post_type() );
 							echo '</li>';
 						}
 						?>
