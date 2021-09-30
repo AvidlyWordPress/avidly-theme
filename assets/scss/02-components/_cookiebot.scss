@@ -1,0 +1,13 @@
+/**
+ * Cookiebot support
+ * Add default styling to display embed area if cookiebot blocks it.
+ */
+
+.wp-block-embed__wrapper {
+	@apply bg-lightgray;
+    @apply flex items-center justify-center;
+}
+
+.cookieconsent-optout-marketing {
+	@apply p-4;
+}

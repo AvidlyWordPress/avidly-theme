@@ -16,7 +16,12 @@
                 {
                     "name": "White",
                     "slug": "white",
-                    "color": "#ffffff"
+                    "color": "#FFFFFF"
+                },
+                {
+                    "name": "Light gray",
+                    "slug": "lightgray",
+                    "color": "#EEEEEE"
                 },
                 {
                     "name": "Primary",

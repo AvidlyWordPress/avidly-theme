@@ -43,6 +43,7 @@ module.exports = {
 			current: 'currentColor',
 			black: '#000000',
 			white: '#FFFFFF',
+			lightgray: '#EEEEEE',
 			primary : '#0000FF',
 			secondary: '#00FF00',
 			tertiary: '#FF0000',
