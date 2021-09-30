@@ -16,7 +16,7 @@ if ( ! function_exists( 'avidly_theme_the_theme_svg' ) ) {
 	 * @param string $color Color code.
 	 */
 	function avidly_theme_the_theme_svg( $svg_name, $group = 'ui', $class = '', $color = '' ) {
-		echo avidly_theme_get_theme_svg( $svg_name, $group, $color ); //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Escaped in avidly_theme_get_theme_svg();.
+		echo avidly_theme_get_theme_svg( $svg_name, $group, $class, $color ); //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Escaped in avidly_theme_get_theme_svg();.
 	}
 }
 

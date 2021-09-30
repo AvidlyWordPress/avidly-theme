@@ -112,7 +112,7 @@
 		@apply max-w-full;
 		@apply h-auto;
 		
-		&:not(.icon-theme) path {
+		&:not(.icon-theme):not(.custom-fill) path {
 			fill: currentColor;
 		}
 	}

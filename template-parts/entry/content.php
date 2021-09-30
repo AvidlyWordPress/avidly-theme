@@ -16,7 +16,15 @@
 
 		<?php if ( has_post_thumbnail() ) : ?>
 			<div class="entry-header__image relative alignwide h-48 xxs:h-60 xs:h-96 lg:h-128 mb-5">
-				<?php the_post_thumbnail( 'large', array( 'class' => 'object-cover w-full h-full' ) ); ?>
+			<?php
+			the_post_thumbnail(
+				'medium_large',
+				array(
+					'class' => 'object-cover w-full h-full',
+					'sizes' => '(min-width:1280px) 100vw, (min-width:1024px) 1024px, 90vw',
+				),
+			);
+			?>
 			</div>
 		<?php endif; ?>
 

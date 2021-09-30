@@ -9,14 +9,22 @@
  */
 
 $article_class  = 'card mx-2 border h-full link-element';
-$article_class .= ( is_sticky() && ! is_paged() ) ? ' sm:flex' : ' block xs:flex md:block';
+$article_class .= ( is_sticky() && ! is_paged() ) ? ' sm:flex' : ' block sm:flex md:block';
 ?>
 
 <article <?php post_class( $article_class ); ?> aria-labelledby="post-<?php the_ID(); ?>">
 
 	<?php if ( has_post_thumbnail() ) : ?>
 		<div class="card__image relative flex-1">
-			<?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'object-cover w-full h-full' ) ); ?>
+			<?php
+			the_post_thumbnail(
+				'post-thumbnail',
+				array(
+					'class' => 'object-cover w-full h-full',
+					'sizes' => '(max-width:768px) 90vw, (max-width:1280px) 50vw, 450px',
+				),
+			);
+			?>
 		</div>
 	<?php endif; ?>
 

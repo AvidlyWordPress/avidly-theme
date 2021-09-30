@@ -18,9 +18,10 @@ if ( ! class_exists( 'SVG_Icons' ) ) {
 		 *
 		 * @param string $icon Icon name.
 		 * @param string $group Icon group.
+		 * @param string $class custom Class.
 		 * @param string $color Color.
 		 */
-		public static function get_svg( $icon, $group = 'ui', $class = '', $color = '#000000' ) {
+		public static function get_svg( $icon, $group = 'ui', $class = '', $color = '' ) {
 			if ( 'ui' === $group ) {
 				$arr = self::$ui_icons;
 			} elseif ( 'theme' === $group ) {
@@ -31,20 +32,26 @@ if ( ! class_exists( 'SVG_Icons' ) ) {
 				$arr = array();
 			}
 
-			// Add custom class after group info.
-			if ( $class ) {
-				$group = $group . ' ' . $class;
+			// Return empty if SVG icon is not found.
+			if ( ! array_key_exists( $icon, $arr ) ) {
+				return null;
 			}
-			if ( array_key_exists( $icon, $arr ) ) {
-				$repl = '<svg class="svg-icon icon-' . $group . '" aria-hidden="true" focusable="false" ';
-				$svg  = preg_replace( '/^<svg /', $repl, trim( $arr[ $icon ] ) ); // Add extra attributes to SVG code.
-				$svg  = str_replace( '#000000', $color, $svg ); // Replace the color.
-				$svg  = str_replace( '#', '%23', $svg ); // Urlencode hashes.
-				$svg  = preg_replace( "/([\n\t]+)/", ' ', $svg ); // Remove newlines & tabs.
-				$svg  = preg_replace( '/>\s*</', '><', $svg ); // Remove white space between SVG tags.
-				return $svg;
+
+			// Add custom classes after group info.
+			$group .= ( $class ) ? ' ' . $class : '';
+			$group .= ( $color ) ? ' custom-fill' : '';
+
+			$repl = '<svg class="svg-icon icon-' . $group . '" aria-hidden="true" focusable="false" ';
+			$svg  = preg_replace( '/^<svg /', $repl, trim( $arr[ $icon ] ) ); // Add extra attributes to SVG code.
+			$svg  = preg_replace( "/([\n\t]+)/", ' ', $svg ); // Remove newlines & tabs.
+			$svg  = preg_replace( '/>\s*</', '><', $svg ); // Remove white space between SVG tags.
+
+			// Replace fill with custom color.
+			if ( $color ) {
+				$svg = str_replace( 'currentColor', $color, $svg ); // Replace the color.
 			}
-			return null;
+
+			return $svg;
 		}
 
 
@@ -56,9 +63,7 @@ if ( ! class_exists( 'SVG_Icons' ) ) {
 		 * @var array
 		 */
 		public static $theme_icons = array(
-			// 'logo' => '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="255" height="141" viewBox="0 0 255 141"><path fill="rgb(0,0,155)" d="M187.567,28.367v69.484h11.052V22.49L187.567,28.367z M255.121,59.856l-9.443-5.742l-14.137,23.263 l-7.328-13.782l-5.084-9.61l0,0l0,0l-5.205,2.763l-4.555,2.402l0,0l0,0l1.254,2.369l14.219,26.867l-15.242,25.084l9.424,5.766 L255.121,59.856z M107.52,43.825h11.052V30.851H107.52V43.825z M74.675,83.133L60.667,54.277l-9.918,4.872l18.967,38.702h9.918 l18.962-38.702l-9.923-4.872L74.675,83.133z M107.491,97.851h11.052V59.164h-11.052V97.851z M33.666,75.939 c0,6.245-5.062,11.308-11.307, 11.308s-11.307-5.063-11.307-11.308c0-6.244,5.063-11.307,11.307-11.307l0,0 C28.601,64.64,33.658,69.698,33.666,75.939 M35.108,97.851h9.61V75.921l0,0c-0.006-12.349-10.021-22.354-22.37-22.35 C10,53.577-0.006,63.593,0,75.941C0.006,88.09,9.71,98.01,21.854,98.284c4.834-0.021,9.515-1.698,13.263-4.752L35.108,97.851z M162.392,75.925c0,6.245-5.063,11.308-11.308,11.308s-11.307-5.063-11.307-11.308c0-6.244,5.062-11.307,11.307-11.307 C157.326,64.626,162.384,69.683,162.392,75.925L162.392,75.925z M173.444,75.925V35.883l-11.052,5.872v14.896  c-10.65-6.239-24.343-2.664-30.582,7.986s-2.664,24.342,7.986,30.581c10.65,6.24,24.343,2.664,30.582-7.986 C172.387,83.802,173.446,79.899,173.444,75.925"/></svg>',
-
-			'logo' => '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 396" width="1060" height="396"><polygon points="132 264.38 180.24 264.38 156.12 223.03 132 264.38"/><polygon points="189.88 165.15 247.76 264.38 286.35 264.38 209.18 132.07 189.88 165.15"/><polygon points="392.48 173.42 416.6 132.07 368.36 132.07 392.48 173.42"/><polygon points="262.24 132.07 339.42 264.38 358.71 231.3 300.83 132.07 262.24 132.07"/><rect x="448.38" y="132.08" width="33.08" height="132.3"/><polygon points="880.13 132.07 904.25 173.42 928.37 132.07 880.13 132.07"/><polygon points="779.47 132.07 837.36 231.3 837.36 264.38 870.43 264.38 870.43 221.85 818.06 132.07 779.47 132.07"/><rect x="522.56" y="132.08" width="33.08" height="132.3"/><path d="M582.65,132.08h-11a71.69,71.69,0,0,1,0,132.3h11a66.15,66.15,0,0,0,0-132.3Z"/><rect x="684.08" y="132.08" width="33.08" height="132.3"/><path d="M755.56,264.38H791.5v-33A71.89,71.89,0,0,1,755.56,264.38Z"/></svg>'
+			'logo' => '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 396" width="1060" height="396"><polygon points="132 264.38 180.24 264.38 156.12 223.03 132 264.38"/><polygon points="189.88 165.15 247.76 264.38 286.35 264.38 209.18 132.07 189.88 165.15"/><polygon points="392.48 173.42 416.6 132.07 368.36 132.07 392.48 173.42"/><polygon points="262.24 132.07 339.42 264.38 358.71 231.3 300.83 132.07 262.24 132.07"/><rect x="448.38" y="132.08" width="33.08" height="132.3"/><polygon points="880.13 132.07 904.25 173.42 928.37 132.07 880.13 132.07"/><polygon points="779.47 132.07 837.36 231.3 837.36 264.38 870.43 264.38 870.43 221.85 818.06 132.07 779.47 132.07"/><rect x="522.56" y="132.08" width="33.08" height="132.3"/><path d="M582.65,132.08h-11a71.69,71.69,0,0,1,0,132.3h11a66.15,66.15,0,0,0,0-132.3Z"/><rect x="684.08" y="132.08" width="33.08" height="132.3"/><path d="M755.56,264.38H791.5v-33A71.89,71.89,0,0,1,755.56,264.38Z"/></svg>',
 		);
 
 
@@ -68,17 +73,17 @@ if ( ! class_exists( 'SVG_Icons' ) ) {
 		 * @var array
 		 */
 		public static $ui_icons = array(
-			'arrow_right' => '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m4 13v-2h12l-4-4 1-2 7 7-7 7-1-2 4-4z" fill="currentColor"/></svg>',
+			'arrow_right' => '<svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m4 13v-2h12l-4-4 1-2 7 7-7 7-1-2 4-4z" fill="currentColor"/></svg>',
 
-			'arrow_left'  => '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 13v-2H8l4-4-1-2-7 7 7 7 1-2-4-4z" fill="currentColor"/></svg>',
+			'arrow_left'  => '<svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 13v-2H8l4-4-1-2-7 7 7 7 1-2-4-4z" fill="currentColor"/></svg>',
 
-			'close'       => '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.9394L5.53033 4.46973L4.46967 5.53039L10.9393 12.0001L4.46967 18.4697L5.53033 19.5304L12 13.0607L18.4697 19.5304L19.5303 18.4697L13.0607 12.0001L19.5303 5.53039L18.4697 4.46973L12 10.9394Z" fill="currentColor"/></svg>',
+			'close'       => '<svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.9394L5.53033 4.46973L4.46967 5.53039L10.9393 12.0001L4.46967 18.4697L5.53033 19.5304L12 13.0607L18.4697 19.5304L19.5303 18.4697L13.0607 12.0001L19.5303 5.53039L18.4697 4.46973L12 10.9394Z" fill="currentColor"/></svg>',
 
-			'menu'        => '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 6H19.5V7.5H4.5V6ZM4.5 12H19.5V13.5H4.5V12ZM19.5 18H4.5V19.5H19.5V18Z" fill="currentColor"/></svg>',
+			'menu'        => '<svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 6H19.5V7.5H4.5V6ZM4.5 12H19.5V13.5H4.5V12ZM19.5 18H4.5V19.5H19.5V18Z" fill="currentColor"/></svg>',
 
-			'plus'        => '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M18 11.2h-5.2V6h-1.6v5.2H6v1.6h5.2V18h1.6v-5.2H18z" fill="currentColor"/></svg>',
+			'plus'        => '<svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M18 11.2h-5.2V6h-1.6v5.2H6v1.6h5.2V18h1.6v-5.2H18z" fill="currentColor"/></svg>',
 
-			'minus'       => '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6 11h12v2H6z" fill="currentColor"/></svg>',
+			'minus'       => '<svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6 11h12v2H6z" fill="currentColor"/></svg>',
 		);
 
 
@@ -128,7 +133,7 @@ if ( ! class_exists( 'SVG_Icons' ) ) {
 
 			'mail'       => '<svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M20,4H4C2.895,4,2,4.895,2,6v12c0,1.105,0.895,2,2,2h16c1.105,0,2-0.895,2-2V6C22,4.895,21.105,4,20,4z M20,8.236l-8,4.882 L4,8.236V6h16V8.236z"></path></svg>',
 
-			'mastodon'   => '<svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M23.193 7.879c0-5.206-3.411-6.732-3.411-6.732C18.062.357 15.108.025 12.041 0h-.076c-3.068.025-6.02.357-7.74 1.147 0 0-3.411 1.526-3.411 6.732 0 1.192-.023 2.618.015 4.129.124 5.092.934 10.109 5.641 11.355 2.17.574 4.034.695 5.535.612 2.722-.15 4.25-.972 4.25-.972l-.09-1.975s-1.945.613-4.129.539c-2.165-.074-4.449-.233-4.799-2.891a5.499 5.499 0 0 1-.048-.745s2.125.52 4.817.643c1.646.075 3.19-.097 4.758-.283 3.007-.359 5.625-2.212 5.954-3.905.517-2.665.475-6.507.475-6.507zm-4.024 6.709h-2.497V8.469c0-1.29-.543-1.944-1.628-1.944-1.2 0-1.802.776-1.802 2.312v3.349h-2.483v-3.35c0-1.536-.602-2.312-1.802-2.312-1.085 0-1.628.655-1.628 1.944v6.119H4.832V8.284c0-1.289.328-2.313.987-3.07.68-.758 1.569-1.146 2.674-1.146 1.278 0 2.246.491 2.886 1.474L12 6.585l.622-1.043c.64-.983 1.608-1.474 2.886-1.474 1.104 0 1.994.388 2.674 1.146.658.757.986 1.781.986 3.07v6.304z"/></svg>',
+			'mastodon'   => '<svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M23.193 7.879c0-5.206-3.411-6.732-3.411-6.732C18.062.357 15.108.025 12.041 0h-.076c-3.068.025-6.02.357-7.74 1.147 0 0-3.411 1.526-3.411 6.732 0 1.192-.023 2.618.015 4.129.124 5.092.934 10.109 5.641 11.355 2.17.574 4.034.695 5.535.612 2.722-.15 4.25-.972 4.25-.972l-.09-1.975s-1.945.613-4.129.539c-2.165-.074-4.449-.233-4.799-2.891a5.499 5.499 0 0 1-.048-.745s2.125.52 4.817.643c1.646.075 3.19-.097 4.758-.283 3.007-.359 5.625-2.212 5.954-3.905.517-2.665.475-6.507.475-6.507zm-4.024 6.709h-2.497V8.469c0-1.29-.543-1.944-1.628-1.944-1.2 0-1.802.776-1.802 2.312v3.349h-2.483v-3.35c0-1.536-.602-2.312-1.802-2.312-1.085 0-1.628.655-1.628 1.944v6.119H4.832V8.284c0-1.289.328-2.313.987-3.07.68-.758 1.569-1.146 2.674-1.146 1.278 0 2.246.491 2.886 1.474L12 6.585l.622-1.043c.64-.983 1.608-1.474 2.886-1.474 1.104 0 1.994.388 2.674 1.146.658.757.986 1.781.986 3.07v6.304z" fill="currentColor"/></svg>',
 
 			'medium'     => '<svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M20.962,7.257l-5.457,8.867l-3.923-6.375l3.126-5.08c0.112-0.182,0.319-0.286,0.527-0.286c0.05,0,0.1,0.008,0.149,0.02 c0.039,0.01,0.078,0.023,0.114,0.041l5.43,2.715l0.006,0.003c0.004,0.002,0.007,0.006,0.011,0.008 C20.971,7.191,20.98,7.227,20.962,7.257z M9.86,8.592v5.783l5.14,2.57L9.86,8.592z M15.772,17.331l4.231,2.115 C20.554,19.721,21,19.529,21,19.016V8.835L15.772,17.331z M8.968,7.178L3.665,4.527C3.569,4.479,3.478,4.456,3.395,4.456 C3.163,4.456,3,4.636,3,4.938v11.45c0,0.306,0.224,0.669,0.498,0.806l4.671,2.335c0.12,0.06,0.234,0.088,0.337,0.088 c0.29,0,0.494-0.225,0.494-0.602V7.231C9,7.208,8.988,7.188,8.968,7.178z"></path></svg>',
 
