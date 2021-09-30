@@ -106,3 +106,23 @@ add_action(
 		<?php
 	}
 );
+
+/**
+ * Set default favicon if site icon is not added.
+ * Site icon is set via Customize -> Site Identity view -> Site Icon.
+ */
+add_action(
+	'wp_head',
+	function() {
+		if ( '' === get_site_icon_url() ) {
+			echo sprintf(
+				'<!-- Favicons -->
+				<link rel="icon" href="%1$s-32x32.png" sizes="32x32" />
+				<link rel="icon" href="%1$s-192x192.png" sizes="192x192" />
+				<link rel="apple-touch-icon" href="%1$s-180x180.png" />
+				<meta name="msapplication-TileImage" content="%1$s-270x270.png" />',
+				esc_url( get_stylesheet_directory_uri() . '/assets/img/favicon/favicon' )
+			);
+		}
+	}
+);
