@@ -6,13 +6,12 @@ default_name="Avidly Theme"
 default_id="avidly-theme"
 default_prefix="avidly_theme"
 default_package="Avidly_Theme"
-default_url="http://avidlytheme.test"
-default_url_prod="https://avidlyagency.com"
-default_locale="fi"
+default_url="avidlytheme.test"
+default_url_prod="avidlyagency.com"
 
 # Directories
-basedir="$( cd "$( dirname "$0" )" && pwd )/."
-assetsdir="$basedir/assets"
+basedir="$( cd "$( dirname "$0" )" && pwd )"
+languagedir="$basedir/languages"
 basedir_all_files="$basedir/."
 setup_script="$basedir/setup.sh"
 
@@ -108,8 +107,12 @@ Almost done! Running the setup:
 # style.css
 find "$basedir" -name 'style.css' -type f -exec perl -p -i -e "s|$default_name|$name|g" {} \;
 
-# PHP files
+# # PHP files
 find "$basedir_all_files" -name '*.php' -type f -exec perl -p -i -e "s|$default_name|$name|g" {} \;
+
+# Language files
+find "$languagedir" -name '*.pot' -type f -exec perl -p -i -e "s|$default_name|$name|g" {} \;
+find "$languagedir" -name '*.po' -type f -exec perl -p -i -e "s|$default_name|$name|g" {} \;
 
 echo "--> Search & replace name ... ${blue}done${txtreset}"
 
@@ -119,13 +122,19 @@ find "$basedir_all_files" -name '*.php' -type f -exec perl -p -i -e "s|$default_
 # style.css
 find "$basedir" -name 'style.css' -type f -exec perl -p -i -e "s|$default_id|$id|g" {} \;
 
-# package.json
-find "$basedir" -name 'package.json' -type f -exec perl -p -i -e "s|$default_id|$id|g" {} \;
+# JSON files
+find "$basedir_all_files" -name '*.json' -type f -exec perl -p -i -e "s|$default_id|$id|g" {} \;
 
-echo "--> Search & replace id ..... ${blue}done${txtreset}"
+# Language files
+find "$languagedir" -type f -name "${default_id}.pot" -exec mv -f {} "${languagedir}/${id}.pot" \;
+
+echo "--> Search & replace id from..... ${blue}done${txtreset}"
 
 # PHP files
 find "$basedir_all_files" -name '*.php' -type f -exec perl -p -i -e "s|$default_prefix|$prefix|g" {} \;
+
+# JS files
+find "$basedir_all_files" -name '*.js' -type f -exec perl -p -i -e "s|$default_prefix|$prefix|g" {} \;
 
 echo "--> Search & replace prefix ..... ${blue}done${txtreset}"
 
@@ -137,8 +146,8 @@ find "$basedir_all_files" -name '*.php' -type f -exec perl -p -i -e "s|$default_
 
 echo "--> Search & replace package ..... ${blue}done${txtreset}"
 
-# manifest.json
-find "$assetsdir" -name 'manifest.js' -type f -exec perl -p -i -e "s|$default_url|$url|g" {} \;
+#webpack.mix.js
+find "$basedir" -name 'webpack.mix.js' -type f -exec perl -p -i -e "s|$default_url|$url|g" {} \;
 
 # style.css
 find "$basedir" -name 'style.css' -type f -exec perl -p -i -e "s|$default_url_prod|$url_prod|g" {} \;
