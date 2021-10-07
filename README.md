@@ -21,8 +21,7 @@ I integrate with Tailwind CSS. Learn <a href="https://tailwindcss.com/docs">how 
 ## Getting Started
 1. Download avidly-theme repository.
 2. Rename theme folder name for your project (use only a-z and -).
-3. Rename .pot file as your theme name in /languages/ folder (use only a-z and -).
-4. Run `sh setup.sh` in theme folder and follow the instructions in terminal. This will run some search and replace functionality for code.
+3. Run `sh setup.sh` in theme folder and follow the instructions in terminal. This will run some search and replace functionality for code.
 
 ## Nice to know
 
