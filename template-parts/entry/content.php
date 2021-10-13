@@ -22,6 +22,7 @@
 				array(
 					'class' => 'object-cover w-full h-full',
 					'sizes' => '(min-width:1280px) 100vw, (min-width:1024px) 1024px, 90vw',
+					'loading' => false, // This is above-the-fold image, disable lazy load to improve PSI.
 				),
 			);
 			?>

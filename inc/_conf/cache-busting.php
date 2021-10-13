@@ -60,3 +60,17 @@ if ( ! function_exists( 'avidly_theme_cache_busting' ) ) {
 		return get_theme_file_uri( trailingslashit( $manifest_directory ) . $path );
 	}
 }
+
+/**
+ * Add an Expires & a Cache-Control Header.
+ *
+ * @param int $seconds_to_cache default to 900 (15min).
+ *
+ * @return void
+ */
+function avidly_theme_cache_headers( $seconds_to_cache = 900 ) {
+	$ts = gmdate( 'D, d M Y H:i:s', time() + $seconds_to_cache ) . ' GTM';
+
+	header( 'Expires: ' . $ts );
+	header( 'Cache-control: max-age=' . $seconds_to_cache );
+}

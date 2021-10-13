@@ -8,6 +8,8 @@
  * @since 1.0.0
  */
 
+avidly_theme_cache_headers();
+
 ?><!DOCTYPE html>
 
 <html class="no-js" <?php language_attributes(); ?>>
