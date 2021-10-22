@@ -47,6 +47,8 @@ if ( ! function_exists( 'avidly_theme_get_theme_svg' ) ) {
 					'aria-hidden' => true,
 					'role'        => true,
 					'focusable'   => true,
+					'stroke'      => true,
+					'fill'        => true,
 				),
 				'g'     => array(
 					'transform' => true,
@@ -63,11 +65,14 @@ if ( ! function_exists( 'avidly_theme_get_theme_svg' ) ) {
 					'y'         => true,
 				),
 				'path'    => array(
-					'class'     => true,
-					'fill'      => true,
-					'fill-rule' => true,
-					'transform' => true,
-					'd'         => true,
+					'class'           => true,
+					'fill'            => true,
+					'fill-rule'       => true,
+					'transform'       => true,
+					'd'               => true,
+					'stroke-linecap'  => true,
+					'stroke-linejoin' => true,
+					'stroke-width'    => true,
 				),
 				'polygon' => array(
 					'class'     => true,

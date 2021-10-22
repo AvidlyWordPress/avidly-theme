@@ -40,7 +40,7 @@ avidly_theme_cache_headers();
 					?>
 				</a>
 
-				<div class="site-header__logo px-4 max-w-xs xl:px-0 flex-1">
+				<div class="site-header__logo z-10 px-4 mr-auto max-w-xs xl:px-0 flex-1 order-2">
 					<?php
 					echo sprintf(
 						'<p class="site-header__title"><a href="%s" aria-label="%s">%s</a></p>',
@@ -52,20 +52,20 @@ avidly_theme_cache_headers();
 					?>
 				</div><!-- /.site-header__logo -->
 
+				<?php avidly_theme_the_search_link( 'px-2 z-10 menu:hidden items-center order-2' ); ?>
+
 				<?php
 				echo sprintf(
 					'<button class="%s" aria-expanded="false" aria-controls="mobile-menu" aria-label="%s">%s</button>',
-					'mobile-menu-toggle flex-initial xl:mx-0 p-4 m-4 has-primary-background-color has-white-color menu:hidden ',
+					'mobile-menu-toggle flex-initial xl:mx-0 p-4 m-4 order-3 has-primary-background-color has-white-color menu:hidden ',
 					/* translators: Mobile menu toggle button. */
 					esc_html( _x( 'Menu', 'menu UI: toggle', 'avidly-theme' ) ),
 					avidly_theme_get_theme_svg( 'menu', 'ui', 'w-8 mx-auto' ) // phpcs:ignore
 				);
 				?>
 
-				<div id="main-navigation-wrapper" class="main-navigation-wrapper w-full menu:w-auto">
+				<div id="main-navigation-wrapper" class="main-navigation-wrapper order-3 w-full menu:w-auto">
 					<?php if ( has_nav_menu( 'primary_menu' ) ) : ?>
-
-						
 
 						<div id="mobile-menu" class="hidden px-4 xl:px-0 menu:block">
 							<nav id="nav" class="nav-primary" aria-label="<?php echo esc_html_x( 'Primary menu', 'menu UI: aria landmark', 'avidly-theme' ); ?>">
@@ -87,5 +87,7 @@ avidly_theme_cache_headers();
 						</div><!-- /.mobile-menu -->
 					<?php endif; ?>
 				</div>
+
+				<?php avidly_theme_the_search_link( 'px-4 hidden menu:flex items-center order-1 menu:w-auto menu:order-5' ); ?>
 			</header>
 		</div>

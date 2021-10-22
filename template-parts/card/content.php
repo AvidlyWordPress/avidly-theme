@@ -10,6 +10,7 @@
 
 $article_class  = 'card mx-2 border h-full link-element';
 $article_class .= ( is_sticky() && ! is_paged() ) ? ' sm:flex' : ' block sm:flex md:block';
+$post_type      = get_post_type_object( get_post_type() );
 ?>
 
 <article <?php post_class( $article_class ); ?> aria-labelledby="post-<?php the_ID(); ?>">
@@ -31,6 +32,11 @@ $article_class .= ( is_sticky() && ! is_paged() ) ? ' sm:flex' : ' block sm:flex
 	<div class="card__wrapper p-4 flex-1">
 		<header class="card__header mb-2">
 			<?php
+			// Display post type name in search results.
+			if ( is_search() && $post_type ) {
+				echo '<span class="card__posttype text-sm">' . esc_html( $post_type->labels->singular_name ) . '</span>';
+			}
+
 			the_title( '<h2 id="post-' . esc_attr( get_the_ID() ) . '" class="my-0 text-xl break-words"><a href="' . esc_url( get_the_permalink() ) . '">', '</a></h2>' );
 			?>
 

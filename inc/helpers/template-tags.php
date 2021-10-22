@@ -24,3 +24,27 @@ function avidly_theme_get_post_date( $format = '' ) {
 		esc_html( $posted_on ),
 	);
 }
+
+/**
+ * Undocumented function
+ *
+ * @param string $target
+ * @param string $wrap_class
+ * @return void
+ */
+function avidly_theme_the_search_link( $wrap_class = '' ) {
+	?>
+	<div class="search-link-wrapper <?php echo esc_attr( $wrap_class ); ?>">
+		<?php
+		echo sprintf(
+			'<a href="%s" class="%s" aria-label="%s">%s</a>',
+			esc_url( get_site_url() . '?s' ),
+			'inline-block p-1 text-black hover:bg-black hover:text-white',
+			/* translators: Site search link. */
+			esc_html_x( 'Search from site', 'theme UI', 'avidly-theme' ),
+			avidly_theme_get_theme_svg( 'search', 'ui' ) // phpcs:ignore
+		);
+		?>
+	</div>
+	<?php
+}

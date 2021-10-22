@@ -29,11 +29,8 @@ get_header();
 				echo '<h1 class="my-0">' . esc_html( $posts_title ) . '</h1>';
 				echo wp_kses_post( $posts_content );
 			} else if ( is_search() ) {
-				echo sprintf(
-					/* translators: %s search word. */
-					'<h1 class="my-0"">' . esc_html_x( 'You searched for %s', 'theme UI', 'avidly-theme' ) . '</h1>',
-					'<span>' . esc_html( get_search_query() ) . '</span>'
-				);
+				echo '<h1 class="my-0"">' . esc_html_x( 'Search from site', 'theme UI', 'avidly-theme' ) . '</h1>';
+				echo '<div class="site-search-wrapper text-black">' . get_search_form( array( 'echo' => false ) ) . '</div>';
 			} else {
 				the_archive_title( '<h1 class="my-0"">', '</h1>' );
 			}
