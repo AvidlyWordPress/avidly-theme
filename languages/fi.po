@@ -4,10 +4,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Avidly Theme 2.0\n"
-"Report-Msgid-Bugs-To: https://github.com/AvidlyWordPress/avidly-"
-"theme\n"
-"POT-Creation-Date: 2021-10-22 15:00+0300\n"
-"PO-Revision-Date: 2021-10-22 15:00+0300\n"
+"Report-Msgid-Bugs-To: https://github.com/AvidlyWordPress/avidly-theme\n"
+"POT-Creation-Date: 2021-10-22 16:49+0300\n"
+"PO-Revision-Date: 2021-10-22 16:49+0300\n"
 "Last-Translator: \n"
 "Language-Team: Avidly Digital <help@avidlyagency.com>\n"
 "Language: fi\n"
@@ -18,9 +17,9 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_n:2,1;_x:2c,1;esc_attr__;__ngettext:1,2;"
-"__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_nx_noop:4c,1,2;"
-"_ex:1,2c;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
-"esc_html_x:1,2c;_nx:4c,1,2\n"
+"__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_nx:4c,1,2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -88,21 +87,15 @@ msgid "Skip to the content"
 msgstr "Siirry sisältöön"
 
 #. translators: Mobile menu toggle button.
-#: header.php:60
+#: header.php:62
 msgctxt "menu UI: toggle"
 msgid "Menu"
 msgstr "Valikko"
 
-#: header.php:69
+#: header.php:71
 msgctxt "menu UI: aria landmark"
 msgid "Primary menu"
 msgstr "Päävalikko"
-
-#. translators: Mobile menu toggle button.
-#: header.php:96 index.php:33
-msgctxt "theme UI"
-msgid "Search from site"
-msgstr "Hae sivustolta"
 
 #: inc/_conf/register-menus.php:18
 msgctxt "admin UI: menu name"
@@ -159,6 +152,19 @@ msgstr "Alavalikko: %s"
 msgctxt "theme UI"
 msgid "Posted on %s"
 msgstr "Julkaistu %s"
+
+#. translators: Site search link.
+#: inc/helpers/template-tags.php:43 index.php:32
+msgctxt "theme UI"
+msgid "Search from site"
+msgstr "Hae sivustolta"
+
+#. translators: %s post category.
+#: template-parts/card/content.php:50 template-parts/entry/content.php:53
+#, php-format
+msgctxt "theme UI"
+msgid "<span class=\"screen-reader-text\">In category </span>%s"
+msgstr "<span class=\"screen-reader-text\">Kategoriassa </span>%s"
 
 #. translators: Default no content message
 #: template-parts/entry/none.php:18

@@ -33,14 +33,32 @@
 
 		<?php
 		// Display date for posts.
-		if ( 'post' === get_post_type() ) {
-			// phpcs:ignore
-			echo sprintf(
-				'<div class="entry-header__date alignwide">%s</div>',
-				// phpcs:ignore.
-				avidly_theme_get_post_date()
-			);
-		}
+		if ( 'post' === get_post_type() ) :
+			?>
+			<div class="flex flex-col mt-4 sm:mt-0 sm:flex-row flex-wrap alignwide sm:items-center">
+				<?php
+				// phpcs:ignore
+				echo sprintf(
+					'<span class="entry-header__date">%s</span>',
+					// phpcs:ignore.
+					avidly_theme_get_post_date()
+				);
+
+				if ( has_category() ) {
+					echo sprintf(
+						'%s<span class="entry-header__categories text-sm">%s</span>',
+						'<span class="hidden sm:block mx-2">|</span>',
+						sprintf(
+							/* translators: %s post category. */
+							_x( '<span class="screen-reader-text">In category </span>%s', 'theme UI', 'avidly-theme' ), // phpcs:ignore.
+							get_the_category_list( ', ' ) // phpcs:ignore.
+						),
+					);
+				}
+				?>
+			</div>
+			<?php
+		endif;
 
 		if ( has_excerpt() ) {
 			echo sprintf(
