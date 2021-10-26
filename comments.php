@@ -16,7 +16,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area container">
+<div id="comments" class="comments-area container mb-12">
 
 	<?php
 	// You can start editing here -- including this comment!

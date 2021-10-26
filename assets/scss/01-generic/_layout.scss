@@ -36,3 +36,7 @@
 p.has-background {
 	@apply p-4;
 }
+
+.entry-content > *:last-child:not(.has-background) {
+	@apply mb-12;
+}
