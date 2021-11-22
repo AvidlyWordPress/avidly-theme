@@ -1,0 +1,40 @@
+/**
+ * A11y overlay search.
+ */
+
+.a11y-overlaysearch {
+	&__container {
+		@apply relative;
+		@apply bg-white;
+		@apply p-4 md:p-8;
+		@apply w-full max-w-3/4 lg:max-w-1/2;
+	}
+
+	&__close {
+		@apply absolute;
+		@apply -top-2;
+		@apply -right-2;
+		@apply bg-primary;
+		@apply text-white;
+	}
+
+	&--icon {
+		min-width: 2rem;
+		min-height: 2rem;
+
+		svg {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__form {
+		@apply flex items-center justify-center;
+	}
+
+	&__input {
+		margin-bottom: 0 !important;
+		@apply mr-2;
+		@apply w-3/4;
+	}
+}

@@ -44,7 +44,7 @@ avidly_theme_cache_headers();
 					<?php
 					echo sprintf(
 						'<p class="site-header__title"><a href="%s" aria-label="%s">%s</a></p>',
-						esc_url( get_site_url() ),
+						esc_url( home_url( '/' ) ),
 						/* translators: Link to front page. */
 						esc_html_x( 'Go to front page', 'theme UI', 'avidly-theme' ),
 						avidly_theme_get_theme_svg( 'logo', 'theme' ) // phpcs:ignore
@@ -90,4 +90,6 @@ avidly_theme_cache_headers();
 
 				<?php avidly_theme_the_search_link( 'px-4 hidden menu:flex items-center order-1 menu:w-auto menu:order-5' ); ?>
 			</header>
+
 		</div>
+

@@ -33,18 +33,30 @@ function avidly_theme_get_post_date( $format = '' ) {
  */
 function avidly_theme_the_search_link( $wrap_class = '' ) {
 	?>
+
 	<div class="search-link-wrapper <?php echo esc_attr( $wrap_class ); ?>">
 		<?php
-		echo sprintf(
-			'<a href="%s" class="%s" aria-label="%s">%s</a>',
-			esc_url( get_site_url() . '?s' ),
-			'inline-block p-1 text-black hover:bg-black hover:text-white',
-			/* translators: Site search link. */
-			esc_html_x( 'Search from site', 'theme UI', 'avidly-theme' ),
-			avidly_theme_get_theme_svg( 'search', 'ui' ) // phpcs:ignore
-		);
+		if ( function_exists( 'a11y_overlaysearch_button' ) ) :
+
+			// Create search button functionality via plugin.
+			echo a11y_overlaysearch_button( false, 'inline-block p-1 text-black hover:bg-black hover:text-white' ); // phpcs:ignore
+
+		else :
+
+			// Default theme search buttutton functionality (link to search results page).
+			echo sprintf(
+				'<a href="%s" class="%s" aria-label="%s">%s</a>',
+				esc_url( home_url( '/' ) . '?s=+' ), // Href.
+				'inline-block p-1 text-black hover:bg-black hover:text-white', // Classes.
+				/* translators: Site search link. */
+				esc_html_x( 'Search from site', 'theme UI', 'avidly-theme' ), // Screen reader text.
+				avidly_theme_get_theme_svg( 'search', 'ui' ) // phpcs:ignore
+			);
+
+		endif;
 		?>
-	</div>
+	</div><!-- /.search-link-wrapper -->
+
 	<?php
 }
 
