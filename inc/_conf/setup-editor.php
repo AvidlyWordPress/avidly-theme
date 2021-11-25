@@ -180,11 +180,11 @@ add_filter(
 		$user = wp_get_current_user();
 		$caps = ( (array) $user->allcaps ) ? (array) $user->allcaps : array();
 
-		// Unallow these blocks for not a super-admin, admin or editor users, since 2.0.1.
+		// Unallow these blocks for not a super-admin, admin or editor users, since 2.1.1.
 		if ( ! array_key_exists( 'edit_theme_options', $caps ) ) {
 			array_splice( $allowed_block_types, array_search( 'core/html', $allowed_block_types, true ), 1 );
 		}
-		// Unallow these blocks for not a super-admin, admin or editor users, since 2.0.1.
+		// Unallow these blocks for not a super-admin, admin or editor users, since 2.1.1.
 		if ( ! array_key_exists( 'edit_pages', $caps ) ) {
 			array_splice( $allowed_block_types, array_search( 'core/site-logo', $allowed_block_types, true ), 1 );
 			array_splice( $allowed_block_types, array_search( 'core/site-tagline', $allowed_block_types, true ), 1 );
