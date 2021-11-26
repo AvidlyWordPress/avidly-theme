@@ -71,6 +71,9 @@ add_action(
 	}
 );
 
+// Reduces unused CSS by only loading styles for in-use blocks.
+add_filter( 'should_load_separate_core_block_assets', '__return_true' );
+
 
 /**
  * Enqueue supplemental block editor styles.

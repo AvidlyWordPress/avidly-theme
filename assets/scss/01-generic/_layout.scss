@@ -2,6 +2,8 @@
  * Front end widths.
  */
 .container > *,
+.container > .wp-block-image, // Fix core inline style that sets x margin to 0 for images.
+.container > figure, // Fix core inline style that sets x margin to 0 for tables, galleries and pullquotes.
 .alignwide {
 	@apply mx-auto;
 }
