@@ -4,7 +4,12 @@ All notable changes to this project will be documented in this file.
  
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
+
+## [2.1.3] - 2021-26-11
  
+### Added
+- Deactivate blur and animation from Tailwind corePlugins to optimize app.css file size.
+
 ## [2.1.2] - 2021-26-11
  
 ### Added
