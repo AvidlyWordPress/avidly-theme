@@ -8,14 +8,8 @@ module.exports = {
 		content: [
 			'./inc/*/*.php',
 			'./template-parts/*/*.php',
-			'./assets/css/*.css',
 			'./assets/js/*.js',
-			'./comments.php',
-			'./header.php',
-			'./footer.php',
-			'./singular.php',
-			'./index.php',
-			'./404.php',
+			'./*.php',
 			'./safelist.txt'
 		],
 	},
