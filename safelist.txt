@@ -1,3 +1,6 @@
 # Safelist for classes that cannot be detected from templates, classes that needs to be supported via block editor (margin or padding utilities, etc).
 m-0 mt-0 mb-0
 p-0 pt-0 pb-0
+editor-styles-wrapper
+editor-post-title
+is-root-container

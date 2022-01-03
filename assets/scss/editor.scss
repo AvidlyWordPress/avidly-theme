@@ -10,6 +10,10 @@
 /**
  * Editor fixes
  */
+.is-root-container > *:not([data-align]):not(ul):not(ol):not(.has-background) {
+	@apply px-4;
+}
+
 .wp-block[data-align=right],
 .wp-block[data-align=left] {
 	float: none !important; /* Overwrite core styles that does image floats incrorrectly in editor */

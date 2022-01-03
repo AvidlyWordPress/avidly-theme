@@ -39,12 +39,12 @@ module.exports = {
 			black: '#000000',
 			white: '#FFFFFF',
 			lightgray: '#EEEEEE',
-			primary : '#0000FF',
+			primary: '#0000FF',
 			secondary: '#00FF00',
 			tertiary: '#FF0000',
 		},
 		fontFamily: {
-			// Font Family: https://tailwindcss.com/docs/min-width
+			// Font Family: https://tailwindcss.com/docs/font-family
 			sans: ['Roboto', 'sans-serif'],
 			serif: ['Roboto\\ Slab', 'serif']
 		},

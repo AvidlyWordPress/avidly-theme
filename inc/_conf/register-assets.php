@@ -71,9 +71,20 @@ add_action(
 	}
 );
 
+/**
+ * Load supplemental block editor styles.
+ */
+add_action(
+	'after_setup_theme',
+	function() {
+		add_theme_support( 'editor-styles' );
+		add_editor_style( '/assets/dist/css/webfonts.css' );
+		add_editor_style( '/assets/dist/css/editor.css' );
+	}
+);
+
 // Reduces unused CSS by only loading styles for in-use blocks.
 add_filter( 'should_load_separate_core_block_assets', '__return_true' );
-
 
 /**
  * Enqueue supplemental block editor styles.
@@ -92,14 +103,6 @@ add_action(
 	1,
 	1
 );
-
-
-/**
- * Load supplemental block editor styles.
- */
-add_theme_support( 'editor-styles' );
-add_editor_style( '/assets/dist/css/webfonts.css' );
-add_editor_style( '/assets/dist/css/editor.css' );
 
 
 /**
