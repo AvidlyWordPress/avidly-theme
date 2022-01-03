@@ -115,10 +115,10 @@ add_filter(
 			// Gravity Forms.
 			'gravityforms/form',
 
-			/*
+
 			// Advanced Custom Fields.
-			'acf/your-block-name',
-			*/
+			'avidly/social-share',
+			// 'acf/your-block-name',
 
 			/*
 			// LearnDash LMS (block list from version 3.5.0).
