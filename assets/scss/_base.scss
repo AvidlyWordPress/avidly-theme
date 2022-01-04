@@ -92,7 +92,7 @@
 		@apply mt-2;
 	}
 
-	ul:not(.list-none),
+	ul:not(.list-none):not(.a11y-overlaysearch_results),
 	ol:not(.list-none) {
 		@apply pl-10;
 

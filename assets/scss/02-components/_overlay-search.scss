@@ -38,3 +38,28 @@
 		@apply w-3/4;
 	}
 }
+
+.a11y-overlaysearch_results {
+	@apply p-4;
+
+	li {
+		@apply list-none;
+		@apply border-b;
+		@apply border-lightgray;
+		@apply py-2;
+
+		&:last-of-type {
+			@apply border-b-0;
+		}
+	}
+
+	a {
+		@apply flex;
+		@apply justify-between;
+	}
+
+	p {
+		@apply mb-0;
+	}
+	
+}
