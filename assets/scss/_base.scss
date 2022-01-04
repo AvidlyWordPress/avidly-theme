@@ -92,22 +92,6 @@
 		@apply mt-2;
 	}
 
-	ul:not(.list-none):not(.a11y-overlaysearch_results),
-	ol:not(.list-none) {
-		@apply pl-10;
-
-		li {
-			@apply mt-1;
-		}
-	}
- 
-	ul:not(.list-none) {
-		@apply list-disc;
-	}
-	ol:not(.list-none) {
-		@apply list-decimal;
-	}
-
 	svg {
 		@apply max-w-full;
 		@apply h-auto;
