@@ -118,6 +118,7 @@ add_filter(
 
 			// Advanced Custom Fields.
 			'avidly/social-share',
+			'avidly/accordion',
 			// 'acf/your-block-name',
 
 			/*
