@@ -32,7 +32,7 @@ get_header();
 				?>
 				</p>
 
-				<a href="<?php echo esc_html( get_site_url() ); ?>" class="wp-block-button__link mt-3">
+				<a href="<?php echo esc_html( get_site_url() ); ?>" class="mt-3">
 					<?php
 					/* translators: Link to front page. */
 					echo esc_html_x( 'Go to front page', 'theme UI', 'avidly-theme' );
