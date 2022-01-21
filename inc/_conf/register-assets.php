@@ -107,14 +107,15 @@ add_action(
 
 /**
  * Create preload links for webfonts.
+ * You need to only preload only fonts that might give CLS issues.
  *
  * @return void
  */
 function avidly_theme_preload_webfonts() {
 	$font_urls = array(
-		'/assets/webfonts/Roboto/Roboto-Regular.ttf',
-		'/assets/webfonts/Roboto/Roboto-Bold.ttf',
-		'/assets/webfonts/Roboto_Slab/RobotoSlab-Regular.ttf',
+		// '/assets/webfonts/Roboto/Roboto-Regular.ttf',
+		// '/assets/webfonts/Roboto/Roboto-Bold.ttf',
+		// '/assets/webfonts/Roboto_Slab/RobotoSlab-Regular.ttf',
 		'/assets/webfonts/Roboto_Slab/RobotoSlab-Bold.ttf',
 	);
 
