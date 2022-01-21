@@ -87,6 +87,8 @@ add_filter(
 			// 'core/social-links', // New in core 5.4.
 			// 'core/search', // New in core 5.4.
 			'core/tag-cloud', // New in core 5.3.
+			'core/widget-group', // New in core 5.8.
+			'core/legacy-widget', // New in core 5.8.
 
 			// Theme blocks.
 			'core/site-logo', // New in core 5.8.
@@ -98,6 +100,7 @@ add_filter(
 			'core/query-pagination-numbers', // New in core 5.8.
 			'core/query-pagination-next', // New in core 5.8.
 			'core/query-pagination-previous', // New in core 5.8.
+			'core/term-description', // New in core 5.9.
 			'core/post-title', // New in core 5.8.
 			'core/post-content', // New in core 5.8.
 			'core/post-date', // New in core 5.8.
@@ -105,8 +108,14 @@ add_filter(
 			'core/post-featured-image', // New in core 5.8.
 			'core/post-terms', // New in core 5.8.
 			'core/post-template', // New in core 5.8.
+			'core/post-author', // New in core 5.9.
+			'core/post-comments', // New in core 5.9.
 			'core/loginout', // New in core 5.8.
 			'core/pagelist', // New in core 5.8.
+			'core/navigation', // New in core 5.9.
+			'core/navigation-link', // New in core 5.9.
+			'core/navigation-submenu', // New in core 5.9.
+			'core/template-part', // New in core 5.9.
 
 			// Embed blocks was refactored to be variations of the base Embed block on core 5.6.
 			// Variations can be set via /assets/js/editor-script-block.js.

@@ -9,12 +9,12 @@
 }
 
 .container > * {
-	@apply max-w-screen-md;
+	max-width: 64rem; // Add same value as in theme.json / contentSize.
 }
  
 .alignwide,
 .alignwide > .alignwide {
-	@apply max-w-screen-lg;
+	max-width: 80rem; // Add same value as in theme.json / wideSize.
 }
  
 .alignfull,

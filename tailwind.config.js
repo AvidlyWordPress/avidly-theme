@@ -2,7 +2,7 @@ const _      = require("lodash");
 
 module.exports = {
 	// - - - - - - - - - - - - - - -
-	// PurgeCSS: https://tailwindcss.com/docs/optimizing-for-production#purge-css-options
+	// PurgeCSS: https://v2.tailwindcss.com/docs/optimizing-for-production#purge-css-options
 	// - - - - - - - - - - - - - - -
 	purge: {
 		content: [
@@ -16,23 +16,23 @@ module.exports = {
 	},
 
 	// - - - - - - - - - - - - - - -
-	// Theme Configuration: https://tailwindcss.com/docs/theme
+	// Theme Configuration: https://v2.tailwindcss.com/docs/theme
 	// - - - - - - - - - - - - - - -
 	theme: {
 		screens: {
-			// Breakpoints: https://tailwindcss.com/docs/breakpoints#custom-media-queries
+			// Breakpoints: https://v2.tailwindcss.com/docs/breakpoints#custom-media-queries
 			// => @media (min-width: your-value) { ... }
 			'xxs': '414px',
 			'xs': '481px',
 			'sm': '768px',
-			'md' : '1024px', // Add this value also in theme.json => "contentSize"
-			'lg': '1280px', // Add this value also in theme.json => "wideSize"
+			'md' : '1024px',
+			'lg': '1280px',
 			'xl': '1624px',
 			'menu' : '992px' // If you change this, update value also to to /assets/js/discloserMenu.js.
 			
 		},
 		colors: {
-			// Customizing Colors: https://tailwindcss.com/docs/customizing-colors
+			// Customizing Colors: https://v2.tailwindcss.com/docs/customizing-colors
 			// Would be nice to fetch these directly from theme.json.
 			transparent: 'transparent',
 			current: 'currentColor',
@@ -44,12 +44,12 @@ module.exports = {
 			tertiary: '#FF0000',
 		},
 		fontFamily: {
-			// Font Family: https://tailwindcss.com/docs/font-family
+			// Font Family: https://v2.tailwindcss.com/docs/font-family
 			sans: ['Roboto', 'sans-serif'],
 			serif: ['Roboto\\ Slab', 'serif']
 		},
 		fontSize: {
-			// Font Size: https://tailwindcss.com/docs/font-size
+			// Font Size: https://v2.tailwindcss.com/docs/font-size
 			'xs': '.75rem',
 			'sm': '.875rem',
 			'tiny': '.875rem',
@@ -65,22 +65,22 @@ module.exports = {
 		},
 
 		// - - - - - - - - - - - - - - -
-		// Extending the default theme: https://tailwindcss.com/docs/theme#extending-the-default-theme
+		// Extending the default theme: https://v2.tailwindcss.com/docs/theme#extending-the-default-theme
 		// - - - - - - - - - - - - - - -
 		extend: {
 			spacing: {
-				// Spacing scale: https://tailwindcss.com/docs/customizing-spacing#extending-the-default-spacing-scale
+				// Spacing scale: https://v2.tailwindcss.com/docs/customizing-spacing#extending-the-default-spacing-scale
 				'sm': '1rem',
 				'md': '2rem',
 				'lg': '36rem',
 				'128': '32rem',
 			},
 			minWidth: {
-				// https://tailwindcss.com/docs/min-width
+				// https://v2.tailwindcss.com/docs/min-width
 				'40' : '10rem',
 			},
 			maxWidth: {
-				// https://tailwindcss.com/docs/max-width
+				// https://v2.tailwindcss.com/docs/max-width
 				'1/4': '25%',
 				'1/2': '50%',
 				'3/4': '75%',
@@ -94,7 +94,7 @@ module.exports = {
 	},
 
 	// - - - - - - - - - - - - - - -
-	// Core Plugins: https://tailwindcss.com/docs/configuration#core-plugins
+	// Core Plugins: https://v2.tailwindcss.com/docs/configuration#core-plugins
 	// - - - - - - - - - - - - - - -
 	corePlugins: {
 	 container: false, // Deactivate container classes to support WordPress block editor.
@@ -103,7 +103,7 @@ module.exports = {
 	},
 
 	// - - - - - - - - - - - - - - -
-	// Plugins: https://tailwindcss.com/docs/plugins
+	// Plugins: https://v2.tailwindcss.com/docs/plugins
 	// - - - - - - - - - - - - - - -
 	plugins: [
 	]

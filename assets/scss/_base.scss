@@ -34,13 +34,6 @@
 	}
 
 	/**
-	 * Root
-	 */
-	 body {
-		font-family: 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', 'sans-serif';
-	 }
-
-	/**
 	 * Base typographty elements.
 	 */
 	h1,
@@ -48,30 +41,13 @@
 	h3,
 	h4,
 	.editor-post-title {
-		font-family: 'Roboto Slab', 'serif';
 		font-weight: 700;
 		@apply mb-3;
 		@apply mt-4 lg:mt-6;
 	}
 
-	h1,
-	h2 {
-		@apply mt-7 lg:mt-10;
-	}
-
-	h1 {
-		@apply text-4xl lg:text-6xl;
-	}
-	h2 {
-		@apply text-3xl lg:text-4xl;
-	}
-	h3 {
-		@apply text-2xl;
-	}
-
 	a {
 		@apply underline;
-		@apply text-primary;
 
 		&:hover,
 		&:focus {

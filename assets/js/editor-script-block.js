@@ -31,7 +31,10 @@ wp.domReady( function() {
 		// 'crowdsignal',
 		// 'dailymotion',
 		// 'imgur',
+		'twitter',
 		'issuu',
+		'pinterest', // New in core 5.9.
+		// 'wolfram-cloud', // New in core 5.9.
 		// 'kickstarter',
 		// 'meetup-com',
 		// 'mixcloud',
