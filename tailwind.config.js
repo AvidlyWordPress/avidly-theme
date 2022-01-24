@@ -2,18 +2,16 @@ const _      = require("lodash");
 
 module.exports = {
 	// - - - - - - - - - - - - - - -
-	// PurgeCSS: https://v2.tailwindcss.com/docs/optimizing-for-production#purge-css-options
+	// Content Configuration: https://tailwindcss.com/docs/content-configuration
 	// - - - - - - - - - - - - - - -
-	purge: {
-		content: [
-			'./inc/*/*.php',
-			'./template-parts/*/*.php',
-			'./assets/js/*.js',
-			'./assets/scss/*/*.scss',
-			'./*.php',
-			'./safelist.txt'
-		],
-	},
+	content: [
+		'./inc/*/*.php',
+		'./template-parts/*/*.php',
+		'./assets/js/*.js',
+		'./assets/scss/*/*.scss',
+		'./*.php',
+		'./safelist.txt'
+	],
 
 	// - - - - - - - - - - - - - - -
 	// Theme Configuration: https://v2.tailwindcss.com/docs/theme
