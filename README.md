@@ -11,7 +11,7 @@ I'm created for WordPress Block Editor especially in mind. I support theme.json 
 I have been developed with accessibility / WCAG 2.1 criteria in mind.
 
 ### Tailwind CSS
-I integrate with Tailwind CSS (version 2). Learn <a href="https://v2.tailwindcss.com/docs">how to use Tailwind CSS</a> by reading the documentation.
+I integrate with Tailwind CSS. Learn <a href="https://tailwindcss.com/docs">how to use Tailwind CSS</a> by reading the documentation.
 
 ### Requirements
 * Requires at least WordPress 5.9
@@ -41,4 +41,4 @@ More reading and examples from Fullsiteediting.com:
 
 
 ### tailwind.config.js
-- Setup Tailwind CSS related settings. See detailed instructions from <a href="https://v2.tailwindcss.com/docs">Tailwind CSS documentation</a>
+- Setup Tailwind CSS related settings. See detailed instructions from <a href="https://tailwindcss.com/docs">Tailwind CSS documentation</a>

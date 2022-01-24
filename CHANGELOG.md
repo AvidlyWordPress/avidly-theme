@@ -16,7 +16,6 @@ WordPress 5.9 support.
 ### Changed
 - Clean up theme styles
 - Change content width to base on rems
-- Update documentation links to Tailwind CSS version 2
 
 ### Fixed
 - return Twitter as whitelisted embeds
