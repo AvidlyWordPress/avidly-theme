@@ -5,8 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [3.0.0] - 2021-26-11
-Wordpress 5.9 support.
+## [3.0.0] - 2022-01-21
+WordPress 5.9 support.
+
 ### Added
 - Version 2 support to theme.json
 - Pinterest and Wolfram Cloud as block embed variations
@@ -18,7 +19,7 @@ Wordpress 5.9 support.
 - Update documentation links to Tailwind CSS version 2
 
 ### Fixed
-- returns Twitter as whitelisted embeds
+- return Twitter as whitelisted embeds
 
 ## [2.1.3] - 2021-26-11
  
