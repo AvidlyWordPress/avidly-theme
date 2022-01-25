@@ -25,17 +25,17 @@ WordPress 5.9 support.
 ### Changed
 - Deactivate blur and animation from Tailwind corePlugins to optimize app.css file size.
 
-## [2.1.2] - 2021-26-11
+## [2.1.2] - 2021-11-26
  
 ### Changed
 - Reduce unused CSS by only loading styles for in-use blocks.
  
-## [2.1.1] - 2021-25-11
+## [2.1.1] - 2021-11-25
  
 ### Added
 - Way to Unallow blocks by current users capabilities.
  
-## [2.1.0] - 2021-22-11
+## [2.1.0] - 2021-11-22
  
 ### Added
 - A11y Overlay Search support
