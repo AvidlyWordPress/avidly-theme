@@ -9,7 +9,12 @@ module.exports = {
 		'./template-parts/*/*.php',
 		'./assets/js/*.js',
 		'./assets/scss/*/*.scss',
-		'./*.php',
+		'./404.php',
+		'./comments.php',
+		'./footer.php',
+		'./header.php',
+		'./index.php',
+		'./singular.php',
 		'./safelist.txt'
 	],
 
