@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.0.1] - 2022-01-21
+Minor fix.
+
+### Fixed
+- Tailwind content configurations rules and list styles
+- Add PHP files to tailwind.config content listing
+
 ## [3.0.0] - 2022-01-21
 WordPress 5.9 support.
 
