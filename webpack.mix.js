@@ -24,6 +24,7 @@ mix
 		jquery: ['$', 'global.jQuery',"jQuery","global.$","jquery","global.jquery"]
 	})
 	.options({
+		autoprefixer: { remove: false },
 		postCss: [ tailwindcss('./tailwind.config.js') ],
 		processCssUrls: false, // Process/optimize relative stylesheet url()'s. Set to false, if you don't want them touched.
 	});

@@ -4,3 +4,4 @@ p-0 pt-0 pb-0
 editor-styles-wrapper
 editor-post-title
 is-root-container
+list-none
