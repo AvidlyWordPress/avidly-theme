@@ -126,6 +126,11 @@ class Disclosure_Nav_Menu extends Walker_Nav_Menu {
 		$atts['target'] = ! empty( $item->target ) ? $item->target : '';
 		$atts['rel']    = ! empty( $item->xfn ) ? $item->xfn : '';
 		$atts['href']   = ! empty( $item->url ) ? $item->url : '';
+		
+		// Add the 'aria-current' attribute to current menu items.
+		if ( in_array( 'current-menu-item', $classes ) ) {
+			$atts['aria-current'] = 'page';
+		}
 
 		/**
 		 * Filter the HTML attributes applied to a menu item's anchor element.
