@@ -9,6 +9,7 @@ module.exports = {
 		'./template-parts/*/*.php',
 		'./assets/js/*.js',
 		'./assets/scss/*/*.scss',
+		'./assets/scss/overlay-search.scss',
 		'./404.php',
 		'./comments.php',
 		'./footer.php',

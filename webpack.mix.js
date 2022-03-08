@@ -19,6 +19,7 @@ mix
 	.js('./assets/js/editor-script-block.js', 'js/')
 	.sass('./assets/scss/app.scss', 'css/')
 	.sass('./assets/scss/editor.scss', 'css/')
+	.sass('./assets/scss/overlay-search.scss', 'css/')
 	.version()
 	.autoload({
 		jquery: ['$', 'global.jQuery',"jQuery","global.$","jquery","global.jquery"]

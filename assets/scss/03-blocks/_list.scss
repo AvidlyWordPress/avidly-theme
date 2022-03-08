@@ -1,17 +1,13 @@
 /**
  * Block: List.
  */
-ul[data-type="core/list"]:not(.list-none),
-ul:not(.list-none):not([class^="wp-block"]):not(.grid) {
+ul {
 	@apply list-disc;
 	@apply list-inside;
 	@apply pl-5;
-
-	background: red;
 }
 
-ol[data-type="core/list"]:not(.list-none),
-ol:not(.list-none):not([class^="wp-block"]):not(.grid) {
+ol {
 	@apply list-decimal;
 	@apply list-inside;
 	@apply pl-5;

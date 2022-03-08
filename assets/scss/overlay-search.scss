@@ -1,7 +1,9 @@
+/* Tailwind CSS, change settings from tailwind.config.js */
+@import 'utilities';
+
 /**
  * A11y overlay search.
  */
-
 .a11y-overlaysearch {
 	&__container {
 		@apply relative;
@@ -40,10 +42,10 @@
 }
 
 .a11y-overlaysearch_results {
+	@apply list-none;
 	@apply p-4;
-
+	
 	li {
-		@apply list-none;
 		@apply border-b;
 		@apply border-lightgray;
 		@apply py-2;
