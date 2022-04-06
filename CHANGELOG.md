@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.2.0] - 2022-01-25
+New implementation of Tailwind CSS preflight.
+
+### Changed
+Run Tailwind preflight as separely file to prevent conflicts with theme.json styles in editor.
+
+## [3.1.0] - 2022-01-25
+Minor changes + WordPress 5.9.1 support.
+
+### Changed
+Move a11y overlay search styles to own CSS file -> load only if functionality is found
+Comment out example how to remove allowed blocks from different capabilities.
+
+### Fixed
+Create temp workaround for WP 5.9.1 and Tailwind preflight styles incompatibility.
+
 ## [3.0.1] - 2022-01-25
 Minor fix.
 

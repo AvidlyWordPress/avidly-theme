@@ -17,6 +17,7 @@ mix
 	.js('./assets/js/app.js', 'js/')
 	.js('./assets/js/disclosureMenu.js', 'js/')
 	.js('./assets/js/editor-script-block.js', 'js/')
+	.sass('./assets/scss/preflight.scss', 'css/')
 	.sass('./assets/scss/app.scss', 'css/')
 	.sass('./assets/scss/editor.scss', 'css/')
 	.sass('./assets/scss/overlay-search.scss', 'css/')

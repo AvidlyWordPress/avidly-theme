@@ -1,4 +1,17 @@
-/* Tailwind CSS, change settings from tailwind.config.js */
+/**
+ * Manually handpicked preflight rules for editor.
+ */
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: theme('borderColor.DEFAULT', currentColor); /* 2 */
+}
+
+/**
+ * Tailwind CSS, change settings from tailwind.config.js
+ */
 @import 'base';
 @tailwind components;
 @import 'utilities';

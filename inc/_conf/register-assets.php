@@ -31,6 +31,12 @@ add_filter( 'script_loader_src', 'avidly_theme_remove_wp_ver', 9999 );
 add_action(
 	'wp_enqueue_scripts',
 	function() {
+		// Manually added tailwind preflight for front end only.
+		wp_enqueue_style( // phpcs:ignore
+			'avidly_theme-preflight',
+			avidly_theme_cache_busting( '/assets/dist/css/preflight.css' )
+		);
+
 		// Main style.
 		wp_enqueue_style( // phpcs:ignore
 			'avidly_theme',
@@ -133,35 +139,3 @@ function avidly_theme_preload_webfonts() {
 }
 add_action( 'wp_head', 'avidly_theme_preload_webfonts', 5 );
 add_action( 'admin_head', 'avidly_theme_preload_webfonts', 5 );
-
-/**
- * Create workaround for WP 5.9.1 and Tailwind preflight styles incompability.
- */
-function avidly_theme_tailwind_support() {
-	// Get theme.json file.
-	$url        = esc_url( get_theme_file_uri( 'theme.json' ) );
-	$decodejson = ( $url ) ? json_decode( file_get_contents( $url ) ) : '';
-	$elements   = ( is_object( $decodejson ) ) ? $decodejson->styles->elements : '';
-
-	// Return if there is no elements added i ntheme.json.
-	if ( ! $elements ) {
-		return;
-	}
-
-	$styles = '';
-
-	// Create custom inline styles from theme.json elements.
-	foreach ( $elements as $key => $el ) {
-		if ( is_object( $el ) && isset( $el->typography ) ) {
-			$styles .= sprintf(
-				'.editor-styles-wrapper %s{ %s %s }',
-				$key,
-				isset( $el->typography->fontSize ) ? 'font-size: ' . $el->typography->fontSize . ' !important;' : '',
-				isset( $el->typography->lineHeight ) ? 'line-height: calc(' . $el->typography->lineHeight . ' *  ' . $el->typography->lineHeight . ') !important;' : ''
-			);
-		}
-	}
-
-	echo '<style>' . $styles . '</style>'; // phpcs:ignore
-}
-add_action( 'admin_head', 'avidly_theme_tailwind_support' );

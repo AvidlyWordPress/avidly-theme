@@ -104,6 +104,7 @@ module.exports = {
 	 container: false, // Deactivate container classes to support WordPress block editor.
 	 blur: false, // Deactive blur in decrease outputed CSS size.
 	 animation: false, // Deactive animation in decrease outputed CSS size.
+	 preflight: false, // Disable default preflight to create own for frontend only.
 	},
 
 	// - - - - - - - - - - - - - - -
