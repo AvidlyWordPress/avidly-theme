@@ -43,6 +43,14 @@ add_action(
 			avidly_theme_cache_busting( '/assets/dist/css/app.css' )
 		);
 
+		/* phpcs:ignore
+		// Cache busting usage example in child themes.
+		wp_enqueue_style( // phpcs:ignore
+			'child_theme',
+			avidly_theme_cache_busting( '/assets/dist/css/app.css', true )
+		);
+		*/
+
 		// Navigation JS.
 		if ( has_nav_menu( 'primary_menu' ) ) {
 			wp_enqueue_script( // phpcs:ignore

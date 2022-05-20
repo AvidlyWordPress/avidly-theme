@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [3.2.0] - 2022-01-25
+Minor fixes to improve child theme support.
+
+### Fixed
+Modify cache busting function to create support for use of child themes.
+
+## [3.2.0] - 2022-01-25
 New implementation of Tailwind CSS preflight.
 
 ### Changed
