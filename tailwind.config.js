@@ -1,23 +1,17 @@
-const _      = require("lodash");
+const _   = require("lodash");
 
 module.exports = {
 	// - - - - - - - - - - - - - - -
 	// Content Configuration: https://tailwindcss.com/docs/content-configuration
 	// - - - - - - - - - - - - - - -
-	content: [
+	content: require('fast-glob').sync([ //
 		'./inc/*/*.php',
 		'./template-parts/*/*.php',
 		'./assets/js/*.js',
 		'./assets/scss/*/*.scss',
-		'./assets/scss/overlay-search.scss',
-		'./404.php',
-		'./comments.php',
-		'./footer.php',
-		'./header.php',
-		'./index.php',
-		'./singular.php',
+		'./*.php',
 		'./safelist.txt'
-	],
+	]),
 
 	// - - - - - - - - - - - - - - -
 	// Theme Configuration: https://tailwindcss.com/docs/theme

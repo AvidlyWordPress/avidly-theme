@@ -23,20 +23,9 @@
 }
 
 .container > *:not(.has-background):not(.site-header):not(.alignfull):not(ul):not(ol),
-.alignwide.has-background,
-.alignfull.has-background,
 .alignwide:not(.has-background) > .alignwide,
 .alignfull:not(.has-background) > .alignfull {
-	@apply px-4;
-}
-
-
-/**
- * Content padding fixes.
- */
-.has-background,
-p.has-background {
-	@apply p-4;
+	@apply px-6 sm:px-10 lg:px-0;
 }
 
 .entry-content > *:last-child:not(.has-background) {

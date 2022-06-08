@@ -23,6 +23,12 @@ add_action(
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
 
+		// Unregister default patterns and pattern categories that comes from core.
+		remove_theme_support( 'core-block-patterns' );
+
+		// Enable support for responsive embeds.
+		add_theme_support( 'responsive-embeds' );
+
 		/*
 		 * Let WordPress manage the document title.
 		 * By adding theme support, we declare that this theme does not use a

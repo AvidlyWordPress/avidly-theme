@@ -1,5 +1,5 @@
 /* Tailwind CSS, change settings from tailwind.config.js */
-@import 'utilities';
+// @import 'utilities';
 
 /**
  * A11y overlay search.
@@ -35,7 +35,7 @@
 	}
 
 	&__input {
-		margin-bottom: 0 !important;
+		margin-bottom: 0;
 		@apply mr-2;
 		@apply w-3/4;
 	}

@@ -18,4 +18,9 @@
 			@apply h-full;
 		}
 	}
+
+	.has-background {
+		@apply py-4;
+		@apply px-6 sm:px-10;
+	}
 }

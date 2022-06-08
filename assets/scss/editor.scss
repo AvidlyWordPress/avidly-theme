@@ -23,24 +23,3 @@
 @import '03-blocks/query';
 @import '03-blocks/accordion';
 
-/**
- * Editor fixes
- */
-.is-root-container > *:not([data-align]):not(ul):not(ol):not(.has-background) {
-	@apply px-4;
-}
-
-.wp-block[data-align=right],
-.wp-block[data-align=left] {
-	float: none !important; /* Overwrite core styles that does image floats incrorrectly in editor */
-}
-
-.wp-block[data-align=right] > .wp-block-image {
-	float: right;
-	margin-left: 2em;
-}
-
-.wp-block[data-align=left] > .wp-block-image {
-	float: left;
-	margin-right: 2em;
-}

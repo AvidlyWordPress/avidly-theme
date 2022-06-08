@@ -5,6 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.3.0] - 2022-06-09
+Support for WordPress 6.0
+
+### Fixed
+- Wrap image blocks output in div to prevent breaking floats.
+- Improve paddings in editor and front end.
+
+### Watch command fixes (to prevent stucks)
+- Update Laravel Mix.
+- Remove utilities from overlay search styles.
+- Remove `! important rules` globally.
+- Purge support with fast-glob system (requires global install: `yarn add fast-glob -D`).
+
+### Changed
+- Use functions with hooks in `setup-editor.php` for easier activate/deactivate functionality.
+- Run WooCommerce and LearnDash blocks whitelisting in own hooks.
+- Move default patterns unregister and responsive embeds support to `setup-theme.php`
+
+### Added
+- New blocks from 6.0.
+
 ## [3.2.1] - 2022-05-20
 Minor fixes to improve child theme support.
 

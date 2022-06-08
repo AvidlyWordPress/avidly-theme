@@ -35,3 +35,8 @@ require_once 'inc/class/class-svg-icons.php';
 require_once 'inc/helpers/wp-cleanup.php'; // Remove unneeded WordPress default functionality.
 require_once 'inc/helpers/svg-icons.php';
 require_once 'inc/helpers/template-tags.php';
+
+/**
+ * Block renders
+ */
+require_once 'inc/render-block/image.php';
