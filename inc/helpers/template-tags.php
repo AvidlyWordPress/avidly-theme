@@ -1,6 +1,6 @@
 <?php
 /**
- * SVG Icon helper functions
+ * Template tag functions.
  *
  * @package Avidly_Theme
  * @since 2.0.0
@@ -10,6 +10,8 @@
  * Create post date tag.
  *
  * @param string $format PHP date format. Defaults to the 'date_format' option.
+ *
+ * @return HTML
  */
 function avidly_theme_get_post_date( $format = '' ) {
 	$posted_on = sprintf(
@@ -29,6 +31,7 @@ function avidly_theme_get_post_date( $format = '' ) {
  * Create link that leads to search page.
  *
  * @param string $wrap_class set classes for link wrapper.
+ *
  * @return void
  */
 function avidly_theme_the_search_link( $wrap_class = '' ) {
