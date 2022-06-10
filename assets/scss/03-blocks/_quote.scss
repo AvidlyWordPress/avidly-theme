@@ -8,17 +8,31 @@
 	@apply py-2;
 
 	> * {
-		@apply pl-4;
+		@apply pl-6;
 	}
 
 	&::before {
 		content: '';
 		@apply absolute;
 		@apply top-0;
-		@apply left-4;
+		@apply left-6 sm:left-10 lg:left-0;
 		@apply h-full;
 		@apply w-1;
 		@apply bg-primary;
+	}
+
+	/* Variation: background */
+	&.has-background {
+		@apply p-6;
+		@apply mx-6 sm:mx-10 md:mx-auto;
+
+		> * {
+			@apply pl-0 md:pl-4 lg:pl-0;
+		}
+
+		&::before {
+			@apply left-0;
+		}
 	}
 
 	/* Variation: align right */
@@ -52,15 +66,3 @@
 		}
 	}
 }
-
-
-
-
-/* Editor fixes */
-// [data-type="core/quote"]::before {
-// 	@apply left-0;
-// }
-
-// [data-type="core/quote"].has-text-align-right::before {
-// 	@apply right-0;
-// }

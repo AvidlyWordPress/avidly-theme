@@ -11,6 +11,7 @@ Support for WordPress 6.0
 ### Fixed
 - Wrap image blocks output in div to prevent breaking floats.
 - Improve paddings in editor and front end.
+- Fix blockquote default paddings & margins.
 
 ### Watch command fixes (to prevent stucks)
 - Update Laravel Mix.
