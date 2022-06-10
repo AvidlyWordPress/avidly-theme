@@ -1,0 +1,18 @@
+/**
+ * Block: Image.
+ */
+
+// - - - - - - - - - - - - - - -
+// Image float support for WP 6.0: START
+// - - - - - - - - - - - - - - -
+.wp-block-image > span {
+	display: contents; // Required for cropped galleries.
+
+	figcaption {
+		display: table-caption;
+		caption-side: bottom;
+	}
+}
+// - - - - - - - - - - - - - - -
+// Image float support for WP 6.0: END
+// - - - - - - - - - - - - - - -
