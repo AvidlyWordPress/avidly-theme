@@ -1,11 +1,11 @@
 {
-    "version": 2,
-    "settings": {
-        "appearanceTools": true,
-        "color": {
-            "defaultPalette": false,
-            "custom": false,
-            "duotone": [
+	"version": 2,
+	"settings": {
+		"appearanceTools": true,
+		"color": {
+			"defaultPalette": false,
+			"custom": false,
+			"duotone": [
 				{
 					"colors": [ "#000000", "#399e1a" ],
 					"slug": "black-and-primary",
@@ -64,12 +64,12 @@
 				"vw"
 			]
 		},
-        "typography": {
+		"typography": {
 			"dropCap": false,
-            "customFontSize": false,
-            "customLineHeight": false,
-            "fontFamilies": [
-                {
+			"customFontSize": false,
+			"customLineHeight": false,
+			"fontFamilies": [
+				{
 					"fontFamily": "Roboto,Oxygen-Sans,Ubuntu,Cantarell,\"Helvetica Neue\",sans-serif",
 					"name": "System Font",
 					"slug": "system-font"
@@ -79,34 +79,36 @@
 					"name": "Heading Font",
 					"slug": "heading-font"
 				}
-            ],
-            "fontSizes": [
+			],
+			"fontSizes": [
 				{
 					"size": "0.75rem",
 					"slug": "small"
 				},
-                {
+				{
 					"size": "1rem",
-					"slug": "medium"
+					"slug": "normal"
 				},
 				{
 					"size": "1.5rem",
+					"slug": "medium"
+				},
+				{
+					"size": "2rem",
 					"slug": "large"
 				},
 				{
-					"size": "2.25rem",
-					"slug": "x-large"
-				},
-				{
 					"size": "3rem",
-					"slug": "huge"
+					"slug": "x-large"
 				}
+
 			]
-        },
+		},
 		"custom": {
 			"typography": {
 				"font-size": {
-					"gigantic": "clamp(3.75rem, 6vw, 4.25rem)"
+					"gigantic": "clamp(4rem, 6vw, 5rem)",
+					"huge": "clamp(4rem, 4vw, 3.75rem)"
 				},
 				"line-height": {
 					"tiny": 1.15,
@@ -116,10 +118,10 @@
 				}
 			}
 		},
-        "blocks": {
-            "core/button": {
-                "color": {
-                    "palette": [
+		"blocks": {
+			"core/button": {
+				"color": {
+					"palette": [
 						{
 							"name": "White",
 							"slug": "white",
@@ -131,20 +133,20 @@
 							"color": "#0000FF"
 						}
 					]
-                }
-            }
-        }
-    },
-    "styles": {
-        "color": {
+				}
+			}
+		}
+	},
+	"styles": {
+		"color": {
 			"background": "var(--wp--preset--color--lightergray)",
 			"text": "var(--wp--preset--color--black)"
 		},
-        "typography": {
-            "fontSize": "var(--wp--preset--font-size--normal)",
-            "fontFamily": "var(--wp--preset--font-family--system-font)",
-            "lineHeight": "1.5" 
-        },
+		"typography": {
+			"fontSize": "var(--wp--preset--font-size--normal)",
+			"fontFamily": "var(--wp--preset--font-family--system-font)",
+			"lineHeight": "1.5" 
+		},
 		"elements": {
 			"h1": {
 				"typography": {
@@ -156,7 +158,7 @@
 			"h2": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
-					"fontSize": "var(--wp--preset--font-size--huge)",
+					"fontSize": "var(--wp--custom--typography--font-size--huge)",
 					"lineHeight": "var(--wp--custom--typography--line-height--small)"
 				}
 			},
@@ -183,7 +185,7 @@
 			},
 			"h6": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--medium)",
+					"fontSize": "var(--wp--preset--font-size--normal)",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)",
 					"fontWeight": 700
 				}
@@ -194,21 +196,26 @@
 				}
 			}
 		},
-        "blocks": {
-            "core/button": {
-				"typography":{
-                    "fontFamily": "var(--wp--preset--font-family--heading-font)"
-                },
-                "color": {
-                    "background": "var(--wp--preset--color--primary)",
-                    "text": "var(--wp--preset--color--white)"
-                },
+		"blocks": {
+			"core/button": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading-font)"
+				},
+				"color": {
+					"background": "var(--wp--preset--color--primary)",
+					"text": "var(--wp--preset--color--white)"
+				},
 				"border": {
 					"radius": "0"
 				}
-            }
-        }
-    },
+			},
+			"core/cover": {
+				"color": {
+					"text": "var(--wp--preset--color--white)"
+				}
+			}
+		}
+	},
 	"templateParts": [
 		{
 			"name": "header",

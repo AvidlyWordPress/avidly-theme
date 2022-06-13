@@ -24,6 +24,7 @@ Support for WordPress 6.0
 - Run WooCommerce and LearnDash blocks whitelisting in own hooks.
 - Move default patterns unregister and responsive embeds support to `setup-theme.php`.
 - Scss improvements and small code refactoring.
+- Tweak font sizes in theme.json.
 
 ### Added
 - New blocks from 6.0.
