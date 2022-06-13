@@ -26,15 +26,15 @@ function avidly_theme_image_block( $block_content, $block ) {
 		return $block_content;
 	}
 
-	// Wrap figure content inside a span.
+	// Wrap add image content inside a <span>.
 	$block_content = str_replace( '<img', '<span><img', $block_content );
 	$block_content = str_replace( '</figure>', '</span></figure>', $block_content );
 
 	// Detect aligns.
 	$align = isset( $block['attrs']['align'] ) ? $block['attrs']['align'] : '';
 
-	// Move left&right align class from <figure> into <span>.
-	if ( 'left' === $align || 'right' === $align ) {
+	// Move align class from <figure> into <span>.
+	if ( 'left' === $align || 'right' === $align || 'center' === $align ) {
 		$block_content = str_replace( ' align' . $align, '', $block_content );
 		$block_content = str_replace( '<span>', '<span class="align' . esc_attr( $align ) . '">', $block_content );
 	}

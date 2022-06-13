@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [3.3.0] - 2022-06-09
+## [3.3.0] - 2022-06-13
 Support for WordPress 6.0
 
 ### Fixed
@@ -22,7 +22,8 @@ Support for WordPress 6.0
 ### Changed
 - Use functions with hooks in `setup-editor.php` for easier activate/deactivate functionality.
 - Run WooCommerce and LearnDash blocks whitelisting in own hooks.
-- Move default patterns unregister and responsive embeds support to `setup-theme.php`
+- Move default patterns unregister and responsive embeds support to `setup-theme.php`.
+- Scss improvements and small code refactoring.
 
 ### Added
 - New blocks from 6.0.
