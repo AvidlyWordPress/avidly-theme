@@ -4,9 +4,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Avidly Theme 2.0\n"
-"Report-Msgid-Bugs-To: https://github.com/AvidlyWordPress/avidly-theme\n"
-"POT-Creation-Date: 2021-10-22 16:49+0300\n"
-"PO-Revision-Date: 2021-10-22 16:49+0300\n"
+"Report-Msgid-Bugs-To: https://github.com/AvidlyWordPress/avidly-"
+"theme\n"
+"POT-Creation-Date: 2022-06-23 14:35+0300\n"
+"PO-Revision-Date: 2022-06-23 14:36+0300\n"
 "Last-Translator: \n"
 "Language-Team: Avidly Digital <help@avidlyagency.com>\n"
 "Language: fi\n"
@@ -17,9 +18,9 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_n:2,1;_x:2c,1;esc_attr__;__ngettext:1,2;"
-"__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_nx:4c,1,2\n"
+"__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_nx_noop:4c,1,2;"
+"_ex:1,2c;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
+"esc_html_x:1,2c;_nx:4c,1,2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -28,19 +29,19 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-2: _src\n"
 
 #. translators: 404 page title.
-#: 404.php:21
+#: 404.php:32
 msgctxt "theme UI"
 msgid "404 - Page not found"
 msgstr "404 - Sivua ei löydy"
 
 #. translators: 404 page error message.
-#: 404.php:31
+#: 404.php:42
 msgctxt "theme UI"
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Hups, etsimääsi sisältöä löytynyt."
 
 #. translators: Link to front page.
-#: 404.php:38 header.php:49
+#: 404.php:49 header.php:49
 msgctxt "theme UI"
 msgid "Go to front page"
 msgstr "Siirry etusivulle"
@@ -117,17 +118,17 @@ msgctxt "admin UI: widget area"
 msgid "Add widgets here."
 msgstr "Lisää vimpaimia tähän."
 
-#: inc/_conf/setup-editor.php:196
+#: inc/_conf/setup-editor.php:311
 msgctxt "admin UI: block pattern category"
 msgid "Block category"
 msgstr "Mallikategoria"
 
-#: inc/_conf/setup-editor.php:203
+#: inc/_conf/setup-editor.php:323
 msgctxt "admin UI: block pattern title"
-msgid "Custom block pattern"
-msgstr "Lohkomalli"
+msgid "Example Post header"
+msgstr "Malli artikkelin yläosa"
 
-#: inc/_conf/setup-editor.php:204
+#: inc/_conf/setup-editor.php:324
 msgctxt "admin UI: block pattern description"
 msgid "Example of custom block pattern."
 msgstr "Esimerkki lohkomallista."
@@ -140,27 +141,27 @@ msgid "Submenu for %s"
 msgstr "%s alavalikko"
 
 #. translators: Submenu toggle button: %s parent page title.
-#: inc/class/class-disclosure-nav-menu.php:189
+#: inc/class/class-disclosure-nav-menu.php:194
 #, php-format
 msgctxt "menu UI: toggle"
 msgid "Submenu: %s"
 msgstr "Alavalikko: %s"
 
 #. translators: %s post date.
-#: inc/helpers/template-tags.php:17
+#: inc/helpers/helper-functions.php:19
 #, php-format
 msgctxt "theme UI"
 msgid "Posted on %s"
 msgstr "Julkaistu %s"
 
 #. translators: Site search link.
-#: inc/helpers/template-tags.php:43 index.php:32
+#: inc/helpers/helper-functions.php:55 index.php:32
 msgctxt "theme UI"
 msgid "Search from site"
 msgstr "Hae sivustolta"
 
 #. translators: %s post category.
-#: template-parts/card/content.php:50 template-parts/entry/content.php:53
+#: template-parts/card/content.php:50 template-parts/entry/header.php:50
 #, php-format
 msgctxt "theme UI"
 msgid "<span class=\"screen-reader-text\">In category </span>%s"
@@ -171,6 +172,10 @@ msgstr "<span class=\"screen-reader-text\">Kategoriassa </span>%s"
 msgctxt "theme UI"
 msgid "No content found."
 msgstr "Sisältöä ei löytynyt."
+
+#~ msgctxt "admin UI: block pattern title"
+#~ msgid "Custom block pattern"
+#~ msgstr "Lohkomalli"
 
 #, php-format
 #~ msgctxt "theme UI"

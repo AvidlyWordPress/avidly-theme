@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Avidly Theme 2.0\n"
 "Report-Msgid-Bugs-To: https://github.com/AvidlyWordPress/avidly-theme\n"
-"POT-Creation-Date: 2021-10-22 16:49+0300\n"
+"POT-Creation-Date: 2022-06-23 14:35+0300\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,19 +24,19 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-2: _src\n"
 
 #. translators: 404 page title.
-#: 404.php:21
+#: 404.php:32
 msgctxt "theme UI"
 msgid "404 - Page not found"
 msgstr ""
 
 #. translators: 404 page error message.
-#: 404.php:31
+#: 404.php:42
 msgctxt "theme UI"
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
 #. translators: Link to front page.
-#: 404.php:38 header.php:49
+#: 404.php:49 header.php:49
 msgctxt "theme UI"
 msgid "Go to front page"
 msgstr ""
@@ -113,17 +113,17 @@ msgctxt "admin UI: widget area"
 msgid "Add widgets here."
 msgstr ""
 
-#: inc/_conf/setup-editor.php:196
+#: inc/_conf/setup-editor.php:311
 msgctxt "admin UI: block pattern category"
 msgid "Block category"
 msgstr ""
 
-#: inc/_conf/setup-editor.php:203
+#: inc/_conf/setup-editor.php:323
 msgctxt "admin UI: block pattern title"
-msgid "Custom block pattern"
+msgid "Example Post header"
 msgstr ""
 
-#: inc/_conf/setup-editor.php:204
+#: inc/_conf/setup-editor.php:324
 msgctxt "admin UI: block pattern description"
 msgid "Example of custom block pattern."
 msgstr ""
@@ -136,27 +136,27 @@ msgid "Submenu for %s"
 msgstr ""
 
 #. translators: Submenu toggle button: %s parent page title.
-#: inc/class/class-disclosure-nav-menu.php:189
+#: inc/class/class-disclosure-nav-menu.php:194
 #, php-format
 msgctxt "menu UI: toggle"
 msgid "Submenu: %s"
 msgstr ""
 
 #. translators: %s post date.
-#: inc/helpers/template-tags.php:17
+#: inc/helpers/helper-functions.php:19
 #, php-format
 msgctxt "theme UI"
 msgid "Posted on %s"
 msgstr ""
 
 #. translators: Site search link.
-#: inc/helpers/template-tags.php:43 index.php:32
+#: inc/helpers/helper-functions.php:55 index.php:32
 msgctxt "theme UI"
 msgid "Search from site"
 msgstr ""
 
 #. translators: %s post category.
-#: template-parts/card/content.php:50 template-parts/entry/content.php:53
+#: template-parts/card/content.php:50 template-parts/entry/header.php:50
 #, php-format
 msgctxt "theme UI"
 msgid "<span class=\"screen-reader-text\">In category </span>%s"

@@ -61,7 +61,7 @@ function avidly_theme_whitelist_blocks( $allowed_block_types, $editor_context ) 
 
 		// Layout elements.
 		// 'core/nextpage', // Page Break.
-		// 'core/spacer',
+		'core/spacer',
 		'core/button', // Required for buttons.
 		'core/buttons', // New in core 5.4.
 		'core/column', // New in core 5.8, required for columns.
@@ -318,26 +318,29 @@ function avidly_theme_block_pattern_cat() {
  */
 function avidly_theme_block_patterns() {
 	register_block_pattern(
-		'avidly-theme/example-pattern',
+		'avidly-theme/post-header-pattern',
 		array(
-			'title'         => _x( 'Custom block pattern', 'admin UI: block pattern title', 'avidly-theme' ),
+			'title'         => _x( 'Example Post header', 'admin UI: block pattern title', 'avidly-theme' ),
 			'description'   => _x( 'Example of custom block pattern.', 'admin UI: block pattern description', 'avidly-theme' ),
 			'categories'    => array( 'avidly_theme-block-cat' ),
 			'keywords'      => '',
 			'viewportWidth' => 1440,
 			'content'       =>
-				'<!-- wp:columns {"align":"wide"} -->
-				<div class="wp-block-columns alignwide"><!-- wp:column -->
-				<div class="wp-block-column"><!-- wp:heading -->
-				<h2></h2>
-				<!-- /wp:heading --></div>
-				<!-- /wp:column -->
+				'<!-- wp:post-featured-image {"height":"40vw","align":"full"} /-->
+
+				<!-- wp:group {"tagName":"header","align":"wide","layout":{"inherit":false}} -->
+				<header class="wp-block-group alignwide"><!-- wp:post-title {"level":1,"style":{"spacing":{"margin":{"top":"5vh"}}}} /-->
 				
-				<!-- wp:column -->
-				<div class="wp-block-column">
-				</div>
-				<!-- /wp:column --></div>
-				<!-- /wp:columns -->',
+				<!-- wp:post-date {"format":"j. F\\t\\a Y \\k\\l\\o H:i"} /-->
+				
+				<!-- wp:paragraph {"fontSize":"medium"} -->
+				<p class="has-medium-font-size">Artikkelin ingressi lorem ipsum dolor sit amet. Quisque at arcu a elit ultricies cursus nec tincidunt urna. Nulla et nisl aliquet, semper leo ac, varius quam. Mauris et diam vitae orci ultrices lacinia tempus sed felis.</p>
+				<!-- /wp:paragraph -->
+				
+				<!-- wp:spacer {"height":"5vh"} -->
+				<div style="height:5vh" aria-hidden="true" class="wp-block-spacer"></div>
+				<!-- /wp:spacer --></header>
+				<!-- /wp:group -->',
 		)
 	);
 }

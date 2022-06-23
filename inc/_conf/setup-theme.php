@@ -51,6 +51,7 @@ add_action(
 		 */
 		set_post_thumbnail_size( 450, 300, true );
 
+		// phpcs:disable
 		/*
 		 * Set custom image sizes.
 		 *
@@ -60,6 +61,7 @@ add_action(
 		// add_image_size( 'custom-thumb', 400, 225, true );
 		// add_image_size( 'custom-medium', 800, 450, true );
 		// add_image_size( 'custom-large', 1200, 675, true );
+		// phpcs:enable
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments

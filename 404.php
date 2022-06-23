@@ -8,11 +8,22 @@
  * @since 2.0.0
  */
 
+$page404        = avidly_theme_get_page_by_path( '404-blocks' );
+$page404_content = apply_filters( 'the_content', get_post_field( 'post_content', $page404 ) );
+
 get_header();
 ?>
 
 	<div id="primary" class="site-content overflow-hidden">
 		<main id="main" class="site-main">
+
+		<?php if ( $page404 ) : ?>
+
+			<div class="entry-content container">
+				<?php echo wp_kses_post( $page404_content ); ?>
+			</div>
+
+		<?php else : ?>
 
 			<header class="entry-header container text-center px-5 py-10 mb-6">
 				<h1 class="my-0">
@@ -40,6 +51,8 @@ get_header();
 				</a>
 
 			</div><!-- /.entry-content -->
+
+		<?php endif; ?>
 
 		</main><!-- .site-main -->
 	</div><!-- .site-content -->

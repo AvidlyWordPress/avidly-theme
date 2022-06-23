@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.3.1] - 2022-06-23
+Improve content side FSE support.
+
+### Changed
+- Create entry header via own template-part.
+- Set custom image size medium_large for features images (srcset and sizes still requires improvements).
+- Rename template-tags.php to more common helper-fuctions.php.
+
+### Added
+- Set fallback image ID manually for post featured images.
+- Get 404 page content from block editor if page exsist.
+- Block pattern for example post header.
+
 ## [3.3.0] - 2022-06-13
 Support for WordPress 6.0
 
