@@ -69,4 +69,9 @@
 	a:not(.no-underline):not(.wp-block-button__link) {
 		@apply underline hover:bg-secondary;
 	}
+
+	// Automatic hypenation support, souh fallback to Hypenopoly.
+	.container {
+		hyphens: auto;
+	}
 }

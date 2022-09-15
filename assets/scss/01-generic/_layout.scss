@@ -1,14 +1,14 @@
 /**
  * Front end widths.
  */
-.entry-content > *,
-.entry-content > .wp-block-image, // Fix core inline style that sets x margin to 0 for images.
-.entry-content > figure, // Fix core inline style that sets x margin to 0 for tables, galleries and pullquotes.
+.container > *,
+.container > .wp-block-image, // Fix core inline style that sets x margin to 0 for images.
+.container > figure, // Fix core inline style that sets x margin to 0 for tables, galleries and pullquotes.
 .alignwide {
 	@apply mx-auto;
 }
 
-.entry-content > * {
+.container > * {
 	max-width: var(--theme-layout-contentSize); // Add same value as in theme.json / contentSize.
 
 	// 3.4.0: Fix spacing for small screens and 200% font size.

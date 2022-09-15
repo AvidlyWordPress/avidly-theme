@@ -23,12 +23,12 @@ get_header();
 	<div id="wp--skip-link--target" class="site-content overflow-hidden">
 		<main id="main" class="site-main">
 
-		<header class="entry-header container text-center has-text-color has-white-color has-background-color has-black-background-color link-color-secondary px-5 py-10 mb-6">
+		<header class="entry-header container px-5 py-10 mb-6">
 			<?php
 			if ( is_home() ) {
 				echo '<h1 class="my-0">' . esc_html( $posts_title ) . '</h1>';
-				echo wp_kses_post( $posts_content );
-			} else if ( is_search() ) {
+				echo '<div class="entry-header__content mt-6">' . wp_kses_post( $posts_content ) . '</div>';
+			} elseif ( is_search() ) {
 				echo '<h1 class="my-0"">' . esc_html_x( 'Search from site', 'theme UI', 'avidly-theme' ) . '</h1>';
 				echo '<div class="site-search-wrapper text-black">' . get_search_form( array( 'echo' => false ) ) . '</div>';
 			} else {
@@ -37,10 +37,14 @@ get_header();
 			?>
 		</header><!-- .entry-header -->
 
-			<div class="entry-content container">
+			<?php
+			if ( have_posts() && is_singular() ) :
 
-				<?php if ( have_posts() ) : ?>
+				get_template_part( 'template-parts/entry/content', get_post_type() ); // phpcs:ignore
 
+			elseif ( have_posts() ) :
+				?>
+				<div class="entry-content container mb-6">
 					<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 list-none alignwide">
 						<?php
 						// Load content loop.
@@ -56,19 +60,17 @@ get_header();
 						}
 						?>
 					</ul>
+				</div><!-- /.entry-content -->
+				<?php
+			else :
 
-					<?php
-				else :
+				// If no content, include the "No posts found" template.
+				get_template_part( 'template-parts/entry/none', get_post_type() );
 
-					// If no content, include the "No posts found" template.
-					get_template_part( 'template-parts/entry/none', get_post_type() );
+			endif;
+			?>
 
-				endif;
-				?>
-
-				<?php the_posts_pagination( array( 'class' => 'text-center' ) ); ?>
-
-			</div><!-- /.entry-content -->
+			<?php the_posts_pagination( array( 'class' => 'text-center' ) ); ?>
 
 		</main><!-- .site-main -->
 	</div><!-- .site-content -->

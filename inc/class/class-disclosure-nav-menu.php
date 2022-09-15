@@ -128,7 +128,7 @@ class Disclosure_Nav_Menu extends Walker_Nav_Menu {
 		$atts['href']   = ! empty( $item->url ) ? $item->url : '';
 
 		// Add the 'aria-current' attribute to current menu items.
-		if ( in_array( 'current-menu-item', $classes ) ) {
+		if ( in_array( 'current-menu-item', $classes, true ) ) {
 			$atts['aria-current'] = 'page';
 		}
 
@@ -179,7 +179,7 @@ class Disclosure_Nav_Menu extends Walker_Nav_Menu {
 		$item_output = $args->before;
 
 		// Create button to toddle dropdown menu.
-		if ( in_array( 'menu-item-has-children', $item->classes ) ) {
+		if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
 			$item_output .= '<a' . $attributes . '>';
 			$item_output .= $args->link_before . $title . $args->link_after;
 			$item_output .= '</a>';

@@ -21,6 +21,7 @@ require_once 'inc/_conf/setup-editor.php';
 require_once 'inc/_conf/register-assets.php';
 require_once 'inc/_conf/register-menus.php';
 require_once 'inc/_conf/register-sidebars.php';
+require_once 'inc/_conf/register-block-patterns.php';
 require_once 'inc/_conf/register-block-templates.php';
 
 /**

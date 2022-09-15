@@ -28,7 +28,7 @@ function avidly_theme_get_post_date( $format = '' ) {
 }
 
 /**
- * Create link that leads to search page.
+ * Create (icon) link that leads to search page.
  *
  * @param string $wrap_class set classes for link wrapper.
  *
@@ -50,7 +50,7 @@ function avidly_theme_the_search_link( $wrap_class = '' ) {
 			echo sprintf(
 				'<a href="%s" class="%s" aria-label="%s">%s</a>',
 				esc_url( home_url( '/' ) . '?s=+' ), // Href.
-				'inline-block p-1 text-black hover:bg-black hover:text-white', // Classes.
+				'inline-block p-1 no-underline text-black hover:bg-black hover:text-white', // Classes.
 				/* translators: Site search link. */
 				esc_html_x( 'Search from site', 'theme UI', 'avidly-theme' ), // Screen reader text.
 				avidly_theme_get_theme_svg( 'search', 'ui' ) // phpcs:ignore
@@ -111,7 +111,7 @@ function avidly_theme_get_page_by_path( $path ) {
 }
 
 /**
- * Detect sticky posts
+ * Detect sticky posts.
  *
  * phpcs:ignore
  * @param int $post_id for ID.

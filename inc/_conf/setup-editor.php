@@ -8,12 +8,10 @@
  */
 
 // phpcs:disable
-// add_filter( 'allowed_block_types_all', 'avidly_theme_set_default_blocks', 10, 2 );
+add_filter( 'allowed_block_types_all', 'avidly_theme_set_default_blocks', 10, 2 );
 // add_filter( 'allowed_block_types_all', 'avidly_theme_set_wc_blocks', 15, 2 );
 // add_filter( 'allowed_block_types_all', 'avidly_theme_set_ld_blocks', 15, 2 );
 // add_filter( 'allowed_block_types_all', 'avidly_theme_set_cap_based_blocks', 15, 2 );
-add_filter( 'init', 'avidly_theme_block_pattern_cat' );
-add_filter( 'init', 'avidly_theme_block_patterns' );
 // phpcs:enable
 
 /**
@@ -61,8 +59,8 @@ function avidly_theme_set_default_blocks( $allowed_block_types, $editor_context 
 		// Layout elements.
 		// 'core/nextpage', // Page Break.
 		'core/spacer',
-		'core/button', // Required for buttons.
-		'core/buttons', // New in core 5.4.
+		'core/button', // New in core 5.4, equired for buttons.
+		'core/buttons',
 		'core/column', // New in core 5.8, required for columns.
 		'core/columns',
 		'core/text-columns', // New in core 6.0.
@@ -125,7 +123,7 @@ function avidly_theme_set_default_blocks( $allowed_block_types, $editor_context 
 		'core/post-author', // New in core 5.9.
 		'core/post-author-biography', // New in core 6.0.
 
-		// Comments, new in core 6.0.
+		// Comments, all new in core 6.0.
 		'core/post-comments',
 		'core/post-comments-form',
 		'core/comment-author-name',
@@ -277,7 +275,7 @@ function avidly_theme_set_cap_based_blocks( $allowed_block_types, $editor_contex
 
 	// IMPORTANT!!!
 	// SELECT JUST ONE WAY OF WORK FROM BELOW (either work with unset OR set own whitelists for specific capabilities).
-	// Capability based whitelistings are not tested in production yeat.
+	// Capability based whitelisting is not tested in production yeat.
 
 	// Way 1: Unallow these blocks for users who cannot edit theme settings (since 2.1.1.).
 	if ( ! array_key_exists( 'edit_theme_options', $caps ) ) {
@@ -299,48 +297,3 @@ function avidly_theme_set_cap_based_blocks( $allowed_block_types, $editor_contex
 	return $allowed_block_types;
 }
 
-
-/**
- * Register custom block patterns categories.
- */
-function avidly_theme_block_pattern_cat() {
-	// Register block pattern categories.
-	register_block_pattern_category(
-		'avidly_theme-block-cat',
-		array(
-			'label' => _x( 'Block category', 'admin UI: block pattern category', 'avidly-theme' ),
-		)
-	);
-}
-
-/**
- * Register custom block patterns.
- */
-function avidly_theme_block_patterns() {
-	register_block_pattern(
-		'avidly-theme/post-header-pattern',
-		array(
-			'title'         => _x( 'Example Post header', 'admin UI: block pattern title', 'avidly-theme' ),
-			'description'   => _x( 'Example of custom block pattern.', 'admin UI: block pattern description', 'avidly-theme' ),
-			'categories'    => array( 'avidly_theme-block-cat' ),
-			'keywords'      => '',
-			'viewportWidth' => 1440,
-			'content'       =>
-				'<!-- wp:post-featured-image {"height":"40vw","align":"full"} /-->
-
-				<!-- wp:group {"tagName":"header","align":"wide","layout":{"inherit":false}} -->
-				<header class="wp-block-group alignwide"><!-- wp:post-title {"level":1,"style":{"spacing":{"margin":{"top":"5vh"}}}} /-->
-				
-				<!-- wp:post-date {"format":"j. F\\t\\a Y \\k\\l\\o H:i"} /-->
-				
-				<!-- wp:paragraph {"fontSize":"medium"} -->
-				<p class="has-medium-font-size">Artikkelin ingressi lorem ipsum dolor sit amet. Quisque at arcu a elit ultricies cursus nec tincidunt urna. Nulla et nisl aliquet, semper leo ac, varius quam. Mauris et diam vitae orci ultrices lacinia tempus sed felis.</p>
-				<!-- /wp:paragraph -->
-				
-				<!-- wp:spacer {"height":"5vh"} -->
-				<div style="height:5vh" aria-hidden="true" class="wp-block-spacer"></div>
-				<!-- /wp:spacer --></header>
-				<!-- /wp:group -->',
-		)
-	);
-}

@@ -35,4 +35,8 @@
 	.has-background {
 		@apply p-6 sm:p-6;
 	}
+
+	.no-underline a {
+		text-decoration: none !important; // Override a:not(.no-underline):not(.wp-block-button__link).
+	}
 }

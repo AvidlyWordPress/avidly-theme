@@ -8,7 +8,7 @@
  * @since 2.0.0
  */
 
-$page404        = avidly_theme_get_page_by_path( '404-blocks' );
+$page404         = avidly_theme_get_page_by_path( '404-blocks' );
 $page404_content = apply_filters( 'the_content', get_post_field( 'post_content', $page404 ) );
 
 get_header();

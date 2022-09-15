@@ -69,6 +69,35 @@ add_action(
 			);
 		}
 
+		// Hypenopoly support.
+		wp_enqueue_script(
+			'hyphenopoly',
+			get_stylesheet_directory_uri() . '/hyphenopoly/Hyphenopoly_Loader.js',
+			array(),
+			'4.12.0',
+			false
+		);
+
+		// Hypenopoly configuration.
+		// See useage: https://www.mikkosaari.fi/suomenkielinen-tavutus-wordpressiin/
+		wp_add_inline_script(
+			'hyphenopoly',
+			'Hyphenopoly.config({
+				require: {
+					"fi": "pyyhkäisyelektronimikroskooppi",
+				},
+				paths: {
+					patterndir: "' . get_stylesheet_directory_uri() . '/hyphenopoly/patterns/",
+					maindir: "' . get_stylesheet_directory_uri() . '/hyphenopoly/",
+				},
+				setup: {
+					selectors: {
+						".container": {}
+					}
+				}
+			});'
+		);
+
 		// Main js, run in footer.
 		wp_enqueue_script( // phpcs:ignore
 			'avidly_theme',

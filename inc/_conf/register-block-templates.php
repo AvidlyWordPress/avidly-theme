@@ -1,6 +1,6 @@
 <?php
 /**
- * Setup editor properties and editor related functionality
+ * Create default block templates for post types.
  *
  * @link https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/
  *

@@ -8,10 +8,10 @@
 
 add_filter( 'post_thumbnail_id', 'avidly_theme_fallback_post_thumbnail_id', 5, 2 );
 add_filter( 'post_thumbnail_size', 'avidly_theme_default_thumbnail_size', 5, 2 );
-add_filter( 'wp_get_attachment_image_attributes', 'avidly_theme_first_featured_image', 5, 2 );
+add_filter( 'wp_get_attachment_image_attributes', 'avidly_theme_main_image_attrs', 5, 2 );
 
 /**
- * Set the default festured image ID if none exists.
+ * Set the default featured image ID if none exists.
  *
  * @param int     $thumbnail_id Post thumbnail ID or false if the post does not exist.
  * @param WP_Post $post Post ID or WP_Post object. Default is global $post.
@@ -21,7 +21,7 @@ add_filter( 'wp_get_attachment_image_attributes', 'avidly_theme_first_featured_i
 function avidly_theme_fallback_post_thumbnail_id( $thumbnail_id, $post ) {
 	// Modify $thumbnail_id only for posts.
 	if ( 'post' === get_post_type( $post ) ) {
-		$thumbnail_id = ( ! $thumbnail_id ) ? 1947 : $thumbnail_id;
+		$thumbnail_id = ( ! $thumbnail_id ) ? 1947 : $thumbnail_id; // Next release idea: Set default attacment image from admin (to image meta etc?).
 	}
 
 	return $thumbnail_id;
@@ -51,14 +51,14 @@ function avidly_theme_default_thumbnail_size( $size, $post_id ) {
 }
 
 /**
- * Undocumented function
+ * Set special image attributes for post main image.
  *
  * @param array   $attr Array of attribute values for the image markup, keyed by attribute name.
  * @param WP_Post $attachment Image attachment post.
  *
  * @return $attr
  */
-function avidly_theme_first_featured_image( $attr, $attachment ) {
+function avidly_theme_main_image_attrs( $attr, $attachment ) {
 	global $wp_query;
 
 	// Detect if featured image is main image.
@@ -75,10 +75,10 @@ function avidly_theme_first_featured_image( $attr, $attachment ) {
 }
 
 /**
- * Detect if current post has same featured image as...?
+ * Detect if current post (single) has same featured image as current attacment.
  *
- * @param [type] $current_id Current post ID.
- * @param [type] $found_id Post ID found for featured image.
+ * @param int $current_id Current Post/Attachment ID.
+ * @param int $found_id Post/Attachment ID found for featured image.
  * @return bool
  */
 function avidly_theme_is_main_image( $current_id, $found_id ) {

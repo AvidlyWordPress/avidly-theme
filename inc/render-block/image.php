@@ -3,7 +3,7 @@
  * Block render callback: Image
  *
  * @package Avidly_Theme
- * @since 2.0.0
+ * @since 3.3.0
  */
 
 add_filter( 'render_block_core/image', 'avidly_theme_image_block', 10, 2 );
@@ -22,7 +22,7 @@ function avidly_theme_image_block( $block_content, $block ) {
 
 	// Fallback for WP < 6.0.
 	// Return original output if image block is added before WP 6.0 update.
-	if ( substr( $block_content, 1, 7 ) !== '<figure' ) { // Detect if block content starts with <figure.
+	if ( substr( $block_content, 1, 7 ) !== '<figure' ) { // Detect if block content starts with "<figure".
 		return $block_content;
 	}
 

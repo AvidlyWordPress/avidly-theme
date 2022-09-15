@@ -5,7 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [3.4.0] - 2022-09-14
+## [3.4.1] - 2022-09-15
+Small bug fixes, improvements and Hypenopoly support.
+
+### Improvement
+- Improve commenting.
+- Clone cleanups & WordPress PHPCS improvements.
+- Remove _list.scss block styles.
+- Modify index.php for better fallback template.
+
+### Fixed
+- Add no-underline class to default search button.
+
+### Added
+- Hyphenopoly support: https://www.mikkosaari.fi/suomenkielinen-tavutus-wordpressiin/
+
+## [3.4.0] - 2022-09-15
 Improve content side FSE support (production).
 
 ### Changed

@@ -2,7 +2,7 @@
  * Accessibility helpers.
  */
  
- .screen-reader-text {
+.screen-reader-text {
     clip: rect(1px,1px,1px,1px);
     @apply h-px;
     @apply overflow-hidden;

@@ -1,6 +1,6 @@
 <?php
 /**
- * The main page template file
+ * The main page template file for post types.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -16,7 +16,6 @@ get_header();
 
 		<?php
 		if ( have_posts() ) {
-
 			// Load content loop.
 			while ( have_posts() ) {
 				the_post();
