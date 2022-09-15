@@ -65,4 +65,8 @@
 			@apply mb-0
 		}
 	}
+
+	a:not(.no-underline):not(.wp-block-button__link) {
+		@apply underline hover:bg-secondary;
+	}
 }

@@ -10,7 +10,7 @@
 
 ?>
 
-<article <?php post_class(); ?> aria-labelledby="post-<?php the_ID(); ?>">
+<article <?php post_class(); ?>>
 
 	<?php
 	/**
