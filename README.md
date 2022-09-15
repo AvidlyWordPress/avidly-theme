@@ -14,9 +14,10 @@ I have been developed with accessibility / WCAG 2.1 criteria in mind.
 I integrate with Tailwind CSS. Learn <a href="https://tailwindcss.com/docs">how to use Tailwind CSS</a> by reading the documentation. Note that preflight rules has been customized so that Tailwind would not cleat styles that editor gets from thene.json.
 
 ### Requirements
-* Requires at least WordPress 5.9
+* Requires at least WordPress 6.0
 * Webpack / Laravel Mix for bundling assets
-* NodeJS v12.14.1 or later
+* NodeJS v14.0 or later
+* npm v6 or later
 
 ## Getting Started
 1. Download avidly-theme repository.

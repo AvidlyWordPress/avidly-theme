@@ -9,6 +9,6 @@
 
 	&:focus,
 	&:hover {
-		@apply scale-105;
+		filter: brightness(0.75);
 	}
 }

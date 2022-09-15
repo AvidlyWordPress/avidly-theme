@@ -5,8 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.4.0] - 2022-09-14
+Improve content side FSE support (production).
+
+### Changed
+- Update README.txt about required Node, npm and WordPress core versions.
+- Change primary ID to wp--skip-link--target.
+- Remove plain Quote block style.
+- Use font-display: optional and base font-family preload for better CLS.
+
+### Improvements
+- Use clamp() text sizes with names and add margins (theme.json).
+- Improve styles: button hover and focus, paddings and spacing globally (a11y improvement), simplify Quote block styles, hover effect for images in link-elements.
+- Add WordPress PHPCS improvements.
+
+### Added
+- Create base for Block gap support (note: might change in 6.1).
+- Set block gap to theme.json (requires for WP >= 6.0).
+- Set custom srcset and sizes attrubutes for current post featured image.
+- Functionality to exclude current post from Query post loop.
+- Create default block content templates for posts and pages.
+
 ## [3.3.1] - 2022-06-23
-Improve content side FSE support.
+Improve content side FSE support (BETA).
 
 ### Changed
 - Create entry header via own template-part.

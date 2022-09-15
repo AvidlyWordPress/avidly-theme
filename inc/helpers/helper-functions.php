@@ -16,14 +16,14 @@
 function avidly_theme_get_post_date( $format = '' ) {
 	$posted_on = sprintf(
 		/* translators: %s post date. */
-		esc_html_x( 'Posted on %s', 'theme UI', 'avidly-theme' ),
+		_x( '<span class="sr-only">Posted on</span> %s', 'theme UI', 'avidly-theme' ),
 		esc_html( get_the_date( $format ) )
 	);
 
 	return sprintf(
-		'<time class="card__time text-sm" datetime="%s">%s</time>',
+		'<time class="card__time" datetime="%s">%s</time>',
 		esc_attr( get_the_date( DATE_W3C ) ),
-		esc_html( $posted_on ),
+		$posted_on,
 	);
 }
 
@@ -107,5 +107,23 @@ function avidly_theme_get_page_by_path( $path ) {
 	}
 
 	// Return false if page is not published.
+	return false;
+}
+
+/**
+ * Detect sticky posts
+ *
+ * phpcs:ignore
+ * @param int $post_id for ID.
+ *
+ * return bool
+ */
+function avidly_theme_is_sticky( $post_id = '' ) {
+	$post_id = ( $post_id ) ? $post_id : get_the_ID();
+
+	if ( is_sticky( $post_id ) && ( ! is_paged() && ! is_archive() && ! is_search() ) ) {
+		return true;
+	}
+
 	return false;
 }

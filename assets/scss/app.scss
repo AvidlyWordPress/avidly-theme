@@ -1,3 +1,5 @@
+@import 'variables';
+
 /* Tailwind CSS, change settings from tailwind.config.js */
 @import 'base';
 @tailwind components;
@@ -19,5 +21,6 @@
 @import '03-blocks/quote';
 @import '03-blocks/list';
 @import '03-blocks/query';
+@import '03-blocks/cover';
 @import '03-blocks/accordion';
 

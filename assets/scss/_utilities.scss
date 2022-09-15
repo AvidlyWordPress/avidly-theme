@@ -17,10 +17,22 @@
 			@apply w-full;
 			@apply h-full;
 		}
+
+		figure {
+			@apply overflow-hidden;
+		}
+
+		img {
+			@apply transition-transform duration-1000 ease-out;
+			@apply scale-100;
+		}
+
+		&:hover img {
+			@apply scale-110;
+		}
 	}
 
 	.has-background {
-		@apply py-4;
-		@apply px-6 sm:px-10;
+		@apply p-6 sm:p-6;
 	}
 }

@@ -3,20 +3,20 @@
  */
 
 
-ul,
-ol {
-	@apply list-inside;
-	@apply pl-10 lg:pl-0;
+// ul,
+// ol {
+// 	@apply list-inside;
+// 	@apply pl-10 lg:pl-0;
 
-	ul, ol {
-		@apply lg:pl-5;
-	}
-}
+// 	ul, ol {
+// 		@apply lg:pl-5;
+// 	}
+// }
 
-ul {
-	@apply list-disc;
-}
+// ul {
+// 	@apply list-disc;
+// }
 
-ol {
-	@apply list-decimal;
-}
+// ol {
+// 	@apply list-decimal;
+// }

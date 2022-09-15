@@ -11,7 +11,7 @@
 get_header();
 ?>
 
-	<div id="primary" class="site-content overflow-hidden">
+	<div id="wp--skip-link--target" class="site-content overflow-hidden">
 		<main id="main" class="site-main">
 
 		<?php

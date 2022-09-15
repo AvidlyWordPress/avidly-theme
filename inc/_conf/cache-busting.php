@@ -66,14 +66,14 @@ function avidly_theme_cache_busting( $path, $is_child = false, $manifest_directo
 	return $theme_directory_uri . trailingslashit( $manifest_directory ) . $path;
 }
 
-/**
- * Add an Expires & a Cache-Control Header.
- *
- * @param int $seconds_to_cache default to 900 (15min).
- *
- * @return void
- */
 if ( ! function_exists( 'avidly_theme_cache_headers' ) ) {
+	/**
+	 * Add an Expires & a Cache-Control Header.
+	 *
+	 * @param int $seconds_to_cache default to 900 (15min).
+	 *
+	 * @return void
+	 */
 	function avidly_theme_cache_headers( $seconds_to_cache = 900 ) {
 		$ts = gmdate( 'D, d M Y H:i:s', time() + $seconds_to_cache ) . ' GTM';
 

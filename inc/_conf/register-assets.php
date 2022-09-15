@@ -24,7 +24,6 @@ function avidly_theme_remove_wp_ver( $src ) {
 add_filter( 'style_loader_src', 'avidly_theme_remove_wp_ver', 9999 );
 add_filter( 'script_loader_src', 'avidly_theme_remove_wp_ver', 9999 );
 
-
 /**
  * Enqueue scripts and styles.
  */
@@ -135,7 +134,7 @@ add_action(
  */
 function avidly_theme_preload_webfonts() {
 	$font_urls = array(
-		// '/assets/webfonts/Roboto/Roboto-Regular.ttf',
+		'/assets/webfonts/Roboto/Roboto-Regular.ttf',
 		// '/assets/webfonts/Roboto/Roboto-Bold.ttf',
 		// '/assets/webfonts/Roboto_Slab/RobotoSlab-Regular.ttf',
 		'/assets/webfonts/Roboto_Slab/RobotoSlab-Bold.ttf',

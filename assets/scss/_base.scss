@@ -12,68 +12,57 @@
 		font-family: 'Roboto';
 		font-weight: 400;
 		src: url(../../webfonts/Roboto/Roboto-Regular.ttf) format('truetype');
-		font-display: swap;
+		font-display: optional;
 	}
 	@font-face {
 		font-family: 'Roboto';
 		font-weight: 700;
 		src: url(../../webfonts/Roboto/Roboto-Bold.ttf) format('truetype');
-		font-display: swap;
+		font-display: optional;
 	}
 	@font-face {
 		font-family: 'Roboto Slab';
 		font-weight: 400;
 		src: url(../../webfonts/Roboto_Slab/RobotoSlab-Regular.ttf) format('truetype');
-		font-display: swap;
+		font-display: optional;
 	}
 	@font-face {
 		font-family: 'Roboto Slab';
 		font-weight: 700;
 		src: url(../../webfonts/Roboto_Slab/RobotoSlab-Bold.ttf) format('truetype');
-		font-display: swap;
-	}
-
-	/**
-	 * Base typographty elements.
-	 */
-	h1,
-	h2,
-	h3,
-	h4,
-	.editor-post-title {
-		font-weight: 700;
-		@apply mb-3;
-		@apply mt-4 lg:mt-6;
-	}
-
-	a {
-		@apply underline;
-
-		&:hover,
-		&:focus {
-			@apply no-underline;
-		}
-	}
-	
-	blockquote,
-	dl,
-	dd,
-	figure,
-	p,
-	pre {
-		@apply mb-2;
-	}
-
-	figcaption {
-		@apply text-center;
-	}
-
-	cite {
-		@apply mt-2;
+		font-display: optional;
 	}
 
 	svg {
 		@apply max-w-full;
 		@apply h-auto;
+	}
+
+	// WP 6.0: Core block gap support for default templates element.
+	blockquote,
+	dl,
+	dd,
+	figure,
+	p,
+	pre,
+	ul,
+	ol,
+	cite,
+	address {
+		&:not([class*="m-"]):not([class*="my-"]):not([class*="mt-"]) {
+			margin-top: calc( var(--wp--style--block-gap) / 2 );
+		}
+	}
+
+	cite {
+		@apply block;
+		font-size: 85%;
+	}
+
+	ul,
+	ol {
+		&:not([class*="m-"]):not([class*="my-"]):not([class*="mb-"]) {
+			@apply mb-0
+		}
 	}
 }

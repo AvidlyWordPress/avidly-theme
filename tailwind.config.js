@@ -43,8 +43,8 @@ module.exports = {
 		},
 		fontFamily: {
 			// Font Family: https://tailwindcss.com/docs/font-family
-			sans: ['Roboto', 'sans-serif'],
-			serif: ['Roboto\\ Slab', 'serif']
+			sans: ['Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', 'Helvetica\\ Neue', 'sans-serif'],
+			serif: ['Roboto\\ Slab', 'Georgia', 'Times\\ New\\ Roman', 'serif']
 		},
 		fontSize: {
 			// Font Size: https://tailwindcss.com/docs/font-size

@@ -1,3 +1,5 @@
+@import 'variables';
+
 /**
  * Manually handpicked preflight rules for editor.
  */
@@ -22,5 +24,6 @@
 @import '03-blocks/quote';
 @import '03-blocks/list';
 @import '03-blocks/query';
+@import '03-blocks/cover';
 @import '03-blocks/accordion';
 

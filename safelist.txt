@@ -5,3 +5,7 @@ editor-styles-wrapper
 editor-post-title
 is-root-container
 list-none
+sr-only
+z-0 z-10 z-20 z-30 z-40 z-50 z-auto
+h-full w-full
+no-underline

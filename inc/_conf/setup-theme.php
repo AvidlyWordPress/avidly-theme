@@ -49,7 +49,7 @@ add_action(
 		 *
 		 * @link https://developer.wordpress.org/reference/functions/set_post_thumbnail_size/
 		 */
-		set_post_thumbnail_size( 450, 300, true );
+		set_post_thumbnail_size( 480, 300, true );
 
 		// phpcs:disable
 		/*

@@ -8,17 +8,16 @@
  */
 
 // phpcs:disable
-add_filter( 'allowed_block_types_all', 'avidly_theme_whitelist_blocks', 10, 2 );
+// add_filter( 'allowed_block_types_all', 'avidly_theme_set_default_blocks', 10, 2 );
 // add_filter( 'allowed_block_types_all', 'avidly_theme_set_wc_blocks', 15, 2 );
 // add_filter( 'allowed_block_types_all', 'avidly_theme_set_ld_blocks', 15, 2 );
-// add_filter( 'allowed_block_types_all', 'avidly_theme_set_capability_based_blocks', 15, 2 );
+// add_filter( 'allowed_block_types_all', 'avidly_theme_set_cap_based_blocks', 15, 2 );
 add_filter( 'init', 'avidly_theme_block_pattern_cat' );
 add_filter( 'init', 'avidly_theme_block_patterns' );
 // phpcs:enable
 
-
 /**
- * Whitelist blocks
+ * Whitelist core blocks
  *
  * Comment out the ones theme doesn't use.
  *
@@ -28,7 +27,7 @@ add_filter( 'init', 'avidly_theme_block_patterns' );
  * @link https://wordpress.org/support/article/blocks/
  * @link https://developer.wordpress.org/reference/hooks/allowed_block_types_all/
  */
-function avidly_theme_whitelist_blocks( $allowed_block_types, $editor_context ) {
+function avidly_theme_set_default_blocks( $allowed_block_types, $editor_context ) {
 
 	// DO not use whitelist if block editor context is not detected.
 	if ( empty( $editor_context->post ) ) {
@@ -152,19 +151,20 @@ function avidly_theme_whitelist_blocks( $allowed_block_types, $editor_context ) 
 		// Advanced Custom Fields.
 		// 'acf/your-block-name',
 
-		// Custom blocks.
+		// Avidly blocks.
 		'avidly/social-share',
 		'avidly/accordion',
+		'avidly/block-toc',
+		'avidly/block-query',
 
 		// phpcs:enable
 	);
 
 	return $allowed_block_types;
-
 }
 
 /**
- * Example: Enable WooCommerce blocks.
+ * Enable WooCommerce blocks.
  *
  * @param bool|string             $allowed_block_types Array of block type slugs, or boolean to enable/disable all.
  * @param WP_Block_Editor_Context $editor_context The current block editor context.
@@ -271,7 +271,7 @@ function avidly_theme_set_ld_blocks( $allowed_block_types, $editor_context ) {
  *
  * @link https://developer.wordpress.org/reference/functions/wp_get_current_user/.
  */
-function avidly_theme_set_capability_based_blocks( $allowed_block_types, $editor_context ) {
+function avidly_theme_set_cap_based_blocks( $allowed_block_types, $editor_context ) {
 	$user = wp_get_current_user();
 	$caps = ( (array) $user->allcaps ) ? (array) $user->allcaps : array();
 

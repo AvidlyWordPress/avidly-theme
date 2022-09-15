@@ -34,6 +34,11 @@ add_action(
 		// All menus.
 		$atts['class'] = 'no-underline hover:underline';
 
+		// Primary menu.
+		if ( 'primary_menu' === $args->theme_location ) {
+			$atts['class'] .= ' p-4 menu:px-0 menu:py-2';
+		}
+
 		// Secondary menu.
 		if ( 'policy_menu' === $args->theme_location ) {
 			$atts['class'] .= ' mr-4';

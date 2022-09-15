@@ -1,34 +1,33 @@
 /**
  * Front end widths.
  */
- 
-.container > *,
-.container > .wp-block-image, // Fix core inline style that sets x margin to 0 for images.
-.container > figure, // Fix core inline style that sets x margin to 0 for tables, galleries and pullquotes.
+.entry-content > *,
+.entry-content > .wp-block-image, // Fix core inline style that sets x margin to 0 for images.
+.entry-content > figure, // Fix core inline style that sets x margin to 0 for tables, galleries and pullquotes.
 .alignwide {
 	@apply mx-auto;
 }
 
-.container > * {
-	max-width: 64rem; // Add same value as in theme.json / contentSize.
+.entry-content > * {
+	max-width: var(--theme-layout-contentSize); // Add same value as in theme.json / contentSize.
+
+	// 3.4.0: Fix spacing for small screens and 200% font size.
+	width: calc( 100% - ( var(--wp--style--block-gap) * 2 ) ) !important;
+	margin-left: max( calc((100vw - var(--theme-layout-contentSize)) / 2 ), var(--wp--style--block-gap) );
+	margin-right: max( calc((100vw - var(--theme-layout-contentSize)) / 2 ), var(--wp--style--block-gap) );
 }
  
 .alignwide,
 .alignwide > .alignwide {
-	max-width: 80rem; // Add same value as in theme.json / wideSize.
+	max-width: var(--theme-layout-wideSize); // Add same value as in theme.json / wideSize.
+	@apply mx-auto;
 }
  
 .alignfull,
 .alignfull > .alignfull {
 	@apply max-w-none;
-}
+	@apply mx-auto;
 
-.container > *:not(.has-background):not(.site-header):not(.alignfull):not(ul):not(ol),
-.alignwide:not(.has-background) > .alignwide,
-.alignfull:not(.has-background) > .alignfull {
-	@apply px-6 sm:px-10 lg:px-0;
-}
-
-.entry-content > *:last-child:not(.has-background) {
-	@apply mb-12;
+	// 3.4.0: Fix spacing for small screens and 200% font size.
+	width: 100% !important;
 }

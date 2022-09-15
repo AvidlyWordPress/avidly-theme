@@ -33,7 +33,7 @@ avidly_theme_cache_headers();
 		<div class="nav-container container">
 			<header class="site-header relative w-full flex flex-wrap items-center justify-between alignwide" aria-label="<?php echo esc_html_x( 'Site header', 'theme UI: aria landmark', 'avidly-theme' ); ?>">
 
-				<a class="skip-link screen-reader-text border-2 border-primary has-white-background-color has-text-color has-primary-color p-4" href="#primary">
+				<a class="skip-link screen-reader-text border-2 border-primary has-white-background-color has-text-color has-primary-color p-4" href="#wp--skip-link--target">
 					<?php
 					/* translators: Link to skip site section. */
 					echo esc_html_x( 'Skip to the content', 'theme UI: skip link', 'avidly-theme' );
@@ -43,7 +43,7 @@ avidly_theme_cache_headers();
 				<div class="site-header__logo z-10 px-4 mr-auto max-w-xs xl:px-0 flex-1 order-2">
 					<?php
 					echo sprintf(
-						'<p class="site-header__title"><a href="%s" aria-label="%s">%s</a></p>',
+						'<div class="site-header__title"><a href="%s" aria-label="%s">%s</a></div>',
 						esc_url( home_url( '/' ) ),
 						/* translators: Link to front page. */
 						esc_html_x( 'Go to front page', 'theme UI', 'avidly-theme' ),
@@ -67,7 +67,7 @@ avidly_theme_cache_headers();
 				<div id="main-navigation-wrapper" class="main-navigation-wrapper order-3 w-full menu:w-auto">
 					<?php if ( has_nav_menu( 'primary_menu' ) ) : ?>
 
-						<div id="mobile-menu" class="hidden px-4 xl:px-0 menu:block">
+						<div id="mobile-menu" class="hidden xl:px-0 menu:block">
 							<nav id="nav" class="nav-primary" aria-label="<?php echo esc_html_x( 'Primary menu', 'menu UI: aria landmark', 'avidly-theme' ); ?>">
 								<?php
 								wp_nav_menu(
@@ -75,7 +75,7 @@ avidly_theme_cache_headers();
 										'theme_location' => 'primary_menu',
 										'container'      => false,
 										'depth'          => 4,
-										'menu_class'     => 'disclosure-menu list-none flex flex-col menu:flex-row menu:flex-wrap menu:justify-end has-text-color',
+										'menu_class'     => 'disclosure-menu list-none flex flex-col menu:flex-row menu:flex-wrap menu:justify-end has-text-color mt-0 p-0',
 										'menu_id'        => 'main-menu',
 										'echo'           => true,
 										'walker'         => new Disclosure_Nav_Menu(),

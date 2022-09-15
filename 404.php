@@ -14,7 +14,7 @@ $page404_content = apply_filters( 'the_content', get_post_field( 'post_content',
 get_header();
 ?>
 
-	<div id="primary" class="site-content overflow-hidden">
+	<div id="wp--skip-link--target" class="site-content overflow-hidden">
 		<main id="main" class="site-main">
 
 		<?php if ( $page404 ) : ?>

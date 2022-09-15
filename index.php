@@ -20,7 +20,7 @@ $posts_content  = apply_filters( 'the_content', get_post_field( 'post_content', 
 get_header();
 ?>
 
-	<div id="primary" class="site-content overflow-hidden">
+	<div id="wp--skip-link--target" class="site-content overflow-hidden">
 		<main id="main" class="site-main">
 
 		<header class="entry-header container text-center has-text-color has-white-color has-background-color has-black-background-color link-color-secondary px-5 py-10 mb-6">
@@ -48,7 +48,7 @@ get_header();
 							the_post();
 
 							$classes = 'mb-4';
-							$classes .= is_sticky() && ! is_paged() ? ' md:col-span-2 lg:col-span-3' : '';
+							$classes .= ( avidly_theme_is_sticky() ) ? ' md:col-span-2 lg:col-span-3' : '';
 
 							echo '<li class="' . esc_attr( $classes ) . '">';
 							get_template_part( 'template-parts/card/content', get_post_type() );

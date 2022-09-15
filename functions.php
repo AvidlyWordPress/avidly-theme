@@ -21,7 +21,7 @@ require_once 'inc/_conf/setup-editor.php';
 require_once 'inc/_conf/register-assets.php';
 require_once 'inc/_conf/register-menus.php';
 require_once 'inc/_conf/register-sidebars.php';
-
+require_once 'inc/_conf/register-block-templates.php';
 
 /**
  * Classes
@@ -40,4 +40,5 @@ require_once 'inc/helpers/helper-functions.php';
 /**
  * Block renders
  */
+require_once 'inc/render-block/post-template.php';
 require_once 'inc/render-block/image.php';
