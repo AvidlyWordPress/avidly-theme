@@ -75,7 +75,7 @@ add_action(
 			get_stylesheet_directory_uri() . '/hyphenopoly/Hyphenopoly_Loader.js',
 			array(),
 			'4.12.0',
-			false
+			true
 		);
 
 		// Hypenopoly configuration.
