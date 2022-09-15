@@ -79,7 +79,8 @@ add_action(
 		);
 
 		// Hypenopoly configuration.
-		// See useage: https://www.mikkosaari.fi/suomenkielinen-tavutus-wordpressiin/
+		// @since 3.4.1
+		// See usage: https://www.mikkosaari.fi/suomenkielinen-tavutus-wordpressiin/.
 		wp_add_inline_script(
 			'hyphenopoly',
 			'Hyphenopoly.config({
