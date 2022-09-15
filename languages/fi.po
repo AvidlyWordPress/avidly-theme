@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: Avidly Theme 2.0\n"
 "Report-Msgid-Bugs-To: https://github.com/AvidlyWordPress/avidly-"
 "theme\n"
-"POT-Creation-Date: 2022-06-23 14:35+0300\n"
-"PO-Revision-Date: 2022-06-23 14:36+0300\n"
+"POT-Creation-Date: 2022-09-15 15:14+0300\n"
+"PO-Revision-Date: 2022-09-15 15:15+0300\n"
 "Last-Translator: \n"
 "Language-Team: Avidly Digital <help@avidlyagency.com>\n"
 "Language: fi\n"
@@ -98,6 +98,11 @@ msgctxt "menu UI: aria landmark"
 msgid "Primary menu"
 msgstr "Päävalikko"
 
+#: inc/_conf/register-block-templates.php:159
+msgctxt "placeholder"
+msgid "Add ingress text."
+msgstr "Lisää ingressi tähän."
+
 #: inc/_conf/register-menus.php:18
 msgctxt "admin UI: menu name"
 msgid "Primary menu"
@@ -151,8 +156,8 @@ msgstr "Alavalikko: %s"
 #: inc/helpers/helper-functions.php:19
 #, php-format
 msgctxt "theme UI"
-msgid "Posted on %s"
-msgstr "Julkaistu %s"
+msgid "<span class=\"sr-only\">Posted on</span> %s"
+msgstr "<span class=\"screen-reader-text\">Julkaistu </span>%s"
 
 #. translators: Site search link.
 #: inc/helpers/helper-functions.php:55 index.php:32
@@ -161,7 +166,7 @@ msgid "Search from site"
 msgstr "Hae sivustolta"
 
 #. translators: %s post category.
-#: template-parts/card/content.php:50 template-parts/entry/header.php:50
+#: template-parts/card/content.php:48 template-parts/entry/header.php:50
 #, php-format
 msgctxt "theme UI"
 msgid "<span class=\"screen-reader-text\">In category </span>%s"
@@ -172,6 +177,11 @@ msgstr "<span class=\"screen-reader-text\">Kategoriassa </span>%s"
 msgctxt "theme UI"
 msgid "No content found."
 msgstr "Sisältöä ei löytynyt."
+
+#, php-format
+#~ msgctxt "theme UI"
+#~ msgid "Posted on %s"
+#~ msgstr "Julkaistu %s"
 
 #~ msgctxt "admin UI: block pattern title"
 #~ msgid "Custom block pattern"
