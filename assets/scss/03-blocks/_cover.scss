@@ -6,6 +6,6 @@
 	background-color: var(--wp--preset--color--lightgray);
 	&__inner-container {
 		width: 100% !important; // Override core block style.
-		max-width: var(--theme-layout-wideSize); // Add same value as in theme.json / wideSize.
+		max-width: var(--theme--layout--wideSize); // Add same value as in theme.json / wideSize.
 	}
 }

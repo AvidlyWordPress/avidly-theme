@@ -7,16 +7,20 @@
 		@apply p-0;
 	}
 
+	&:not(.alignfull) .wp-block-media-text__content {
+		padding: var(--theme--clamp--block-gap) !important; // Override core block style.
+	}
+
 	// Custom padding for full width elements.
 	&.alignfull {
-		
 		.wp-block-media-text__content {
-			padding: clamp( var(--wp--style--block-gap), 5vw, calc( var(--wp--style--block-gap) * 2 ) );
+			padding: var(--theme--clamp--block-gap);
 			padding-right: clamp( var(--wp--style--block-gap), calc( 50vw -  var(--theme-offset-wideSize) ), 50vw );
 		}
 
 		&.has-media-on-the-right .wp-block-media-text__content {
-			padding: clamp( var(--wp--style--block-gap), 5vw, calc( var(--wp--style--block-gap) * 2 ) );
+			padding: var(--theme--clamp--block-gap);
+			padding: clamp( var(--wp--style--block-gap), 5vw, var(--wp--style--block-gap) );
 			padding-left: clamp( var(--wp--style--block-gap), calc( 50vw -  var(--theme-offset-wideSize) ), 50vw );
 		}
 	}

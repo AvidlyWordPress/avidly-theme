@@ -9,17 +9,17 @@
 }
 
 .container > * {
-	max-width: var(--theme-layout-contentSize);
+	max-width: var(--theme--layout--contentSize);
 
 	// 3.4.0: Fix spacing for small screens and 200% font size.
 	width: calc( 100% - ( var(--wp--style--block-gap) * 2 ) ) !important;
-	margin-left: max( calc((100vw - var(--theme-layout-contentSize)) / 2 ), var(--wp--style--block-gap) );
-	margin-right: max( calc((100vw - var(--theme-layout-contentSize)) / 2 ), var(--wp--style--block-gap) );
+	margin-left: max( calc((100vw - var(--theme--layout--contentSize)) / 2 ), var(--wp--style--block-gap) );
+	margin-right: max( calc((100vw - var(--theme--layout--contentSize)) / 2 ), var(--wp--style--block-gap) );
 }
  
 .alignwide,
 .alignwide > .alignwide {
-	max-width: var(--theme-layout-wideSize);
+	max-width: var(--theme--layout--wideSize);
 	@apply mx-auto;
 }
  
