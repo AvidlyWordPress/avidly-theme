@@ -2,7 +2,7 @@
 @tailwind utilities;
 
 @layer utilities {
-	.has-text-color > a {
+	.has-text-color a {
 		@apply text-current;
 	}
 

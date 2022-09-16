@@ -3,6 +3,9 @@
  */
 
 body {
-	--theme-layout-contentSize: 64rem;
-	--theme-layout-wideSize: 80rem;
+	--theme-layout-contentSize: 64rem; // Add same value as in theme.json / contentSize.
+	--theme-layout-wideSize: 80rem; // Add same value as in theme.json / wideSize.
+
+	--theme-offset-contentSize: calc( var(--theme-layout-contentSize) / 2 );
+	--theme-offset-wideSize: calc( var(--theme-layout-wideSize) / 2 + var(--wp--style--block-gap) * 2 );
 }

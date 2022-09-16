@@ -9,7 +9,7 @@
 }
 
 .container > * {
-	max-width: var(--theme-layout-contentSize); // Add same value as in theme.json / contentSize.
+	max-width: var(--theme-layout-contentSize);
 
 	// 3.4.0: Fix spacing for small screens and 200% font size.
 	width: calc( 100% - ( var(--wp--style--block-gap) * 2 ) ) !important;
@@ -19,7 +19,7 @@
  
 .alignwide,
 .alignwide > .alignwide {
-	max-width: var(--theme-layout-wideSize); // Add same value as in theme.json / wideSize.
+	max-width: var(--theme-layout-wideSize);
 	@apply mx-auto;
 }
  

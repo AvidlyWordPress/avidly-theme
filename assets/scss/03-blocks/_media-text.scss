@@ -1,0 +1,23 @@
+/**
+ * Block: Image.
+ */
+
+.wp-block-media-text{
+	&.has-background {
+		@apply p-0;
+	}
+
+	// Custom padding for full width elements.
+	&.alignfull {
+		
+		.wp-block-media-text__content {
+			padding: clamp( var(--wp--style--block-gap), 5vw, calc( var(--wp--style--block-gap) * 2 ) );
+			padding-right: clamp( var(--wp--style--block-gap), calc( 50vw -  var(--theme-offset-wideSize) ), 50vw );
+		}
+
+		&.has-media-on-the-right .wp-block-media-text__content {
+			padding: clamp( var(--wp--style--block-gap), 5vw, calc( var(--wp--style--block-gap) * 2 ) );
+			padding-left: clamp( var(--wp--style--block-gap), calc( 50vw -  var(--theme-offset-wideSize) ), 50vw );
+		}
+	}
+}

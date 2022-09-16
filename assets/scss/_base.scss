@@ -42,7 +42,7 @@
 	blockquote,
 	dl,
 	dd,
-	figure,
+	figure:not(.wp-block-media-text__media),
 	p,
 	pre,
 	ul,

@@ -13,6 +13,7 @@ Small bug fixes, improvements and Hypenopoly support.
 - Clone cleanups & WordPress PHPCS improvements.
 - Remove _list.scss block styles.
 - Modify index.php for better fallback template.
+- Media & text block styles improving.
 
 ### Fixed
 - Add no-underline class to default search button.
