@@ -12,6 +12,6 @@ body {
 	--theme-offset-wideSize: calc( var(--theme--layout--wideSize) / 2 + calc( var(--wp--style--block-gap) / 2 ) );
 
 	// Clamps.
-	--theme--clamp--block-gap: clamp( var(--wp--style--block-gap), 5vw, var(--wp--style--block-gap) );
+	--theme--clamp--block-gap: clamp( var(--wp--style--block-gap), 5vw, var(--wp--style--block-gap) * 2 );
 
 }
