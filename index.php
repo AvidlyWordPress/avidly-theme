@@ -47,7 +47,7 @@ get_header();
 			elseif ( have_posts() ) :
 				?>
 				<div class="entry-content container">
-					<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 list-none alignwide">
+					<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 list-none alignwide p-0">
 						<?php
 						// Load content loop.
 						while ( have_posts() ) {
