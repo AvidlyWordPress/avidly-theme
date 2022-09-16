@@ -124,7 +124,23 @@ function avidly_theme_block_header_post() {
 									),
 								),
 								array(
-									'core/post-date',
+									'core/group',
+									array(
+										'layout' => array( // Group styles.
+											'type' => 'flex',
+										),
+									),
+									array( // Group content.
+										array(
+											'core/post-date',
+										),
+										array(
+											'core/post-terms',
+											array( // Post terms settings.
+												'term' => 'category',
+											),
+										),
+									),
 								),
 							),
 						),

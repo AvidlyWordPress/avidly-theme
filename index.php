@@ -24,17 +24,19 @@ get_header();
 		<main id="main" class="site-main">
 
 		<header class="entry-header container px-5 py-10 mb-6">
-			<?php
-			if ( is_home() ) {
-				echo '<h1 class="my-0">' . esc_html( $posts_title ) . '</h1>';
-				echo '<div class="entry-header__content mt-6">' . wp_kses_post( $posts_content ) . '</div>';
-			} elseif ( is_search() ) {
-				echo '<h1 class="my-0"">' . esc_html_x( 'Search from site', 'theme UI', 'avidly-theme' ) . '</h1>';
-				echo '<div class="site-search-wrapper text-black">' . get_search_form( array( 'echo' => false ) ) . '</div>';
-			} else {
-				the_archive_title( '<h1 class="my-0"">', '</h1>' );
-			}
-			?>
+			<div class="alignwide text-center">
+				<?php
+				if ( is_home() ) {
+					echo '<h1 class="my-0">' . esc_html( $posts_title ) . '</h1>';
+					echo '<div class="entry-header__content mt-6">' . wp_kses_post( $posts_content ) . '</div>';
+				} elseif ( is_search() ) {
+					echo '<h1 class="my-0"">' . esc_html_x( 'Search from site', 'theme UI', 'avidly-theme' ) . '</h1>';
+					echo '<div class="site-search-wrapper text-black">' . get_search_form( array( 'echo' => false ) ) . '</div>';
+				} else {
+					the_archive_title( '<h1 class="my-0"">', '</h1>' );
+				}
+				?>
+			</div>
 		</header><!-- .entry-header -->
 
 			<?php

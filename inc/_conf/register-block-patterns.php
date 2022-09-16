@@ -47,7 +47,12 @@ function avidly_theme_block_patterns() {
 				<div class="wp-block-column has-black-color has-white-background-color has-text-color has-background" style="flex-basis:50%">
 
 				<!-- wp:post-title {"level":1} /-->
+
+				<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+				<div class="wp-block-group">
 				<!-- wp:post-date /-->
+				<!-- wp:post-terms {"term":"category"} /--></div>
+				<!-- /wp:group -->
 
 				</div>
 				<!-- /wp:column -->
