@@ -20,7 +20,6 @@
 
 		&.has-media-on-the-right .wp-block-media-text__content {
 			padding: var(--theme--clamp--block-gap);
-			padding: clamp( var(--wp--style--block-gap), 5vw, var(--wp--style--block-gap) );
 			padding-left: clamp( var(--wp--style--block-gap), calc( 50vw -  var(--theme-offset-wideSize) ), 50vw );
 		}
 	}
