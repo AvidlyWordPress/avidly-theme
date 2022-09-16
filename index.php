@@ -23,7 +23,7 @@ get_header();
 	<div id="wp--skip-link--target" class="site-content overflow-hidden">
 		<main id="main" class="site-main">
 
-		<header class="entry-header container px-5 py-10 mb-6">
+		<header class="entry-header container px-5 py-10 mb-12">
 			<div class="alignwide text-center">
 				<?php
 				if ( is_home() ) {
@@ -46,7 +46,7 @@ get_header();
 
 			elseif ( have_posts() ) :
 				?>
-				<div class="entry-content container mb-6">
+				<div class="entry-content container">
 					<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 list-none alignwide">
 						<?php
 						// Load content loop.
@@ -72,8 +72,11 @@ get_header();
 			endif;
 			?>
 
+			<div style="height:2.5rem" aria-hidden="true" class="wp-block-spacer"></div>
+
 			<?php the_posts_pagination( array( 'class' => 'text-center' ) ); ?>
 
+			<div style="height:2.5rem" aria-hidden="true" class="wp-block-spacer"></div>
 		</main><!-- .site-main -->
 	</div><!-- .site-content -->
 
