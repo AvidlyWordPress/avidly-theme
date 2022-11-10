@@ -13,6 +13,20 @@ add_filter( 'allowed_block_types_all', 'avidly_theme_set_default_blocks', 10, 2 
 // add_filter( 'allowed_block_types_all', 'avidly_theme_set_ld_blocks', 15, 2 );
 // add_filter( 'allowed_block_types_all', 'avidly_theme_set_cap_based_blocks', 15, 2 );
 // phpcs:enable
+add_filter( 'block_editor_settings_all', 'avidly_theme_default_block_template' );
+
+
+/**
+ * Filters the settings to pass to the block editor for all editor type.
+ *
+ * @param array $settings Default editor settings.
+ * @return $settings
+ */
+function avidly_theme_default_block_template( $settings ) {
+	$settings['defaultBlockTemplate'] = file_get_contents( get_theme_file_path( 'templates/block-template.html' ) );
+	return $settings;
+}
+
 
 /**
  * Whitelist core blocks
@@ -41,6 +55,7 @@ function avidly_theme_set_default_blocks( $allowed_block_types, $editor_context 
 		'core/heading',
 		'core/gallery',
 		'core/list',
+		'core/list-item', // New in core 6.1, required for lists.
 		'core/quote',
 		'core/audio',
 		'core/cover',
@@ -145,6 +160,11 @@ function avidly_theme_set_default_blocks( $allowed_block_types, $editor_context 
 
 		// Gravity Forms.
 		'gravityforms/form',
+
+		// Yoast SEO.
+		'yoast-seo/breadcrumbs',
+		// 'yoast/how-to-block',
+		// 'yoast/faq-block',
 
 		// Advanced Custom Fields.
 		// 'acf/your-block-name',

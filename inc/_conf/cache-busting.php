@@ -77,7 +77,9 @@ if ( ! function_exists( 'avidly_theme_cache_headers' ) ) {
 	function avidly_theme_cache_headers( $seconds_to_cache = 900 ) {
 		$ts = gmdate( 'D, d M Y H:i:s', time() + $seconds_to_cache ) . ' GTM';
 
-		header( 'Expires: ' . $ts );
-		header( 'Cache-control: max-age=' . $seconds_to_cache );
+		if ( ! is_user_logged_in() ) {
+			header( 'Expires: ' . $ts );
+			header( 'Cache-control: max-age=' . $seconds_to_cache );
+		}
 	}
 }

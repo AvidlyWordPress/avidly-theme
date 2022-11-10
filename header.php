@@ -33,7 +33,7 @@ avidly_theme_cache_headers();
 		<div class="nav-container container">
 			<header class="site-header relative w-full flex flex-wrap items-center justify-between alignwide" aria-label="<?php echo esc_html_x( 'Site header', 'theme UI: aria landmark', 'avidly-theme' ); ?>">
 
-				<a class="skip-link screen-reader-text border-2 border-primary has-white-background-color has-text-color has-primary-color p-4" href="#wp--skip-link--target">
+				<a class="skip-link screen-reader-text" href="#main">
 					<?php
 					/* translators: Link to skip site section. */
 					echo esc_html_x( 'Skip to the content', 'theme UI: skip link', 'avidly-theme' );

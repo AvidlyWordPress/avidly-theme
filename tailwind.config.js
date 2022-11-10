@@ -73,6 +73,9 @@ module.exports = {
 				'lg': '36rem',
 				'128': '32rem',
 			},
+			gap: {
+				'default': '1.25em',
+			},
 			minWidth: {
 				// https://tailwindcss.com/docs/min-width
 				'40' : '10rem',

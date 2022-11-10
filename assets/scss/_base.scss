@@ -3,55 +3,10 @@
 
 
 @layer base {
-	/**
-	 * Font-face rules
-	 * 
-	 * @link https://v1.tailwindcss.com/docs/adding-base-styles#font-face-rules
-	 */
-	@font-face {
-		font-family: 'Roboto';
-		font-weight: 400;
-		src: url(../../webfonts/Roboto/Roboto-Regular.ttf) format('truetype');
-		font-display: optional;
-	}
-	@font-face {
-		font-family: 'Roboto';
-		font-weight: 700;
-		src: url(../../webfonts/Roboto/Roboto-Bold.ttf) format('truetype');
-		font-display: optional;
-	}
-	@font-face {
-		font-family: 'Roboto Slab';
-		font-weight: 400;
-		src: url(../../webfonts/Roboto_Slab/RobotoSlab-Regular.ttf) format('truetype');
-		font-display: optional;
-	}
-	@font-face {
-		font-family: 'Roboto Slab';
-		font-weight: 700;
-		src: url(../../webfonts/Roboto_Slab/RobotoSlab-Bold.ttf) format('truetype');
-		font-display: optional;
-	}
 
 	svg {
 		@apply max-w-full;
 		@apply h-auto;
-	}
-
-	// WP 6.0: Core block gap support for default templates element.
-	blockquote,
-	dl,
-	dd,
-	figure:not(.wp-block-media-text__media),
-	p,
-	pre,
-	ul,
-	ol,
-	cite,
-	address {
-		&:not([class*="m-"]):not([class*="my-"]):not([class*="mt-"]) {
-			margin-top: calc( var(--wp--style--block-gap) / 2 );
-		}
 	}
 
 	cite {
@@ -66,12 +21,8 @@
 		}
 	}
 
-	a:not(.no-underline):not(.wp-block-button__link) {
-		@apply underline hover:bg-secondary;
-	}
-
-	// Automatic hypenation support, souh fallback to Hypenopoly.
-	.container {
-		hyphens: auto;
+	// Added in versio 6.1: Override blockGap set in theme.json.
+	body .is-layout-constrained > h2 {
+		margin-top: calc( var( --wp--style--block-gap ) * 2 );
 	}
 }

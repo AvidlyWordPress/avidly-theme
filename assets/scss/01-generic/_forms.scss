@@ -12,6 +12,7 @@ select {
 	@apply px-2;
 	@apply mb-3;
 	@apply rounded;
+	@apply max-w-full;
 }
 
 fieldset {
@@ -22,18 +23,9 @@ input[type='submit'] {
 	@apply cursor-pointer;
 	@apply bg-primary;
 	@apply border-0;
-	@apply rounded-full;
-	@apply py-2;
-	@apply px-4;
+	@apply py-3;
+	@apply px-6;
+	@apply my-6;
 	@apply text-white;
-	@apply my-4;
-
-	@apply scale-100;
-	@apply transition;
-	@apply duration-75;
-
-	&:focus,
-	&:hover {
-		@apply scale-105;
-	}
+	@apply hover:underline focus:underline;
 }

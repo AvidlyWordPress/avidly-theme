@@ -8,7 +8,7 @@
  * @since 1.0.0
  */
 
-$article_class  = 'card mx-2 border h-full link-element';
+$article_class  = 'card border h-full link-element';
 $article_class .= ( avidly_theme_is_sticky() ) ? ' sm:flex' : ' block sm:flex md:block';
 $posttype       = get_post_type_object( get_post_type() );
 ?>
@@ -16,7 +16,7 @@ $posttype       = get_post_type_object( get_post_type() );
 <article <?php post_class( $article_class ); ?> aria-labelledby="post-<?php the_ID(); ?>">
 
 	<?php if ( has_post_thumbnail() ) : ?>
-		<figure class="wp-block-post-featured-image card__image relative flex-1 mt-0">
+		<figure class="wp-block-post-featured-image card__image relative flex-1 m-0">
 			<?php
 			the_post_thumbnail(
 				'post-thumbnail',

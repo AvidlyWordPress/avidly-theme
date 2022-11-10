@@ -19,7 +19,7 @@
 	 */
 	?>
 
-	<div class="entry-content container">
+	<div class="entry-content container is-layout-constrained">
 		<?php the_content(); ?>
 	</div><!-- .entry-content -->
 

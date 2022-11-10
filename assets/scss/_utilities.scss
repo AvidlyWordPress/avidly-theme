@@ -2,8 +2,12 @@
 @tailwind utilities;
 
 @layer utilities {
-	.has-text-color a {
+	.has-text-color:not(.has-link-color) a {
 		@apply text-current;
+	}
+
+	:focus-visible {
+		@apply outline-offset-[3px];
 	}
 
 	.link-element {
@@ -32,8 +36,12 @@
 		}
 	}
 
-	.has-background {
-		@apply p-6 sm:p-6;
+	// Added in versio 6.1: Fix paddings on speficic elements only with background.
+	.wp-block-group,
+	.wp-block-column {
+		&.has-background {
+			@apply p-6 sm:p-6;
+		}
 	}
 
 	.no-underline a {

@@ -11,7 +11,7 @@
 <footer class="site-footer container" aria-label="<?php echo esc_html_x( 'Site footer', 'theme UI: aria landmark', 'avidly-theme' ); ?>">
 
 	<?php if ( has_nav_menu( 'policy_menu' ) ) : ?>
-	<nav class="has-background has-black-background-color has-text-color has-white-color alignfull" aria-label="<?php echo esc_html_x( 'Policy menu', 'menu UI: aria landmark', 'avidly-theme' ); ?>">
+	<nav class="has-background has-black-background-color has-text-color has-white-color alignfull px-6" aria-label="<?php echo esc_html_x( 'Policy menu', 'menu UI: aria landmark', 'avidly-theme' ); ?>">
 		<div class="nowrap overflow-x-auto alignwide">
 			<?php
 			wp_nav_menu(
@@ -26,7 +26,7 @@
 	</nav>
 	<?php endif; ?>
 
-	<div class="site-footer__widgets has-background has-tertiary-background-color alignfull py-5">
+	<div class="site-footer__widgets has-background has-tertiary-background-color alignfull py-6 px-6">
 		<?php if ( is_active_sidebar( 'footer' ) ) : ?>
 			<div class="alignwide md:flex justify-between">
 				<?php dynamic_sidebar( 'footer' ); ?>

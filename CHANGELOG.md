@@ -5,6 +5,37 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.5.0] - 2022-09-15
+Support for WordPress 6.1 + changes to theme functionality.
+
+### Improvement
+- Deactive cache headers (expires & cache-control) for logged in users.
+- Do not optimize core block style by default
+- Make sure preflight is runned before any other styles.
+- Better readibility for Enqueue scripts and stylesheets for theme functionality.
+- Usage of blockGap in theme & block template editor.
+- Simplify DOM structure for default PHP templates.
+- Simplify general link and button :hover and :focus styles.
+- Run 404 and block page content via do_blocks() function.
+- Override default media & text breakpoint.
+- Comment area styles.
+
+### Added
+- Create theme translations via make-pot command.
+- fontFace include example via theme.json.
+- New block whitelists: core/list-item and Yoast SEO blocks.
+- New settings and styling to theme.json.
+- Create block patterns via patterns directory.
+- Create default block template via templates directory.
+- Add custom editor styles in footer.
+- Better detection of archive paginations.
+
+### Removed
+- Hyphenopoly support (can be added via plugin).
+- Webfont related functionality from PHP.
+- References to block template parts.
+- PHP template for singular content.
+
 ## [3.4.1] - 2022-09-15
 Small bug fixes, improvements and Hypenopoly support.
 

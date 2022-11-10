@@ -1,6 +1,6 @@
 {
   "name": "avidly-theme",
-  "version": "3.4.0",
+  "version": "3.5.0",
   "description": "",
   "main": "index.js",
   "engines": {
@@ -15,7 +15,8 @@
     "watch-poll": "mix watch -- --watch-options-poll=1000",
     "hot": "mix watch --hot",
     "prod": "npm run production",
-    "production": "mix --production"
+    "production": "mix --production",
+    "make-pot": "wp i18n make-pot ./ languages/avidly-theme.pot"
   },
   "repository": {
     "type": "git",

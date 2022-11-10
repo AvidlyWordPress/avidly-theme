@@ -1,0 +1,44 @@
+.comments-area {
+	@apply mt-12;
+
+	.comments-title,
+	.comment-reply-title {
+		@apply mt-12 mb-6;
+	}
+
+	.comment-list {
+		@apply mt-12;
+
+		li {
+			@apply my-6;
+		}
+	}
+
+	.comment-author {
+		@apply flex gap-2;
+	}
+}
+
+.comment-form {
+	@apply my-6;
+	@apply flex flex-wrap gap-3 justify-between;
+
+	> * {
+		@apply flex;
+		@apply flex-col;
+	}
+
+	.comment-notes,
+	.comment-form-cookies-consent {
+		@apply gap-3;
+		@apply flex-row;
+		@apply items-center;
+	}
+
+	.comment-notes,
+	.comment-form-comment,
+	.form-submit {
+		@apply basis-full;
+	}
+	
+}

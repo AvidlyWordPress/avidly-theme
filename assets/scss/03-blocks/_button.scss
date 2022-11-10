@@ -3,12 +3,4 @@
  */
 
 .wp-block-button__link {
-	@apply scale-100;
-	@apply transition;
-	@apply duration-75;
-
-	&:focus,
-	&:hover {
-		filter: brightness(0.75);
-	}
 }
