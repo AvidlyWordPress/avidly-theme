@@ -1,56 +1,58 @@
-# Copyright (C) 2016 Automattic
-# Copyright (C) 2020 Avidly
+# Copyright (C) 2022 
 # This file is distributed under the GNU General Public License v2 or later.
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Avidly Theme 2.0\n"
-"Report-Msgid-Bugs-To: https://github.com/AvidlyWordPress/avidly-theme\n"
-"POT-Creation-Date: 2022-09-15 15:14+0300\n"
+"Project-Id-Version: Avidly Theme 3.5.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/avidly-theme\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Avidly Digital <help@avidlyagency.com>\n"
-"X-Generator: Poedit 3.0\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-KeywordsList: __;_e;_n:2,1;_x:2c,1;esc_attr__;__ngettext:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_nx:4c,1,2\n"
-"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: bower_components\n"
-"X-Poedit-SearchPathExcluded-1: node_modules\n"
-"X-Poedit-SearchPathExcluded-2: _src\n"
+"POT-Creation-Date: 2022-11-14T17:05:10+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: avidly-theme\n"
+
+#. Theme Name of the theme
+msgid "Avidly Theme"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "https://avidlyagency.com"
+msgstr ""
+
+#. Description of the theme
+msgid "Custom theme by Avidly."
+msgstr ""
 
 #. translators: 404 page title.
-#: 404.php:32
+#: 404.php:34
 msgctxt "theme UI"
 msgid "404 - Page not found"
 msgstr ""
 
 #. translators: 404 page error message.
-#: 404.php:42
+#: 404.php:44
 msgctxt "theme UI"
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
 #. translators: Link to front page.
-#: 404.php:49 header.php:49
+#: 404.php:51
+#: header.php:49
 msgctxt "theme UI"
 msgid "Go to front page"
 msgstr ""
 
 #. translators: Comment title (singular): %1$s title.
 #: comments.php:32
-#, php-format
 msgctxt "comments UI"
 msgid "One thought on &ldquo;%1$s&rdquo;"
 msgstr ""
 
 #. translators: Comment title (plurar): %1$s comment count number, %2$s title.
 #: comments.php:40
-#, php-format
 msgctxt "comments UI"
 msgid "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr ""
@@ -93,7 +95,42 @@ msgctxt "menu UI: aria landmark"
 msgid "Primary menu"
 msgstr ""
 
-#: inc/_conf/register-block-templates.php:159
+#. translators: %s parent page title.
+#: inc/class/class-disclosure-nav-menu.php:51
+msgctxt "menu UI: aria landmark"
+msgid "Submenu for %s"
+msgstr ""
+
+#. translators: Submenu toggle button: %s parent page title.
+#: inc/class/class-disclosure-nav-menu.php:194
+msgctxt "menu UI: toggle"
+msgid "Submenu: %s"
+msgstr ""
+
+#. translators: %s post date.
+#: inc/helpers/helper-functions.php:19
+msgctxt "theme UI"
+msgid "<span class=\"sr-only\">Posted on</span> %s"
+msgstr ""
+
+#. translators: Site search link.
+#: inc/helpers/helper-functions.php:55
+#: index.php:42
+msgctxt "theme UI"
+msgid "Search from site"
+msgstr ""
+
+#: inc/_conf/register-block-patterns.php:21
+msgctxt "admin UI: block pattern category"
+msgid "Content areas"
+msgstr ""
+
+#: inc/_conf/register-block-patterns.php:27
+msgctxt "admin UI: block pattern category"
+msgid "Query loop areas"
+msgstr ""
+
+#: inc/_conf/register-block-templates.php:175
 msgctxt "placeholder"
 msgid "Add ingress text."
 msgstr ""
@@ -118,51 +155,8 @@ msgctxt "admin UI: widget area"
 msgid "Add widgets here."
 msgstr ""
 
-#: inc/_conf/setup-editor.php:311
-msgctxt "admin UI: block pattern category"
-msgid "Block category"
-msgstr ""
-
-#: inc/_conf/setup-editor.php:323
-msgctxt "admin UI: block pattern title"
-msgid "Example Post header"
-msgstr ""
-
-#: inc/_conf/setup-editor.php:324
-msgctxt "admin UI: block pattern description"
-msgid "Example of custom block pattern."
-msgstr ""
-
-#. translators: %s parent page title.
-#: inc/class/class-disclosure-nav-menu.php:51
-#, php-format
-msgctxt "menu UI: aria landmark"
-msgid "Submenu for %s"
-msgstr ""
-
-#. translators: Submenu toggle button: %s parent page title.
-#: inc/class/class-disclosure-nav-menu.php:194
-#, php-format
-msgctxt "menu UI: toggle"
-msgid "Submenu: %s"
-msgstr ""
-
-#. translators: %s post date.
-#: inc/helpers/helper-functions.php:19
-#, php-format
-msgctxt "theme UI"
-msgid "<span class=\"sr-only\">Posted on</span> %s"
-msgstr ""
-
-#. translators: Site search link.
-#: inc/helpers/helper-functions.php:55 index.php:32
-msgctxt "theme UI"
-msgid "Search from site"
-msgstr ""
-
 #. translators: %s post category.
-#: template-parts/card/content.php:48 template-parts/entry/header.php:50
-#, php-format
+#: template-parts/card/content.php:48
 msgctxt "theme UI"
 msgid "<span class=\"screen-reader-text\">In category </span>%s"
 msgstr ""
@@ -171,4 +165,119 @@ msgstr ""
 #: template-parts/entry/none.php:18
 msgctxt "theme UI"
 msgid "No content found."
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Paragraph"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Ingress"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Heading 4"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Heading 3"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Heading 2"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Heading 1"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System Font"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Heading Font"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Black"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "White"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Light gray"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Secondary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Tertiary"
+msgstr ""
+
+#: theme.json
+msgctxt "Duotone name"
+msgid "Black and primary"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "xsmall"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "small"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "medium"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "large"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "xlarge"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "xxlarge"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Block template"
 msgstr ""

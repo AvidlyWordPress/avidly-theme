@@ -16,7 +16,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area entry-content container">
+<div id="comments" class="comments-area entry-content container has-background has-lightgray-background-color py-6">
 
 	<?php
 	// You can start editing here -- including this comment!
