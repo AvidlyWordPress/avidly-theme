@@ -12,6 +12,7 @@
 
 	.link-element {
 		@apply relative;
+		@apply overflow-hidden;
 
 		a::after {
 			content: '';

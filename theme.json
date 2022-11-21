@@ -64,7 +64,7 @@
 			},
 			"spacingSizes": [
 				{
-					"size": "0.75rem",
+					"size": "1rem",
 					"slug": "xs",
 					"name": "xsmall"
 				},
@@ -74,12 +74,12 @@
 					"name": "small"
 				},
 				{
-					"size": "3rem",
+					"size": "2rem",
 					"slug": "md",
 					"name": "medium"
 				},
 				{
-					"size": "4.5rem",
+					"size": "4rem",
 					"slug": "lg",
 					"name": "large"
 				},
@@ -98,6 +98,7 @@
 			"customPadding": true,
 			"units": [
 				"rem",
+				"em",
 				"%",
 				"px",
 				"vh",
@@ -130,6 +131,16 @@
 							"fontWeight": "400",
 							"src": [
 								"file:./assets/webfonts/Roboto/Roboto-Italic.ttf"
+							]
+						},
+						{
+							"fontDisplay": "optional",
+							"fontFamily": "Roboto",
+							"fontStretch": "normal",
+							"fontStyle": "medium",
+							"fontWeight": "500",
+							"src": [
+								"file:./assets/webfonts/Roboto/Roboto-Medium.ttf"
 							]
 						},
 						{
@@ -263,29 +274,34 @@
 							"color": "#FFFFFF"
 						},
 						{
-							"name": "Primary",
-							"slug": "primary",
-							"color": "#0000FF"
+							"name": "Black",
+							"slug": "black",
+							"color": "#2A2A2A"
+						},
+						{
+							"name": "Secondary",
+							"slug": "secondary",
+							"color": "#AEBECB"
 						}
 					]
 				},
 				"typography": {
-					"fluid": true,
+					"fluid": false,
 					"fontSizes": [
 						{
-							"size": "0.9rem",
+							"size": "0.875",
 							"slug": "small",
 							"name": "Small"
 						},
 						{
 							"size": "1.125rem",
-							"slug": "normal",
+							"slug": "medium",
 							"name": "Normal"
 						},
 						{
 							"size": "1.5rem",
-							"slug": "large",
-							"name": "Large"
+							"slug": "xlarge",
+							"name": "xLarge"
 						}
 					]
 				}
@@ -374,12 +390,24 @@
 				}
 			},
 			"button": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--medium)",
+					"fontWeight": 500
+				},
 				"border": {
-					"radius": "0"
+					"radius": "5em"
 				},
 				"color": {
-					"background": "var(--wp--preset--color--primary)",
-					"text": "var(--wp--preset--color--white)"
+					"background": "var(--wp--preset--color--secondary)",
+					"text": "var(--wp--preset--color--black)"
+				},
+				"spacing": {
+					"padding": {
+						"top": "var(--wp--preset--spacing--xs)",
+						"left": "var(--wp--preset--spacing--md)",
+						"bottom": "var(--wp--preset--spacing--xs)",
+						"right": "var(--wp--preset--spacing--md)"
+					}
 				},
 				":hover": {
 					"typography": {

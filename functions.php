@@ -37,6 +37,7 @@ require_once 'inc/helpers/wp-cleanup.php'; // Remove unneeded WordPress default 
 require_once 'inc/helpers/svg-icons.php';
 require_once 'inc/helpers/featured-images.php';
 require_once 'inc/helpers/override-core-styles.php';
+require_once 'inc/helpers/theme-hooks.php';
 require_once 'inc/helpers/helper-functions.php';
 
 /**
