@@ -1,5 +1,3 @@
-const { __ } = wp.i18n;
-
 // Detect all links that open in new window.
 document.addEventListener( 'DOMContentLoaded', detectLinksBlank );
 

@@ -66,6 +66,22 @@ function avidly_theme_cache_busting( $path, $is_child = false, $manifest_directo
 	return $theme_directory_uri . trailingslashit( $manifest_directory ) . $path;
 }
 
+
+/**
+ * Remove wp version param from any enqueued scripts.
+ * We will handle the cache busting with mix-manifest.json.
+ *
+ * @param string $src first occurrence of a substring in a string.
+ * @return $src
+ */
+function avidly_theme_remove_wp_ver( $src ) {
+	if ( strpos( $src, '/avidly-theme/' ) && strpos( $src, 'ver=' ) ) {
+		$src = remove_query_arg( 'ver', $src );
+	}
+
+	return $src;
+}
+
 if ( ! function_exists( 'avidly_theme_cache_headers' ) ) {
 	/**
 	 * Add an Expires & a Cache-Control Header.

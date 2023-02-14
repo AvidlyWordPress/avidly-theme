@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: Avidly Theme 2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/avidly-"
 "theme\n"
-"POT-Creation-Date: 2022-11-21T08:38:45+00:00\n"
-"PO-Revision-Date: 2022-11-21 10:39+0200\n"
+"POT-Creation-Date: 2023-02-14T12:01:45+00:00\n"
+"PO-Revision-Date: 2023-02-14 14:02+0200\n"
 "Last-Translator: \n"
 "Language-Team: Avidly Digital <help@avidlyagency.com>\n"
 "Language: fi\n"
@@ -134,7 +134,7 @@ msgstr "Hae sivustolta"
 
 #: inc/_conf/register-assets.php:96
 msgctxt "theme UI"
-msgid "(opens in new window)"
+msgid "(opens in a new window)"
 msgstr "(avautuu uuteen ikkunaan)"
 
 #: inc/_conf/register-block-patterns.php:21
@@ -172,13 +172,15 @@ msgctxt "admin UI: widget area"
 msgid "Add widgets here."
 msgstr "Lisää vimpaimia tähän."
 
-#: inc/_conf/setup-theme.php:112
-#, fuzzy
-#| msgctxt "theme UI"
-#| msgid "Opens in a new window"
-msgctxt "theme UI"
-msgid "opens in a new window"
-msgstr "Avautuu uuteen ikkunaan"
+#: patterns/hero-01-post.php
+msgctxt "Pattern title"
+msgid "Artikkelin hero"
+msgstr ""
+
+#: patterns/query-01-latest-posts.php
+msgctxt "Pattern title"
+msgid "Uusimmat artikkelit"
+msgstr ""
 
 #. translators: %s post category.
 #: template-parts/card/content.php:48
@@ -193,49 +195,9 @@ msgid "No content found."
 msgstr "Sisältöä ei löytynyt."
 
 #: theme.json
-msgctxt "Font size name"
-msgid "Small"
-msgstr "Pieni"
-
-#: theme.json
-msgctxt "Font size name"
-msgid "Paragraph"
-msgstr "Leipateksti"
-
-#: theme.json
-msgctxt "Font size name"
-msgid "Ingress"
-msgstr "Ingressi"
-
-#: theme.json
-msgctxt "Font size name"
-msgid "Heading 4"
-msgstr "Otsikko 4"
-
-#: theme.json
-msgctxt "Font size name"
-msgid "Heading 3"
-msgstr "Otsikko 3"
-
-#: theme.json
-msgctxt "Font size name"
-msgid "Heading 2"
-msgstr "Otsikko 2"
-
-#: theme.json
-msgctxt "Font size name"
-msgid "Heading 1"
-msgstr "Otsikko 1"
-
-#: theme.json
-msgctxt "Font family name"
-msgid "System Font"
-msgstr "Järjestelmä"
-
-#: theme.json
-msgctxt "Font family name"
-msgid "Heading Font"
-msgstr "Otsikko"
+msgctxt "Duotone name"
+msgid "Black and primary"
+msgstr "Musta ja ensisijainen"
 
 #: theme.json
 msgctxt "Color name"
@@ -273,11 +235,6 @@ msgid "Tertiary"
 msgstr "Tertiääri"
 
 #: theme.json
-msgctxt "Duotone name"
-msgid "Black and primary"
-msgstr "Musta ja ensisijainen"
-
-#: theme.json
 msgctxt "Space size name"
 msgid "xsmall"
 msgstr ""
@@ -308,6 +265,51 @@ msgid "xxlarge"
 msgstr ""
 
 #: theme.json
+msgctxt "Font family name"
+msgid "System Font"
+msgstr "Järjestelmä"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Heading Font"
+msgstr "Otsikko"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr "Pieni"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Paragraph"
+msgstr "Leipateksti"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Ingress"
+msgstr "Ingressi"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Heading 4"
+msgstr "Otsikko 4"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Heading 3"
+msgstr "Otsikko 3"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Heading 2"
+msgstr "Otsikko 2"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Heading 1"
+msgstr "Otsikko 1"
+
+#: theme.json
 msgctxt "Font size name"
 msgid "Normal"
 msgstr ""
@@ -321,6 +323,10 @@ msgstr ""
 msgctxt "Custom template name"
 msgid "Block template"
 msgstr "Lohkosivupohja"
+
+#~ msgctxt "theme UI"
+#~ msgid "(opens in new window)"
+#~ msgstr "(avautuu uuteen ikkunaan)"
 
 #~ msgctxt "theme UI"
 #~ msgid "Opens in new window"

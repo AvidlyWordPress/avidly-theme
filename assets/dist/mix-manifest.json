@@ -1,9 +1,16 @@
 {
-    "/js/app.js": "/js/app.js?id=d5ed7994346b6278f538c7f0cdae7706",
+    "/js/app.js": "/js/app.js?id=4c592557e7a9ed54f30f3ba597b9250f",
     "/js/disclosureMenu.js": "/js/disclosureMenu.js?id=9ba8d20d488438d7441dc4f50c612bae",
     "/js/editor-script-block.js": "/js/editor-script-block.js?id=b2c50de3bf17ac3a91be5b0fda33df18",
+    "/css/blocks/avidly-accordion.css": "/css/blocks/avidly-accordion.css?id=ff443a789e0e6a7b3b942ac6959c8ec0",
     "/css/overlay-search.css": "/css/overlay-search.css?id=a42eeeaacf326b20e2d1d52ddc909a0f",
-    "/css/editor.css": "/css/editor.css?id=799ebcd502f7a4e973a40068474a181e",
-    "/css/app.css": "/css/app.css?id=a26d0ab6120aa3962bfc952434a6e388",
-    "/css/preflight.css": "/css/preflight.css?id=83bdd0c06bdcb2ae6044a079960b435f"
+    "/css/editor.css": "/css/editor.css?id=aadffd584293401316a3dc7501ca3b61",
+    "/css/app.css": "/css/app.css?id=ec9602a837a6dc85c82f4837a0056a6d",
+    "/css/preflight.css": "/css/preflight.css?id=04278722adaf4ba22e670d00e62fde24",
+    "/css/blocks/core-quote.css": "/css/blocks/core-quote.css?id=47abe1124a890c9109b08f988e6f34fb",
+    "/css/blocks/core-query.css": "/css/blocks/core-query.css?id=dadcc744250b1634c81b07ede639d411",
+    "/css/blocks/core-media-text.css": "/css/blocks/core-media-text.css?id=6d209dc4370019cf6e2ea9cbe09fa5c0",
+    "/css/blocks/core-image.css": "/css/blocks/core-image.css?id=8ec8446cef1cf5e583b67cff49a54448",
+    "/css/blocks/core-cover.css": "/css/blocks/core-cover.css?id=d7bfad24dcf0b72e1877d731db8562ff",
+    "/css/blocks/core-button.css": "/css/blocks/core-button.css?id=68b329da9893e34099c7d8ad5cb9c940"
 }

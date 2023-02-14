@@ -13,23 +13,9 @@ add_filter( 'script_loader_src', 'avidly_theme_remove_wp_ver', 9999 );
 add_filter( 'wp_enqueue_scripts', 'avidly_theme_primary_enqueue', -9999 );
 add_filter( 'wp_enqueue_scripts', 'avidly_theme_default_enqueue' );
 add_action( 'after_setup_theme', 'avidly_theme_editor_styles' );
+add_action( 'after_setup_theme', 'avidly_theme_conditional_block_styles' );
 add_action( 'enqueue_block_editor_assets', 'avidly_theme_editor_scripts' );
 
-
-/**
- * Remove wp version param from any enqueued scripts.
- * We will handle the cache busting with mix-manifest.json.
- *
- * @param string $src first occurrence of a substring in a string.
- * @return $src
- */
-function avidly_theme_remove_wp_ver( $src ) {
-	if ( strpos( $src, 'ver=' ) ) {
-		$src = remove_query_arg( 'ver', $src );
-	}
-
-	return $src;
-}
 
 /**
  * Enqueue PRIMARY scripts and styles (will be run as soon as possible).
@@ -93,7 +79,7 @@ function avidly_theme_default_enqueue() {
 		'avidly_theme',
 		'localizeText',
 		array(
-			'newwin' => _x( '(opens in new window)', 'theme UI', 'avidly-theme' ),
+			'newwin' => _x( '(opens in a new window)', 'theme UI', 'avidly-theme' ),
 		)
 	);
 
@@ -110,6 +96,39 @@ function avidly_theme_default_enqueue() {
 	}
 }
 
+/*
+* Load additional block styles.
+*/
+function avidly_theme_conditional_block_styles() {
+
+	// Generate arrays from filed found in /assets/dist/css/_blocks.
+	$theme_directory = get_stylesheet_directory() . '/assets/dist/css/blocks/';
+	$styled_blocks   = scandir( $theme_directory  );
+
+	// Return if there is no content in $styled_blocks.
+	if ( ! is_array( $styled_blocks ) && is_wp_error( $styled_blocks ) ) {
+		return;
+	}
+
+	// Loop thrue found $styled_blocks &&  enqueue block style.
+	foreach ( $styled_blocks as $file_name ) {
+		$file_name = str_replace( '.css', '', $file_name );
+		$block_arr = explode( '-', $file_name );
+
+		// Make sure that we have just two arra element (package and name).
+		$block['package'] = $block_arr[0];
+		unset( $block_arr[0] );
+		$block['name'] = implode( $block_arr );
+
+		$args = array(
+			'handle' => 'theme-' . $block['name'],
+			'src'    => get_theme_file_uri( 'assets/dist/css/blocks/' . $file_name . '.css' ),
+		);
+
+		wp_enqueue_block_style( $block['package'] . '/' . $block['name'], $args );
+	}
+}
+
 /**
  * Load supplemental block editor styles.
  */
@@ -118,10 +137,9 @@ function avidly_theme_editor_styles() {
 	add_editor_style( '/assets/dist/css/editor.css' );
 }
 
-/* phpcs:ignore
+
 // Reduces unused CSS by only loading styles for in-use blocks.
 add_filter( 'should_load_separate_core_block_assets', '__return_true' );
-*/
 
 /**
  * Enqueue supplemental block editor styles.

@@ -186,7 +186,7 @@ class Disclosure_Nav_Menu extends Walker_Nav_Menu {
 			$item_output .= $args->after;
 
 			$item_output .= sprintf(
-				'<button class="%s" aria-expanded="false" aria-controls="submenu-%s" aria-haspopup="true"><span class="screen-reader-text">%s</span></button>',
+				'<button class="%s" aria-expanded="false" aria-controls="submenu-%s"><span class="screen-reader-text">%s</span></button>',
 				'disclosure-menu-toggle toggle-level--' . ( $depth + 1 ) . ' relative ml-1 w-8 h-8 text-center border-2 border-current mr-4 menu:mr-0',
 				esc_attr( $this->cur_item->ID ),
 				sprintf(

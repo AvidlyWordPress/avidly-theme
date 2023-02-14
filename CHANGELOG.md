@@ -8,16 +8,24 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [3.5.1] - 2022-11-21
 Create support for Figma styleguide template and general improvements.
 
+### Changed
+- Create block based styles and load them separately only when block occures in page.
+
 ### Improvement
 - Match theme settings to Figma template.
 - Style current menu-item hierarcy items.
 - Reduce scrollbar width from alignwide media&text padding detection.
+- Target on theme assets ?ver= changes for cache-busting.
+- Remove unneede aria-haspopup from Disclosure Menu Walker.
 
 ### Added
 - Hooks for excerpt lenght and more.
 - Localize Script support for app.js.
 - Detect links with target `_blank` links and add `aria-label` helper.
 - Default ::after style for target `_blank` links.
+
+## Update
+- NPM dependencies.
 
 ## [3.5.0] - 2022-11-14
 Support for WordPress 6.1 + changes to theme functionality.

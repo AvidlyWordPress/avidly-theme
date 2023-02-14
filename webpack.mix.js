@@ -31,6 +31,33 @@ mix
 		processCssUrls: false, // Process/optimize relative stylesheet url()'s. Set to false, if you don't want them touched.
 	});
 
+// Create induvidual .css from every file found from _blocks folder.
+buildSass('./assets/scss/_blocks', './assets/dist/css/blocks');
+
+
+/**
+ * Find all files from specific folder.
+ * Used in buildSass.
+ */
+function findFiles(dir) {
+	const fs = require('fs');
+	return fs.readdirSync(dir).filter(file => {
+		return fs.statSync(`${dir}/${file}`).isFile();
+	});
+}
+
+/**
+ * Bulk build Sass->CSS.
+ */
+function buildSass(dir, dest) {
+	findFiles(dir).forEach(function (file) {
+		if ( ! file.startsWith('_')) {
+			mix.sass(dir + '/' + file, dest);
+		}
+	});
+}
+
+
 // Full API
 // mix.js(src, output);
 // mix.react(src, output); <-- Identical to mix.js(), but registers React Babel compilation.
