@@ -26,7 +26,7 @@ Create support for Figma styleguide template and general improvements to functio
 - Detect links with target `_blank` links and add `aria-label` helper.
 - Default ::after style for target `_blank` links.
 
-## Update
+### Update
 - NPM dependencies.
 
 ## [3.5.0] - 2022-11-14
