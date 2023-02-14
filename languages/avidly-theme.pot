@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-11-14T17:05:10+00:00\n"
+"POT-Creation-Date: 2022-11-21T08:38:45+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: avidly-theme\n"
@@ -120,6 +120,11 @@ msgctxt "theme UI"
 msgid "Search from site"
 msgstr ""
 
+#: inc/_conf/register-assets.php:96
+msgctxt "theme UI"
+msgid "(opens in new window)"
+msgstr ""
+
 #: inc/_conf/register-block-patterns.php:21
 msgctxt "admin UI: block pattern category"
 msgid "Content areas"
@@ -153,6 +158,11 @@ msgstr ""
 #: inc/_conf/register-sidebars.php:20
 msgctxt "admin UI: widget area"
 msgid "Add widgets here."
+msgstr ""
+
+#: inc/_conf/setup-theme.php:112
+msgctxt "theme UI"
+msgid "opens in a new window"
 msgstr ""
 
 #. translators: %s post category.
@@ -219,12 +229,17 @@ msgstr ""
 
 #: theme.json
 msgctxt "Color name"
-msgid "White"
+msgid "Dark gray"
 msgstr ""
 
 #: theme.json
 msgctxt "Color name"
 msgid "Light gray"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "White"
 msgstr ""
 
 #: theme.json
@@ -275,6 +290,16 @@ msgstr ""
 #: theme.json
 msgctxt "Space size name"
 msgid "xxlarge"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Normal"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "xLarge"
 msgstr ""
 
 #: theme.json

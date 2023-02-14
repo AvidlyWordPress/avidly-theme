@@ -83,9 +83,18 @@ function avidly_theme_default_enqueue() {
 	wp_enqueue_script( // phpcs:ignore
 		'avidly_theme',
 		avidly_theme_cache_busting( '/assets/dist/js/app.js' ),
-		array(),
+		array( 'wp-i18n' ),
 		'',
 		true
+	);
+
+	// Add translations to app.js.
+	wp_localize_script(
+		'avidly_theme',
+		'localizeText',
+		array(
+			'newwin' => _x( '(opens in new window)', 'theme UI', 'avidly-theme' ),
+		)
 	);
 
 	/* phpcs:ignore

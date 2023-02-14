@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.5.1] - 2022-11-21
+Create support for Figma styleguide template and general improvements.
+
+### Improvement
+- Match theme settings to Figma template.
+- Style current menu-item hierarcy items.
+- Reduce scrollbar width from alignwide media&text padding detection.
+
+### Added
+- Hooks for excerpt lenght and more.
+- Localize Script support for app.js.
+- Detect links with target `_blank` links and add `aria-label` helper.
+- Default ::after style for target `_blank` links.
+
 ## [3.5.0] - 2022-11-14
 Support for WordPress 6.1 + changes to theme functionality.
 

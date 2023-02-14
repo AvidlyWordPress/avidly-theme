@@ -1,0 +1,10 @@
+/**
+ * Styles for menus.
+ */
+
+.current-menu-item > a,
+.current-menu-ancestor > a,
+.current-page-parent > a,
+.current_page_parent > a {
+	text-decoration: underline;
+}

@@ -34,12 +34,13 @@ module.exports = {
 			// Would be nice to fetch these directly from theme.json.
 			transparent: 'transparent',
 			current: 'currentColor',
-			black: '#000000',
+			black: '#2A2A2A',
 			white: '#FFFFFF',
+			darkgray: "#595959",
 			lightgray: '#EEEEEE',
-			primary: '#0000FF',
-			secondary: '#00FF00',
-			tertiary: '#FF0000',
+			primary: '#0F3052',
+			secondary: '#AEBECB',
+			tertiary: '#FAE1DF',
 		},
 		fontFamily: {
 			// Font Family: https://tailwindcss.com/docs/font-family
@@ -48,18 +49,13 @@ module.exports = {
 		},
 		fontSize: {
 			// Font Size: https://tailwindcss.com/docs/font-size
-			'xs': '.75rem',
-			'sm': '.875rem',
-			'tiny': '.875rem',
+			'sm': '.813rem',
 			'base': '1rem',
-			'lg': '1.125rem',
-			'xl': '1.25rem',
-			'2xl': '1.5rem',
-			'3xl': '1.875rem',
-			'4xl': '2.25rem',
-			'5xl': '3rem',
-			'6xl': '4rem',
-			'7xl': '5rem',
+			'md': '1.125rem',
+			'lg': '1.25rem',
+			'xl': '1.5rem',
+			'huge': '2rem',
+			'gigantic': '3.375rem',
 		},
 
 		// - - - - - - - - - - - - - - -
@@ -68,13 +64,15 @@ module.exports = {
 		extend: {
 			spacing: {
 				// Spacing scale: https://tailwindcss.com/docs/customizing-spacing#extending-the-default-spacing-scale
-				'sm': '1rem',
+				'xs': '1rem',
+				's': '1.5rem',
 				'md': '2rem',
-				'lg': '36rem',
-				'128': '32rem',
+				'lg': '4rem',
+				'xl': '6rem',
+				'xxl': '8rem',
 			},
 			gap: {
-				'default': '1.25em',
+				'default': '1.5rem',
 			},
 			minWidth: {
 				// https://tailwindcss.com/docs/min-width

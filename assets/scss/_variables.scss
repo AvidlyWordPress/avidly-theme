@@ -3,13 +3,13 @@
  */
 
 body {
-	// Widths.
-	--theme--layout--contentSize: 64rem; // Add same value as in theme.json / contentSize.
-	--theme--layout--wideSize: 80rem; // Add same value as in theme.json / wideSize.
+	--theme--layout--contentSize: 48rem; // Add same value as in theme.json / contentSize.
+	--theme--layout--wideSize: 64rem; // Add same value as in theme.json / wideSize.
+	--default--scrollbar-width: 15px; // Scrollbar width in Chrome.
 
 	// Offsets.
 	--theme-offset-contentSize: calc( var(--theme--layout--contentSize) / 2 );
-	--theme-offset-wideSize: calc( var(--theme--layout--wideSize) / 2 + calc( var(--wp--style--block-gap) / 2 ) );
+	--theme-offset-wideSize: calc( var(--theme--layout--wideSize) / 2 + calc( var(--wp--style--block-gap) / 2 ) - calc( var(--default--scrollbar-width) / 2 ) );
 
 	// Clamps.
 	--theme--clamp--block-gap: clamp( var(--wp--style--block-gap), 5vw, var(--wp--style--block-gap) * 2 );
