@@ -5,11 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [3.5.1] - 2022-11-21
-Create support for Figma styleguide template and general improvements.
+## [3.5.1] - 2023-02-14
+Happy Valentine's Day!
+Create support for Figma styleguide template and general improvements to functionality and optimization.
 
 ### Changed
 - Create block based styles and load them separately only when block occures in page.
+- Enable [should_load_separate_core_block_assets](https://developer.wordpress.org/reference/hooks/should_load_separate_core_block_assets/) filter.
 
 ### Improvement
 - Match theme settings to Figma template.
