@@ -33,6 +33,17 @@ I integrate with Tailwind CSS. Learn <a href="https://tailwindcss.com/docs">how 
 
 VERY IMPORTANT: Always run production build to compile compressed, production-ready CSS and JS. Otherwise you'll end up with ridiculously large CSS and JS files and your clients will call you on a Saturday evening when you're trying to enjoy a beer with your friends.
 
+### Directory structure
+Directory | Contents
+| --- | --- |
+/assets/ | development assets (example JS, SASS, fonts)
+/assets/dist/ | production ready assets (processed, combined and optimized)
+/inc/ | php files that are not part of template structure
+/languages/ | translations
+/patterns/ | block patterns
+/template-parts/ | global template parts
+/templates/ | templates for template editor
+
 ### theme.json
 - Setup global settings and styles for block editor. Read details from <a href="https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json/">Block Editor Handbook</a>.
 
@@ -43,3 +54,5 @@ More reading and examples from Fullsiteediting.com:
 
 ### tailwind.config.js
 - Setup Tailwind CSS related settings. See detailed instructions from <a href="https://tailwindcss.com/docs">Tailwind CSS documentation</a>
+
+
