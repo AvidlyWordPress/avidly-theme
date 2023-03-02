@@ -114,6 +114,11 @@ function avidly_theme_conditional_block_styles() {
 	foreach ( $styled_blocks as $file_name ) {
 		$file_name = str_replace( '.css', '', $file_name );
 		$block_arr = explode( '-', $file_name );
+		
+		// Skip if invisible files or too short file names.
+		if (  6 > strlen( $file_name ) ) {
+			continue;
+		}
 
 		// Make sure that we have just two arra element (package and name).
 		$block['package'] = $block_arr[0];
