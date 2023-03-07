@@ -123,7 +123,7 @@ function avidly_theme_conditional_block_styles() {
 		// Make sure that we have just two arra element (package and name).
 		$block['package'] = $block_arr[0];
 		unset( $block_arr[0] );
-		$block['name'] = implode( $block_arr );
+		$block['name'] = implode( '-', $block_arr );
 
 		$args = array(
 			'handle' => 'theme-' . $block['name'],
