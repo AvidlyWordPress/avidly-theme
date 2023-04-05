@@ -127,7 +127,7 @@ function avidly_theme_conditional_block_styles() {
 
 		$args = array(
 			'handle' => 'theme-' . $block['name'],
-			'src'    => get_theme_file_uri( 'assets/dist/css/blocks/' . $file_name . '.css' ),
+			'src'    => avidly_theme_cache_busting( '/assets/dist/css/blocks/' . $file_name . '.css' ),
 		);
 
 		wp_enqueue_block_style( $block['package'] . '/' . $block['name'], $args );
