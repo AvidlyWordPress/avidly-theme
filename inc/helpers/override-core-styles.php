@@ -7,7 +7,6 @@
  */
 
 add_action( 'admin_footer', 'avidly_theme_admin_styles' );
-add_action( 'wp_footer', 'avidly_theme_footer_styles', 100 );
 
 /**
  * Add custom styles to admin view.
@@ -31,24 +30,6 @@ function avidly_theme_admin_styles() {
 	.editor-styles-wrapper .alignfull {
 		margin-left: -1.5rem;
 		margin-right: -1.5rem;
-	}';
-
-	echo '</style>';
-}
-
-/**
- * Add inline styles to footer (after core styles).
- *
- * @return void
- */
-function avidly_theme_footer_styles() {
-	echo '<style>
-	/* Styles added via avidly_theme_footer_styles() function. */
-	';
-
-	// Detect margin top 0.
-	echo 'body .is-layout-flow > * + *.mt-0 {
-		margin-block-start: 0;
 	}';
 
 	echo '</style>';

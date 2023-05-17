@@ -1,0 +1,19 @@
+/**
+ * Block: Navigation block
+ */
+
+.wp-block-navigation {
+	// Change mobile breakpoint for media & text block.
+	// This will override breakpoint that core sets (max-width: 600px).
+	@screen max-menu {
+		&__responsive-container-open:not(.always-shown) {
+			@apply flex;
+		}
+
+		&__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+			@apply fixed;
+			@apply bottom-0 left-0 top-0 right-0;
+			@apply hidden;
+		}
+	}
+}

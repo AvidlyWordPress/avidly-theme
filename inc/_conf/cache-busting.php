@@ -82,16 +82,19 @@ function avidly_theme_remove_wp_ver( $src ) {
 	return $src;
 }
 
+// Fires once the requested HTTP headers for caching, content type, etc. have been sent.
+// https://developer.wordpress.org/reference/hooks/send_headers/
+add_action( 'send_headers', 'avidly_theme_cache_headers' );
+
 if ( ! function_exists( 'avidly_theme_cache_headers' ) ) {
 	/**
 	 * Add an Expires & a Cache-Control Header.
 	 *
-	 * @param int $seconds_to_cache default to 900 (15min).
-	 *
 	 * @return void
 	 */
-	function avidly_theme_cache_headers( $seconds_to_cache = 900 ) {
-		$ts = gmdate( 'D, d M Y H:i:s', time() + $seconds_to_cache ) . ' GTM';
+	function avidly_theme_cache_headers() {
+		$seconds_to_cache = 900; // 900 sec = 15min.
+		$ts               = gmdate( 'D, d M Y H:i:s', time() + $seconds_to_cache );
 
 		if ( ! is_user_logged_in() ) {
 			header( 'Expires: ' . $ts );

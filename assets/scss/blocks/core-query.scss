@@ -1,0 +1,31 @@
+/**
+ * Block: Latest news & Query block
+ */
+
+.wp-block-query {
+	// Change mobile breakpoint for query block content.
+	// This will override breakpoint that core sets (max-width: 600px).
+	@screen only-sm {
+		.wp-block-post-template > li {
+			width: calc(50% - .83333em) !important; // Override core styles.
+		}
+	}
+
+	ul {
+		@apply list-none;
+	}
+
+	// Special styling for sticky elements.
+	li.sticky {
+		@apply w-full #{!important}; // Override core styles.
+
+		article {
+			@apply flex sm:flex-row;
+
+			> .wp-block-cover {
+				@apply basis-1/2;
+				@apply md:min-h-[20rem] #{!important}; // Override block settings.
+			}
+		}
+	}
+}

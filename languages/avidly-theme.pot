@@ -2,20 +2,20 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Avidly Theme 3.5.0\n"
+"Project-Id-Version: Avidly Block Theme 4.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/avidly-theme\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-02-14T12:01:45+00:00\n"
+"POT-Creation-Date: 2023-05-17T15:28:57+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: avidly-theme\n"
 
 #. Theme Name of the theme
-msgid "Avidly Theme"
+msgid "Avidly Block Theme"
 msgstr ""
 
 #. Theme URI of the theme
@@ -23,104 +23,10 @@ msgid "https://avidlyagency.com"
 msgstr ""
 
 #. Description of the theme
-msgid "Custom theme by Avidly."
+msgid "Custom block theme, based on Avidly starter theme version 4.0.0."
 msgstr ""
 
-#. translators: 404 page title.
-#: 404.php:34
-msgctxt "theme UI"
-msgid "404 - Page not found"
-msgstr ""
-
-#. translators: 404 page error message.
-#: 404.php:44
-msgctxt "theme UI"
-msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
-
-#. translators: Link to front page.
-#: 404.php:51
-#: header.php:49
-msgctxt "theme UI"
-msgid "Go to front page"
-msgstr ""
-
-#. translators: Comment title (singular): %1$s title.
-#: comments.php:32
-msgctxt "comments UI"
-msgid "One thought on &ldquo;%1$s&rdquo;"
-msgstr ""
-
-#. translators: Comment title (plurar): %1$s comment count number, %2$s title.
-#: comments.php:40
-msgctxt "comments UI"
-msgid "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr ""
-
-#. translators: Commenting is closed message.
-#: comments.php:71
-msgctxt "comments UI"
-msgid "Comments are closed."
-msgstr ""
-
-#: footer.php:11
-msgctxt "theme UI: aria landmark"
-msgid "Site footer"
-msgstr ""
-
-#: footer.php:14
-msgctxt "menu UI: aria landmark"
-msgid "Policy menu"
-msgstr ""
-
-#: header.php:34
-msgctxt "theme UI: aria landmark"
-msgid "Site header"
-msgstr ""
-
-#. translators: Link to skip site section.
-#: header.php:39
-msgctxt "theme UI: skip link"
-msgid "Skip to the content"
-msgstr ""
-
-#. translators: Mobile menu toggle button.
-#: header.php:62
-msgctxt "menu UI: toggle"
-msgid "Menu"
-msgstr ""
-
-#: header.php:71
-msgctxt "menu UI: aria landmark"
-msgid "Primary menu"
-msgstr ""
-
-#. translators: %s parent page title.
-#: inc/class/class-disclosure-nav-menu.php:51
-msgctxt "menu UI: aria landmark"
-msgid "Submenu for %s"
-msgstr ""
-
-#. translators: Submenu toggle button: %s parent page title.
-#: inc/class/class-disclosure-nav-menu.php:194
-msgctxt "menu UI: toggle"
-msgid "Submenu: %s"
-msgstr ""
-
-#. translators: %s post date.
-#: inc/helpers/helper-functions.php:19
-msgctxt "theme UI"
-msgid "<span class=\"sr-only\">Posted on</span> %s"
-msgstr ""
-
-#. translators: Site search link.
-#: inc/helpers/helper-functions.php:55
-#: index.php:42
-msgctxt "theme UI"
-msgid "Search from site"
-msgstr ""
-
-#: inc/_conf/register-assets.php:96
+#: inc/_conf/register-assets.php:63
 msgctxt "theme UI"
 msgid "(opens in a new window)"
 msgstr ""
@@ -135,51 +41,29 @@ msgctxt "admin UI: block pattern category"
 msgid "Query loop areas"
 msgstr ""
 
-#: inc/_conf/register-block-templates.php:175
+#: inc/_conf/register-block-templates.php:188
 msgctxt "placeholder"
 msgid "Add ingress text."
 msgstr ""
 
-#: inc/_conf/register-menus.php:18
-msgctxt "admin UI: menu name"
-msgid "Primary menu"
-msgstr ""
-
-#: inc/_conf/register-menus.php:19
-msgctxt "admin UI: menu UI"
-msgid "Policy menu"
-msgstr ""
-
-#: inc/_conf/register-sidebars.php:18
-msgctxt "admin UI: widget area"
-msgid "Footer"
-msgstr ""
-
-#: inc/_conf/register-sidebars.php:20
-msgctxt "admin UI: widget area"
-msgid "Add widgets here."
+#: patterns/hero-01-page.php
+msgctxt "Pattern title"
+msgid "Page hero"
 msgstr ""
 
 #: patterns/hero-01-post.php
 msgctxt "Pattern title"
-msgid "Artikkelin hero"
+msgid "Post hero"
 msgstr ""
 
 #: patterns/query-01-latest-posts.php
 msgctxt "Pattern title"
-msgid "Uusimmat artikkelit"
+msgid "Latest posts"
 msgstr ""
 
-#. translators: %s post category.
-#: template-parts/card/content.php:48
-msgctxt "theme UI"
-msgid "<span class=\"screen-reader-text\">In category </span>%s"
-msgstr ""
-
-#. translators: Default no content message
-#: template-parts/entry/none.php:18
-msgctxt "theme UI"
-msgid "No content found."
+#: patterns/query-02-related-posts.php
+msgctxt "Pattern title"
+msgid "Related posts"
 msgstr ""
 
 #: theme.json
@@ -220,6 +104,16 @@ msgstr ""
 #: theme.json
 msgctxt "Color name"
 msgid "Tertiary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Transparent"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "xxsmall"
 msgstr ""
 
 #: theme.json
@@ -269,45 +163,45 @@ msgstr ""
 
 #: theme.json
 msgctxt "Font size name"
-msgid "Paragraph"
+msgid "Normal (base)"
 msgstr ""
 
 #: theme.json
 msgctxt "Font size name"
-msgid "Ingress"
+msgid "Medium (ingress)"
 msgstr ""
 
 #: theme.json
 msgctxt "Font size name"
-msgid "Heading 4"
+msgid "Large (h4)"
 msgstr ""
 
 #: theme.json
 msgctxt "Font size name"
-msgid "Heading 3"
+msgid "xLarge (h3)"
 msgstr ""
 
 #: theme.json
 msgctxt "Font size name"
-msgid "Heading 2"
+msgid "XXLarge (h2)"
 msgstr ""
 
 #: theme.json
 msgctxt "Font size name"
-msgid "Heading 1"
-msgstr ""
-
-#: theme.json
-msgctxt "Font size name"
-msgid "Normal"
-msgstr ""
-
-#: theme.json
-msgctxt "Font size name"
-msgid "xLarge"
+msgid "XXXLarge (h1)"
 msgstr ""
 
 #: theme.json
 msgctxt "Custom template name"
 msgid "Block template"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Site header"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Site footer"
 msgstr ""

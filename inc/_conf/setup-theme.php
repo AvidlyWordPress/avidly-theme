@@ -14,28 +14,20 @@ add_action(
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on Avidly Theme, use a find
+		 * If you're building a theme based on Avidly Block Theme, use a find
 		 * and replace to change 'avidly-theme' to the name of your theme in
 		 * all the template files.
 		 */
 		load_theme_textdomain( 'avidly-theme', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
-		add_theme_support( 'automatic-feed-links' );
+		// add_theme_support( 'automatic-feed-links' );
 
 		// Unregister default patterns and pattern categories that comes from core.
 		remove_theme_support( 'core-block-patterns' );
 
 		// Enable support for responsive embeds.
 		add_theme_support( 'responsive-embeds' );
-
-		/*
-		 * Let WordPress manage the document title.
-		 * By adding theme support, we declare that this theme does not use a
-		 * hard-coded <title> tag in the document head, and expect WordPress to
-		 * provide it for us.
-		 */
-		add_theme_support( 'title-tag' );
 
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.

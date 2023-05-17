@@ -1,15 +1,14 @@
 
 @tailwind utilities;
 
+
+// Custom utilities can be used with Tailwind
+// responsive variants: https://tailwindcss.com/docs/responsive-design
+// and state variants: https://tailwindcss.com/docs/hover-focus-and-other-states
 @layer utilities {
-	.has-text-color:not(.has-link-color) a {
-		@apply text-current;
-	}
 
-	:focus-visible {
-		@apply outline-offset-[3px];
-	}
-
+	// Custom utility to create link that covers the parent element.
+	// Add the utility to parent element.
 	.link-element {
 		@apply relative;
 		@apply overflow-hidden;
@@ -17,13 +16,13 @@
 		a::after {
 			content: '';
 			@apply absolute;
-			@apply top-0;
-			@apply left-0;
-			@apply w-full;
-			@apply h-full;
+			@apply z-10;
+			@apply top-0 left-0;
+			@apply w-full h-full;
 		}
 
-		figure {
+		figure,
+		.wp-block-cover {
 			@apply overflow-hidden;
 		}
 
@@ -37,14 +36,7 @@
 		}
 	}
 
-	// Added in versio 6.1: Fix paddings on speficic elements only with background.
-	.wp-block-group,
-	.wp-block-column {
-		&.has-background {
-			@apply p-6 sm:p-6;
-		}
-	}
-
+	// Extend text decoration to inner link element: https://tailwindcss.com/docs/text-decoration#setting-the-text-decoration
 	.no-underline a {
 		text-decoration: none !important; // Override a:not(.no-underline):not(.wp-block-button__link).
 	}

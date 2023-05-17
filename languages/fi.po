@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: Avidly Theme 2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/avidly-"
 "theme\n"
-"POT-Creation-Date: 2023-02-14T12:01:45+00:00\n"
-"PO-Revision-Date: 2023-02-14 14:02+0200\n"
+"POT-Creation-Date: 2023-05-17T15:28:57+00:00\n"
+"PO-Revision-Date: 2023-05-17 18:30+0300\n"
 "Last-Translator: \n"
 "Language-Team: Avidly Digital <help@avidlyagency.com>\n"
 "Language: fi\n"
@@ -29,7 +29,7 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-2: _src\n"
 
 #. Theme Name of the theme
-msgid "Avidly Theme"
+msgid "Avidly Block Theme"
 msgstr ""
 
 #. Theme URI of the theme
@@ -37,102 +37,10 @@ msgid "https://avidlyagency.com"
 msgstr ""
 
 #. Description of the theme
-msgid "Custom theme by Avidly."
+msgid "Custom block theme, based on Avidly starter theme version 4.0.0."
 msgstr ""
 
-#. translators: 404 page title.
-#: 404.php:34
-msgctxt "theme UI"
-msgid "404 - Page not found"
-msgstr "404 - Sivua ei löydy"
-
-#. translators: 404 page error message.
-#: 404.php:44
-msgctxt "theme UI"
-msgid "Oops! That page can&rsquo;t be found."
-msgstr "Hups, etsimääsi sisältöä löytynyt."
-
-#. translators: Link to front page.
-#: 404.php:51 header.php:49
-msgctxt "theme UI"
-msgid "Go to front page"
-msgstr "Siirry etusivulle"
-
-#. translators: Comment title (singular): %1$s title.
-#: comments.php:32
-msgctxt "comments UI"
-msgid "One thought on &ldquo;%1$s&rdquo;"
-msgstr "Yksi kommentti: &ldquo;%1$s&rdquo;"
-
-#. translators: Comment title (plurar): %1$s comment count number, %2$s title.
-#: comments.php:40
-msgctxt "comments UI"
-msgid "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr "%1$s kommenttia: &ldquo;%2$s&rdquo;"
-
-#. translators: Commenting is closed message.
-#: comments.php:71
-msgctxt "comments UI"
-msgid "Comments are closed."
-msgstr "Kommentointi on suljettu."
-
-#: footer.php:11
-msgctxt "theme UI: aria landmark"
-msgid "Site footer"
-msgstr "Sivuston alatunniste"
-
-#: footer.php:14
-msgctxt "menu UI: aria landmark"
-msgid "Policy menu"
-msgstr "Selostevalikko"
-
-#: header.php:34
-msgctxt "theme UI: aria landmark"
-msgid "Site header"
-msgstr "Sivuston ylätunniste"
-
-#. translators: Link to skip site section.
-#: header.php:39
-msgctxt "theme UI: skip link"
-msgid "Skip to the content"
-msgstr "Siirry sisältöön"
-
-#. translators: Mobile menu toggle button.
-#: header.php:62
-msgctxt "menu UI: toggle"
-msgid "Menu"
-msgstr "Valikko"
-
-#: header.php:71
-msgctxt "menu UI: aria landmark"
-msgid "Primary menu"
-msgstr "Päävalikko"
-
-#. translators: %s parent page title.
-#: inc/class/class-disclosure-nav-menu.php:51
-msgctxt "menu UI: aria landmark"
-msgid "Submenu for %s"
-msgstr "%s alavalikko"
-
-#. translators: Submenu toggle button: %s parent page title.
-#: inc/class/class-disclosure-nav-menu.php:194
-msgctxt "menu UI: toggle"
-msgid "Submenu: %s"
-msgstr "Alavalikko: %s"
-
-#. translators: %s post date.
-#: inc/helpers/helper-functions.php:19
-msgctxt "theme UI"
-msgid "<span class=\"sr-only\">Posted on</span> %s"
-msgstr "<span class=\"screen-reader-text\">Julkaistu </span>%s"
-
-#. translators: Site search link.
-#: inc/helpers/helper-functions.php:55 index.php:42
-msgctxt "theme UI"
-msgid "Search from site"
-msgstr "Hae sivustolta"
-
-#: inc/_conf/register-assets.php:96
+#: inc/_conf/register-assets.php:63
 msgctxt "theme UI"
 msgid "(opens in a new window)"
 msgstr "(avautuu uuteen ikkunaan)"
@@ -147,52 +55,30 @@ msgctxt "admin UI: block pattern category"
 msgid "Query loop areas"
 msgstr "Nostot"
 
-#: inc/_conf/register-block-templates.php:175
+#: inc/_conf/register-block-templates.php:188
 msgctxt "placeholder"
 msgid "Add ingress text."
 msgstr "Lisää ingressi tähän."
 
-#: inc/_conf/register-menus.php:18
-msgctxt "admin UI: menu name"
-msgid "Primary menu"
-msgstr "Päävalikko"
-
-#: inc/_conf/register-menus.php:19
-msgctxt "admin UI: menu UI"
-msgid "Policy menu"
-msgstr "Selostevalikko"
-
-#: inc/_conf/register-sidebars.php:18
-msgctxt "admin UI: widget area"
-msgid "Footer"
-msgstr "Alatunniste"
-
-#: inc/_conf/register-sidebars.php:20
-msgctxt "admin UI: widget area"
-msgid "Add widgets here."
-msgstr "Lisää vimpaimia tähän."
+#: patterns/hero-01-page.php
+msgctxt "Pattern title"
+msgid "Page hero"
+msgstr "Sivun hero"
 
 #: patterns/hero-01-post.php
 msgctxt "Pattern title"
-msgid "Artikkelin hero"
-msgstr ""
+msgid "Post hero"
+msgstr "Artikkelin hero"
 
 #: patterns/query-01-latest-posts.php
 msgctxt "Pattern title"
-msgid "Uusimmat artikkelit"
-msgstr ""
+msgid "Latest posts"
+msgstr "Uusimmat artikkelit"
 
-#. translators: %s post category.
-#: template-parts/card/content.php:48
-msgctxt "theme UI"
-msgid "<span class=\"screen-reader-text\">In category </span>%s"
-msgstr "<span class=\"screen-reader-text\">Kategoriassa </span>%s"
-
-#. translators: Default no content message
-#: template-parts/entry/none.php:18
-msgctxt "theme UI"
-msgid "No content found."
-msgstr "Sisältöä ei löytynyt."
+#: patterns/query-02-related-posts.php
+msgctxt "Pattern title"
+msgid "Related posts"
+msgstr "Liittyvät artikkelit"
 
 #: theme.json
 msgctxt "Duotone name"
@@ -207,7 +93,7 @@ msgstr "Musta"
 #: theme.json
 msgctxt "Color name"
 msgid "Dark gray"
-msgstr ""
+msgstr "Tumman harmaa"
 
 #: theme.json
 msgctxt "Color name"
@@ -233,6 +119,16 @@ msgstr "Toissijainen"
 msgctxt "Color name"
 msgid "Tertiary"
 msgstr "Tertiääri"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Transparent"
+msgstr "Läpinäkyvä"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "xxsmall"
+msgstr ""
 
 #: theme.json
 msgctxt "Space size name"
@@ -281,48 +177,160 @@ msgstr "Pieni"
 
 #: theme.json
 msgctxt "Font size name"
-msgid "Paragraph"
-msgstr "Leipateksti"
+msgid "Normal (base)"
+msgstr "Normaali"
 
 #: theme.json
 msgctxt "Font size name"
-msgid "Ingress"
-msgstr "Ingressi"
+msgid "Medium (ingress)"
+msgstr "Keskikoko (ingressi)"
 
 #: theme.json
 msgctxt "Font size name"
-msgid "Heading 4"
-msgstr "Otsikko 4"
+msgid "Large (h4)"
+msgstr "L (h4)"
 
 #: theme.json
 msgctxt "Font size name"
-msgid "Heading 3"
-msgstr "Otsikko 3"
+msgid "xLarge (h3)"
+msgstr "XL (h3)"
 
 #: theme.json
 msgctxt "Font size name"
-msgid "Heading 2"
-msgstr "Otsikko 2"
+msgid "XXLarge (h2)"
+msgstr "XXL (h2)"
 
 #: theme.json
 msgctxt "Font size name"
-msgid "Heading 1"
-msgstr "Otsikko 1"
-
-#: theme.json
-msgctxt "Font size name"
-msgid "Normal"
-msgstr ""
-
-#: theme.json
-msgctxt "Font size name"
-msgid "xLarge"
-msgstr ""
+msgid "XXXLarge (h1)"
+msgstr "XXXL (h1)"
 
 #: theme.json
 msgctxt "Custom template name"
 msgid "Block template"
 msgstr "Lohkosivupohja"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Site header"
+msgstr "Yätunniste"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Site footer"
+msgstr "Alatunniste"
+
+#~ msgctxt "Font size name"
+#~ msgid "Normal"
+#~ msgstr "Normaali"
+
+#~ msgctxt "Font size name"
+#~ msgid "xLarge"
+#~ msgstr "Suuri"
+
+#~ msgctxt "Font size name"
+#~ msgid "Paragraph"
+#~ msgstr "Leipateksti"
+
+#~ msgctxt "Font size name"
+#~ msgid "Ingress"
+#~ msgstr "Ingressi"
+
+#~ msgctxt "Font size name"
+#~ msgid "Heading 4"
+#~ msgstr "Otsikko 4"
+
+#~ msgctxt "Font size name"
+#~ msgid "Heading 3"
+#~ msgstr "Otsikko 3"
+
+#~ msgctxt "Font size name"
+#~ msgid "Heading 2"
+#~ msgstr "Otsikko 2"
+
+#~ msgctxt "Font size name"
+#~ msgid "Heading 1"
+#~ msgstr "Otsikko 1"
+
+#~ msgctxt "admin UI: menu name"
+#~ msgid "Primary menu"
+#~ msgstr "Päävalikko"
+
+#~ msgctxt "admin UI: menu UI"
+#~ msgid "Policy menu"
+#~ msgstr "Selostevalikko"
+
+#~ msgctxt "theme UI"
+#~ msgid "404 - Page not found"
+#~ msgstr "404 - Sivua ei löydy"
+
+#~ msgctxt "theme UI"
+#~ msgid "Oops! That page can&rsquo;t be found."
+#~ msgstr "Hups, etsimääsi sisältöä löytynyt."
+
+#~ msgctxt "theme UI"
+#~ msgid "Go to front page"
+#~ msgstr "Siirry etusivulle"
+
+#~ msgctxt "comments UI"
+#~ msgid "One thought on &ldquo;%1$s&rdquo;"
+#~ msgstr "Yksi kommentti: &ldquo;%1$s&rdquo;"
+
+#~ msgctxt "comments UI"
+#~ msgid "%1$s thoughts on &ldquo;%2$s&rdquo;"
+#~ msgstr "%1$s kommenttia: &ldquo;%2$s&rdquo;"
+
+#~ msgctxt "comments UI"
+#~ msgid "Comments are closed."
+#~ msgstr "Kommentointi on suljettu."
+
+#~ msgctxt "menu UI: aria landmark"
+#~ msgid "Policy menu"
+#~ msgstr "Selostevalikko"
+
+#~ msgctxt "theme UI: skip link"
+#~ msgid "Skip to the content"
+#~ msgstr "Siirry sisältöön"
+
+#~ msgctxt "menu UI: toggle"
+#~ msgid "Menu"
+#~ msgstr "Valikko"
+
+#~ msgctxt "menu UI: aria landmark"
+#~ msgid "Primary menu"
+#~ msgstr "Päävalikko"
+
+#~ msgctxt "menu UI: aria landmark"
+#~ msgid "Submenu for %s"
+#~ msgstr "%s alavalikko"
+
+#~ msgctxt "menu UI: toggle"
+#~ msgid "Submenu: %s"
+#~ msgstr "Alavalikko: %s"
+
+#~ msgctxt "theme UI"
+#~ msgid "<span class=\"sr-only\">Posted on</span> %s"
+#~ msgstr "<span class=\"screen-reader-text\">Julkaistu </span>%s"
+
+#~ msgctxt "theme UI"
+#~ msgid "Search from site"
+#~ msgstr "Hae sivustolta"
+
+#~ msgctxt "admin UI: widget area"
+#~ msgid "Footer"
+#~ msgstr "Alatunniste"
+
+#~ msgctxt "admin UI: widget area"
+#~ msgid "Add widgets here."
+#~ msgstr "Lisää vimpaimia tähän."
+
+#~ msgctxt "theme UI"
+#~ msgid "<span class=\"screen-reader-text\">In category </span>%s"
+#~ msgstr "<span class=\"screen-reader-text\">Kategoriassa </span>%s"
+
+#~ msgctxt "theme UI"
+#~ msgid "No content found."
+#~ msgstr "Sisältöä ei löytynyt."
 
 #~ msgctxt "theme UI"
 #~ msgid "(opens in new window)"

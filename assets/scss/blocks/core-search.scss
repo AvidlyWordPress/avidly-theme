@@ -1,0 +1,11 @@
+/**
+ * Block: Search
+ */
+.wp-block-search {
+    
+    @apply relative #{!important}; // Fix relevanssi live search position.
+
+    .relevanssi-live-search-results {
+        @apply top-full left-0 min-w-full #{!important}; // Fix relevanssi live search position.
+    }
+}

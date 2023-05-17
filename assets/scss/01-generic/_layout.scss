@@ -1,33 +1,63 @@
 /**
- * Front end widths.
+ * Layout helpers.
  */
-.container > *,
-.container > .wp-block-image, // Fix core inline style that sets x margin to 0 for images.
-.container > figure, // Fix core inline style that sets x margin to 0 for tables, galleries and pullquotes.
-.alignwide {
-	@apply mx-auto;
+
+// - - - - - - - - - - - - - - - - - - - - - - -
+// START: global styles stolen from TwentyTwenty-Three.
+// - - - - - - - - - - - - - - - - - - - - - - -
+
+// Global spacings.
+.has-global-padding {
+	margin-top: 0;
+	padding-right: var(--theme--blocks--global-spacing);
+	padding-left: var(--theme--blocks--global-spacing);
+
+	:where(.has-global-padding) {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	> .alignfull {
+		margin-right: calc(var(--theme--blocks--global-spacing) * -1);
+		margin-left: calc(var(--theme--blocks--global-spacing) * -1);
+	}
+
+	:where(.has-global-padding) > .alignfull {
+		margin-right: 0;
+		margin-left: 0;
+	}
 }
 
-.container > * {
-	max-width: var(--theme--layout--contentSize);
+// Main level blocks.
+.wp-site-blocks {
+	> .alignleft {
+		float: left;
+		margin-right: var(--theme--blocks--global-spacing);
+	}
 
-	// 3.4.0: Fix spacing for small screens and 200% font size.
-	width: calc( 100% - ( var(--wp--style--block-gap) * 2 ) ) !important;
-	margin-left: max( calc((100vw - var(--theme--layout--contentSize)) / 2 ), var(--wp--style--block-gap) );
-	margin-right: max( calc((100vw - var(--theme--layout--contentSize)) / 2 ), var(--wp--style--block-gap) );
-}
- 
-.alignwide,
-.alignwide > .alignwide {
-	max-width: var(--theme--layout--wideSize);
-	@apply mx-auto;
-}
- 
-.alignfull,
-.alignfull > .alignfull {
-	@apply max-w-none;
-	@apply mx-auto;
+	> .alignright {
+		float: right;
+		margin-left: var(--theme--blocks--global-spacing);
+	}
 
-	// 3.4.0: Fix spacing for small screens and 200% font size.
-	width: 100% !important;
+	> .aligncenter {
+		justify-content: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	> * {
+		margin-block-start: 0;
+		margin-block-end: 0;
+	}
+}
+// - - - - - - - - - - - - - - - - - - - - - - -
+// END: global styles stolen from TwentyTwenty-Three.
+// - - - - - - - - - - - - - - - - - - - - - - -
+
+
+// Elements with BG color
+.wp-block-group.has-background,
+.wp-block-column.has-background {
+    padding: var(--theme--blocks--global-spacing);
 }

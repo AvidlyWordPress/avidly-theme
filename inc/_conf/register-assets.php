@@ -46,25 +46,6 @@ function avidly_theme_default_enqueue() {
 	);
 	*/
 
-	// A11y overlay search.
-	if ( function_exists( 'a11y_overlaysearch_button' ) ) {
-		wp_enqueue_style( // phpcs:ignore
-			'avidly_theme_overlay-search',
-			avidly_theme_cache_busting( '/assets/dist/css/overlay-search.css' )
-		);
-	}
-
-	// Navigation JS, run in footer.
-	if ( has_nav_menu( 'primary_menu' ) ) {
-		wp_enqueue_script( // phpcs:ignore
-			'avidly_theme-navigation',
-			avidly_theme_cache_busting( '/assets/dist/js/disclosureMenu.js' ),
-			array(),
-			'',
-			true
-		);
-	}
-
 	// Main js, run in footer.
 	wp_enqueue_script( // phpcs:ignore
 		'avidly_theme',
@@ -101,7 +82,7 @@ function avidly_theme_default_enqueue() {
 */
 function avidly_theme_conditional_block_styles() {
 
-	// Generate arrays from filed found in /assets/dist/css/_blocks.
+	// Generate arrays from filed found in /assets/dist/css/blocks.
 	$theme_directory = get_stylesheet_directory() . '/assets/dist/css/blocks/';
 	$styled_blocks   = scandir( $theme_directory  );
 

@@ -1,11 +1,27 @@
 # Safelist for classes that cannot be detected from templates, classes that needs to be supported via block editor (margin or padding utilities, etc).
-m-0 mt-0 mb-0
-p-0 pt-0 pb-0
+
+# typography
+uppercase
+
+# displays
+hidden block menu:block menu:inline-block
+
+# spacings (margins & paddings)
+p-0 py-0 px-0 pt-0 pb-0 pl-0 pr-0
+m-0 my-0 mx-0 mt-0 mb-0 ml-0 mr-0
+mx-auto ml-auto mr-auto !ml-auto !mr-auto
+
+# dimensions (widths & heights)
+h-full w-full
+
+# flex
+flex flex-col-reverse flex-row-reverse
+
+# custom
+no-underline
 editor-styles-wrapper
 editor-post-title
 is-root-container
 list-none
+link-element
 sr-only
-z-0 z-10 z-20 z-30 z-40 z-50 z-auto
-h-full w-full
-no-underline

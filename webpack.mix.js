@@ -15,12 +15,10 @@ const tailwindcss = require('tailwindcss');
 mix
 	.setPublicPath('./assets/dist')
 	.js('./assets/js/app.js', 'js/')
-	.js('./assets/js/disclosureMenu.js', 'js/')
 	.js('./assets/js/editor-script-block.js', 'js/')
 	.sass('./assets/scss/preflight.scss', 'css/')
 	.sass('./assets/scss/app.scss', 'css/')
 	.sass('./assets/scss/editor.scss', 'css/')
-	.sass('./assets/scss/overlay-search.scss', 'css/')
 	.version()
 	.autoload({
 		jquery: ['$', 'global.jQuery',"jQuery","global.$","jquery","global.jquery"]
@@ -32,7 +30,7 @@ mix
 	});
 
 // Create induvidual .css from every file found from _blocks folder.
-buildSass('./assets/scss/_blocks', './assets/dist/css/blocks');
+buildSass('./assets/scss/blocks', './assets/dist/css/blocks');
 
 
 /**

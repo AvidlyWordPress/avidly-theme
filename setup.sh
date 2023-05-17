@@ -2,7 +2,7 @@
 # Theme setup
 
 # Defaults
-default_name="Avidly Theme"
+default_name="Avidly Block Theme"
 default_id="avidly-theme"
 default_prefix="avidly_theme"
 default_package="Avidly_Theme"

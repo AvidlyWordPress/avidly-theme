@@ -1,0 +1,39 @@
+/**
+ * Block: Media & Text.
+ */
+
+.wp-block-media-text {
+	// Change mobile breakpoint for media & text block.
+	// This will override breakpoint that core sets (max-width: 600px).
+	@screen max-sm {
+		&.is-stacked-on-mobile {
+			grid-template-columns: 100%;
+		
+			.wp-block-media-text__media {
+				grid-column: 1;
+				grid-row: 1;
+			}
+			.wp-block-media-text__content {
+				grid-column: 1;
+				grid-row: 2;
+			}
+		}
+	}
+
+	// Do not use the global .has-background spacings.
+	&.has-background {
+		@apply p-0;
+
+		.wp-block-media-text__content {
+			padding: var(--theme--blocks--global-spacing);
+		}
+	}
+
+	// Special rules for full width block.
+	&.alignfull {
+		.wp-block-media-text__content {
+			max-width: calc( var(--theme--layout--wideSize) / 2 + var(--theme--blocks--global-spacing) );
+			@apply sm:ml-auto;
+		}
+	}
+}

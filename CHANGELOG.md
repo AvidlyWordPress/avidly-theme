@@ -5,6 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [4.0.0] - 2023-05-17
+MAJOR CHANGE - not compatible with previous theme version!
+Convert starter theme to Block theme.
+
+### Changed
+- Overall file stucture
+
+### Removed
+- Classic theme related PHP files, styling and functionality
+
+### Added
+- Breakpoint to override navigation and media&text block core breakpoint
+- Build-in supports for Relevanssi Live Ajax Search
+- Default templates and template parts
+- Possibillity to detect term links via class in post-terms block
+- Block pattern for related posts (posts from same category)
+
+### Improvement
+- General block editor support (example has-global-padding class)
+- Better readibility for safelist.txt
+- Improved file stucture and file stucture documentation in README.md
+- Improve font size naming
+
 ## [3.5.1] - 2023-02-14
 Happy Valentine's Day!
 Create support for Figma styleguide template and general improvements to functionality and optimization.

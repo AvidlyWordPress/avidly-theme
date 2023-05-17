@@ -10,42 +10,14 @@
 /**
  * Register: Menus
  */
-add_action(
-	'after_setup_theme',
-	function() {
-		register_nav_menus(
-			array(
-				'primary_menu'   => _x( 'Primary menu', 'admin UI: menu name', 'avidly-theme' ),
-				'policy_menu'    => _x( 'Policy menu', 'admin UI: menu UI', 'avidly-theme' ),
-			)
-		);
-	}
-);
-
-
-/**
- * Add custom classes to all <a> elements in wp_nav_menu() menus.
- *
- * @return $atts.
- */
-add_action(
-	'nav_menu_link_attributes',
-	function( $atts, $item, $args ) {
-		// All menus.
-		$atts['class'] = 'no-underline hover:underline';
-
-		// Primary menu.
-		if ( 'primary_menu' === $args->theme_location ) {
-			$atts['class'] .= ' p-4 menu:px-0 menu:py-2';
-		}
-
-		// Secondary menu.
-		if ( 'policy_menu' === $args->theme_location ) {
-			$atts['class'] .= ' mr-4';
-		}
-
-		return $atts;
-	},
-	10,
-	3
-);
+// add_action(
+// 	'after_setup_theme',
+// 	function() {
+// 		register_nav_menus(
+// 			array(
+// 				'primary_menu'   => _x( 'Primary menu', 'admin UI: menu name', 'avidly-theme' ),
+// 				'policy_menu'    => _x( 'Policy menu', 'admin UI: menu UI', 'avidly-theme' ),
+// 			)
+// 		);
+// 	}
+// );

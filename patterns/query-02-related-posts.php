@@ -1,10 +1,10 @@
 <?php
 /**
- * Title: Latest posts
- * Slug: avidly-theme/latest-posts
+ * Title: Related posts
+ * Slug: avidly-theme/related-posts
  * viewportWidth: 1440
  * Block Types: core/post-content
- * Post Types: page
+ * Post Types: post
  * Categories: avidly_theme-query
  *
  * @package Avidly_Theme
@@ -12,7 +12,7 @@
 
 ?>
 
-<!-- wp:query {"queryId":1,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false},"displayLayout":{"type":"flex","columns":3}} -->
+<!-- wp:query {"queryId":1,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":":related_custom_query","exclude":[],"sticky":"exclude","inherit":false},"displayLayout":{"type":"flex","columns":3}} -->
 <div class="wp-block-query">
 
 	<!-- wp:post-template -->

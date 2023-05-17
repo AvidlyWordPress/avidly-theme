@@ -8,8 +8,21 @@
  * @since 3.4.0
  */
 
+add_filter( 'block_editor_settings_all', 'avidly_theme_default_block_template' );
 add_action( 'init', 'avidly_theme_register_page_template' );
 add_action( 'init', 'avidly_theme_register_post_template' );
+
+
+/**
+ * Filters the settings to pass to the block editor for all editor type.
+ *
+ * @param array $settings Default editor settings.
+ * @return $settings
+ */
+function avidly_theme_default_block_template( $settings ) {
+	$settings['defaultBlockTemplate'] = file_get_contents( get_theme_file_path( 'templates/default-template.html' ) );
+	return $settings;
+}
 
 /**
  * Register template: Page

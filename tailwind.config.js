@@ -6,7 +6,8 @@ module.exports = {
 	// - - - - - - - - - - - - - - -
 	content: require('fast-glob').sync([ //
 		'./inc/*/*.php',
-		'./template-parts/*/*.php',
+		'./parts/*.html',
+		'./templates/*.html',
 		'./assets/js/*.js',
 		'./assets/scss/*/*.scss',
 		'./*.php',
@@ -20,14 +21,25 @@ module.exports = {
 		screens: {
 			// Breakpoints: https://tailwindcss.com/docs/breakpoints#custom-media-queries
 			// => @media (min-width: your-value) { ... }
-			'xxs': '414px',
 			'xs': '481px',
 			'sm': '768px',
+			'menu': '992px', // Custom breakpoint for navigation block.
 			'md' : '1024px',
 			'lg': '1280px',
 			'xl': '1624px',
-			'menu' : '992px' // If you change this, update value also to to /assets/js/discloserMenu.js.
-			
+
+			// Advanced, max: https://tailwindcss.com/docs/screens#max-width-breakpoints
+			'max-xs': {'max': '480px'},
+			'max-sm': {'max': '767px'},
+			'max-md': {'max': '1023px'},
+			'max-menu': {'max': '991px'}, // Custom breakpoint for navigation block.
+			'max-lg': {'max': '1279px'},
+			'max-xl': {'max': '1623px'},
+
+			// Advadvanced, fixed-range: https://tailwindcss.com/docs/screens#fixed-range-breakpoints
+			'only-sm': {'min': '481px', 'max': '767px'},
+			'only-md': {'min': '768px', 'max': '1023px'},
+			'only-lg': {'min': '1024px', 'max': '1279px'},
 		},
 		colors: {
 			// Customizing Colors: https://tailwindcss.com/docs/customizing-colors
@@ -54,8 +66,8 @@ module.exports = {
 			'md': '1.125rem',
 			'lg': '1.25rem',
 			'xl': '1.5rem',
-			'huge': '2rem',
-			'gigantic': '3.375rem',
+			'2xl': '2rem',
+			'3xl': '3.375rem',
 		},
 
 		// - - - - - - - - - - - - - - -
@@ -65,7 +77,7 @@ module.exports = {
 			spacing: {
 				// Spacing scale: https://tailwindcss.com/docs/customizing-spacing#extending-the-default-spacing-scale
 				'xs': '1rem',
-				's': '1.5rem',
+				'sm': '1.5rem',
 				'md': '2rem',
 				'lg': '4rem',
 				'xl': '6rem',

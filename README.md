@@ -39,10 +39,14 @@ Directory | Contents
 /assets/ | development assets (example JS, SASS, fonts)
 /assets/dist/ | production ready assets (processed, combined and optimized)
 /inc/ | php files that are not part of template structure
+/inc/_conf/ | basic setups for theme and editor & register stuff (assets, menus, widgets, block pattern categories, etc...)
+/inc/helpers/ | general theme related functions and hooks
+/inc/queries/ | modifications to queries (query block, get_pre_posts queries, etc...)
+/inc/render_block/ | modifications to blocks output
 /languages/ | translations
 /patterns/ | block patterns
-/template-parts/ | global template parts
-/templates/ | templates for template editor
+/parts/ | template parts for site editor
+/templates/ | templates for site editor
 
 ### theme.json
 - Setup global settings and styles for block editor. Read details from <a href="https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json/">Block Editor Handbook</a>.
