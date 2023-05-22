@@ -186,7 +186,7 @@ function avidly_theme_set_extended_blocks( $allowed_block_types, $editor_context
 	);
 	// phpcs:enable
 
-	$allowed_block_types = array_merge( $allowed_block_types, $push_blocks );
+	$allowed_block_types = is_array( $allowed_block_types ) ? array_merge( $allowed_block_types, $push_blocks ) : $push_blocks;
 
 	return $allowed_block_types;
 }
@@ -292,7 +292,7 @@ function avidly_theme_set_wc_blocks( $allowed_block_types, $editor_context ) {
 		'woocommerce/product-meta'
 	);
 
-	$allowed_block_types = array_merge( $allowed_block_types, $push_blocks );
+	$allowed_block_types = is_array( $allowed_block_types ) ? array_merge( $allowed_block_types, $push_blocks ) : $push_blocks;
 
 	return $allowed_block_types;
 }
@@ -346,7 +346,7 @@ function avidly_theme_set_ld_blocks( $allowed_block_types, $editor_context ) {
 		'learndash/ld-question-description', 
 	);
 
-	$allowed_block_types = array_merge( $allowed_block_types, $push_blocks );
+	$allowed_block_types = is_array( $allowed_block_types ) ? array_merge( $allowed_block_types, $push_blocks ) : $push_blocks;
 
 	return $allowed_block_types;
 }
