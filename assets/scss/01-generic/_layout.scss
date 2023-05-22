@@ -57,6 +57,9 @@
 
 
 // Special elements with BG color
-.wp-block.has-background {
+.wp-block-group.has-background,
+[data-type="core/group"].has-background,
+.wp-block-column.has-background,
+[data-type="core/column"].has-background {
     padding: var(--theme--blocks--global-spacing);
 }

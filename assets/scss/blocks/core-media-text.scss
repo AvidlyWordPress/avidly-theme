@@ -20,13 +20,9 @@
 		}
 	}
 
-	// Do not use the global .has-background spacings.
-	&.has-background {
-		@apply p-0;
-
-		.wp-block-media-text__content {
-			padding: var(--theme--blocks--global-spacing);
-		}
+	// Block spesific has-background styles.
+	&.has-background .wp-block-media-text__content {
+		padding: var(--theme--blocks--global-spacing);
 	}
 
 	// Special rules for full width block.
@@ -35,10 +31,10 @@
 			max-width: calc( var(--theme--layout--wideSize) / 2 + var(--theme--blocks--global-spacing) );
 		}
 		&:not(.has-media-on-the-right) .wp-block-media-text__content {
-			@apply sm:ml-auto;
+			@apply sm:mr-auto;
 		}
 		&.has-media-on-the-right .wp-block-media-text__content {
-			@apply sm:mr-auto;
+			@apply sm:ml-auto;
 		}
 	}
 }
