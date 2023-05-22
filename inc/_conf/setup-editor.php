@@ -28,7 +28,8 @@ add_filter( 'allowed_block_types_all', 'avidly_theme_set_extended_blocks', 15, 2
  */
 function avidly_theme_set_core_blocks( $allowed_block_types, $editor_context ) {
 
-	// DO not use whitelist if block editor context is not detected.
+	// Do not use whitelist if block editor context is not detected.
+	// Basically this allows all blocks to be used in Site editor (?)
 	if ( empty( $editor_context->post ) ) {
 		return $allowed_block_types;
 	}
@@ -161,6 +162,12 @@ function avidly_theme_set_core_blocks( $allowed_block_types, $editor_context ) {
  */
 function avidly_theme_set_extended_blocks( $allowed_block_types, $editor_context ) {
 
+	// Do not use whitelist if block editor context is not detected.
+	// Basically this allows all blocks to be used in Site editor (?).
+	if ( empty( $editor_context->post ) ) {
+		return $allowed_block_types;
+	}
+
 	// phpcs:disable
 	$push_blocks = array(
 		// Avidly.
@@ -198,6 +205,12 @@ function avidly_theme_set_extended_blocks( $allowed_block_types, $editor_context
  * @param WP_Block_Editor_Context $editor_context The current block editor context.
  */
 function avidly_theme_set_wc_blocks( $allowed_block_types, $editor_context ) {
+
+	// Do not use whitelist if block editor context is not detected.
+	// Basically this allows all blocks to be used in Site editor (?).
+	if ( empty( $editor_context->post ) ) {
+		return $allowed_block_types;
+	}
 
 	// Updated list from WC version 7.7.0.
 	$push_blocks = array(
@@ -305,6 +318,12 @@ function avidly_theme_set_wc_blocks( $allowed_block_types, $editor_context ) {
  */
 function avidly_theme_set_ld_blocks( $allowed_block_types, $editor_context ) {
 
+	// Do not use whitelist if block editor context is not detected.
+	// Basically this allows all blocks to be used in Site editor (?).
+	if ( empty( $editor_context->post ) ) {
+		return $allowed_block_types;
+	}
+
 	// Updated list from LD version 4.2.0.1.
 	$push_blocks = array(
 		'learndash/ld-login', 
@@ -361,6 +380,14 @@ function avidly_theme_set_ld_blocks( $allowed_block_types, $editor_context ) {
  * @link https://developer.wordpress.org/reference/functions/wp_get_current_user/.
  */
 function avidly_theme_set_cap_based_blocks( $allowed_block_types, $editor_context ) {
+
+	// Do not use whitelist if block editor context is not detected.
+	// Basically this allows all blocks to be used in Site editor (?).
+	if ( empty( $editor_context->post ) ) {
+		return $allowed_block_types;
+	}
+
+	// Get user.
 	$user = wp_get_current_user();
 	$caps = ( (array) $user->allcaps ) ? (array) $user->allcaps : array();
 
