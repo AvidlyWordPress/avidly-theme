@@ -1,11 +1,11 @@
 <?php
 /**
- * Title: Page hero
- * Slug: avidly-theme/post-hero
+ * Title: Sivun hero, oletus
+ * Slug: avidly-theme/page-hero-01
  * viewportWidth: 1440
  * Block Types: core/post-content
  * Post Types: page
- * Categories: avidly_theme-content
+ * Categories: avidly_theme-hero
  *
  * @package Avidly_Theme
  */

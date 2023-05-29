@@ -4,10 +4,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Avidly Theme 2.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/avidly-"
-"theme\n"
-"POT-Creation-Date: 2023-05-17T15:28:57+00:00\n"
-"PO-Revision-Date: 2023-05-17 18:30+0300\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/avidly-theme\n"
+"POT-Creation-Date: 2023-05-29T05:46:29+00:00\n"
+"PO-Revision-Date: 2023-05-29 08:48+0300\n"
 "Last-Translator: \n"
 "Language-Team: Avidly Digital <help@avidlyagency.com>\n"
 "Language: fi\n"
@@ -18,9 +17,9 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_n:2,1;_x:2c,1;esc_attr__;__ngettext:1,2;"
-"__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_nx_noop:4c,1,2;"
-"_ex:1,2c;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
-"esc_html_x:1,2c;_nx:4c,1,2\n"
+"__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_nx:4c,1,2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -37,7 +36,13 @@ msgid "https://avidlyagency.com"
 msgstr ""
 
 #. Description of the theme
-msgid "Custom block theme, based on Avidly starter theme version 4.0.0."
+msgid ""
+"Custom block theme, based on <a href=\"https://github.com/AvidlyWordPress/"
+"avidly-theme\">Avidly Starter Theme</a>, version 4.0.x."
+msgstr ""
+
+#. Author of the theme
+msgid "Avidly"
 msgstr ""
 
 #: inc/_conf/register-assets.php:63
@@ -47,13 +52,18 @@ msgstr "(avautuu uuteen ikkunaan)"
 
 #: inc/_conf/register-block-patterns.php:21
 msgctxt "admin UI: block pattern category"
-msgid "Content areas"
-msgstr "Sisältö"
+msgid "Hero areas"
+msgstr "Hero-osiot"
 
 #: inc/_conf/register-block-patterns.php:27
 msgctxt "admin UI: block pattern category"
+msgid "Content areas"
+msgstr "Sisältöosiot"
+
+#: inc/_conf/register-block-patterns.php:33
+msgctxt "admin UI: block pattern category"
 msgid "Query loop areas"
-msgstr "Nostot"
+msgstr "Sisältönosto-osiot"
 
 #: inc/_conf/register-block-templates.php:188
 msgctxt "placeholder"

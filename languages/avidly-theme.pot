@@ -1,4 +1,4 @@
-# Copyright (C) 2023 
+# Copyright (C) 2023 Avidly
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-05-17T15:28:57+00:00\n"
+"POT-Creation-Date: 2023-05-29T05:46:29+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: avidly-theme\n"
@@ -23,7 +23,11 @@ msgid "https://avidlyagency.com"
 msgstr ""
 
 #. Description of the theme
-msgid "Custom block theme, based on Avidly starter theme version 4.0.0."
+msgid "Custom block theme, based on <a href=\"https://github.com/AvidlyWordPress/avidly-theme\">Avidly Starter Theme</a>, version 4.0.x."
+msgstr ""
+
+#. Author of the theme
+msgid "Avidly"
 msgstr ""
 
 #: inc/_conf/register-assets.php:63
@@ -33,10 +37,15 @@ msgstr ""
 
 #: inc/_conf/register-block-patterns.php:21
 msgctxt "admin UI: block pattern category"
-msgid "Content areas"
+msgid "Hero areas"
 msgstr ""
 
 #: inc/_conf/register-block-patterns.php:27
+msgctxt "admin UI: block pattern category"
+msgid "Content areas"
+msgstr ""
+
+#: inc/_conf/register-block-patterns.php:33
 msgctxt "admin UI: block pattern category"
 msgid "Query loop areas"
 msgstr ""

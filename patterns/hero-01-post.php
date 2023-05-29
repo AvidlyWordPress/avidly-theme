@@ -1,11 +1,11 @@
 <?php
 /**
- * Title: Post hero
- * Slug: avidly-theme/post-hero
+ * Title: Artikkelin hero
+ * Slug: avidly-theme/post-hero-01
  * viewportWidth: 1440
  * Block Types: core/post-content
  * Post Types: post
- * Categories: avidly_theme-content
+ * Categories: avidly_theme-hero
  *
  * @package Avidly_Theme
  */
