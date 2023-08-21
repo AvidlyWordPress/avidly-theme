@@ -5,6 +5,36 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.0.0] - 2023-08-21
+MAJOR CHANGE - not compatible with previous theme version!
+Create development support for Create Block Theme, fix styles for WP 6.3
+
+### Changed
+- stucture in theme.json
+- HTML output in templates and template parts
+- workflow to add webfonts via Create Block Theme
+
+### Removed
+- Tailwind preflight support
+- unneeded CSS styles and files
+- "theme" attribute from all template parts used in templates
+- legacy markup support for image block
+
+### Added
+- new block support: Details & Footnotes block
+- instructions how to optimize webfont performance
+- loading strategy for app.js
+
+### Improved
+- site editor compability
+- example how to style cite in theme.json
+- how to detect global paddings from theme.json (refer: twenty-twentythree)
+
+### Fixed
+- Query block: grid customizations, sticky support
+- _blank links aria-label impementation in app.js
+
+
 ## [4.0.0] - 2023-05-17
 MAJOR CHANGE - not compatible with previous theme version!
 Convert starter theme to Block theme.
