@@ -5,13 +5,10 @@ Hi. I'm a starter theme called Avidly Theme. I'm a theme meant for hacking so do
 ## Features
 
 ### Gutenberg with love
-I'm created for WordPress Block Editor especially in mind. I support theme.json theme configuring that enables a finer-grained controls introduces the first step in managing styles for future WordPress releases. Read more from <a href="https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json/">Block Editor Handbook</a>.
+I'm created for WordPress Block Editor and Site Editor especially in mind. I support theme.json theme configuring that enables a finer-grained controls introduces the first step in managing styles for future WordPress releases. Read more from <a href="https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json/">Block Editor Handbook</a>.
 
 ### Accessibility
 I have been developed with accessibility / WCAG 2.1 criteria in mind.
-
-### Tailwind CSS
-I integrate with Tailwind CSS. Learn <a href="https://tailwindcss.com/docs">how to use Tailwind CSS</a> by reading the documentation. Note that preflight rules has been customized so that Tailwind would not cleat styles that editor gets from thene.json.
 
 ### Requirements
 * Requires at least WordPress 6.3
@@ -26,6 +23,9 @@ I integrate with Tailwind CSS. Learn <a href="https://tailwindcss.com/docs">how 
 
 ## Nice to know
 
+### Create Block Theme Support
+Templates, template parts and theme styles are managed primarily via **Site editor** (as far as they can be) and saved to theme with <a href="https://wordpress.org/plugins/create-block-theme/">Create Block Theme</a> **plugin**. Please install the plugin **only to development environment** (WP enviromnt where you manahe the code to production / staging).
+
 ### Development
 - Get pagackes with `npm install` command
 - Run development with `npm run watch` command
@@ -38,6 +38,9 @@ Directory | Contents
 | --- | --- |
 /assets/ | development assets (example JS, SASS, fonts)
 /assets/dist/ | production ready assets (processed, combined and optimized)
+/assets/fonts/ | webfonts
+/assets/scss/ | development styles modified via theme
+/assets/scss/blocks | development styles modified via theme, has conditional loading (loaded when block is presented)
 /inc/ | php files that are not part of template structure
 /inc/_conf/ | basic setups for theme and editor & register stuff (assets, menus, widgets, block pattern categories, etc...)
 /inc/helpers/ | general theme related functions and hooks
@@ -55,8 +58,9 @@ More reading and examples from Fullsiteediting.com:
 <a href="https://fullsiteediting.com/lessons/creating-theme-json/">Exercise: Creating theme.json</a> and 
 <a href="https://fullsiteediting.com/lessons/global-styles/">Global Styles & theme.json</a>
 
+### Tailwind CSS
+I integrate with Tailwind CSS that is used t extend the utility styling when needed. Learn <a href="https://tailwindcss.com/docs">how to use Tailwind CSS</a> by reading the documentation. 
+Note that preflight rules has been removed so that Tailwind would not clear styles that editor gets from WP core and theme.json.
 
-### tailwind.config.js
-- Setup Tailwind CSS related settings. See detailed instructions from <a href="https://tailwindcss.com/docs">Tailwind CSS documentation</a>
-
-
+#### tailwind.config.js
+Setup Tailwind CSS related settings (use sam values as you use in theme.json). See detailed instructions from <a href="https://tailwindcss.com/docs">Tailwind CSS documentation</a>
