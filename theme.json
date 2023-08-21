@@ -186,75 +186,42 @@
 				{
 					"fontFace": [
 						{
-							"fontDisplay": "optional",
-							"fontFamily": "Roboto",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "400",
-							"src": [
-								"file:./assets/webfonts/Roboto/Roboto-Regular.ttf"
-							]
-						},
-						{
-							"fontDisplay": "optional",
-							"fontFamily": "Roboto",
-							"fontStretch": "normal",
-							"fontStyle": "italic",
-							"fontWeight": "400",
-							"src": [
-								"file:./assets/webfonts/Roboto/Roboto-Italic.ttf"
-							]
-						},
-						{
-							"fontDisplay": "optional",
-							"fontFamily": "Roboto",
-							"fontStretch": "normal",
-							"fontStyle": "medium",
-							"fontWeight": "500",
-							"src": [
-								"file:./assets/webfonts/Roboto/Roboto-Medium.ttf"
-							]
-						},
-						{
-							"fontDisplay": "optional",
-							"fontFamily": "Roboto",
-							"fontStretch": "normal",
+							"fontDisplay": "swap",
+							"fontFamily": "Montserrat",
 							"fontStyle": "normal",
 							"fontWeight": "700",
 							"src": [
-								"file:./assets/webfonts/Roboto/Roboto-Bold.ttf"
+								"file:./assets/fonts/montserrat_normal_700.ttf"
+							]
+						},
+						{
+							"fontDisplay": "swap",
+							"fontFamily": "Montserrat",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/montserrat_normal_400.ttf"
 							]
 						}
 					],
-					"fontFamily": "Roboto, Oxygen-Sans, Ubuntu, Cantarell, \"Helvetica Neue\", sans-serif",
-					"name": "Järjestelmä",
+					"fontFamily": "Montserrat, Geneva, \"Century Gothic\", sans-serif",
+					"name": "Montserrat",
 					"slug": "system-font"
 				},
 				{
 					"fontFace": [
 						{
-							"fontDisplay": "optional",
-							"fontFamily": "Roboto Slab",
-							"fontStretch": "normal",
+							"fontDisplay": "swap",
+							"fontFamily": "Krona One",
 							"fontStyle": "normal",
 							"fontWeight": "400",
 							"src": [
-								"file:./assets/webfonts/Roboto_Slab/RobotoSlab-Regular.ttf"
-							]
-						},
-						{
-							"fontDisplay": "optional",
-							"fontFamily": "Roboto Slab",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "700",
-							"src": [
-								"file:./assets/webfonts/Roboto_Slab/RobotoSlab-Bold.ttf"
+								"file:./assets/fonts/krona-one_normal_400.ttf"
 							]
 						}
 					],
-					"fontFamily": "\"Roboto Slab\", Georgia, \"Times New Roman\", serif",
-					"name": "Otsikko",
+					"fontFamily": "Krona One, \"Gill Sans\", \"Franklin Gothic Medium\", \"Arial Black\", sans-serif",
+					"name": "Krona One",
 					"slug": "heading-font"
 				}
 			],
@@ -414,8 +381,8 @@
 					}
 				},
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--medium)",
-					"fontWeight": 500
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
+					"fontSize": "var(--wp--preset--font-size--medium)"
 				}
 			},
 			"h1": {
@@ -457,7 +424,6 @@
 			"heading": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
-					"fontWeight": 700,
 					"lineHeight": "var(--wp--custom--typography--line-height--small)"
 				}
 			},
