@@ -3,36 +3,19 @@
 
 
 @layer base {
-
+	// Make sure SVg images has max-width and auto height.
 	svg {
 		@apply max-w-full;
 		@apply h-auto;
 	}
 
-	cite {
-		@apply block;
-		font-size: 85%;
-	}
-
-	ul,
-	ol {
-		&:not([class*="m-"]):not([class*="my-"]):not([class*="mb-"]) {
-			@apply mb-0
-		}
-	}
-
-	// Added in versio 6.1: Override blockGap set in theme.json.
-	body .is-layout-constrained > h2 {
-		margin-top: calc( var( --wp--style--block-gap ) * 2 );
-	}
-
-	// Links.
+	// Add icon after "target _blank" links.
 	a[target="_blank"]::after {
 		@apply inline-block;
 		@apply relative;
 
 		content: '';
-		top: 0.125rem; // Match position to parent element size.
+		top: 0.125em; // Match position to parent element size.
 		margin-left: 0.125em; // Match position to parent element size.
 		width: 1.125em; // Match size to parent element.
 		height: 1.125em; // Match size to parent element.

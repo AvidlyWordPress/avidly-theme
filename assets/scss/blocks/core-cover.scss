@@ -7,7 +7,6 @@
 
 	// Force cover content to use wide width.
 	&__inner-container {
-		width: 100% !important; // Override core block style.
-		max-width: var(--theme--layout--wideSize); // Add same value as in theme.json / wideSize.
+		width: 100% !important; // Make rure this style exsist (was removed in core 6.1 and readded in 6.3).
 	}
 }

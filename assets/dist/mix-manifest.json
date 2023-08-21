@@ -1,14 +1,12 @@
 {
-    "/js/app.js": "/js/app.js?id=b87f04dcc2dbd3881c13278a0e0611c9",
+    "/js/app.js": "/js/app.js?id=30b7c560e53384ccad5d81fe1faf96c7",
     "/js/editor-script-block.js": "/js/editor-script-block.js?id=b2c50de3bf17ac3a91be5b0fda33df18",
-    "/css/blocks/core-image.css": "/css/blocks/core-image.css?id=8ec8446cef1cf5e583b67cff49a54448",
-    "/css/blocks/core-cover.css": "/css/blocks/core-cover.css?id=d7bfad24dcf0b72e1877d731db8562ff",
-    "/css/editor.css": "/css/editor.css?id=78fa34d9706f4ef1ac31de62cf79dcc5",
-    "/css/app.css": "/css/app.css?id=f61bacf4e79bf8c3fb1938c3e2f1f2dc",
-    "/css/preflight.css": "/css/preflight.css?id=83bdd0c06bdcb2ae6044a079960b435f",
+    "/css/blocks/core-navigation.css": "/css/blocks/core-navigation.css?id=07270674417e3a25dfef16b6f02ee8f4",
+    "/css/blocks/core-media-text.css": "/css/blocks/core-media-text.css?id=ea05058cc29230e609735cecb121b184",
+    "/css/blocks/core-cover.css": "/css/blocks/core-cover.css?id=965740d1998a4f72dc256a8bc45e0811",
+    "/css/editor.css": "/css/editor.css?id=ce95f4174a2d243c6ff44c3e506b8fdf",
+    "/css/app.css": "/css/app.css?id=712c8165123ca8bf9f12335d509b1739",
     "/css/blocks/core-search.css": "/css/blocks/core-search.css?id=189d1b710100579cce548c8d75408c48",
     "/css/blocks/core-quote.css": "/css/blocks/core-quote.css?id=47abe1124a890c9109b08f988e6f34fb",
-    "/css/blocks/core-query.css": "/css/blocks/core-query.css?id=11037fd40f29e8634c35eb553d8800e4",
-    "/css/blocks/core-navigation.css": "/css/blocks/core-navigation.css?id=07270674417e3a25dfef16b6f02ee8f4",
-    "/css/blocks/core-media-text.css": "/css/blocks/core-media-text.css?id=ea05058cc29230e609735cecb121b184"
+    "/css/blocks/core-query.css": "/css/blocks/core-query.css?id=11037fd40f29e8634c35eb553d8800e4"
 }

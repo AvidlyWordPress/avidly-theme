@@ -11,9 +11,9 @@ How to use webfonts?
 	5.1 font files into /assets/fonts/ folder
 	5.2 fontFamilies rules into theme.json
 6. Set correct fontFamily slugs from theme.json
-	6.1 use slug: system-font for fontFamily that is the default font for site
-	6.2 use slug: heading-font for fontFamily that is the default font for site
-	WHY? These are used with CSS variables in theme var(--wp--preset--font-family--system-font) and var(--wp--preset--font-family--heading-font). If you do not change slugs the original CSS variables do not exsist
+	6.1 use slug: system for fontFamily that is the default font for site
+	6.2 use slug: heading for fontFamily that is the default font for site
+	WHY? These are used with CSS variables in theme var(--wp--preset--font-family--system) and var(--wp--preset--font-family--heading). If you do not change slugs the original CSS variables do not exsist
 7. Optimize Fonts
 	7.1 Extend "fontFamily" with websafe fonts. Consult Google or designer to choose best fallback fonts
 	7.2 Add "fontDisplay": "swap" or "optional"
@@ -46,7 +46,7 @@ Basically your font settings should look like:
 		],
 		"name": "YourWebFont",
 		"fontFamily": "YourWebFont, FallbackFont, sans-serif",
-		"slug": "system-font",
+		"slug": "system",
 	},
 	{
 		...another fontFamily...

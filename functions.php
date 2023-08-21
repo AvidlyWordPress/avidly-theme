@@ -41,6 +41,5 @@ require_once 'inc/queries/related-posts-query.php';
 /**
  * Block renders
  */
-require_once 'inc/render-block/image.php';
 require_once 'inc/render-block/post-template.php';
 require_once 'inc/render-block/post-terms.php';

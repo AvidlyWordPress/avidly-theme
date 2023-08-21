@@ -10,7 +10,6 @@
 add_filter( 'style_loader_src', 'avidly_theme_remove_wp_ver', 9999 );
 add_filter( 'script_loader_src', 'avidly_theme_remove_wp_ver', 9999 );
 
-add_filter( 'wp_enqueue_scripts', 'avidly_theme_primary_enqueue', -9999 );
 add_filter( 'wp_enqueue_scripts', 'avidly_theme_default_enqueue' );
 add_action( 'after_setup_theme', 'avidly_theme_editor_styles' );
 add_action( 'after_setup_theme', 'avidly_theme_conditional_block_styles' );

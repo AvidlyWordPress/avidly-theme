@@ -206,7 +206,7 @@
 					],
 					"fontFamily": "Montserrat, Geneva, \"Century Gothic\", sans-serif",
 					"name": "Montserrat",
-					"slug": "system-font"
+					"slug": "system"
 				},
 				{
 					"fontFace": [
@@ -222,7 +222,7 @@
 					],
 					"fontFamily": "Krona One, \"Gill Sans\", \"Franklin Gothic Medium\", \"Arial Black\", sans-serif",
 					"name": "Krona One",
-					"slug": "heading-font"
+					"slug": "heading"
 				}
 			],
 			"fontSizes": [
@@ -381,8 +381,14 @@
 					}
 				},
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--heading-font)",
+					"fontFamily": "var(--wp--preset--font-family--heading)",
 					"fontSize": "var(--wp--preset--font-size--medium)"
+				}
+			},
+			"cite": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)",
+					"fontStyle": "normal"
 				}
 			},
 			"h1": {
@@ -397,33 +403,33 @@
 			},
 			"h3": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--system-font)",
+					"fontFamily": "var(--wp--preset--font-family--system)",
 					"fontSize": "var(--wp--preset--font-size--xlarge)",
 					"fontWeight": 400
 				}
 			},
 			"h4": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--system-font)",
+					"fontFamily": "var(--wp--preset--font-family--system)",
 					"fontSize": "var(--wp--preset--font-size--large)"
 				}
 			},
 			"h5": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--system-font)",
+					"fontFamily": "var(--wp--preset--font-family--system)",
 					"fontSize": "var(--wp--preset--font-size--medium)",
 					"textTransform": "uppercase"
 				}
 			},
 			"h6": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--system-font)",
+					"fontFamily": "var(--wp--preset--font-family--system)",
 					"fontSize": "var(--wp--preset--font-size--normal)"
 				}
 			},
 			"heading": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--heading-font)",
+					"fontFamily": "var(--wp--preset--font-family--heading)",
 					"lineHeight": "var(--wp--custom--typography--line-height--small)"
 				}
 			},
@@ -451,7 +457,7 @@
 			"blockGap": "1.5rem"
 		},
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--system-font)",
+			"fontFamily": "var(--wp--preset--font-family--system)",
 			"fontSize": "var(--wp--preset--font-size--normal)",
 			"lineHeight": "var(--wp--custom--typography--line-height--normal)"
 		}
