@@ -39,6 +39,7 @@ function avidly_theme_set_core_blocks( $allowed_block_types, $editor_context ) {
 	$allowed_block_types = array(
 		// Common.
 		'core/paragraph',
+		'core/details', // New in core 6.3.
 		'core/image',
 		'core/heading',
 		'core/gallery',
@@ -49,6 +50,7 @@ function avidly_theme_set_core_blocks( $allowed_block_types, $editor_context ) {
 		'core/cover',
 		'core/file',
 		'core/video',
+		// 'core/footnotes', // New in core 6.3.
 
 		// Formating.
 		'core/code',
@@ -171,7 +173,6 @@ function avidly_theme_set_extended_blocks( $allowed_block_types, $editor_context
 	// phpcs:disable
 	$push_blocks = array(
 		// Avidly.
-		'avidly/accordion',
 		'avidly/block-toc',
 		'avidly/social-share',
 
