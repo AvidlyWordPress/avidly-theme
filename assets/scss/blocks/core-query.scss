@@ -5,22 +5,24 @@
 .wp-block-query {
 	// Change mobile breakpoint for query block content.
 	// This will override breakpoint that core sets (max-width: 600px).
-	@screen only-sm {
-		.wp-block-post-template > li {
-			width: calc(50% - .83333em) !important; // Override core styles.
+	.wp-block-post-template.is-layout-grid {
+		@screen only-sm {
+			grid-template-columns: repeat(2, minmax(0, 1fr)) !important; // Override core styles, force 2-grid in small screens.
 		}
-	}
+	
+		// Special styling for sticky elements.
+		li.sticky {
+			@screen sm {
+				grid-column: 1/4; //Make sitcky post full width.
 
-	// Special styling for sticky elements.
-	li.sticky {
-		@apply w-full #{!important}; // Override core styles.
+				article {
+					@apply flex sm:flex-row;
 
-		article {
-			@apply flex sm:flex-row;
-
-			> .wp-block-cover {
-				@apply basis-1/2;
-				@apply md:min-h-[20rem] #{!important}; // Override block settings.
+					> .wp-block-cover {
+						@apply basis-1/2;
+						@apply md:min-h-[20rem] #{!important}; // Override block settings.
+					}
+				}
 			}
 		}
 	}
