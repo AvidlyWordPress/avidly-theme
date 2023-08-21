@@ -350,7 +350,7 @@
 			}
 		},
 		"color": {
-			"background": "var(--wp--preset--color--lightergray)",
+			"background": "var(--wp--preset--color--white)",
 			"text": "var(--wp--preset--color--black)"
 		},
 		"elements": {
