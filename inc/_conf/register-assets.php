@@ -17,17 +17,6 @@ add_action( 'enqueue_block_editor_assets', 'avidly_theme_editor_scripts' );
 
 
 /**
- * Enqueue PRIMARY scripts and styles (will be run as soon as possible).
- */
-function avidly_theme_primary_enqueue() {
-	// Manually added tailwind preflight for frontend use only.
-	wp_enqueue_style( // phpcs:ignore
-		'avidly_theme-preflight',
-		avidly_theme_cache_busting( '/assets/dist/css/preflight.css' )
-	);
-}
-
-/**
  * Enqueue scripts and styles.
  */
 function avidly_theme_default_enqueue() {
@@ -51,7 +40,10 @@ function avidly_theme_default_enqueue() {
 		avidly_theme_cache_busting( '/assets/dist/js/app.js' ),
 		array( 'wp-i18n' ),
 		'',
-		true
+		array(
+			'in_footer' => true,
+			'strategy'  => 'async',
+		)
 	);
 
 	// Add translations to app.js.
@@ -128,6 +120,7 @@ add_filter( 'should_load_separate_core_block_assets', '__return_true' );
 
 /**
  * Enqueue supplemental block editor styles.
+ * NOTE: This doesn't purge the editor JS automatically, you need to update the theme version.
  */
 function avidly_theme_editor_scripts() {
 	wp_enqueue_script(
