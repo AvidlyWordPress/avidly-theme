@@ -14,7 +14,7 @@ I have been developed with accessibility / WCAG 2.1 criteria in mind.
 I integrate with Tailwind CSS. Learn <a href="https://tailwindcss.com/docs">how to use Tailwind CSS</a> by reading the documentation. Note that preflight rules has been customized so that Tailwind would not cleat styles that editor gets from thene.json.
 
 ### Requirements
-* Requires at least WordPress 6.2
+* Requires at least WordPress 6.3
 * Webpack / Laravel Mix for bundling assets
 * NodeJS v14.0 or later
 * npm v6 or later

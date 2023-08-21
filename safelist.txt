@@ -14,7 +14,7 @@ mx-auto ml-auto mr-auto !ml-auto !mr-auto
 # dimensions (widths & heights)
 h-full w-full
 
-# flex
+# flex & grid
 flex flex-col-reverse flex-row-reverse
 
 # custom
