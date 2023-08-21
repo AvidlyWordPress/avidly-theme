@@ -2,10 +2,6 @@
  * Create and override CSS varibales.
  */
 
-body {
-	--theme--layout--contentSize: 48rem; // Add same value as in theme.json / contentSize.
-	--theme--layout--wideSize: 64rem; // Add same value as in theme.json / wideSize.
-
-	// Global blocks margin (default/wide).
-	--theme--blocks--global-spacing: clamp(1.5rem, 3vw, 2.5rem);
+:root {
+	// Add custom variables here (prefix as --theme--preset--variable to identify these from core/plugin variables).
 }

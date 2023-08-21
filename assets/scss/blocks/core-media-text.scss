@@ -20,21 +20,23 @@
 		}
 	}
 
-	// Block spesific has-background styles.
-	&.has-background .wp-block-media-text__content {
-		padding: var(--theme--blocks--global-spacing);
+	.wp-block-media-text__content {
+		// Override core paddings for content.
+		padding-top: var(--wp--style--root--padding-top);
+		padding-left: var(--wp--style--root--padding-left);
+		padding-bottom: var(--wp--style--root--padding-bottom);
+		padding-right: var(--wp--style--root--padding-right);
 	}
 
-	// Special rules for full width block.
+	// Custom content width for full width elements (commonly used by Avidly designers).
+	// Note: This doesn't calculate the scrollbar width that can be something between 12-20px.
 	&.alignfull {
 		.wp-block-media-text__content {
-			max-width: calc( var(--theme--layout--wideSize) / 2 + var(--theme--blocks--global-spacing) );
+			max-width: calc( var(--wp--style--global--wide-size) / 2 - var(--wp--style--block-gap) * 2);
 		}
-		&:not(.has-media-on-the-right) .wp-block-media-text__content {
-			@apply sm:mr-auto;
-		}
-		&.has-media-on-the-right .wp-block-media-text__content {
-			@apply sm:ml-auto;
+
+		&.has-media-on-the-right {
+			justify-items: end;
 		}
 	}
 }

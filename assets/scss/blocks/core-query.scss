@@ -11,10 +11,6 @@
 		}
 	}
 
-	ul {
-		@apply list-none;
-	}
-
 	// Special styling for sticky elements.
 	li.sticky {
 		@apply w-full #{!important}; // Override core styles.
