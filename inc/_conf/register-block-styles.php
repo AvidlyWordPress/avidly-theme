@@ -18,7 +18,7 @@ register_block_style(
 	'core/list',
 	array(
 		'name'       => 'list-none',
-		'label'      => _x( 'None', 'admin UI', 'framery-theme' ),
+		'label'      => _x( 'None', 'admin UI', 'avidly-theme' ),
 		'is_default' => false,
 		'inline_style' => '.is-style-list-none { list-style:none; padding-left:0; }'
 	)
