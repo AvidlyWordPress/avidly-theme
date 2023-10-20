@@ -1,6 +1,7 @@
 <?php
 /**
  * Title: Sivun hero, oletus
+ * Description: Add block description.
  * Slug: avidly-theme/page-hero-01
  * viewportWidth: 1440
  * Block Types: core/post-content

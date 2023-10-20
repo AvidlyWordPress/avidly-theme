@@ -1,6 +1,7 @@
 <?php
 /**
  * Title: Aiheeseen liittyvät artikkelit
+ * Description: Add block description.
  * Slug: avidly-theme/related-posts
  * viewportWidth: 1440
  * Block Types: core/post-content

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [4.1.1] - 2023-08-21
+Documentation related improvements.
+
+### Improved
+- Add Description meta for theme block patterns to make documentation easier.
+- Improvements and fixes README.md
+
 ## [4.1.0] - 2023-08-21
 Create development support for Create Block Theme, fix styles for WP 6.3
 

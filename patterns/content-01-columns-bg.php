@@ -1,6 +1,7 @@
 <?php
 /**
  * Title: Kolme saraketta taustavärillä
+ * Description: Add block description.
  * Slug: avidly-theme/post-hero
  * viewportWidth: 1440
  * Block Types: core/post-content

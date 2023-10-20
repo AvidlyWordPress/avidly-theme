@@ -1,6 +1,7 @@
 <?php
 /**
  * Title: Uusimmat artikkelit
+ * Description: Add block description.
  * Slug: avidly-theme/latest-posts
  * viewportWidth: 1440
  * Block Types: core/post-content

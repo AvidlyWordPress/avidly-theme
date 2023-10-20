@@ -1,6 +1,7 @@
 <?php
 /**
  * Title: Artikkelin hero
+ * Description: Add block description.
  * Slug: avidly-theme/post-hero-01
  * viewportWidth: 1440
  * Block Types: core/post-content

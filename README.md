@@ -24,14 +24,19 @@ I have been developed with accessibility / WCAG 2.1 criteria in mind.
 ## Nice to know
 
 ### Create Block Theme Support
-Templates, template parts and theme styles are managed primarily via **Site editor** (as far as they can be) and saved to theme with <a href="https://wordpress.org/plugins/create-block-theme/">Create Block Theme</a> **plugin**. Please install the plugin **only to development environment** (WP enviromnt where you manahe the code to production / staging).
+Templates, template parts and theme styles are managed primarily via **Site editor** (as far as they can be) and saved to theme with <a href="https://wordpress.org/plugins/create-block-theme/">Create Block Theme</a> **plugin**. Please install the plugin **only to development environment** (WP environment where you manage the theme code and GIT).
+
+### Customize editor experience
+Editor experience can be modified multiple ways. You can setup font sizes, colors, spacings and settings users can use in editor what they can move or delete and event set role based settings. See examples for theme.json, block locking ways and more advanced JavaScript methods from <a href="https://developer.wordpress.org/block-editor/how-to-guides/curating-the-editor-experience/">official documentation in developer.wordpress.org</a> or <a href="https://wordpress.tv/?s=Nick%20Diego%20editor&sort=newest">video tutorials wordpress.tv</a>.
 
 ### Development
 - Get pagackes with `npm install` command
 - Run development with `npm run watch` command
 - Run production build with `npm run production` command (this also purges caches from edited assets by detecting version changes from /dist/mix-manifest.json)
 
-VERY IMPORTANT: Always run production build to compile compressed, production-ready CSS and JS. Otherwise you'll end up with ridiculously large CSS and JS files and your clients will call you on a Saturday evening when you're trying to enjoy a beer with your friends.
+Audit npm depencencies `npm audit` and fix them `npm audit --fix` command.
+
+VERY IMPORTANT: Always run production build to compile compressed, production-ready CSS and JS.
 
 ### Directory structure
 Directory | Contents
