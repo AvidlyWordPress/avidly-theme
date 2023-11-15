@@ -33,7 +33,9 @@ function restrictBlockSettingsByUserPermissions(
 	// You can see all available settings with:
 	// console.log( settingName );
 
+	// - - - - - - - - - - - - - - - -
 	// Disable these block settings for ! canUserEditPage.
+	// - - - - - - - - - - - - - - - -
 	const disabledBlockSettingsEditPage = [
 		// Spacing related settings.
 		'spacing.blockGap',
@@ -61,7 +63,9 @@ function restrictBlockSettingsByUserPermissions(
 		return false;
 	}
 
-	// Disable these block settings.
+	// - - - - - - - - - - - - - - - -
+	// Disable these block settings for ! canUserUpdateSettings.
+	// - - - - - - - - - - - - - - - -
 	const disabledBlockSettingsUpdateSettings = [
 		// Border related options.
 		'border.color',

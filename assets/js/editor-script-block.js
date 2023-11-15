@@ -58,7 +58,29 @@
 		}
 	} );
 
-	// You may use this to output all blocks that are found (found core and plugin blocks).
+	/**
+	 * Handle block toolbar format types.
+	 */
+	wp.richText.unregisterFormatType('core/footnote')
+	// wp.richText.unregisterFormatType('core/bold')
+	// wp.richText.unregisterFormatType('core/code')
+	wp.richText.unregisterFormatType('core/image')
+	// wp.richText.unregisterFormatType('core/italic')
+	// wp.richText.unregisterFormatType('core/link')
+	// wp.richText.unregisterFormatType('core/strikethrough')
+	wp.richText.unregisterFormatType('core/underline')
+	wp.richText.unregisterFormatType('core/text-color')
+	wp.richText.unregisterFormatType('core/subscript')
+	wp.richText.unregisterFormatType('core/superscript')
+	wp.richText.unregisterFormatType('core/keyboard')
+	// wp.richText.unregisterFormatType('core/language')
+
+	// Looking for name of new format type?
+	// You may use this to output active format types:
+	// console.log( wp.data.select( 'core/rich-text' ).getFormatTypes() );
+
+	// Looking for list of all available blocks?
+	// You may use this to output all blocks that are found (core and plugin blocks):
 	// console.log( wp.data.select( 'core/blocks' ).getBlockTypes() );
  } );
  
