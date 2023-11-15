@@ -31,7 +31,7 @@ function restrictBlockSettingsByUserPermissions(
 
 	// Looking for spefic block setting?
 	// You can see all available settings with:
-	console.log( settingName );
+	// console.log( settingName );
 
 	// Disable these block settings for ! canUserEditPage.
 	const disabledBlockSettingsEditPage = [
