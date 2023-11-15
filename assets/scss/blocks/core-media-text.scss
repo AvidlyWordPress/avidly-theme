@@ -7,7 +7,7 @@
 	// This will override breakpoint that core sets (max-width: 600px).
 	@screen max-sm {
 		&.is-stacked-on-mobile {
-			grid-template-columns: 100%;
+			grid-template-columns: 100% !important; // Important is needed to override possible inline style if media size is changed manually from block settings.
 		
 			.wp-block-media-text__media {
 				grid-column: 1;
@@ -28,15 +28,33 @@
 		padding-right: var(--wp--style--root--padding-right);
 	}
 
-	// Custom content width for full width elements (commonly used by Avidly designers).
+	// Custom content width for full width elements (commonly used by Avidly designers). Applies only larger screen size.
 	// Note: This doesn't calculate the scrollbar width that can be something between 12-20px.
-	&.alignfull {
-		.wp-block-media-text__content {
-			max-width: calc( var(--wp--style--global--wide-size) / 2 - var(--wp--style--block-gap) * 2);
-		}
-
-		&.has-media-on-the-right {
-			justify-items: end;
+	@screen sm {
+		&.alignfull {
+			.wp-block-media-text__content {
+				max-width: calc( var(--wp--style--global--wide-size) / 2 - var(--wp--style--block-gap) * 2);
+			}
+			&.has-media-on-the-right .wp-block-media-text__content {
+				justify-self: end;
+			}
 		}
 	}
 }
+
+/*
+.alignfull.has-media-on-the-right {
+	justify-content: unset !important;
+	background: yellow;
+	}
+	
+	.wp-block-media-text.alignfull.has-media-on-the-right > wp-block-media-text__content {
+	justify-self: end;
+	}
+	
+	@media screen and (max-width: 767px) {
+	.wp-block-media-text.alignfull .wp-block-media-text__content {
+	max-width: unset; 
+	}
+	}
+*/
