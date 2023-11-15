@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [4.2] - 2023-XX-XX
+Under construction.
+
+### Added
+- Cache purge support for editor assets.
+- Base rules for client side filters that disables block settings from roles lower than administrator.
+
+### Improved
+- Restrict available color options from theme.json.
+
+### Update
+- NPM dependencies.
+
 ## [4.1.2] - 2023-11-15
 Small bugfix for WordPress 6.4.
 

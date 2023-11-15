@@ -16,6 +16,7 @@ mix
 	.setPublicPath('./assets/dist')
 	.js('./assets/js/app.js', 'js/')
 	.js('./assets/js/editor-script-block.js', 'js/')
+	.js('./assets/js/client-side-filters.js', 'js/')
 	.sass('./assets/scss/app.scss', 'css/')
 	.sass('./assets/scss/editor.scss', 'css/')
 	.version()

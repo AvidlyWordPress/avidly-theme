@@ -124,10 +124,18 @@ add_filter( 'should_load_separate_core_block_assets', '__return_true' );
  */
 function avidly_theme_editor_scripts() {
 	wp_enqueue_script(
-		'avidly-theme-block-editor-script',
-		get_theme_file_uri( '/assets/js/editor-script-block.js' ),
+		'avidly-theme-editor-script-block',
+		avidly_theme_cache_busting( '/assets/dist/js/editor-script-block.js' ),
 		array( 'wp-blocks', 'wp-dom' ),
-		wp_get_theme()->get( 'Version' ),
+		'',
+		true
+	);
+
+	wp_enqueue_script(
+		'avidly-theme-client-side-filters',
+		avidly_theme_cache_busting( '/assets/dist/js/client-side-filters.js' ),
+		array( 'wp-blocks', 'wp-dom' ),
+		'',
 		true
 	);
 }

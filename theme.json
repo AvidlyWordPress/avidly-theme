@@ -49,20 +49,13 @@
 			}
 		},
 		"color": {
-			"custom": false,
+			"custom": true,
 			"customDuotone": false,
 			"customGradient": false,
+			"defaultDuotone": false,
+			"defaultGradients": false,
 			"defaultPalette": false,
-			"duotone": [
-				{
-					"colors": [
-						"#000000",
-						"#399e1a"
-					],
-					"name": "Musta ja ensisijainen",
-					"slug": "black-and-primary"
-				}
-			],
+			"duotone": [],
 			"gradients": [],
 			"palette": [
 				{
