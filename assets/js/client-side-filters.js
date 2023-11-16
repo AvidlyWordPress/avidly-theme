@@ -25,8 +25,8 @@ function restrictBlockSettingsByUserPermissions(
 
 	// Check user permissions.
 	// See capabilities: https://developer.wordpress.org/block-editor/reference-guides/packages/packages-core-data/#canuser
-	const canUserEditPage       = canUser( 'create', 'pages' ); // Editors and lower roles.
-	const canUserUpdateSettings = canUser( 'update', 'settings' ); // Authors and lower roles.
+	const canUserCreatePage       = canUser( 'create', 'pages' ); // User has cabability to create new pages.
+	const canUserUpdateSettings = canUser( 'update', 'settings' ); // User has cabability to update site settings.
 
 
 	// Looking for spefic block setting?
@@ -34,7 +34,7 @@ function restrictBlockSettingsByUserPermissions(
 	// console.log( settingName );
 
 	// - - - - - - - - - - - - - - - -
-	// Disable these block settings for ! canUserEditPage.
+	// Disable these block settings for ! canUserCreatePage.
 	// - - - - - - - - - - - - - - - -
 	const disabledBlockSettingsEditPage = [
 		// Spacing related settings.
@@ -57,7 +57,8 @@ function restrictBlockSettingsByUserPermissions(
 	];
 
 	if (
-		! canUserEditPage &&
+		// Disable block settings if user cannot create pages.
+		! canUserCreatePage &&
 		disabledBlockSettingsEditPage.includes( settingName )
 	) {
 		return false;
@@ -92,6 +93,7 @@ function restrictBlockSettingsByUserPermissions(
 	];
 
 	if (
+		// Disable block settings if user cannot update site settings.
 		! canUserUpdateSettings &&
 		disabledBlockSettingsUpdateSettings.includes( settingName )
 	) {
