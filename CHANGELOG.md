@@ -15,9 +15,11 @@ Under construction.
 
 ### Improved
 - Restrict available color options from theme.json.
+- Remove prefix from block pattern categories names (works better with categories created from editor).
 
 ### Update
 - NPM dependencies.
+- Translations.
 
 ## [4.1.2] - 2023-11-15
 Small bugfix for WordPress 6.4.

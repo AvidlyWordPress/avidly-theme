@@ -1,12 +1,12 @@
 <?php
 /**
- * Title: Aiheeseen liittyvät artikkelit
+ * Title: Related posts
  * Description: Add block description.
  * Slug: avidly-theme/related-posts
  * viewportWidth: 1440
  * Block Types: core/post-content
  * Post Types: post
- * Categories: avidly_theme-query
+ * Categories: dynamic
  *
  * @package Avidly_Theme
  */

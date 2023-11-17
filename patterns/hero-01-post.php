@@ -1,12 +1,12 @@
 <?php
 /**
- * Title: Artikkelin hero
+ * Title: Post hero
  * Description: Add block description.
  * Slug: avidly-theme/post-hero-01
  * viewportWidth: 1440
  * Block Types: core/post-content
  * Post Types: post
- * Categories: avidly_theme-hero
+ * Categories: hero
  *
  * @package Avidly_Theme
  */

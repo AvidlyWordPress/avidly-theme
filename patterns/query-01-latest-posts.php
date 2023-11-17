@@ -1,12 +1,12 @@
 <?php
 /**
- * Title: Uusimmat artikkelit
+ * Title: Latest posts
  * Description: Add block description.
  * Slug: avidly-theme/latest-posts
  * viewportWidth: 1440
  * Block Types: core/post-content
  * Post Types: page
- * Categories: avidly_theme-query
+ * Categories: dynamic
  *
  * @package Avidly_Theme
  */

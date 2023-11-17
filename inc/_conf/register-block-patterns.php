@@ -16,21 +16,21 @@ add_filter( 'init', 'avidly_theme_block_pattern_cat' );
 function avidly_theme_block_pattern_cat() {
 	// Register block pattern categories.
 	register_block_pattern_category(
-		'avidly_theme-hero',
+		'hero',
 		array(
-			'label' => _x( 'Hero areas', 'admin UI: block pattern category', 'avidly-theme' ),
+			'label' => _x( 'Heroalueet', 'admin UI: block pattern category', 'avidly-theme' ), // Translations is generated to .pot correclty but not in editor view, tested in WP 6.4.
 		)
 	);
 	register_block_pattern_category(
-		'avidly_theme-content',
+		'content',
 		array(
-			'label' => _x( 'Content areas', 'admin UI: block pattern category', 'avidly-theme' ),
+			'label' => _x( 'Sisältöalueet', 'admin UI: block pattern category', 'avidly-theme' ),
 		)
 	);
 	register_block_pattern_category(
-		'avidly_theme-query',
+		'dynamic',
 		array(
-			'label' => _x( 'Query loop areas', 'admin UI: block pattern category', 'avidly-theme' ),
+			'label' => _x( 'Dynaamiset nostot', 'admin UI: block pattern category', 'avidly-theme' ),
 		)
 	);
 }

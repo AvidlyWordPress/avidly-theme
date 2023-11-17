@@ -16,17 +16,17 @@
 					"palette": [
 						{
 							"color": "#FFFFFF",
-							"name": "Valkoinen",
+							"name": "White",
 							"slug": "white"
 						},
 						{
 							"color": "#2A2A2A",
-							"name": "Musta",
+							"name": "Black",
 							"slug": "black"
 						},
 						{
 							"color": "#AEBECB",
-							"name": "Toissijainen",
+							"name": "Secondary",
 							"slug": "secondary"
 						}
 					]
@@ -35,12 +35,12 @@
 					"fluid": false,
 					"fontSizes": [
 						{
-							"name": "Pieni",
+							"name": "Small",
 							"size": "0.875",
 							"slug": "small"
 						},
 						{
-							"name": "Normaali",
+							"name": "Medium",
 							"size": "1.125rem",
 							"slug": "medium"
 						}
@@ -60,42 +60,42 @@
 			"palette": [
 				{
 					"color": "#2A2A2A",
-					"name": "Musta",
+					"name": "Black",
 					"slug": "black"
 				},
 				{
 					"color": "#595959",
-					"name": "Tumman harmaa",
+					"name": "Dark gray",
 					"slug": "darkgray"
 				},
 				{
 					"color": "#EEEEEE",
-					"name": "Vaalean harmaa",
+					"name": "Light gray",
 					"slug": "lightgray"
 				},
 				{
 					"color": "#FFFFFF",
-					"name": "Valkoinen",
+					"name": "White",
 					"slug": "white"
 				},
 				{
 					"color": "#0F3052",
-					"name": "Ensisijainen",
+					"name": "Primary",
 					"slug": "primary"
 				},
 				{
 					"color": "#AEBECB",
-					"name": "Toissijainen",
+					"name": "Secondary",
 					"slug": "secondary"
 				},
 				{
 					"color": "#FAE1DF",
-					"name": "Tertiääri",
+					"name": "Tertiary",
 					"slug": "tertiary"
 				},
 				{
 					"color": "transparent",
-					"name": "Läpinäkyvä",
+					"name": "Transparent",
 					"slug": "transparent"
 				}
 			]
@@ -221,13 +221,13 @@
 			"fontSizes": [
 				{
 					"fluid": false,
-					"name": "Pieni",
+					"name": "Small",
 					"size": "0.813rem",
 					"slug": "small"
 				},
 				{
 					"fluid": false,
-					"name": "Normaali",
+					"name": "Normal",
 					"size": "1rem",
 					"slug": "normal"
 				},
@@ -236,7 +236,7 @@
 						"max": "1.125rem",
 						"min": "1rem"
 					},
-					"name": "Keskikoko (ingressi)",
+					"name": "Medium (ingress)",
 					"size": "1.125rem",
 					"slug": "medium"
 				},
@@ -466,12 +466,12 @@
 		{
 			"area": "header",
 			"name": "header",
-			"title": "Yätunniste"
+			"title": "Header"
 		},
 		{
 			"area": "footer",
 			"name": "footer",
-			"title": "Alatunniste"
+			"title": "Footer"
 		}
 	],
 	"version": 2,

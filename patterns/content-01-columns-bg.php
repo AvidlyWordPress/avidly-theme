@@ -1,12 +1,12 @@
 <?php
 /**
- * Title: Kolme saraketta taustavärillä
+ * Title: Three columns with background color
  * Description: Add block description.
  * Slug: avidly-theme/post-hero
  * viewportWidth: 1440
  * Block Types: core/post-content
  * Post Types: page, post
- * Categories: avidly_theme-content
+ * Categories: content
  *
  * @package Avidly_Theme
  */

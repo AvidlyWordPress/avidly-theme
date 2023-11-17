@@ -1,12 +1,12 @@
 <?php
 /**
- * Title: Sivun hero, yksinkertainen
+ * Title: Page hero, simple
  * Description: Add block description.
  * Slug: avidly-theme/page-hero-02
  * viewportWidth: 1440
  * Block Types: core/post-content
  * Post Types: page
- * Categories: avidly_theme-hero
+ * Categories: hero
  *
  * @package Avidly_Theme
  */
