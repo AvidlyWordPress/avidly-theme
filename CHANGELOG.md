@@ -12,6 +12,7 @@ Under construction.
 - Cache purge support for editor assets.
 - Base rules for client side filters that disables block settings from roles lower than administrator.
 - Base rules to manage block toolbar elements (format types).
+- Disable Openverse.
 
 ### Improved
 - Restrict available color options from theme.json.

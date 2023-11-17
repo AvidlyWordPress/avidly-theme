@@ -15,6 +15,19 @@ add_filter( 'allowed_block_types_all', 'avidly_theme_set_extended_blocks', 15, 2
 // add_filter( 'allowed_block_types_all', 'avidly_theme_set_cap_based_blocks', 15, 2 );
 // phpcs:enable
 
+
+/**
+ * Disable Openverse.
+ */
+add_filter(
+	'block_editor_settings_all',
+	function( $settings ) {
+		$settings['enableOpenverseMediaCategory'] = false;
+		return $settings;
+	},
+	10
+);
+
 /**
  * Whitelist core blocks
  *
