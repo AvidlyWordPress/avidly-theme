@@ -9,7 +9,6 @@
  */
 
 add_filter( 'block_editor_settings_all', 'avidly_theme_default_block_template' );
-add_action( 'init', 'avidly_theme_register_page_template' );
 add_action( 'init', 'avidly_theme_register_post_template' );
 
 
@@ -25,21 +24,11 @@ function avidly_theme_default_block_template( $settings ) {
 }
 
 /**
- * Register template: Page
- *
- * @return void
- */
-function avidly_theme_register_page_template() {
-	$post_type_object = get_post_type_object( 'page' );
-
-	// Combine templates.
-	$template = array_merge( avidly_theme_block_header_page(), avidly_theme_block_content() );
-
-	$post_type_object->template = $template;
-}
-
-/**
  * Register template: Post
+ * 
+ * A block template is defined as a list of block items and can have predefined attributes or placeholder content.
+ * Block templates allow specifying a default initial state for an editor session.
+ * @link https://developer.wordpress.org/block-editor/reference-guides/block-api/block-templates/
  *
  * @return void
  */
@@ -47,61 +36,13 @@ function avidly_theme_register_post_template() {
 	$post_type_object = get_post_type_object( 'post' );
 
 	// Combine templates.
-	$template = array_merge( avidly_theme_block_header_post(), avidly_theme_block_content() );
+	$template = array_merge( avidly_theme_block_header_post(), avidly_theme_block_content_post() );
 
 	$post_type_object->template = $template;
 }
 
 /**
- * Create header block template structure for page.
- *
- * @return array
- */
-function avidly_theme_block_header_page() {
-	return array(
-		array(
-			'core/cover',
-			array( // Cover settings.
-				'align'            => 'full',
-				'useFeaturedImage' => true,
-				'overlayColor'     => 'black',
-				'dimRatio'         => 0,
-				'contentPosition'  => 'bottom center',
-				'useFeaturedImage' => true,
-			),
-			array( // Cover content.
-				array(
-					'core/columns',
-					array(), // Columns settings.
-					array( // Columns content.
-						array(
-							'core/column',
-							array( // Column settings.
-								'width'           => '50%',
-								'backgroundColor' => 'white',
-								'textColor'       => 'black',
-							),
-							array( // Column content.
-								array(
-									'core/post-title',
-									array( // Post title settings.
-										'level' => 1,
-									),
-								),
-							),
-						),
-						array(
-							'core/column',
-						),
-					),
-				),
-			),
-		),
-	);
-}
-
-/**
- * Create header block template structure for page.
+ * Header block template structure for post.
  *
  * @return array
  */
@@ -169,11 +110,11 @@ function avidly_theme_block_header_post() {
 
 
 /**
- * Create default structure for tart of every post type template.
+ * Header block template structure for post.
  *
  * @return array
  */
-function avidly_theme_block_content() {
+function avidly_theme_block_content_post() {
 	return array(
 		array(
 			'core/spacer',
@@ -184,8 +125,14 @@ function avidly_theme_block_content() {
 		array(
 			'core/paragraph',
 			array(
-				'className'   => 'has-medium-font-size',
+				'fontSize'   => 'medium',
 				'placeholder' => esc_html_x( 'Add ingress text.', 'placeholder', 'avidly-theme' ),
+			),
+		),
+		array(
+			'core/paragraph',
+			array(
+				'placeholder' => esc_html_x( 'Type / to choose block', 'placeholder', 'avidly-theme' ),
 			),
 		),
 		array(

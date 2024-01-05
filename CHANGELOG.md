@@ -13,11 +13,18 @@ Under construction.
 - Base rules for client side filters that disables block settings from roles lower than administrator.
 - Base rules to manage block toolbar elements (format types).
 - Disable Openverse.
+- New block pattern creation logic, refer to <a href="https://github.com/WordPress/twentytwentyfour/tree/trunk/patterns">Twenty Twenty-Four</a> theme.
+
+### Removed
+- Block template for page.
+- Page specific hero patterns.
 
 ### Improved
 - Restrict available color options from theme.json.
 - Remove prefix from block pattern categories names (works better with categories created from editor).
 - Refactor SASS styles and remove style depencies to Tailwind utilities.
+- Examples about restricting content editing in block patterns ("templateLock":"contentOnly").
+- Detect block patterns via custom class prefixed as `pattern-`.
 
 ### Update
 - NPM dependencies.

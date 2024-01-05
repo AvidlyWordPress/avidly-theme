@@ -1,19 +1,19 @@
 <?php
 /**
- * Title: Page hero, default
- * Description: Add block description.
- * Slug: avidly-theme/page-hero-01
+ * Title: Hero-yliö, oletus (piilotettu)
+ * Description: Pattern is added within another block pattern, therefore it is hidden from the 'Patterns' menu (Inserter: no). Editing the content of the Cover block is restricted ("templateLock":"contentOnly").
+ * Slug: avidly-theme/hidden-hero-01
  * viewportWidth: 1440
  * Block Types: core/post-content
- * Post Types: page
+ * Inserter: no
  * Categories: hero
  *
  * @package Avidly_Theme
  */
 
 ?>
-<!-- wp:cover {"useFeaturedImage":true,"dimRatio":0,"overlayColor":"black","contentPosition":"bottom center","align":"full"} -->
-<div class="wp-block-cover alignfull has-custom-content-position is-position-bottom-center">
+<!-- wp:cover {"templateLock":"contentOnly","useFeaturedImage":true,"dimRatio":0,"overlayColor":"black","contentPosition":"bottom center","align":"full","className":"pattern-hidden-hero-01"} -->
+<div class="wp-block-cover alignfull has-custom-content-position is-position-bottom-center pattern-hidden-hero-01">
 	<span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim-0 has-background-dim"></span>
 	<div class="wp-block-cover__inner-container">
 		<!-- wp:columns -->

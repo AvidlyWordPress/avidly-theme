@@ -1,11 +1,10 @@
 <?php
 /**
- * Title: Latest posts
- * Description: Add block description.
- * Slug: avidly-theme/latest-posts
+ * Title: Uusimmat artikkelit
+ * Description: Query block, lists the latest articles. No pagination.
+ * Slug: avidly-theme/query-01-latest-posts
  * viewportWidth: 1440
  * Block Types: core/post-content
- * Post Types: page
  * Categories: dynamic
  *
  * @package Avidly_Theme
@@ -13,11 +12,11 @@
 
 ?>
 
-<!-- wp:query {"queryId":1,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false},"displayLayout":{"type":"flex","columns":3},"align":"wide"} -->
-<div class="wp-block-query alignwide">
+<!-- wp:query {"queryId":1,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false},"displayLayout":{"type":"flex","columns":3},"align":"wide","className":"pattern-query-01-latest-posts"} -->
+<div class="wp-block-query alignwide pattern-query-01-latest-posts">
 
 	<!-- wp:post-template -->
-		<!-- wp:group {"tagName":"article","style":{"spacing":{"padding":{"top":"0%","right":"0%","bottom":"0%","left":"0%"}}},"className":"border h-full link-element"} -->
+		<!-- wp:group {"templateLock":"contentOnly", "tagName":"article","style":{"spacing":{"padding":{"top":"0%","right":"0%","bottom":"0%","left":"0%"}}},"className":"border h-full link-element"} -->
 		<article class="wp-block-group border h-full link-element" style="padding-top:0%;padding-right:0%;padding-bottom:0%;padding-left:0%">
 
 			<!-- wp:cover {"useFeaturedImage":true,"dimRatio":0,"minHeight":15,"minHeightUnit":"rem","isDark":false} -->

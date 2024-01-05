@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: Related posts
- * Description: Add block description.
- * Slug: avidly-theme/related-posts
+ * Title: Liittyvät artikkelit
+ * Description: Custom Query block, lists the latest articles from current post category ("search":":related_custom_query"). No pagination.
+ * Slug: avidly-theme/query-02-related-posts
  * viewportWidth: 1440
  * Block Types: core/post-content
  * Post Types: post
@@ -13,8 +13,8 @@
 
 ?>
 
-<!-- wp:query {"queryId":1,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":":related_custom_query","exclude":[],"sticky":"exclude","inherit":false},"displayLayout":{"type":"flex","columns":3},"align":"wide"} -->
-<div class="wp-block-query alignwide">
+<!-- wp:query {"queryId":1,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":":related_custom_query","exclude":[],"sticky":"exclude","inherit":false},"displayLayout":{"type":"flex","columns":3},"align":"wide","className":"pattern-query-02-related-posts"} -->
+<div class="wp-block-query alignwide pattern-query-02-related-posts">
 
 	<!-- wp:post-template -->
 		<!-- wp:group {"tagName":"article","style":{"spacing":{"padding":{"top":"0%","right":"0%","bottom":"0%","left":"0%"}}},"className":"border h-full link-element"} -->

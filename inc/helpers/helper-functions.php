@@ -1,6 +1,6 @@
 <?php
 /**
- * Template tag functions.
+ * Helper functions: general.
  *
  * @package Avidly_Theme
  * @since 2.0.0
