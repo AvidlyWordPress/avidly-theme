@@ -1,5 +1,5 @@
 /**
- * Block: Media & Text.
+ * Block: Media & Text
  */
 
 .wp-block-media-text {
@@ -28,10 +28,11 @@
 		padding-right: var(--wp--style--root--padding-right);
 	}
 
-	// Custom content width for full width elements (commonly used by Avidly designers). Applies only larger screen size.
+	// Limit content width when the block is set as full width (commonly used by Avidly designers).
+	// Applies only larger screen size AND block that do not have manually changed media size.
 	// Note: This doesn't calculate the scrollbar width that can be something between 12-20px.
 	@screen sm {
-		&.alignfull {
+		&.alignfull:not([style*="grid-template-columns"]) {
 			.wp-block-media-text__content {
 				max-width: calc( var(--wp--style--global--wide-size) / 2 - var(--wp--style--block-gap) * 2);
 			}
@@ -41,20 +42,3 @@
 		}
 	}
 }
-
-/*
-.alignfull.has-media-on-the-right {
-	justify-content: unset !important;
-	background: yellow;
-	}
-	
-	.wp-block-media-text.alignfull.has-media-on-the-right > wp-block-media-text__content {
-	justify-self: end;
-	}
-	
-	@media screen and (max-width: 767px) {
-	.wp-block-media-text.alignfull .wp-block-media-text__content {
-	max-width: unset; 
-	}
-	}
-*/

@@ -2,10 +2,12 @@
  * Block: Search
  */
 .wp-block-search {
-    
-    @apply relative #{!important}; // Fix relevanssi live search position.
+    position: relative !important; // Fix for Relevanssi Live Search position.
 
     .relevanssi-live-search-results {
-        @apply top-full left-0 min-w-full #{!important}; // Fix relevanssi live search position.
+        // Fix Relevanssi live search position.
+        top: 100% !important;
+        left: 0 !important;
+        min-width: 100% !important;
     }
 }

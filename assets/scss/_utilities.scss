@@ -10,10 +10,10 @@
 	// Custom utility to create link that covers the parent element.
 	// Add the utility to parent element.
 	.link-element {
-		@apply relative;
-		@apply overflow-hidden;
+		position: relative;
+		overflow: hidden;
 
-		a::after {
+		a:not([target="_blank"])::after {
 			content: '';
 			@apply absolute;
 			@apply z-10;
@@ -23,21 +23,23 @@
 
 		figure,
 		.wp-block-cover {
-			@apply overflow-hidden;
+			overflow: hidden;
 		}
 
 		img {
-			@apply transition-transform duration-1000 ease-out;
-			@apply scale-100;
+			transition-property: transform;
+			transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+			transition-duration: 1s;
+			transform: scale(1);
 		}
 
 		&:hover img {
-			@apply scale-110;
+			transform: scale(1.1);
 		}
 	}
 
-	// Extend text decoration to inner link element: https://tailwindcss.com/docs/text-decoration#setting-the-text-decoration
+	// Extend link decoration to inner element
 	.no-underline a {
-		text-decoration: none !important; // Override a:not(.no-underline):not(.wp-block-button__link).
+		text-decoration: none !important;
 	}
 }

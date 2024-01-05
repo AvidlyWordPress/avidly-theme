@@ -2,9 +2,6 @@
  * Layout helpers.
  */
 
-
-
-
 // - - - - - - - - - - - - - - - - - - - - - - -
 // START: global styles stolen from TwentyTwenty-Three.
 // Last update: 1.4 version
@@ -71,7 +68,7 @@
 	padding-bottom: 0; // Reset styyle from theme.json
 }
 
-// Special elements with BG color
+// Special elements with BG color.
 .wp-block-group.has-background,
 [data-type="core/group"].has-background,
 .wp-block-column.has-background,

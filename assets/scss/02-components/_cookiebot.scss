@@ -4,10 +4,12 @@
  */
 
 .wp-block-embed__wrapper {
-	@apply bg-lightgray;
-    @apply flex items-center justify-center;
+	background: var(--wp--preset--color--lightgray);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .cookieconsent-optout-marketing {
-	@apply p-4;
+	padding: var(--wp--preset--spacing--md);
 }

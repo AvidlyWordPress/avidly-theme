@@ -1,5 +1,5 @@
 /**
- * Block: Latest news & Query block
+ * Block: Query
  */
 
 .wp-block-query {
@@ -12,16 +12,14 @@
 	
 		// Special styling for sticky elements.
 		li.sticky {
-			@screen sm {
-				grid-column: 1/4; //Make sitcky post full width.
+			// Make sticky post full width without knowing how many columns there will be in grid.
+			grid-column-start: 1; 
+			grid-column-end: -1;
 
-				article {
-					@apply flex sm:flex-row;
-
-					> .wp-block-cover {
-						@apply basis-1/2;
-						@apply md:min-h-[20rem] #{!important}; // Override block settings.
-					}
+			article {
+				@screen sm {
+					display: grid;
+					grid-template-columns: repeat(2,minmax(0,1fr))!important;
 				}
 			}
 		}

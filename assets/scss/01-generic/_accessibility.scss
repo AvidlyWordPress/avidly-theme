@@ -2,32 +2,7 @@
  * Accessibility helpers.
  */
  
-.screen-reader-text {
-    clip: rect(1px,1px,1px,1px);
-    @apply h-px;
-    @apply overflow-hidden;
-    @apply absolute;
-    @apply w-px;
-
-	&:focus {
-		clip: auto;
-		clip-path: none;
-		@apply block;
-		@apply h-auto;
-		@apply w-auto;
-		@apply top-0.5;
-		@apply right-0.5;
-	}
-}
-
-.skip-link {
-	@apply -left-96;
-
-	&:focus {
-		@apply left-0.5;
-		@apply right-auto;
-	}
-}
+// .skip-link and screen-reader-text styles are handled by core.
 
 * {
 	@media ( prefers-reduced-motion: reduce ) {

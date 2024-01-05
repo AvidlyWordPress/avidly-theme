@@ -17,6 +17,7 @@ Under construction.
 ### Improved
 - Restrict available color options from theme.json.
 - Remove prefix from block pattern categories names (works better with categories created from editor).
+- Refactor SASS styles and remove style depencies to Tailwind utilities.
 
 ### Update
 - NPM dependencies.

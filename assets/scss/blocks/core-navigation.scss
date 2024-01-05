@@ -1,19 +1,30 @@
 /**
- * Block: Navigation block
+ * Block: Navigation
  */
 
 .wp-block-navigation {
-	// Change mobile breakpoint for media & text block.
-	// This will override breakpoint that core sets (max-width: 600px).
+	// Change mobile breakpoint for Navigation block.
+	// Will override the default breakpoint that core sets (max-width: 600px).
 	@screen max-menu {
 		&__responsive-container-open:not(.always-shown) {
-			@apply flex;
+			display: flex;
 		}
 
 		&__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
-			@apply fixed;
-			@apply bottom-0 left-0 top-0 right-0;
-			@apply hidden;
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			display: none;
 		}
+	}
+
+	// Make submenu toggle icon larger.
+	.wp-block-navigation__submenu-icon {
+		width: 1em;
+		height: 1em;
+		min-width: 24px; // WCAG 2.2, criteria 2.5.8: Target Size (Minimum)
+		min-height: 24px; // WCAG 2.2, criteria 2.5.8: Target Size (Minimum)
 	}
 }
