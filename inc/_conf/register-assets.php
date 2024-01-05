@@ -88,7 +88,7 @@ function avidly_theme_conditional_block_styles() {
 		$block_arr = explode( '-', $file_name );
 		
 		// Skip if invisible files or too short file names.
-		if (  6 > strlen( $file_name ) ) {
+		if (  str_starts_with( $file_name, '.') || 6 > strlen( $file_name ) ) {
 			continue;
 		}
 

@@ -26,6 +26,9 @@ Under construction.
 - Examples about restricting content editing in block patterns ("templateLock":"contentOnly").
 - Detect block patterns via custom class prefixed as `pattern-`.
 
+### Fixed
+- File detecting in conditional block style enqueue.
+
 ### Update
 - NPM dependencies.
 - Translations.
