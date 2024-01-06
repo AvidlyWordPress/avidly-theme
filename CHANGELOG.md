@@ -15,6 +15,7 @@ Under construction.
 - Disable Openverse.
 - New block pattern creation logic, refer to <a href="https://github.com/WordPress/twentytwentyfour/tree/trunk/patterns">Twenty Twenty-Four</a> theme.
 - Unregister rules for default WordPress core block patterns.
+- Script loading strategy for Block editor assets.
 
 ### Removed
 - Block template for page.

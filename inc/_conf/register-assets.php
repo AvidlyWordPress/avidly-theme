@@ -130,7 +130,10 @@ function avidly_theme_editor_scripts() {
 		avidly_theme_cache_busting( '/assets/dist/js/editor-script-block.js' ),
 		array( 'wp-blocks', 'wp-dom' ),
 		'',
-		true
+		array(
+			'in_footer' => true,
+			'strategy'  => 'async',
+		)
 	);
 
 	wp_enqueue_script(
@@ -138,7 +141,10 @@ function avidly_theme_editor_scripts() {
 		avidly_theme_cache_busting( '/assets/dist/js/client-side-filters.js' ),
 		array( 'wp-blocks', 'wp-dom' ),
 		'',
-		true
+		array(
+			'in_footer' => true,
+			'strategy'  => 'async',
+		)
 	);
 }
 
