@@ -107,7 +107,7 @@ Almost done! Running the setup:
 # style.css
 find "$basedir" -name 'style.css' -type f -exec perl -p -i -e "s|$default_name|$name|g" {} \;
 
-# # PHP files
+# PHP files
 find "$basedir_all_files" -name '*.php' -type f -exec perl -p -i -e "s|$default_name|$name|g" {} \;
 
 # Language files

@@ -5,6 +5,8 @@
  *  @package Avidly_Theme
  */
 
+add_action( 'init', 'disable_emojis' );
+
 /**
  * Disable the emoji's
  *
@@ -21,8 +23,6 @@ function disable_emojis() {
 	add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
 	add_filter( 'wp_resource_hints', 'disable_emojis_remove_dns_prefetch', 10, 2 );
 }
-add_action( 'init', 'disable_emojis' );
-
 
 /**
  * Filter function used to remove the tinymce emoji plugin.
@@ -31,13 +31,12 @@ add_action( 'init', 'disable_emojis' );
  * @return array Difference betwen the two arrays
  */
 function disable_emojis_tinymce( $plugins ) {
-	if ( is_array( $plugins ) ) :
+	if ( is_array( $plugins ) ) {
 		return array_diff( $plugins, array( 'wpemoji' ) );
-	else :
+	} else {
 		return array();
-	endif;
+	}
 }
-
 
 /**
  * Remove emoji CDN hostname from DNS prefetching hints.

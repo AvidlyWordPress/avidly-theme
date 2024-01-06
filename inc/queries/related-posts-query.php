@@ -27,7 +27,7 @@ function avidly_theme_related_posts_block_query( $query ) {
 		return $query;
 	}
 
-	// Get search query if set.
+	// Get $query search value and modify default $query.
 	$query_s = ( isset( $query['s'] ) ) ? trim( $query['s'] ) : '';
 	$query = avidly_theme_related_posts( $query, $query_s, $post->ID );
 
@@ -57,7 +57,7 @@ function avidly_theme_related_posts_rest_query( $query, $request ) {
 		$curr_post_id = ( isset( $matches[1] ) ) ? $matches[1] : 0;
 	}
 
-	// Get search query if set.
+	// Get $query search value and modify default $query.
 	$query_s = ( isset( $query['s'] ) ) ? trim( $query['s'] ) : '';
 	$query = avidly_theme_related_posts( $query, $query_s, $curr_post_id );
 

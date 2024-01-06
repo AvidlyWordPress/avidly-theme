@@ -6,9 +6,9 @@
  * @since 3.1.1
  */
 
-
 /**
  * Create default output for column content.
+ * Can be used in block pattern that has multiple columns with identical content.
  *
  * @return HTML
  */

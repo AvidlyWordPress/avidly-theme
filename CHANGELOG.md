@@ -14,10 +14,15 @@ Under construction.
 - Base rules to manage block toolbar elements (format types).
 - Disable Openverse.
 - New block pattern creation logic, refer to <a href="https://github.com/WordPress/twentytwentyfour/tree/trunk/patterns">Twenty Twenty-Four</a> theme.
+- Unregister rules for default WordPress core block patterns.
 
 ### Removed
 - Block template for page.
 - Page specific hero patterns.
+- Unneeded align styles (handled by core)
+- Unused block render modification for image block.
+- Unused hook for excerpt lenght.
+- Untested functionality to set capability based block whitelists.
 
 ### Improved
 - Restrict available color options from theme.json.
@@ -25,6 +30,7 @@ Under construction.
 - Refactor SASS styles and remove style depencies to Tailwind utilities.
 - Examples about restricting content editing in block patterns ("templateLock":"contentOnly").
 - Detect block patterns via custom class prefixed as `pattern-`.
+- Refactor code, comments and file naming.
 
 ### Fixed
 - File detecting in conditional block style enqueue.

@@ -12,7 +12,6 @@ add_filter( 'allowed_block_types_all', 'avidly_theme_set_core_blocks', 10, 2 );
 add_filter( 'allowed_block_types_all', 'avidly_theme_set_extended_blocks', 15, 2 );
 // add_filter( 'allowed_block_types_all', 'avidly_theme_set_wc_blocks', 15, 2 );
 // add_filter( 'allowed_block_types_all', 'avidly_theme_set_ld_blocks', 15, 2 );
-// add_filter( 'allowed_block_types_all', 'avidly_theme_set_cap_based_blocks', 15, 2 );
 // phpcs:enable
 
 
@@ -383,49 +382,3 @@ function avidly_theme_set_ld_blocks( $allowed_block_types, $editor_context ) {
 
 	return $allowed_block_types;
 }
-
-
-/**
- * Example: Modify allowed blocks by current user capability.
- *
- * @param bool|string $allowed_block_types Array of block type slugs, or boolean to enable/disable all.
- * @param WP_Block_Editor_Context $editor_context The current block editor context.
- *
- * @link https://developer.wordpress.org/reference/functions/wp_get_current_user/.
- */
-function avidly_theme_set_cap_based_blocks( $allowed_block_types, $editor_context ) {
-
-	// Do not use whitelist if block editor context is not detected.
-	// Basically this allows all blocks to be used in Site editor (?).
-	if ( empty( $editor_context->post ) ) {
-		return $allowed_block_types;
-	}
-
-	// Get user.
-	$user = wp_get_current_user();
-	$caps = ( (array) $user->allcaps ) ? (array) $user->allcaps : array();
-
-	// IMPORTANT!!!
-	// SELECT JUST ONE WAY OF WORK FROM BELOW (either work with unset OR set own whitelists for specific capabilities).
-	// Capability based whitelisting is not tested in production yeat.
-
-	// WAY 1: Unallow these blocks for users who cannot edit theme settings (since 2.1.1.).
-	if ( ! array_key_exists( 'edit_theme_options', $caps ) ) {
-		array_splice( $allowed_block_types, array_search( 'core/html', $allowed_block_types, true ), 1 );
-	}
-	$allowed_block_types = array_values( $allowed_block_types ); // Rebase array keys.
-
-	// WAY 2: Allow these blocks for users who cannot edit theme settings (since 2.1.1.).
-	if ( ! array_key_exists( 'edit_theme_options', $caps ) ) {
-		$allowed_block_types = array(
-			'core/paragraph',
-			'core/list',
-			'core/image',
-			'core/buttons',
-			'core/quote',
-		);
-	}
-
-	return $allowed_block_types;
-}
-

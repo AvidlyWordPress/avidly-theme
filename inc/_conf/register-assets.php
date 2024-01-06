@@ -15,6 +15,12 @@ add_action( 'after_setup_theme', 'avidly_theme_editor_styles' );
 add_action( 'after_setup_theme', 'avidly_theme_conditional_block_styles' );
 add_action( 'enqueue_block_editor_assets', 'avidly_theme_editor_scripts' );
 
+// Reduces unused CSS by only loading styles for in-use blocks.
+add_filter( 'should_load_separate_core_block_assets', '__return_true' );
+
+// Fires once the requested HTTP headers for caching, content type, etc. have been sent.
+// https://developer.wordpress.org/reference/hooks/send_headers/
+add_action( 'send_headers', 'avidly_theme_cache_headers' );
 
 /**
  * Enqueue scripts and styles.
@@ -56,7 +62,7 @@ function avidly_theme_default_enqueue() {
 	);
 
 	/* phpcs:ignore
-	// Remove Gutenberg stylesheets.
+	// Remove default Gutenberg block editor stylesheets.
 	// By default we want to use block styles from core so they will be up-to-date if block structures or classes changes.
 	wp_deregister_style( 'wp-block-library-theme' );
 	wp_deregister_style( 'wp-block-library' );
@@ -114,10 +120,6 @@ function avidly_theme_editor_styles() {
 	add_editor_style( '/assets/dist/css/editor.css' );
 }
 
-
-// Reduces unused CSS by only loading styles for in-use blocks.
-add_filter( 'should_load_separate_core_block_assets', '__return_true' );
-
 /**
  * Enqueue supplemental block editor styles.
  * NOTE: This doesn't purge the editor JS automatically, you need to update the theme version.
@@ -138,4 +140,34 @@ function avidly_theme_editor_scripts() {
 		'',
 		true
 	);
+}
+
+/**
+ * Remove WordPress core version param from any theme enqueued assets.
+ * Handle the versioning and cache busting with mix-manifest.json.
+ *
+ * @param string $src first occurrence of a substring in a string.
+ * @return $src
+ */
+function avidly_theme_remove_wp_ver( $src ) {
+	if ( strpos( $src, '/avidly-theme/' ) && strpos( $src, 'ver=' ) ) {
+		$src = remove_query_arg( 'ver', $src );
+	}
+
+	return $src;
+}
+
+/**
+ * Add an Expires & a Cache-Control Header.
+ *
+ * @return void
+ */
+function avidly_theme_cache_headers() {
+	$seconds_to_cache = 900; // 900 sec = 15min.
+	$ts               = gmdate( 'D, d M Y H:i:s', time() + $seconds_to_cache );
+
+	if ( ! is_user_logged_in() ) {
+		header( 'Expires: ' . $ts );
+		header( 'Cache-control: max-age=' . $seconds_to_cache );
+	}
 }

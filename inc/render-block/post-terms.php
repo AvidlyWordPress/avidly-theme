@@ -32,6 +32,8 @@ function avidly_theme_post_terms( $block_content, $block ) {
 			// Get the term slug from URL.
 			$slug = avidly_theme_get_link_part( $link );
 			// Add custom class to link.
+			// Note: This should be done with WP_HTML_Tag_Processor in future.
+			// @link https://developer.wordpress.org/reference/classes/wp_html_tag_processor/
 			$block_content = str_replace( $slug . '/" rel="tag"', $slug . '/" class="' . $tax . '-' .  $slug . '"  rel="tag"', $block_content );
 		}
 	}
@@ -50,17 +52,13 @@ function avidly_theme_post_terms( $block_content, $block ) {
 function avidly_theme_get_link_part( $html ) {
 
 	preg_match('!https?://\S+!', $html, $href);
-	// error_log( print_r( $href[0], true ) );
 
 	$url = str_replace('"', '', $href[0] );
 	$url = str_replace('>', '', $url );
-	// error_log( $url );
 
 	$explode = array_filter( explode( '/', $url ) );
-	// error_log( print_r( $explode, true ) );
 
 	$slug = end( $explode );
-	// error_log( $slug );
 
 	return $slug;
 }

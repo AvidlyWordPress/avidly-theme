@@ -16,11 +16,12 @@
  * Configuration
  */
 require_once 'inc/_conf/wp-cleanup.php'; // Remove unneeded WordPress default functionality.
-require_once 'inc/_conf/cache-busting.php'; // Purge assets cache in register-assets.php.
+require_once 'inc/_conf/cache-busting.php'; // Purge cache for assets added in register-assets.php.
 require_once 'inc/_conf/setup-theme.php';
-require_once 'inc/_conf/setup-editor.php';
+require_once 'inc/_conf/setup-allowed-block-types.php';
 require_once 'inc/_conf/register-assets.php';
-// require_once 'inc/_conf/register-menus.php'; // Uncomment his if you wan't to use Classic menus. You need also a custom block or Avidly Classic Menu block to display classic menus from backend.
+// phpcs:ignore 
+// require_once 'inc/_conf/register-menus.php'; // Uncomment this if you want to use Classic menus. You need also a custom block display classic menus from backend. 
 require_once 'inc/_conf/register-pattern-categories.php';
 require_once 'inc/_conf/register-block-templates.php';
 require_once 'inc/_conf/register-block-styles.php';
@@ -29,10 +30,10 @@ require_once 'inc/_conf/register-block-styles.php';
  * Helpers
  */
 require_once 'inc/helpers/theme-hooks.php';
-require_once 'inc/helpers/override-core-styles.php';
+require_once 'inc/helpers/override-admin-styles.php';
 require_once 'inc/helpers/featured-images.php';
-require_once 'inc/helpers/helper-functions.php';
-require_once 'inc/helpers/helper-patterns.php';
+require_once 'inc/helpers/helper-functions-general.php';
+require_once 'inc/helpers/helper-functions-patterns.php';
 
 /**
  * Block queries

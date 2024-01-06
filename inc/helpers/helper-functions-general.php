@@ -1,6 +1,6 @@
 <?php
 /**
- * Helper functions: general.
+ * Helper functions: General.
  *
  * @package Avidly_Theme
  * @since 2.0.0
@@ -8,6 +8,9 @@
 
 /**
  * Get translated ID from page path.
+ * Can be used to detect a specific page and it's translations.
+ *
+ * @link https://developer.wordpress.org/reference/functions/get_page_by_path/
  *
  * @param string $path to page.
  *

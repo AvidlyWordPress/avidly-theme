@@ -27,7 +27,6 @@ function avidly_theme_fallback_post_thumbnail_id( $thumbnail_id, $post ) {
 	return $thumbnail_id;
 }
 
-
 /**
  * Change default thumbnail size.
  *
