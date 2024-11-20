@@ -55,6 +55,20 @@ function avidly_theme_default_enqueue() {
 		)
 	);
 
+
+	if (current_user_can('administrator') && is_admin_bar_showing()) {
+		wp_enqueue_script(
+			'toolbar-toggle',
+			get_template_directory_uri() . '/assets/js/adminbar-toggle.js', // Adjust the path as needed
+			[],
+			null,
+			true
+		);
+	}
+
+
+
+
 	/* phpcs:ignore
 	// Remove Gutenberg stylesheets.
 	// By default we want to use block styles from core so they will be up-to-date if block structures or classes changes.

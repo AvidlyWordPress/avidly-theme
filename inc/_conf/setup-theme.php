@@ -126,3 +126,18 @@ add_action(
 		}
 	}
 );
+
+
+//
+// Toggle Admin Bar
+//
+add_action('wp_ajax_toggle-admin-bar', 'toggle_admin_bar');
+function toggle_admin_bar() {
+  $showAdminBar = $_POST['showAdminBar'];
+  if ($showAdminBar) {
+    remove_filter('show_admin_bar', '__return_false');
+  } else {
+    add_filter('show_admin_bar', '__return_false');
+  }
+  wp_die();
+}
