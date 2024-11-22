@@ -55,17 +55,16 @@ function avidly_theme_default_enqueue() {
 		)
 	);
 
-
+	// add toolbar toggle command for admins
 	if (current_user_can('administrator') && is_admin_bar_showing()) {
 		wp_enqueue_script(
 			'toolbar-toggle',
-			get_template_directory_uri() . '/assets/js/adminbar-toggle.js', // Adjust the path as needed
+			get_template_directory_uri() . '/assets/js/toolbar-toggle.js',
 			[],
 			null,
 			true
 		);
 	}
-
 
 
 

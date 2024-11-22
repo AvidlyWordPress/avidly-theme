@@ -3,6 +3,10 @@
 
 
 @layer base {
+
+	a{
+		text-underline-offset: 4px;
+	}
 	// Make sure SVg images has max-width and auto height.
 	svg {
 		@apply max-w-full;

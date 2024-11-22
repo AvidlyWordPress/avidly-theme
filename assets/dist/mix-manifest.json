@@ -1,12 +1,13 @@
 {
-    "/js/app.js": "/js/app.js?id=5745bb5d9814af51ce66f9eac338b9eb",
+    "/js/app.js": "/js/app.js?id=5a59d365a9cad0d22cd4d1a7aa02a4dd",
     "/js/editor-script-block.js": "/js/editor-script-block.js?id=b2c50de3bf17ac3a91be5b0fda33df18",
-    "/css/blocks/core-navigation.css": "/css/blocks/core-navigation.css?id=07270674417e3a25dfef16b6f02ee8f4",
+    "/css/blocks/core-navigation.css": "/css/blocks/core-navigation.css?id=d007cb5e49ce5b9d6154ed0d1c23c395",
     "/css/blocks/core-media-text.css": "/css/blocks/core-media-text.css?id=1200419f376d5a5ac8e9e24372a3c93e",
     "/css/blocks/core-cover.css": "/css/blocks/core-cover.css?id=965740d1998a4f72dc256a8bc45e0811",
-    "/css/editor.css": "/css/editor.css?id=4d0931c96675ee09ba73447d95a93c9d",
-    "/css/app.css": "/css/app.css?id=f27a333ba106ea7e515953578ac4e823",
+    "/css/editor.css": "/css/editor.css?id=fdbdafc337f27746e6a3429ebd7207ad",
+    "/css/app.css": "/css/app.css?id=d5a78caca8e4c6aeefcf152a16f3a7ff",
     "/css/blocks/core-search.css": "/css/blocks/core-search.css?id=189d1b710100579cce548c8d75408c48",
     "/css/blocks/core-quote.css": "/css/blocks/core-quote.css?id=47abe1124a890c9109b08f988e6f34fb",
-    "/css/blocks/core-query.css": "/css/blocks/core-query.css?id=e41283b71e4ed013d085d415d7a727d3"
+    "/css/blocks/core-query.css": "/css/blocks/core-query.css?id=e41283b71e4ed013d085d415d7a727d3",
+    "/css/blocks/core-post-excerpt.css": "/css/blocks/core-post-excerpt.css?id=c6a081a7cc855a35290a079f254d63e7"
 }

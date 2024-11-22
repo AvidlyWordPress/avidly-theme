@@ -175,6 +175,12 @@ function avidly_theme_set_extended_blocks( $allowed_block_types, $editor_context
 		// Avidly.
 		'avidly/block-toc',
 		'avidly/social-share',
+		'custom-tabs-plugin/tabs',
+		'custom-tabs-plugin/tab-item',
+		'avidly/embed-iframe',
+
+		'avidly/tabs',
+		'avidly/tab-item',
 
 		// Yoast SEO.
 		'yoast-seo/breadcrumbs',

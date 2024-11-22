@@ -240,29 +240,29 @@
 				},
 				{
 					"fluid": {
-						"max": "1.125rem",
+						"max": "1.13rem",
 						"min": "1rem"
 					},
 					"name": "Keskikoko (ingressi)",
-					"size": "1.125rem",
+					"size": "1.13rem",
 					"slug": "medium"
 				},
 				{
 					"fluid": {
-						"max": "1.25rem",
+						"max": "1.45rem",
 						"min": "1rem"
 					},
 					"name": "L (h4)",
-					"size": "1.25rem",
+					"size": "1.45rem",
 					"slug": "large"
 				},
 				{
 					"fluid": {
-						"max": "1.5rem",
+						"max": "1.75rem",
 						"min": "1.125rem"
 					},
 					"name": "XL (h3)",
-					"size": "1.5rem",
+					"size": "1.75rem",
 					"slug": "xlarge"
 				},
 				{
@@ -405,8 +405,7 @@
 			"h3": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--system)",
-					"fontSize": "var(--wp--preset--font-size--xlarge)",
-					"fontWeight": "400"
+					"fontSize": "var(--wp--preset--font-size--xlarge)"
 				}
 			},
 			"h4": {
@@ -418,8 +417,7 @@
 			"h5": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--system)",
-					"fontSize": "var(--wp--preset--font-size--medium)",
-					"textTransform": "uppercase"
+					"fontSize": "var(--wp--preset--font-size--medium)"
 				}
 			},
 			"h6": {
@@ -473,7 +471,7 @@
 		{
 			"area": "header",
 			"name": "header",
-			"title": "Yätunniste"
+			"title": "Ylätunniste"
 		},
 		{
 			"area": "footer",

@@ -16,4 +16,50 @@
 			@apply hidden;
 		}
 	}
+
+	// Make submenu toggle icon larger.
+	.wp-block-navigation__submenu-icon {
+		width: 1em;
+		height: 1em;
+		min-width: 24px; // WCAG 2.2, criteria 2.5.8: Target Size (Minimum)
+		min-height: 24px; // WCAG 2.2, criteria 2.5.8: Target Size (Minimum)
+	}
+
+	//
+	// Mobile menu
+	//
+	@screen max-menu{
+
+
+		.wp-block-navigation__responsive-container{
+
+			
+			
+			animation:none!important; // remove mobile menu opening animation
+
+			.wp-block-navigation__responsive-dialog {
+				
+				.wp-block-navigation__responsive-container-content{
+
+					.wp-block-navigation__container{
+						
+						width:100%;
+
+						.wp-block-navigation-item{
+							width:100%;
+							--navigation-layout-justification-setting: flex-start;
+						}
+					}
+				}
+			
+				.wp-block-navigation__responsive-container-close{
+					margin-top:-0.5rem;
+				}
+
+			}
+
+		}
+	}
+
+
 }
