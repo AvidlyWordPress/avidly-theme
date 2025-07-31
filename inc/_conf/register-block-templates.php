@@ -1,6 +1,12 @@
 <?php
 /**
- * Create default block templates for post types.
+ * Default block templates for post types.
+ *
+ * This file manages the default block structure that appears when creating new posts/pages.
+ * Currently configured to provide empty templates for maximum flexibility.
+ * 
+ * Contains example functions showing how to build complex block templates using arrays.
+ * These examples demonstrate cover blocks, columns, spacers, and metadata integration.
  *
  * @link https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/
  *
@@ -27,13 +33,22 @@ function avidly_theme_default_block_template( $settings ) {
 /**
  * Register template: Page
  *
+ * Defines the default block template for new pages. Currently set to empty
+ * to provide a clean starting point. Users can add blocks via the pattern inserter.
+ *
+ * To add default blocks, use this format:
+ * $template = array(
+ *     array( 'core/heading', array( 'level' => 1 ) ),
+ *     array( 'core/paragraph', array( 'placeholder' => 'Start writing...' ) )
+ * );
+ *
  * @return void
  */
 function avidly_theme_register_page_template() {
 	$post_type_object = get_post_type_object( 'page' );
 
-	// Combine templates.
-	$template = array_merge( avidly_theme_block_header_page(), avidly_theme_block_content() );
+	// Empty template provides clean starting point - users choose content via patterns
+	$template = array();
 
 	$post_type_object->template = $template;
 }
@@ -41,13 +56,22 @@ function avidly_theme_register_page_template() {
 /**
  * Register template: Post
  *
+ * Defines the default block template for new posts. Currently set to empty
+ * to provide a clean starting point. Users can add blocks via the pattern inserter.
+ *
+ * To add default blocks, use this format:
+ * $template = array(
+ *     array( 'core/cover', array( 'useFeaturedImage' => true ) ),
+ *     array( 'core/paragraph', array( 'placeholder' => 'Tell your story...' ) )
+ * );
+ *
  * @return void
  */
 function avidly_theme_register_post_template() {
 	$post_type_object = get_post_type_object( 'post' );
 
-	// Combine templates.
-	$template = array_merge( avidly_theme_block_header_post(), avidly_theme_block_content() );
+	// Empty template provides clean starting point - users choose content via patterns
+	$template = array();
 
 	$post_type_object->template = $template;
 }
@@ -55,7 +79,11 @@ function avidly_theme_register_post_template() {
 /**
  * Create header block template structure for page.
  *
- * @return array
+ * Example function showing how to build complex block structures.
+ * Returns a cover block with featured image, overlay, and columns layout.
+ * Currently unused but kept as reference for building custom templates.
+ *
+ * @return array Block template array
  */
 function avidly_theme_block_header_page() {
 	return array(
@@ -101,9 +129,13 @@ function avidly_theme_block_header_page() {
 }
 
 /**
- * Create header block template structure for page.
+ * Create header block template structure for post.
  *
- * @return array
+ * Example function showing how to build post-specific templates.
+ * Returns a cover block with post title, date, and category metadata.
+ * Currently unused but kept as reference for building custom templates.
+ *
+ * @return array Block template array
  */
 function avidly_theme_block_header_post() {
 	return array(
@@ -169,9 +201,13 @@ function avidly_theme_block_header_post() {
 
 
 /**
- * Create default structure for tart of every post type template.
+ * Create default content structure for post type templates.
  *
- * @return array
+ * Example function showing how to build reusable content blocks.
+ * Returns spacers and paragraph with placeholder text.
+ * Currently unused but kept as reference for building custom templates.
+ *
+ * @return array Block template array
  */
 function avidly_theme_block_content() {
 	return array(

@@ -1,14 +1,18 @@
 <?php
 /**
- * Title: Sivun hero, oletus
- * Description: Add block description.
+ * Title: Page Hero with Cover Image
+ * Description: Full-width hero section with featured image background, overlay, and content positioning.
  * Slug: avidly-theme/page-hero-01
  * viewportWidth: 1440
  * Block Types: core/post-content
  * Post Types: page
  * Categories: avidly_theme-hero
+ * Inserter: false
  *
  * @package Avidly_Theme
+ *
+ * This pattern is hidden from the inserter by default.
+ * To make it available in the pattern inserter, change "Inserter: false" to "Inserter: true" above.
  */
 
 ?>

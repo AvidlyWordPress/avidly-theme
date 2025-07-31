@@ -1,14 +1,18 @@
 <?php
 /**
- * Title: Uusimmat artikkelit
- * Description: Add block description.
+ * Title: Latest Posts Grid
+ * Description: Display recent posts in a three-column grid with featured images and metadata.
  * Slug: avidly-theme/latest-posts
  * viewportWidth: 1440
  * Block Types: core/post-content
  * Post Types: page
  * Categories: avidly_theme-query
+ * Inserter: false
  *
  * @package Avidly_Theme
+ *
+ * This pattern is hidden from the inserter by default.
+ * To make it available in the pattern inserter, change "Inserter: false" to "Inserter: true" above.
  */
 
 ?>
@@ -21,7 +25,7 @@
 		<article class="wp-block-group border h-full link-element" style="padding-top:0%;padding-right:0%;padding-bottom:0%;padding-left:0%">
 
 			<!-- wp:cover {"useFeaturedImage":true,"dimRatio":0,"minHeight":15,"minHeightUnit":"rem","isDark":false} -->
-			<div class="wp-block-cover is-light" style="min-height:15rem"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Kirjoita otsikko...","fontSize":"large"} -->
+			<div class="wp-block-cover is-light" style="min-height:15rem"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"<?php echo esc_attr_x( 'Write title...', 'pattern placeholder text', 'avidly-theme' ); ?>","fontSize":"large"} -->
 			<p class="has-text-align-center has-large-font-size"></p>
 			<!-- /wp:paragraph --></div></div>
 			<!-- /wp:cover -->

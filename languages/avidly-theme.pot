@@ -1,53 +1,77 @@
-# Copyright (C) 2023 Avidly
+# Copyright (C) 2025 Avidly
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Avidly Block Theme 4.0.0\n"
+"Project-Id-Version: Avidly Block Theme 4.1.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/avidly-theme\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-05-29T05:46:29+00:00\n"
+"POT-Creation-Date: 2025-07-31T13:14:54+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.7.1\n"
+"X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: avidly-theme\n"
 
 #. Theme Name of the theme
+#: style.css
 msgid "Avidly Block Theme"
 msgstr ""
 
 #. Theme URI of the theme
+#: style.css
 msgid "https://avidlyagency.com"
 msgstr ""
 
 #. Description of the theme
-msgid "Custom block theme, based on <a href=\"https://github.com/AvidlyWordPress/avidly-theme\">Avidly Starter Theme</a>, version 4.0.x."
+#: style.css
+msgid "Custom block theme, based on <a href=\"https://github.com/AvidlyWordPress/avidly-theme\">Avidly Starter Theme</a>, version 5.0.x."
 msgstr ""
 
 #. Author of the theme
+#: style.css
 msgid "Avidly"
 msgstr ""
 
-#: inc/_conf/register-assets.php:63
+#: inc/_conf/register-assets.php:54
 msgctxt "theme UI"
 msgid "(opens in a new window)"
 msgstr ""
 
-#: inc/_conf/register-block-patterns.php:21
+#: inc/_conf/register-block-patterns.php:27
 msgctxt "admin UI: block pattern category"
 msgid "Hero areas"
 msgstr ""
 
-#: inc/_conf/register-block-patterns.php:27
+#: inc/_conf/register-block-patterns.php:33
 msgctxt "admin UI: block pattern category"
 msgid "Content areas"
 msgstr ""
 
-#: inc/_conf/register-block-patterns.php:33
+#: inc/_conf/register-block-patterns.php:39
 msgctxt "admin UI: block pattern category"
 msgid "Query loop areas"
+msgstr ""
+
+#: inc/_conf/register-block-patterns.php:59
+msgctxt "pattern placeholder text"
+msgid "Column Heading"
+msgstr ""
+
+#: inc/_conf/register-block-patterns.php:63
+msgctxt "pattern placeholder text"
+msgid "Add column content here. This is placeholder text for the column layout pattern."
+msgstr ""
+
+#: inc/_conf/register-block-patterns.php:70
+msgctxt "pattern placeholder text"
+msgid "Call to Action"
+msgstr ""
+
+#: inc/_conf/register-block-styles.php:21
+msgctxt "admin UI"
+msgid "None"
 msgstr ""
 
 #: inc/_conf/register-block-templates.php:188
@@ -55,69 +79,145 @@ msgctxt "placeholder"
 msgid "Add ingress text."
 msgstr ""
 
+#: patterns/content-01-columns-bg.php
+msgctxt "Pattern title"
+msgid "Three Columns Section"
+msgstr ""
+
+#: patterns/content-01-columns-bg.php
+msgctxt "Pattern description"
+msgid "Content section with three equal columns and light gray background."
+msgstr ""
+
+#: patterns/content-01-columns-bg.php:23
+msgctxt "pattern placeholder text"
+msgid "Section Heading"
+msgstr ""
+
 #: patterns/hero-01-page.php
 msgctxt "Pattern title"
-msgid "Page hero"
+msgid "Page Hero with Cover Image"
+msgstr ""
+
+#: patterns/hero-01-page.php
+msgctxt "Pattern description"
+msgid "Full-width hero section with featured image background, overlay, and content positioning."
 msgstr ""
 
 #: patterns/hero-01-post.php
 msgctxt "Pattern title"
-msgid "Post hero"
+msgid "Post Hero with Metadata"
+msgstr ""
+
+#: patterns/hero-01-post.php
+msgctxt "Pattern description"
+msgid "Full-width post hero with featured image, title, date, and category information."
+msgstr ""
+
+#: patterns/hero-02-page.php
+msgctxt "Pattern title"
+msgid "Simple Page Hero"
+msgstr ""
+
+#: patterns/hero-02-page.php
+msgctxt "Pattern description"
+msgid "Clean centered page title with spacing. Perfect starting point for most pages."
+msgstr ""
+
+#: patterns/hero-02-page.php:21
+msgctxt "pattern placeholder text"
+msgid "Hero Title"
+msgstr ""
+
+#: patterns/hero-02-page.php:25
+msgctxt "pattern placeholder text"
+msgid "Add a brief description or subtitle here."
 msgstr ""
 
 #: patterns/query-01-latest-posts.php
 msgctxt "Pattern title"
-msgid "Latest posts"
+msgid "Latest Posts Grid"
+msgstr ""
+
+#: patterns/query-01-latest-posts.php
+msgctxt "Pattern description"
+msgid "Display recent posts in a three-column grid with featured images and metadata."
+msgstr ""
+
+#: patterns/query-01-latest-posts.php:28
+#: patterns/query-02-related-posts.php:28
+msgctxt "pattern placeholder text"
+msgid "Write title..."
 msgstr ""
 
 #: patterns/query-02-related-posts.php
 msgctxt "Pattern title"
-msgid "Related posts"
+msgid "Related Posts Section"
+msgstr ""
+
+#: patterns/query-02-related-posts.php
+msgctxt "Pattern description"
+msgid "Display related posts in a grid layout with category-based filtering."
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Lohkosivupohja"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Valkoinen"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Musta"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Toissijainen"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Pieni"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Normaali"
 msgstr ""
 
 #: theme.json
 msgctxt "Duotone name"
-msgid "Black and primary"
+msgid "Musta ja ensisijainen"
 msgstr ""
 
 #: theme.json
 msgctxt "Color name"
-msgid "Black"
+msgid "Tumman harmaa"
 msgstr ""
 
 #: theme.json
 msgctxt "Color name"
-msgid "Dark gray"
+msgid "Vaalean harmaa"
 msgstr ""
 
 #: theme.json
 msgctxt "Color name"
-msgid "Light gray"
+msgid "Ensisijainen"
 msgstr ""
 
 #: theme.json
 msgctxt "Color name"
-msgid "White"
+msgid "Tertiääri"
 msgstr ""
 
 #: theme.json
 msgctxt "Color name"
-msgid "Primary"
-msgstr ""
-
-#: theme.json
-msgctxt "Color name"
-msgid "Secondary"
-msgstr ""
-
-#: theme.json
-msgctxt "Color name"
-msgid "Tertiary"
-msgstr ""
-
-#: theme.json
-msgctxt "Color name"
-msgid "Transparent"
+msgid "Läpinäkyvä"
 msgstr ""
 
 #: theme.json
@@ -157,60 +257,45 @@ msgstr ""
 
 #: theme.json
 msgctxt "Font family name"
-msgid "System Font"
+msgid "Montserrat"
 msgstr ""
 
 #: theme.json
 msgctxt "Font family name"
-msgid "Heading Font"
+msgid "Krona One"
 msgstr ""
 
 #: theme.json
 msgctxt "Font size name"
-msgid "Small"
+msgid "Keskikoko (ingressi)"
 msgstr ""
 
 #: theme.json
 msgctxt "Font size name"
-msgid "Normal (base)"
+msgid "L (h4)"
 msgstr ""
 
 #: theme.json
 msgctxt "Font size name"
-msgid "Medium (ingress)"
+msgid "XL (h3)"
 msgstr ""
 
 #: theme.json
 msgctxt "Font size name"
-msgid "Large (h4)"
+msgid "XXL (h2)"
 msgstr ""
 
 #: theme.json
 msgctxt "Font size name"
-msgid "xLarge (h3)"
-msgstr ""
-
-#: theme.json
-msgctxt "Font size name"
-msgid "XXLarge (h2)"
-msgstr ""
-
-#: theme.json
-msgctxt "Font size name"
-msgid "XXXLarge (h1)"
-msgstr ""
-
-#: theme.json
-msgctxt "Custom template name"
-msgid "Block template"
+msgid "XXXL (h1)"
 msgstr ""
 
 #: theme.json
 msgctxt "Template part name"
-msgid "Site header"
+msgid "Yätunniste"
 msgstr ""
 
 #: theme.json
 msgctxt "Template part name"
-msgid "Site footer"
+msgid "Alatunniste"
 msgstr ""

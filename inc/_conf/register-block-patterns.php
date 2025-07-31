@@ -6,6 +6,12 @@
  *
  * @package Avidly_theme
  * @since 3.4.0
+ *
+ * PATTERN VISIBILITY:
+ * - All patterns explicitly declare "Inserter: true" (visible) or "Inserter: false" (hidden)
+ * - Hidden patterns provide additional layout options that can be enabled as needed
+ * - To change visibility: Toggle between "Inserter: true" and "Inserter: false" in pattern header
+ * - Only essential patterns are visible by default to avoid overwhelming users
  */
 
 add_filter( 'init', 'avidly_theme_block_pattern_cat' );
@@ -50,18 +56,18 @@ function avidly_theme_column_content_01() {
 	<!-- /wp:image -->
 
 	<!-- wp:heading {"level":3} -->
-	<h3 class="wp-block-heading">Otsikko H3</h3>
+	<h3 class="wp-block-heading"><?php echo esc_html_x( 'Column Heading', 'pattern placeholder text', 'avidly-theme' ); ?></h3>
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph -->
-	<p>Tekstiä lorem ipsum dolor sit amet. Consectetur adipicing elit.</p>
+	<p><?php echo esc_html_x( 'Add column content here. This is placeholder text for the column layout pattern.', 'pattern placeholder text', 'avidly-theme' ); ?></p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:buttons -->
 	<div class="wp-block-buttons">
 		<!-- wp:button -->
 		<div class="wp-block-button">
-			<a class="wp-block-button__link wp-element-button" href="#">CTA-painike</a>
+			<a class="wp-block-button__link wp-element-button" href="#"><?php echo esc_html_x( 'Call to Action', 'pattern placeholder text', 'avidly-theme' ); ?></a>
 		</div>
 		<!-- /wp:button -->
 	</div>

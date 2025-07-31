@@ -1,14 +1,18 @@
 <?php
 /**
- * Title: Artikkelin hero
- * Description: Add block description.
+ * Title: Post Hero with Metadata
+ * Description: Full-width post hero with featured image, title, date, and category information.
  * Slug: avidly-theme/post-hero-01
  * viewportWidth: 1440
  * Block Types: core/post-content
  * Post Types: post
  * Categories: avidly_theme-hero
+ * Inserter: false
  *
  * @package Avidly_Theme
+ *
+ * This pattern is hidden from the inserter by default.
+ * To make it available in the pattern inserter, change "Inserter: false" to "Inserter: true" above.
  */
 
 ?>
