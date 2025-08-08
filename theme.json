@@ -129,6 +129,7 @@
 			"wideSize": "64rem"
 		},
 		"spacing": {
+			"defaultSpacingSizes": false,
 			"spacingScale": {
 				"steps": 0
 			},
@@ -180,6 +181,7 @@
 		},
 		"typography": {
 			"customFontSize": false,
+			"defaultFontSizes": false,
 			"dropCap": false,
 			"fluid": true,
 			"fontFamilies": [
@@ -481,6 +483,6 @@
 			"title": "Alatunniste"
 		}
 	],
-	"version": 2,
-	"$schema": "https://schemas.wp.org/wp/6.3/theme.json"
+	"version": 3,
+	"$schema": "https://schemas.wp.org/wp/6.6/theme.json"
 }
